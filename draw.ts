@@ -193,7 +193,7 @@ namespace dot {
                     pos.y += size.y;
                     size.y *= -1;
                 }
-                const box: HitBox = { rect: dot.rect.mk(pos, size), coll: collision.mkCollision() };
+                const box: HitBox = { rect: new Rect(pos, size), coll: collision.mkCollision() };
                 if (collidable) {
                     box.coll.collidingWith.rect[getColor()] = true;
                     collision.addHitbox(box);

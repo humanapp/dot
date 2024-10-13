@@ -29,6 +29,10 @@ namespace dot.test {
                     10,
                     p1,
                     Color.LightPurple);
+                setColor(Color.Red);
+                particles.add(
+                    p1, 10, 2, Math.PI / 2, Math.PI / 6
+                );
             }
         }
     }

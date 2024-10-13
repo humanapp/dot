@@ -1,34 +1,19 @@
 namespace dot {
     export class Rect {
+        get left() { return this.pos.left; }
+        get top() { return this.pos.top; }
+        get width() { return this.pos.width; }
+        get height() { return this.pos.height; }
+        get right() { return this.left + this.width; }
+        get bottom() { return this.top + this.height; }
         constructor(public pos: Vec2, public size: Vec2) { }
     }
     export namespace rect {
-        export function mk(pos: Vec2, size: Vec2): Rect {
-            return new Rect(pos, size);
-        }
-        export function left(r: Rect): number {
-            return r.pos.x;
-        }
-        export function top(r: Rect): number {
-            return r.pos.y;
-        }
-        export function right(r: Rect): number {
-            return left(r) + width(r);
-        }
-        export function bottom(r: Rect): number {
-            return top(r) + height(r);
-        }
-        export function width(r: Rect): number {
-            return r.size.x;
-        }
-        export function height(r: Rect): number {
-            return r.size.y;
-        }
         export function contains(r: Rect, v: Vec2): boolean {
-            return util.isInRange(v.x, left(r), right(r)) && util.isInRange(v.y, top(r), bottom(r));
+            return util.isInRange(v.x, r.left, r.right) && util.isInRange(v.y, r.top, r.bottom);
         }
         export function scale(r: Rect, s: number): Rect {
-            return mk(
+            return new Rect(
                 vec2.scale(r.pos, s),
                 vec2.scale(r.size, s)
             );

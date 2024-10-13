@@ -19,9 +19,10 @@ namespace dot {
     }
     export function remove<T>(
         array: T[],
-        func: (v: T, index?: number) => any
+        func: (v: T, index?: number) => any,
+        removed?: T[]
     ): T[] {
-        let removed = [];
+        removed = removed || [];
         for (let i = 0, index = 0; i < array.length; index++) {
             if (func(array[i], index)) {
                 removed.push(array[i]);

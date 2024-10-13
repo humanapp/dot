@@ -30,7 +30,8 @@ namespace dot {
                 opts.textColor = opts.textColor || Color.Blue;
                 gameOpts = opts;
                 score = 0;
-                _activeScores = [];
+                scores._internal.init();
+                particles._internal.init();
                 state = GameState.Title;
             }, 0);
         }
@@ -88,7 +89,8 @@ namespace dot {
             _internal.input.block();
             tick = 0;
             score = 0;
-            _activeScores = [];
+            scores._internal.init();
+            particles._internal.init();
             state = GameState.Playing;
         }
 
@@ -120,6 +122,7 @@ namespace dot {
                 }
 
                 scores._internal.update();
+                particles._internal.update();
 
                 drawScoreboard();
 

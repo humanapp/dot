@@ -19,7 +19,10 @@
         "game.ts",
         "test.ts",
         "input.ts",
-        "scores.ts"
+        "scores.ts",
+        "random.ts",
+        "pool.ts",
+        "particles.ts"
     ],
     "testFiles": [
         "test.ts"

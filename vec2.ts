@@ -1,5 +1,9 @@
 namespace dot {
     export class Vec2 {
+        get left() { return this.x; }
+        get top() { return this.y; }
+        get width() { return this.x; }
+        get height() { return this.y; }
         constructor(public x: number, public y: number) { }
         public add(v: Vec2): this {
             this.x += v.x;
@@ -11,13 +15,27 @@ namespace dot {
             this.y -= v.y;
             return this;
         }
+        public mul(v: Vec2): this {
+            this.x *= v.x;
+            this.y *= v.y;
+            return this;
+        }
+        public scale(s: number): this {
+            this.x *= s;
+            this.y *= s;
+            return this;
+        }
+        public rotate(a: number): this {
+            const x = this.x * Math.cos(a) - this.y * Math.sin(a);
+            const y = this.x * Math.sin(a) + this.y * Math.cos(a);
+            this.x = x;
+            this.y = y;
+            return this;
+        }
     }
     export namespace vec2 {
-        export function left(v: Vec2): number {
-            return v.x;
-        }
-        export function top(v: Vec2): number {
-            return v.y;
+        export function dup(v: Vec2): Vec2 {
+            return new Vec2(v.x, v.y);
         }
         export function add(a: Vec2, b: Vec2): Vec2 {
             return new Vec2(
