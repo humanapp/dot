@@ -1,9 +1,10 @@
 game.stats = true;
 
-namespace dottest {
+namespace test {
     const opts = new dot.GameOptions();
     opts.update = gameUpdate;
     opts.gameTitle = "DOT TEST";
+    opts.insertCoinText = "insert coin";
     dot.game.start(opts);
 
     class Box {
@@ -13,11 +14,14 @@ namespace dottest {
     }
 
     const boxes: Box[] = [];
-    [1,2,3,4,5].forEach(() => {
+    [0, 0, 0, 0, 0].forEach(() => {
+        const sz = 10;
         let b = new Box();
         b.r = new dot.Rect(
-            new dot.Vec2(Math.randomRange(0, dot.SCREEN_WIDTH), Math.randomRange(0, dot.SCREEN_HEIGHT)),
-            new dot.Vec2(10, 10));
+            new dot.Vec2(
+                Math.randomRange(0, dot.SCREEN_WIDTH - sz),
+                Math.randomRange(0, dot.SCREEN_HEIGHT - sz)),
+            new dot.Vec2(sz, sz));
         b.c = Math.pickRandom([1,2,3,4,5,6,7,8,9,0xa,0xb,0xc,0xe,0xf]);
         b.v = new dot.Vec2(
             Math.randomRange(-3, 3),
@@ -28,15 +32,14 @@ namespace dottest {
     function gameUpdate() {
         scene.setBackgroundColor(dot.Color.Tan);
         dot.setColor(dot.Color.White);
-        const t = 40;
-        const f = 10;
-        const s = -Math.sin(dot.game.tick / f) * t;
-        const c = Math.cos(dot.game.tick / f) * t;
+        const f = 20;
+        const s = -Math.sin(dot.game.tick / f);
+        const c = Math.cos(dot.game.tick / f);
         const p0 = new dot.Vec2(dot.SCREEN_WIDTH / 2, dot.SCREEN_HEIGHT / 2);
-        const p1 = dot.vec2.add(p0, new dot.Vec2(s, c));
+        const p1 = dot.vec2.add(p0, dot.vec2.mk(s, c).scale(dot.SCREEN_HEIGHT * 0.6));
         dot.draw.line(
             p0, p1,
-            3, 2);
+            3);
 
         boxes.forEach(b => {
             b.r.pos.x += b.v.x;

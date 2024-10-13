@@ -4,6 +4,7 @@ namespace dot {
         scoreColor?: number;
         textColor?: number;
         gameTitle?: string;
+        insertCoinText?: string;
     }
     export enum GameState {
         Title,
@@ -66,9 +67,10 @@ namespace dot {
             }
             if (tick % 80 < 40) {
                 pushColor(gameOpts.textColor);
+                const insertCoinText = gameOpts.insertCoinText || "PRESS ANY KEY";
                 draw.text(
                     new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 5 / 6),
-                    "PRESS ANY KEY", false, TextAlignment.Center,
+                    insertCoinText, false, TextAlignment.Center,
                     image.font5);
                 popColor();
             }

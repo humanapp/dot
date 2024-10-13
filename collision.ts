@@ -8,6 +8,9 @@ namespace dot {
         rect: Rect;
         coll: Collision;
     }
+    export class DeferredCollision {
+        
+    }
     export namespace collision {
         export let hitboxes: HitBox[] = [];
         interface CollisionSet { [color: number]: boolean };

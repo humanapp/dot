@@ -34,6 +34,9 @@ namespace dot {
         }
     }
     export namespace vec2 {
+        export function mk(x: number, y: number): Vec2 {
+            return new Vec2(x, y);
+        }
         export function dup(v: Vec2): Vec2 {
             return new Vec2(v.x, v.y);
         }

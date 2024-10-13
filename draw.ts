@@ -7,13 +7,9 @@ namespace dot {
     export namespace draw {
         export function rect(
             r: Rect,
-            scale = 1,
             alignCenter = false,
             collidable = true,
         ): Collision {
-            if (scale !== 1) {
-                r = dot.rect.scale(r, scale);
-            }
             const x = r.pos.x;
             const y = r.pos.y;
             const w = r.size.x;
@@ -22,13 +18,9 @@ namespace dot {
         }
         export function box(
             r: Rect,
-            scale = 1,
             alignCenter = false,
             collidable = true,
         ): Collision {
-            if (scale !== 1) {
-                r = dot.rect.scale(r, scale);
-            }
             const x = r.pos.x;
             const y = r.pos.y;
             const w = r.size.x;
@@ -40,15 +32,8 @@ namespace dot {
             b: Vec2,
             thickness: number,
             gap = 0,
-            scale = 1,
             collidable = true,
         ): Collision {
-            if (scale !== 1) {
-                a = dot.vec2.scale(a, scale);
-                b = dot.vec2.scale(b, scale);
-                thickness *= scale;
-                gap *= scale;
-            }
             return _internal.line(collidable, a, b, thickness, gap);
         }
         // Copied from screen/text.ts imagePrint
