@@ -89,6 +89,7 @@ namespace dot {
             _internal.input.block();
             tick = 0;
             score = 0;
+            difficulty = 1;
             scores._internal.init();
             particles._internal.init();
             state = GameState.Playing;
@@ -108,7 +109,9 @@ namespace dot {
             export function update() {
                 if (!gameOpts) return;
 
-                difficulty = tick / 3600 + 1;
+                if (state === GameState.Playing) {
+                    difficulty = tick / 3600 + 1;
+                }
 
                 if (state === GameState.Title && dot._internal.input.justPressed) {
                     gotoPlaying();
