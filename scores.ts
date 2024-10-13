@@ -19,7 +19,7 @@ namespace dot {
             _activeScores.push({
                 id: ++scoreId,
                 str,
-                pos,
+                pos: new Vec2(pos.x, pos.y - scoreFont.charHeight / 2),
                 vy: -2,
                 deathTick: game.tick + 30,
                 color
@@ -28,12 +28,12 @@ namespace dot {
         export namespace _internal {
             export function update() {
                 remove(_activeScores, (s) => {
-                    pushCurrentColor(s.color);
+                    pushColor(s.color);
                     draw.text(s.pos, s.str, false, TextAlignment.Center, scoreFont);
                     s.pos.y += s.vy;
                     s.vy *= 0.9;
                     return s.deathTick <= game.tick;
-                    popCurrentColor();
+                    popColor();
                 });
             }
         }

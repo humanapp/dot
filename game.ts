@@ -19,6 +19,7 @@ namespace dot {
         export let state = GameState.Title;
         const scoreboardFont = image.scaledFont(image.font5, 2);
         const titleFont = image.scaledFont(image.font8, 2);
+        let _gameOverText = "GAME OVER";
 
         let gameOpts: GameOptions;
         export function start(opts: GameOptions) {
@@ -34,49 +35,52 @@ namespace dot {
             }, 0);
         }
 
-        export function end() {
-            gotoGameOver();
+        export function end(gameOverText?: string) {
+            gotoGameOver(gameOverText);
         }
 
         function drawScoreboard() {
-            pushCurrentColor(gameOpts.scoreColor);
-            draw.text(
-                new Vec2(2, 2),
-                "" + Math.floor(score), false, TextAlignment.Left,
-                scoreboardFont);
+            pushColor(gameOpts.scoreColor);
+            if (state !== GameState.Title) {
+                draw.text(
+                    new Vec2(2, 2),
+                    "" + Math.floor(score), false, TextAlignment.Left,
+                    scoreboardFont);
+            }
             draw.text(
                 new Vec2(SCREEN_WIDTH, 2),
                 "HI " + Math.floor(high), false, TextAlignment.Right,
                 scoreboardFont);
-            popCurrentColor();
+            popColor();
         }
 
         function drawTitle() {
             if (gameOpts.gameTitle) {
-                pushCurrentColor(gameOpts.textColor);
+                pushColor(gameOpts.textColor);
                 draw.text(
                     new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3),
                     gameOpts.gameTitle, false, TextAlignment.Center,
                     titleFont);
-                popCurrentColor();
+                popColor();
             }
             if (tick % 80 < 40) {
-                pushCurrentColor(gameOpts.textColor);
+                pushColor(gameOpts.textColor);
                 draw.text(
                     new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 5 / 6),
                     "PRESS ANY KEY", false, TextAlignment.Center,
                     image.font5);
-                popCurrentColor();
+                popColor();
             }
         }
 
         function drawGameOver() {
-            pushCurrentColor(gameOpts.textColor);
+            pushColor(gameOpts.textColor);
+            const text = _gameOverText || "GAME OVER";
             draw.text(
                 new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - titleFont.charHeight / 2),
-                "GAME OVER", false, TextAlignment.Center,
+                text, false, TextAlignment.Center,
                 titleFont);
-            popCurrentColor();
+            popColor();
         }
 
         function gotoPlaying() {
@@ -88,12 +92,13 @@ namespace dot {
             state = GameState.Playing;
         }
 
-        function gotoGameOver() {
+        function gotoGameOver(gameOverText: string) {
             input.block();
             _internal.input.block();
             if (score > high) {
                 high = score;
             }
+            _gameOverText = gameOverText;
             state = GameState.GameOver;
         }
 

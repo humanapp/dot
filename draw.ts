@@ -195,11 +195,11 @@ namespace dot {
                 }
                 const box: HitBox = { rect: dot.rect.mk(pos, size), coll: collision.mkCollision() };
                 if (collidable) {
-                    box.coll.collidingWith.rect[getCurrentColor()] = true;
+                    box.coll.collidingWith.rect[getColor()] = true;
                     collision.addHitbox(box);
                 }
                 const coll = collision.checkHitboxes(box);
-                if (getCurrentColor() !== 0) {
+                if (getColor() !== 0) {
                     if (fill) {
                         gfx.box(pos.x, pos.y, size.x, size.y);
                     } else {

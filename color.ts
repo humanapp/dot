@@ -1,19 +1,19 @@
 namespace dot {
     const colorStack: number[] = [5];
-    export function getCurrentColor(): number {
+    export function getColor(): number {
         return colorStack[colorStack.length - 1];
     }
-    export function setCurrentColor(color: number) {
+    export function setColor(color: number) {
         colorStack[colorStack.length - 1] = color;
     }
-    export function pushCurrentColor(color: number) {
+    export function pushColor(color: number) {
         colorStack.push(color);
     }
-    export function popCurrentColor(): number {
+    export function popColor(): number {
         if (colorStack.length > 1) {
             colorStack.pop();
         }
-        return getCurrentColor();
+        return getColor();
     }
     // matches enum in game/game.ts
     export enum Color {

@@ -25,13 +25,13 @@ namespace dot {
         }
         const commands: GfxCommand[] = [];
         export function rect(x: number, y: number, width: number, height: number) {
-            commands.push(new GfxRectCommand(x, y, width, height, getCurrentColor()))
+            commands.push(new GfxRectCommand(x, y, width, height, getColor()))
         }
         export function box(x: number, y: number, width: number, height: number) {
-            commands.push(new GfxBoxCommand(x, y, width, height, getCurrentColor()))
+            commands.push(new GfxBoxCommand(x, y, width, height, getColor()))
         }
         export function icon(x: number, y: number, buf: Buffer) {
-            commands.push(new GfxIconCommand(x, y, buf, getCurrentColor()));
+            commands.push(new GfxIconCommand(x, y, buf, getColor()));
         }
         export namespace _control {
             export function update() {

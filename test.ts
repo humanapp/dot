@@ -9,25 +9,26 @@ namespace dot.test {
 
     function gameUpdate() {
         scene.setBackgroundColor(Color.Tan);
-        setCurrentColor(Color.White);
-        const t = 100;
-        const f = 100;
-        const s = Math.abs(Math.sin(dot.game.tick / f)) * t;
-        const c = Math.abs(Math.cos(dot.game.tick / f)) * t;
+        setColor(Color.White);
+        const t = 40;
+        const f = 10;
+        const s = -Math.sin(dot.game.tick / f) * t;
+        const c = Math.cos(dot.game.tick / f) * t;
+        const p0 = new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+        const p1 = vec2.add(p0, new Vec2(s, c));
         dot.draw.line(
-            new Vec2(0, 0),
-            new Vec2(SCREEN_WIDTH, SCREEN_HEIGHT),
-            s, 8);
+            p0, p1,
+            3, 2);
 
         if (game.state === GameState.Playing) {
             if (input.justPressed) {
                 game.end();
             }
-            if (game.tick % 50 === 0) {
+            if (game.tick % f === 0) {
                 scores.add(
                     10,
-                    new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2),
-                    Color.Green);
+                    p1,
+                    Color.LightPurple);
             }
         }
     }
