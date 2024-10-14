@@ -8,42 +8,45 @@ namespace dot {
         export function rect(
             r: Rect,
             alignCenter = false,
-            collidable = true,
-        ): Collision {
+            collidesWith: Color[] = null,
+        ): CollisionReporter {
             const x = r.pos.x;
             const y = r.pos.y;
             const w = r.size.x;
             const h = r.size.y;
-            return _internal.rect(alignCenter, false, collidable, x, y, w, h);
+            if (collidesWith == null) {
+                collidesWith = color.allExcept(color.curr());
+            }
+            return _internal.rect(alignCenter, false, collidesWith, x, y, w, h);
         }
         export function box(
             r: Rect,
             alignCenter = false,
-            collidable = true,
-        ): Collision {
+            collidesWith: Color[] = null,
+        ): CollisionReporter {
             const x = r.pos.x;
             const y = r.pos.y;
             const w = r.size.x;
             const h = r.size.y;
-            return _internal.rect(alignCenter, true, collidable, x, y, w, h);
+            return _internal.rect(alignCenter, true, collidesWith, x, y, w, h);
         }
         export function line(
             a: Vec2,
             b: Vec2,
             thickness: number,
             gap = 0,
-            collidable = true,
-        ): Collision {
-            return _internal.line(collidable, a, b, thickness, gap);
+            collidesWith: Color[] = null,
+        ): CollisionReporter {
+            return _internal.line(collidesWith, a, b, thickness, gap);
         }
         // Copied from screen/text.ts imagePrint
         export function text(
             p: Vec2,
             s: string,
-            collidable = false,
+            collidesWith: Color[] = null,
             alignment = TextAlignment.Left,
             font?: image.Font
-        ): Collision {
+        ): CollisionReporter {
             let x = p.x |= 0
             let y = p.y |= 0
             if (!font)
@@ -115,6 +118,7 @@ namespace dot {
                     }
                 }
 
+                // DOESN'T WORK (???)
                 //if (mult == 1) {
                 //    imgBuf.write(8, fontdata.slice(off + 2, charSize))
                 //    gfx.icon(x + xOffset, y + yOffset, imgBuf)
@@ -150,26 +154,31 @@ namespace dot {
             }
 
             // TODO: Support collision with text
-            return collision.mkCollision();
+            return new CollisionReporter();
         }
 
         namespace _internal {
             export function rect(
                 alignCenter: boolean,
                 fill: boolean,
-                collidable: boolean,
+                collidesWith: Color[],
                 x: number,
                 y: number,
                 w: number,
-                h: number
-            ): Collision {
+                h: number,
+                reporter?: CollisionReporter
+            ): CollisionReporter {
+                if (!reporter) {
+                    reporter = new CollisionReporter();
+                }
                 const pos = alignCenter
                     ? new Vec2(x - w / 2, y - h / 2)
                     : new Vec2(x, y);
                 const size = new Vec2(w, h);
                 if (size.x === 0 || size.y === 0) {
-                    return collision.mkCollision();
+                    return reporter;
                 }
+                const c = color.curr();
                 if (size.x < 0) {
                     pos.x += size.x;
                     size.x *= -1;
@@ -178,29 +187,32 @@ namespace dot {
                     pos.y += size.y;
                     size.y *= -1;
                 }
-                const box: HitBox = { rect: new Rect(pos, size), coll: collision.mkCollision() };
-                if (collidable) {
-                    box.coll.collidingWith.rect[getColor()] = true;
-                    collision.addHitbox(box);
-                }
-                const coll = collision.checkHitboxes(box);
-                if (getColor() !== 0) {
+                reporter._add(
+                    new Rect(pos, size),
+                    c,
+                    collidesWith
+                );
+                if (c) {
                     if (fill) {
                         gfx.box(pos.x, pos.y, size.x, size.y);
                     } else {
                         gfx.rect(pos.x, pos.y, size.x, size.y);
                     }
                 }
-                return coll;
+                return reporter;
             }
 
             export function line(
-                collidable: boolean,
+                collidesWith: Color[],
                 a: Vec2,
                 b: Vec2,
                 thickness: number,
-                idealGap: number
-            ): Collision {
+                idealGap: number,
+                reporter?: CollisionReporter
+            ): CollisionReporter {
+                if (!reporter) {
+                    reporter = new CollisionReporter();
+                }
                 thickness = Math.floor(Math.clamp(1, SCREEN_WIDTH, thickness));
                 idealGap = Math.abs(idealGap);
                 const d = vec2.sub(b, a);
@@ -213,16 +225,12 @@ namespace dot {
                     actualGap = (len - (numBoxes * thickness)) / (numBoxes - 1);
                 }
                 let step = vec2.scale(norm, thickness + actualGap);
-                let coll = collision.mkCollision();
                 const p = vec2.sub(a, new Vec2(thickness / 2, thickness / 2));
                 for (let i = 0; i <= numBoxes; i++) {
-                    const rcoll = rect(false, true, collidable, p.x, p.y, thickness, thickness);
-                    if (collidable) {
-                        collision.mergeCollisions(coll, rcoll);
-                    }
+                    rect(false, true, collidesWith, p.x, p.y, thickness, thickness, reporter);
                     p.add(step);
                 }
-                return coll;
+                return reporter;
             }
         }
     }

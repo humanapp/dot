@@ -6,9 +6,13 @@ namespace dot {
         get height() { return this.pos.height; }
         get right() { return this.left + this.width; }
         get bottom() { return this.top + this.height; }
+        center() { return vec2.add(this.pos, vec2.scale(this.size, 0.5)) }
         constructor(public pos: Vec2, public size: Vec2) { }
     }
     export namespace rect {
+        export function mk(pos: Vec2, size: Vec2): Rect {
+            return new Rect(pos, size);
+        }
         export function contains(r: Rect, v: Vec2): boolean {
             return util.isInRange(v.x, r.left, r.right) && util.isInRange(v.y, r.top, r.bottom);
         }

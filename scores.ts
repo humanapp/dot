@@ -47,14 +47,15 @@ namespace dot {
                 pool.reset();
             }
             export function update() {
+                const c = color.curr();
                 pool.update(s => {
-                    pushColor(s.color);
-                    draw.text(s.pos, s.str, false, TextAlignment.Center, scoreFont);
+                    color.set(s.color);
+                    draw.text(s.pos, s.str, [], TextAlignment.Center, scoreFont);
                     s.pos.y += s.vy;
                     s.vy *= 0.9;
-                    popColor();
                     return s.deathTick <= game.tick;
                 });
+                color.set(c);
             }
         }
     }

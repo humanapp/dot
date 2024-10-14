@@ -42,48 +42,48 @@ namespace dot {
         }
 
         function drawScoreboard() {
-            pushColor(gameOpts.scoreColor);
+            color.push(gameOpts.scoreColor);
             if (state !== GameState.Title) {
                 draw.text(
                     new Vec2(2, 2),
-                    "" + Math.floor(score), false, TextAlignment.Left,
+                    "" + Math.floor(score), [], TextAlignment.Left,
                     scoreboardFont);
             }
             draw.text(
                 new Vec2(SCREEN_WIDTH, 2),
-                "HI " + Math.floor(high), false, TextAlignment.Right,
+                "HI " + Math.floor(high), [], TextAlignment.Right,
                 scoreboardFont);
-            popColor();
+            color.pop();
         }
 
         function drawTitle() {
             if (gameOpts.gameTitle) {
-                pushColor(gameOpts.textColor);
+                color.push(gameOpts.textColor);
                 draw.text(
                     new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3),
-                    gameOpts.gameTitle, false, TextAlignment.Center,
+                    gameOpts.gameTitle, [], TextAlignment.Center,
                     titleFont);
-                popColor();
+                color.pop();
             }
             if (tick % 80 < 40) {
-                pushColor(gameOpts.textColor);
+                color.push(gameOpts.textColor);
                 const insertCoinText = gameOpts.insertCoinText || "PRESS ANY KEY";
                 draw.text(
                     new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 5 / 6),
-                    insertCoinText, false, TextAlignment.Center,
+                    insertCoinText, [], TextAlignment.Center,
                     image.font5);
-                popColor();
+                color.pop();
             }
         }
 
         function drawGameOver() {
-            pushColor(gameOpts.textColor);
+            color.push(gameOpts.textColor);
             const text = _gameOverText || "GAME OVER";
             draw.text(
                 new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - titleFont.charHeight / 2),
-                text, false, TextAlignment.Center,
+                text, [], TextAlignment.Center,
                 titleFont);
-            popColor();
+            color.pop();
         }
 
         function gotoPlaying() {
@@ -140,7 +140,8 @@ namespace dot {
 
                 ++tick;
 
-                collision.clear();
+                collision._internal.clear();
+                color._internal.reset();
             }
         }
     }

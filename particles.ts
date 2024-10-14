@@ -38,13 +38,13 @@ namespace dot {
                 }
                 count = 1;
             }
-            const color = getColor();
+            const c = color.curr();
             for (let i = 0; i < count; i++) {
                 const a = angle + random.get(angleWidth) - angleWidth / 2;
                 const p = pool.alloc(
                     [vec2.dup(pos),
                     new Vec2(speed * random.get(0.5, 1), 0).rotate(a),
-                        color,
+                        c,
                     Math.clamp(10, 60, random.get(10, 20) * Math.sqrt(Math.abs(speed))),
                     ]);
             }
@@ -55,7 +55,7 @@ namespace dot {
                 pool.reset();
             }
             export function update() {
-                const color = getColor();
+                const c = color.curr();
                 pool.update(p => {
                     p.ticks--;
                     if (p.ticks < 0) {
@@ -63,11 +63,11 @@ namespace dot {
                     }
                     p.pos.add(p.vel);
                     p.vel.scale(0.98);
-                    setColor(p.color);
+                    color.set(p.color);
                     gfx.rect(p.pos.x, p.pos.y, 1, 1);
                     return false;
                 });
-                setColor(color);
+                color.set(c);
             }
         }
     }
