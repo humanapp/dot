@@ -9,26 +9,31 @@ namespace dot {
             r: Rect,
             alignCenter = false,
             collidesWith: Color[] = null,
+            id?: string
         ): CollisionReporter {
             const x = r.pos.x;
             const y = r.pos.y;
             const w = r.size.x;
             const h = r.size.y;
             if (collidesWith == null) {
-                collidesWith = color.allExcept(color.curr());
+                collidesWith = color.all();
             }
-            return _internal.rect(alignCenter, false, collidesWith, x, y, w, h);
+            return _internal.rect(id, alignCenter, false, collidesWith, x, y, w, h);
         }
         export function box(
             r: Rect,
             alignCenter = false,
             collidesWith: Color[] = null,
+            id?: string
         ): CollisionReporter {
             const x = r.pos.x;
             const y = r.pos.y;
             const w = r.size.x;
             const h = r.size.y;
-            return _internal.rect(alignCenter, true, collidesWith, x, y, w, h);
+            if (collidesWith == null) {
+                collidesWith = color.all();
+            }
+            return _internal.rect(id, alignCenter, true, collidesWith, x, y, w, h);
         }
         export function line(
             a: Vec2,
@@ -36,19 +41,23 @@ namespace dot {
             thickness: number,
             gap = 0,
             collidesWith: Color[] = null,
+            id?: string
         ): CollisionReporter {
-            return _internal.line(collidesWith, a, b, thickness, gap);
+            if (collidesWith == null) {
+                collidesWith = color.all();
+            }
+            return _internal.line(id, collidesWith, a, b, thickness, gap);
         }
         // Copied from screen/text.ts imagePrint
+        // TODO: Support collision with text
         export function text(
             p: Vec2,
             s: string,
-            collidesWith: Color[] = null,
             alignment = TextAlignment.Left,
             font?: image.Font
-        ): CollisionReporter {
-            let x = p.x |= 0
-            let y = p.y |= 0
+        ) {
+            let x = Math.floor(p.x)
+            let y = Math.floor(p.y)
             if (!font)
                 font = image.getFontForText(s)
             let x0 = x
@@ -152,13 +161,11 @@ namespace dot {
                     }
                 }
             }
-
-            // TODO: Support collision with text
-            return new CollisionReporter();
         }
 
         namespace _internal {
             export function rect(
+                id: string,
                 alignCenter: boolean,
                 fill: boolean,
                 collidesWith: Color[],
@@ -169,7 +176,7 @@ namespace dot {
                 reporter?: CollisionReporter
             ): CollisionReporter {
                 if (!reporter) {
-                    reporter = new CollisionReporter();
+                    reporter = collision.newReporter();
                 }
                 const pos = alignCenter
                     ? new Vec2(x - w / 2, y - h / 2)
@@ -188,6 +195,7 @@ namespace dot {
                     size.y *= -1;
                 }
                 reporter._add(
+                    id,
                     new Rect(pos, size),
                     c,
                     collidesWith
@@ -203,6 +211,7 @@ namespace dot {
             }
 
             export function line(
+                id: string,
                 collidesWith: Color[],
                 a: Vec2,
                 b: Vec2,
@@ -211,7 +220,7 @@ namespace dot {
                 reporter?: CollisionReporter
             ): CollisionReporter {
                 if (!reporter) {
-                    reporter = new CollisionReporter();
+                    reporter = collision.newReporter();
                 }
                 thickness = Math.floor(Math.clamp(1, SCREEN_WIDTH, thickness));
                 idealGap = Math.abs(idealGap);
@@ -227,7 +236,7 @@ namespace dot {
                 let step = vec2.scale(norm, thickness + actualGap);
                 const p = vec2.sub(a, new Vec2(thickness / 2, thickness / 2));
                 for (let i = 0; i <= numBoxes; i++) {
-                    rect(false, true, collidesWith, p.x, p.y, thickness, thickness, reporter);
+                    rect(id, false, true, collidesWith, p.x, p.y, thickness, thickness, reporter);
                     p.add(step);
                 }
                 return reporter;

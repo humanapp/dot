@@ -10,7 +10,7 @@ namespace dot {
         Teal = 6,
         Green = 7,
         Blue = 8,
-        LightBlue = 9,
+        Cyan = 9,
         Purple = 0xa,
         LightPurple = 0xb,
         DarkPurple = 0xc,
@@ -19,7 +19,24 @@ namespace dot {
         Black = 0xf
     }
 
-    export const ALL_COLORS: Color[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0xa, 0xb, 0xc, 0xd, 0xe, 0xf];
+    const ALL_COLORS: Color[] = [
+        Color.White,
+        Color.Red,
+        Color.Pink,
+        Color.Orange,
+        Color.Yellow,
+        Color.Teal,
+        Color.Green,
+        Color.Blue,
+        Color.Cyan,
+        Color.Purple,
+        Color.LightPurple,
+        Color.DarkPurple,
+        Color.Tan,
+        Color.Brown,
+        Color.Black
+    ];
+
 
     export namespace color {
         let _colorStack: Color[] = [Color.Red];
@@ -38,8 +55,11 @@ namespace dot {
             }
             return curr();
         }
-        export function allExcept(c: Color): Color[] {
-            return [1, 2, 3, 4, 5, 6, 7, 8, 9, 0xa, 0xb, 0xc, 0xd, 0xe, 0xf].filter(n => n !== c);
+        export function allExcept(ex: Color[]): Color[] {
+            return ALL_COLORS.slice().filter(c => ex.indexOf(c) === -1);
+        }
+        export function all(): Color[] {
+            return ALL_COLORS.slice();
         }
         export namespace _internal {
             export function reset() {

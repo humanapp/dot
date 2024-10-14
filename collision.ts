@@ -1,28 +1,29 @@
 namespace dot {
     export class Collidable {
         constructor(
+            public id: string,
             public rect: Rect,
             public color: Color,
             public _mask: Color[]) { }
     }
     export class Collision {
         constructor(
-            public src: Rect,
-            public dst: Rect,
-            public color: Color) { }
+            public src: Collidable,
+            public dst: Collidable) { }
     }
     export class CollisionReporter {
         _id: number;
         _gen: number;
         _srcs: Collidable[];
         _collisions: Collision[];
-        constructor() {
-            this._srcs= [];
+        constructor(id: number, gen: number) {
+            this._id = id;
+            this._gen = gen;
+            this._srcs = [];
             this._collisions = [];
-            collision._internal.register(this);
         }
-        _add(rect: Rect, color: Color, mask: Color[]) {
-            this._srcs.push(new Collidable(rect, color, mask));
+        _add(id: string, rect: Rect, color: Color, mask: Color[]) {
+            this._srcs.push(new Collidable(id, rect, color, mask));
             collision._internal.enqueue(this);
         }
         collisions(): Collision[] {
@@ -35,19 +36,20 @@ namespace dot {
         const reporters: CollisionReporter[] = [];
         const dirty: CollisionReporter[] = [];
 
+        export function newReporter(): CollisionReporter {
+            const reporter = new CollisionReporter(++_internal.nextId, _internal.gen);
+            reporters.push(reporter);
+            _internal.enqueue(reporter);
+            return reporter;
+        }
+
         export namespace _internal {
-            let nextId = 0;
+            export let nextId = 0;
             export let gen = 0;
             export function clear() {
                 gen++;
                 reporters.splice(0, reporters.length);
                 dirty.splice(0, dirty.length);
-            }
-            export function register(reporter: CollisionReporter) {
-                reporter._id = nextId++;
-                reporter._gen = gen;
-                reporters.push(reporter);
-                enqueue(reporter);
             }
             export function enqueue(reporter: CollisionReporter) {
                 if (reporter._gen !== gen) throw "Don't cache CollisionReporters across updates";
@@ -58,27 +60,25 @@ namespace dot {
             function calcCollisions(r0: CollisionReporter, r1: CollisionReporter) {
                 const srcs = r0._srcs;
                 const dsts = r1._srcs;
-
                 for (const src of srcs) {
                     for (const dst of dsts) {
+                        if (!src._mask && !dst._mask) continue;
                         if (rect.overlapping(src.rect, dst.rect)) {
-                            r0._collisions.push(new Collision(
-                                src.rect, dst.rect, dst.color))
-                            r1._collisions.push(new Collision(
-                                dst.rect, src.rect, dst.color))
+                            if (src._mask && src._mask.find(c => c === dst.color)) {
+                                r0._collisions.push(new Collision(src, dst));
+                            }
+                            if (dst._mask && dst._mask.find(c => c === src.color)) {
+                                r1._collisions.push(new Collision(dst, src));
+                            }
                         }
                     }
                 }
             }
             export function calc() {
                 if (dirty.length) {
-                    // if any are dirty, recalc all collisions -- can optimize later
-
-                    // Clear all collisions
                     reporters.forEach(r => {
                         r._collisions.splice(0, r._collisions.length);
                     });
-
                     const n = reporters.length;
                     for (let i = 0; i < n; ++i) {
                         const r0 = reporters[i];
@@ -87,7 +87,6 @@ namespace dot {
                             calcCollisions(r0, r1);
                         }
                     }
-
                     dirty.splice(0, dirty.length);
                 }
             }

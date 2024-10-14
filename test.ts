@@ -2,35 +2,19 @@ game.stats = true;
 
 namespace test {
     const rand = new dot.Random();
-    const opts = new dot.GameOptions();
-    opts.update = gameUpdate;
-    opts.gameTitle = "DOT TEST";
-    opts.insertCoinText = "INSERT COIN";
-    dot.game.start(opts);
 
     class Box {
         r: dot.Rect;
         c: dot.Color;
         v: dot.Vec2;
+        id: string;
     }
 
+    let collisions: any = {};
+
     const boxes: Box[] = [];
-    const boxColors: dot.Color[] = [
-        dot.Color.Red,
-        dot.Color.Pink,
-        dot.Color.Orange,
-        dot.Color.Yellow,
-        dot.Color.Teal,
-        dot.Color.Green,
-        dot.Color.Blue,
-        dot.Color.LightBlue,
-        dot.Color.Purple,
-        dot.Color.LightPurple,
-        dot.Color.DarkPurple,
-        dot.Color.Brown,
-        dot.Color.Black
-    ];
-    [0, 0, 0, 0, 0].forEach(() => {
+    const boxColors: dot.Color[] = dot.color.allExcept([dot.Color.White, dot.Color.Tan]);
+    for (let i = 0; i < 5; ++i) {
         const sz = 10;
         let b = new Box();
         b.r = new dot.Rect(
@@ -42,8 +26,9 @@ namespace test {
         b.v = new dot.Vec2(
             rand.get(-3, 3),
             rand.get(-3, 3));
+        b.id = "box" + i;
         boxes.push(b);
-    });
+    }
 
     function gameUpdate() {
         scene.setBackgroundColor(dot.Color.Tan);
@@ -53,7 +38,8 @@ namespace test {
         const p0 = new dot.Vec2(dot.SCREEN_WIDTH / 2, dot.SCREEN_HEIGHT / 2);
         const p1 = dot.vec2.add(p0, dot.vec2.mk(s, c).scale(dot.SCREEN_HEIGHT * 0.6));
         dot.color.set(dot.Color.White);
-        const det = dot.draw.line(p0, p1, 3, 0, boxColors);
+        //const det = dot.draw.line(p0, p1, 3, 0, boxColors);
+        const det = dot.draw.line(p0, p1, 3, 0);
 
         boxes.forEach(b => {
             b.r.pos.x += b.v.x;
@@ -71,16 +57,27 @@ namespace test {
 
             const colls = det.collisions();
             for (const coll of colls) {
-                const pos = coll.dst.center();
+                if (collisions[coll.dst.id]) continue;
+                const pos = coll.dst.rect.center();
+                dot.color.set(coll.dst.color);
                 dot.scores.add(
                     10,
-                    pos,
-                    dot.Color.LightPurple);
-                dot.color.set(coll.color);
+                    pos);
                 dot.particles.add(
                     pos, 10, 2, Math.PI / 2, Math.PI / 6
                 );
             }
+            collisions = {};
+            for (const coll of colls) {
+                collisions[coll.dst.id] = true;
+            }
         }
     }
+
+    const opts = new dot.GameOptions();
+    opts.update = gameUpdate;
+    opts.gameTitle = "DOT TEST";
+    opts.insertCoinText = "INSERT COIN";
+
+    dot.game.start(opts);
 }

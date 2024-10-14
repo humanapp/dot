@@ -38,15 +38,13 @@ namespace dot {
                 }
                 count = 1;
             }
-            const c = color.curr();
             for (let i = 0; i < count; i++) {
                 const a = angle + random.get(angleWidth) - angleWidth / 2;
-                const p = pool.alloc(
-                    [vec2.dup(pos),
+                pool.alloc([
+                    vec2.dup(pos),
                     new Vec2(speed * random.get(0.5, 1), 0).rotate(a),
-                        c,
-                    Math.clamp(10, 60, random.get(10, 20) * Math.sqrt(Math.abs(speed))),
-                    ]);
+                    color.curr(),
+                    Math.clamp(10, 60, random.get(10, 20) * Math.sqrt(Math.abs(speed)))]);
             }
         }
 

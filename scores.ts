@@ -27,20 +27,21 @@ namespace dot {
 
     const pool = new Pool<Score>(
         () => Score.create(),
-        (s, a) =>Score.init(s, a));
+        (s, a) => Score.init(s, a));
 
     export namespace scores {
-        export function add(value: number, pos: Vec2, color: Color) {
-            game.score += value;
+        export function add(value: number, pos: Vec2) {
+            if (game.state === GameState.Playing) {
+                game.score += value;
+            }
             const prefix = value > 0 ? "+" : "";
             const str = `${prefix}${Math.floor(value)}`;
-            pool.alloc(
-                [str,
+            pool.alloc([
+                str,
                 new Vec2(pos.x, pos.y - scoreFont.charHeight / 2),
                 -2,
                 game.tick + 30,
-                color]
-            );
+                color.curr()]);
         }
         export namespace _internal {
             export function init() {
@@ -50,7 +51,7 @@ namespace dot {
                 const c = color.curr();
                 pool.update(s => {
                     color.set(s.color);
-                    draw.text(s.pos, s.str, [], TextAlignment.Center, scoreFont);
+                    draw.text(s.pos, s.str, TextAlignment.Center, scoreFont);
                     s.pos.y += s.vy;
                     s.vy *= 0.9;
                     return s.deathTick <= game.tick;

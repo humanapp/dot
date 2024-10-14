@@ -46,12 +46,12 @@ namespace dot {
             if (state !== GameState.Title) {
                 draw.text(
                     new Vec2(2, 2),
-                    "" + Math.floor(score), [], TextAlignment.Left,
+                    "" + Math.floor(score), TextAlignment.Left,
                     scoreboardFont);
             }
             draw.text(
                 new Vec2(SCREEN_WIDTH, 2),
-                "HI " + Math.floor(high), [], TextAlignment.Right,
+                "HI " + Math.floor(high), TextAlignment.Right,
                 scoreboardFont);
             color.pop();
         }
@@ -61,7 +61,7 @@ namespace dot {
                 color.push(gameOpts.textColor);
                 draw.text(
                     new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3),
-                    gameOpts.gameTitle, [], TextAlignment.Center,
+                    gameOpts.gameTitle, TextAlignment.Center,
                     titleFont);
                 color.pop();
             }
@@ -70,7 +70,7 @@ namespace dot {
                 const insertCoinText = gameOpts.insertCoinText || "PRESS ANY KEY";
                 draw.text(
                     new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 5 / 6),
-                    insertCoinText, [], TextAlignment.Center,
+                    insertCoinText, TextAlignment.Center,
                     image.font5);
                 color.pop();
             }
@@ -81,9 +81,17 @@ namespace dot {
             const text = _gameOverText || "GAME OVER";
             draw.text(
                 new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - titleFont.charHeight / 2),
-                text, [], TextAlignment.Center,
+                text, TextAlignment.Center,
                 titleFont);
             color.pop();
+            if (tick % 80 < 40) {
+                color.push(gameOpts.textColor);
+                draw.text(
+                    new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 5 / 6),
+                    "PRESS ANY KEY", TextAlignment.Center,
+                    image.font5);
+                color.pop();
+            }
         }
 
         function gotoPlaying() {

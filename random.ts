@@ -36,6 +36,7 @@ namespace dot {
         }
 
         select<T>(values: T[]): T {
+            if (!values.length) throw "Invalid range";
             return values[this.getInt(values.length)];
         }
 
