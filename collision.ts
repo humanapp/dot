@@ -33,6 +33,13 @@ namespace dot {
             collision._internal.calc();
             return this._collisions;
         }
+        collidingWith(color: Color): boolean {
+            const colls = this.collisions();
+            for (const coll of colls) {
+                if (coll.dst.color === color) return true;
+            }
+            return false;
+        }
     }
     export namespace collision {
         const reporters: CollisionReporter[] = [];
