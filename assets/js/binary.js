@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.56/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.11","target":"arcade","targetVersion":"1.12.56","repo":"humanapp/dot"}
-// total=1538843 new=22.32% cached=72.40% other=5.28%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.56/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.12","target":"arcade","targetVersion":"1.12.56","repo":"humanapp/dot"}
+// total=1539026 new=22.33% cached=72.39% other=5.28%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -487,7 +487,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P26193(s) {
+function _main___P30039(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -888,11 +888,11 @@ switch (step) {
   case 38:
     r0 = s.retval;
     r0 = pxsim_Array__mk();
-    globals.reporters___7427 = (r0);
+    globals.reporters___28714 = (r0);
     r0 = pxsim_Array__mk();
-    globals.dirty___7429 = (r0);
-    globals.nextId___4370 = (0);
-    globals.gen___4371 = (0);
+    globals.dirty___28716 = (r0);
+    globals.nextId___28724 = (0);
+    globals.gen___28682 = (0);
     r0 = pxsim_ImageMethods.width(globals.screen___2033);
     globals.SCREEN_WIDTH___4377 = (r0);
     r0 = pxsim_ImageMethods.height(globals.screen___2033);
@@ -1178,13 +1178,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P26193.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
-_main___P26193.continuations = [ 59 ]
+_main___P30039.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
+_main___P30039.continuations = [ 59 ]
 
-function _main___P26193_mk(s) {
+function _main___P30039_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P26193, depth: s.depth + 1,
+        parent: s, fn: _main___P30039, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2863,7 +2863,7 @@ switch (step) {
   case 20:
     r0 = (globals.tick___4440 + 1);
     globals.tick___4440 = (r0);
-    s.tmp_0 = dot_collision__internal_clear__P4372_mk(s);
+    s.tmp_0 = dot_collision__internal_clear__P28735_mk(s);
     s.callLocIdx = 215; s.pc = 32; return s.tmp_0;
   case 32:
     r0 = s.retval;
@@ -2929,7 +2929,7 @@ function dot_color__internal_reset__P4408_mk(s) {
 
 
 
-function dot_collision__internal_clear__P4372(s) {
+function dot_collision__internal_clear__P28735(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2939,20 +2939,20 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = (globals.gen___4371 + 1);
-    globals.gen___4371 = (r0);
+    r0 = (globals.gen___28682 + 1);
+    globals.gen___28682 = (r0);
     s.tmp_0 = helpers_arraySplice__P100_mk(s);
-    s.tmp_0.arg0 = globals.reporters___7427;
+    s.tmp_0.arg0 = globals.reporters___28714;
     s.tmp_0.arg1 = 0;
-    r0 = pxsim_Array__length(globals.reporters___7427);
+    r0 = pxsim_Array__length(globals.reporters___28714);
     s.tmp_0.arg2 = r0;
     s.callLocIdx = 78; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = helpers_arraySplice__P100_mk(s);
-    s.tmp_0.arg0 = globals.dirty___7429;
+    s.tmp_0.arg0 = globals.dirty___28716;
     s.tmp_0.arg1 = 0;
-    r0 = pxsim_Array__length(globals.dirty___7429);
+    r0 = pxsim_Array__length(globals.dirty___28716);
     s.tmp_0.arg2 = r0;
     s.callLocIdx = 79; s.pc = 2; return s.tmp_0;
   case 2:
@@ -2961,12 +2961,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_collision__internal_clear__P4372.info = {"start":1907,"length":164,"line":57,"column":12,"endLine":61,"endColumn":13,"fileName":"collision.ts","functionName":"clear","argumentNames":[]}
+dot_collision__internal_clear__P28735.info = {"start":2142,"length":164,"line":64,"column":12,"endLine":68,"endColumn":13,"fileName":"collision.ts","functionName":"clear","argumentNames":[]}
 
-function dot_collision__internal_clear__P4372_mk(s) {
+function dot_collision__internal_clear__P28735_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_collision__internal_clear__P4372, depth: s.depth + 1,
+        parent: s, fn: dot_collision__internal_clear__P28735, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -8061,12 +8061,12 @@ switch (step) {
     s.det___10265 = undefined;
     s.colls___10397 = undefined;
     s.coll___10402 = undefined;
-    s.unnamed416___U5 = undefined;
-    s.unnamed417___U6 = undefined;
+    s.unnamed660___U5 = undefined;
+    s.unnamed661___U6 = undefined;
     s.pos___10413 = undefined;
     s.coll___10436 = undefined;
-    s.unnamed418___U9 = undefined;
-    s.unnamed419___U10 = undefined;
+    s.unnamed662___U9 = undefined;
+    s.unnamed663___U10 = undefined;
     r0 = (globals.tick___4440 === 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
@@ -8217,22 +8217,22 @@ switch (step) {
   case 6:
   case 7:
   case 8:
-    s.tmp_0 = dot_CollisionReporter_collisions__P4365_mk(s);
+    s.tmp_0 = dot_CollisionReporter_collisions__P28633_mk(s);
     s.tmp_0.arg0 = s.det___10265;
     s.callLocIdx = 350; s.pc = 38; return s.tmp_0;
   case 38:
     r0 = s.retval;
     s.colls___10397 = (r0);
     s.coll___10402 = (undefined);
-    s.unnamed416___U5 = (s.colls___10397);
-    s.unnamed417___U6 = (0);
+    s.unnamed660___U5 = (s.colls___10397);
+    s.unnamed661___U6 = (0);
   case 9:
-    s.tmp_0 = r0 = s.unnamed417___U6;
-    r0 = pxsim_Array__length(s.unnamed416___U5);
+    s.tmp_0 = r0 = s.unnamed661___U6;
+    r0 = pxsim_Array__length(s.unnamed660___U5);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 15; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed416___U5, s.unnamed417___U6);
+    r0 = pxsim_Array__getAt(s.unnamed660___U5, s.unnamed661___U6);
     s.coll___10402 = (r0);
     r0 = s.coll___10402.fields["dst"];
     r0 = r0.fields["id"];
@@ -8291,26 +8291,26 @@ switch (step) {
   case 42:
     r0 = s.retval;
   case 14:
-    r0 = (s.unnamed417___U6 + 1);
-    s.unnamed417___U6 = (r0);
+    r0 = (s.unnamed661___U6 + 1);
+    s.unnamed661___U6 = (r0);
     { step = 9; continue; }
   case 15:
-    s.unnamed416___U5 = (undefined);
+    s.unnamed660___U5 = (undefined);
     s.tmp_0 = dot_Set_clear__P4494_mk(s);
     s.tmp_0.arg0 = globals.collisions___10150;
     s.callLocIdx = 356; s.pc = 43; return s.tmp_0;
   case 43:
     r0 = s.retval;
     s.coll___10436 = (undefined);
-    s.unnamed418___U9 = (s.colls___10397);
-    s.unnamed419___U10 = (0);
+    s.unnamed662___U9 = (s.colls___10397);
+    s.unnamed663___U10 = (0);
   case 16:
-    s.tmp_0 = r0 = s.unnamed419___U10;
-    r0 = pxsim_Array__length(s.unnamed418___U9);
+    s.tmp_0 = r0 = s.unnamed663___U10;
+    r0 = pxsim_Array__length(s.unnamed662___U9);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 19; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed418___U9, s.unnamed419___U10);
+    r0 = pxsim_Array__getAt(s.unnamed662___U9, s.unnamed663___U10);
     s.coll___10436 = (r0);
     r0 = s.coll___10436.fields["dst"];
     r0 = r0.fields["id"];
@@ -8328,11 +8328,11 @@ switch (step) {
     r0 = s.retval;
   case 17:
   case 18:
-    r0 = (s.unnamed419___U10 + 1);
-    s.unnamed419___U10 = (r0);
+    r0 = (s.unnamed663___U10 + 1);
+    s.unnamed663___U10 = (r0);
     { step = 16; continue; }
   case 19:
-    s.unnamed418___U9 = (undefined);
+    s.unnamed662___U9 = (undefined);
   case 20:
   case 21:
     r0 = undefined;
@@ -8361,12 +8361,12 @@ function test_gameUpdate__P10144_mk(s) {
   det___10265: undefined,
   colls___10397: undefined,
   coll___10402: undefined,
-  unnamed416___U5: undefined,
-  unnamed417___U6: undefined,
+  unnamed660___U5: undefined,
+  unnamed661___U6: undefined,
   pos___10413: undefined,
   coll___10436: undefined,
-  unnamed418___U9: undefined,
-  unnamed419___U10: undefined,
+  unnamed662___U9: undefined,
+  unnamed663___U10: undefined,
 } }
 
 
@@ -9417,7 +9417,7 @@ function dot_Set_has__P4491_mk(s) {
 
 
 
-function dot_CollisionReporter_collisions__P4365(s) {
+function dot_CollisionReporter_collisions__P28633(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9432,17 +9432,17 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_CollisionReporter__C4358_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_CollisionReporter__C28631_VT)) failedCast(r0);
     r0 = s.arg0.fields["_gen"];
     s.tmp_1 = r0;
-    r0 = (s.tmp_1 !== globals.gen___4371);
+    r0 = (s.tmp_1 !== globals.gen___28682);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
     r0 = pxsim_pxtcore.throwValue("Don't cache CollisionReporters across updates");
   case 1:
   case 2:
-    s.tmp_2 = dot_collision__internal_calc__P4374_mk(s);
+    s.tmp_2 = dot_collision__internal_calc__P28685_mk(s);
     s.callLocIdx = 75; s.pc = 3; return s.tmp_2;
   case 3:
     r0 = s.retval;
@@ -9450,12 +9450,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_CollisionReporter_collisions__P4365.info = {"start":922,"length":224,"line":30,"column":8,"endLine":34,"endColumn":9,"fileName":"collision.ts","functionName":"collisions","argumentNames":["this"]}
+dot_CollisionReporter_collisions__P28633.info = {"start":922,"length":224,"line":30,"column":8,"endLine":34,"endColumn":9,"fileName":"collision.ts","functionName":"collisions","argumentNames":["this"]}
 
-function dot_CollisionReporter_collisions__P4365_mk(s) {
+function dot_CollisionReporter_collisions__P28633_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_CollisionReporter_collisions__P4365, depth: s.depth + 1,
+        parent: s, fn: dot_CollisionReporter_collisions__P28633, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -9467,7 +9467,7 @@ function dot_CollisionReporter_collisions__P4365_mk(s) {
 
 
 
-function dot_collision__internal_calc__P4374(s) {
+function dot_collision__internal_calc__P28685(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9477,58 +9477,58 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.n___7555 = undefined;
-    s.i___7558 = undefined;
-    s.r0___7563 = undefined;
-    s.j___7567 = undefined;
-    s.r1___7575 = undefined;
-    r0 = pxsim_Array__length(globals.dirty___7429);
+    s.n___28845 = undefined;
+    s.i___28848 = undefined;
+    s.r0___28853 = undefined;
+    s.j___28857 = undefined;
+    s.r1___28865 = undefined;
+    r0 = pxsim_Array__length(globals.dirty___28716);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 5; continue; }
     s.tmp_1 = helpers_arrayForEach__P109_mk(s);
-    s.tmp_1.arg0 = globals.reporters___7427;
-    s.tmp_1.arg1 = dot_collision__internal_calc_inline__P7547;
+    s.tmp_1.arg0 = globals.reporters___28714;
+    s.tmp_1.arg1 = dot_collision__internal_calc_inline__P28837;
     s.callLocIdx = 87; s.pc = 7; return s.tmp_1;
   case 7:
     r0 = s.retval;
-    r0 = pxsim_Array__length(globals.reporters___7427);
-    s.n___7555 = (r0);
-    s.i___7558 = (0);
+    r0 = pxsim_Array__length(globals.reporters___28714);
+    s.n___28845 = (r0);
+    s.i___28848 = (0);
   case 1:
-    r0 = (s.i___7558 < s.n___7555);
+    r0 = (s.i___28848 < s.n___28845);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(globals.reporters___7427, s.i___7558);
-    s.r0___7563 = (r0);
-    r0 = (s.i___7558 + 1);
-    s.j___7567 = (r0);
+    r0 = pxsim_Array__getAt(globals.reporters___28714, s.i___28848);
+    s.r0___28853 = (r0);
+    r0 = (s.i___28848 + 1);
+    s.j___28857 = (r0);
   case 2:
-    r0 = (s.j___7567 < s.n___7555);
+    r0 = (s.j___28857 < s.n___28845);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    r0 = pxsim_Array__getAt(globals.reporters___7427, s.j___7567);
-    s.r1___7575 = (r0);
-    s.tmp_0 = dot_collision__internal_calcCollisions__P7476_mk(s);
-    s.tmp_0.arg0 = s.r0___7563;
-    s.tmp_0.arg1 = s.r1___7575;
+    r0 = pxsim_Array__getAt(globals.reporters___28714, s.j___28857);
+    s.r1___28865 = (r0);
+    s.tmp_0 = dot_collision__internal_calcCollisions__P28766_mk(s);
+    s.tmp_0.arg0 = s.r0___28853;
+    s.tmp_0.arg1 = s.r1___28865;
     s.callLocIdx = 88; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
-    r0 = (s.j___7567 + 1);
-    s.j___7567 = (r0);
+    r0 = (s.j___28857 + 1);
+    s.j___28857 = (r0);
     { step = 2; continue; }
   case 3:
-    r0 = (s.i___7558 + 1);
-    s.i___7558 = (r0);
+    r0 = (s.i___28848 + 1);
+    s.i___28848 = (r0);
     { step = 1; continue; }
   case 4:
     s.tmp_0 = helpers_arraySplice__P100_mk(s);
-    s.tmp_0.arg0 = globals.dirty___7429;
+    s.tmp_0.arg0 = globals.dirty___28716;
     s.tmp_0.arg1 = 0;
-    r0 = pxsim_Array__length(globals.dirty___7429);
+    r0 = pxsim_Array__length(globals.dirty___28716);
     s.tmp_0.arg2 = r0;
     s.callLocIdx = 89; s.pc = 9; return s.tmp_0;
   case 9:
@@ -9539,27 +9539,27 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_collision__internal_calc__P4374.info = {"start":3235,"length":641,"line":85,"column":12,"endLine":100,"endColumn":13,"fileName":"collision.ts","functionName":"calc","argumentNames":[]}
+dot_collision__internal_calc__P28685.info = {"start":3470,"length":641,"line":92,"column":12,"endLine":107,"endColumn":13,"fileName":"collision.ts","functionName":"calc","argumentNames":[]}
 
-function dot_collision__internal_calc__P4374_mk(s) {
+function dot_collision__internal_calc__P28685_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_collision__internal_calc__P4374, depth: s.depth + 1,
+        parent: s, fn: dot_collision__internal_calc__P28685, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  n___7555: undefined,
-  i___7558: undefined,
-  r0___7563: undefined,
-  j___7567: undefined,
-  r1___7575: undefined,
+  n___28845: undefined,
+  i___28848: undefined,
+  r0___28853: undefined,
+  j___28857: undefined,
+  r1___28865: undefined,
 } }
 
 
 
 
 
-function dot_collision__internal_calc_inline__P7547(s) {
+function dot_collision__internal_calc_inline__P28837(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9588,12 +9588,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_collision__internal_calc_inline__P7547.info = {"start":3334,"length":99,"line":87,"column":38,"endLine":89,"endColumn":21,"fileName":"collision.ts","functionName":"inline","argumentNames":["r"]}
+dot_collision__internal_calc_inline__P28837.info = {"start":3569,"length":99,"line":94,"column":38,"endLine":96,"endColumn":21,"fileName":"collision.ts","functionName":"inline","argumentNames":["r"]}
 
-function dot_collision__internal_calc_inline__P7547_mk(s) {
+function dot_collision__internal_calc_inline__P28837_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_collision__internal_calc_inline__P7547, depth: s.depth + 1,
+        parent: s, fn: dot_collision__internal_calc_inline__P28837, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -9604,7 +9604,7 @@ function dot_collision__internal_calc_inline__P7547_mk(s) {
 
 
 
-function dot_collision__internal_calcCollisions__P7476(s) {
+function dot_collision__internal_calcCollisions__P28766(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9614,46 +9614,46 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.srcs___7479 = undefined;
-    s.dsts___7482 = undefined;
-    s.src___7486 = undefined;
-    s.unnamed412___U3 = undefined;
-    s.unnamed413___U4 = undefined;
-    s.dst___7489 = undefined;
-    s.unnamed414___U6 = undefined;
-    s.unnamed415___U7 = undefined;
+    s.srcs___28769 = undefined;
+    s.dsts___28772 = undefined;
+    s.src___28776 = undefined;
+    s.unnamed656___U3 = undefined;
+    s.unnamed657___U4 = undefined;
+    s.dst___28779 = undefined;
+    s.unnamed658___U6 = undefined;
+    s.unnamed659___U7 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0.fields["_srcs"];
-    s.srcs___7479 = (r0);
+    s.srcs___28769 = (r0);
     r0 = s.arg1.fields["_srcs"];
-    s.dsts___7482 = (r0);
-    s.src___7486 = (undefined);
-    s.unnamed412___U3 = (s.srcs___7479);
-    s.unnamed413___U4 = (0);
+    s.dsts___28772 = (r0);
+    s.src___28776 = (undefined);
+    s.unnamed656___U3 = (s.srcs___28769);
+    s.unnamed657___U4 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed413___U4;
-    r0 = pxsim_Array__length(s.unnamed412___U3);
+    s.tmp_0 = r0 = s.unnamed657___U4;
+    r0 = pxsim_Array__length(s.unnamed656___U3);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 19; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed412___U3, s.unnamed413___U4);
-    s.src___7486 = (r0);
-    s.dst___7489 = (undefined);
-    s.unnamed414___U6 = (s.dsts___7482);
-    s.unnamed415___U7 = (0);
+    r0 = pxsim_Array__getAt(s.unnamed656___U3, s.unnamed657___U4);
+    s.src___28776 = (r0);
+    s.dst___28779 = (undefined);
+    s.unnamed658___U6 = (s.dsts___28772);
+    s.unnamed659___U7 = (0);
   case 2:
-    s.tmp_0 = r0 = s.unnamed415___U7;
-    r0 = pxsim_Array__length(s.unnamed414___U6);
+    s.tmp_0 = r0 = s.unnamed659___U7;
+    r0 = pxsim_Array__length(s.unnamed658___U6);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 18; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed414___U6, s.unnamed415___U7);
-    s.dst___7489 = (r0);
-    r0 = s.src___7486.fields["_mask"];
+    r0 = pxsim_Array__getAt(s.unnamed658___U6, s.unnamed659___U7);
+    s.dst___28779 = (r0);
+    r0 = s.src___28776.fields["_mask"];
     s.tmp_4 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_4);
     s.tmp_3 = r0;
@@ -9664,7 +9664,7 @@ switch (step) {
     r0 = s.tmp_2;
     { step = 4; continue; }
   case 3:
-    r0 = s.dst___7489.fields["_mask"];
+    r0 = s.dst___28779.fields["_mask"];
     s.tmp_6 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_6);
     s.tmp_5 = r0;
@@ -9678,9 +9678,9 @@ switch (step) {
   case 5:
   case 6:
     s.tmp_9 = dot_rect_overlapping__P4352_mk(s);
-    r0 = s.src___7486.fields["rect"];
+    r0 = s.src___28776.fields["rect"];
     s.tmp_9.arg0 = r0;
-    r0 = s.dst___7489.fields["rect"];
+    r0 = s.dst___28779.fields["rect"];
     s.tmp_9.arg1 = r0;
     s.callLocIdx = 81; s.pc = 20; return s.tmp_9;
   case 20:
@@ -9688,18 +9688,18 @@ switch (step) {
     s.tmp_8 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_8);
     if (!r0) { step = 15; continue; }
-    r0 = s.src___7486.fields["_mask"];
+    r0 = s.src___28776.fields["_mask"];
     s.tmp_10 = r0;
     r0 = pxsim_numops_toBool(s.tmp_10);
     if (r0) { step = 7; continue; }
     r0 = s.tmp_10;
     { step = 8; continue; }
   case 7:
-    r0 = pxsim_pxtcore_mkAction(1, dot_collision__internal_calcCollisions_inline__P7509);
+    r0 = pxsim_pxtcore_mkAction(1, dot_collision__internal_calcCollisions_inline__P28799);
     s.tmp_11 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_11, 0, s.dst___7489);
+    r0 = pxsim_pxtrt_stclo(s.tmp_11, 0, s.dst___28779);
     s.tmp_12 = helpers_arrayFind__P111_mk(s);
-    r0 = s.src___7486.fields["_mask"];
+    r0 = s.src___28776.fields["_mask"];
     s.tmp_12.arg0 = r0;
     s.tmp_12.arg1 = s.tmp_11;
     s.callLocIdx = 82; s.pc = 21; return s.tmp_12;
@@ -9710,12 +9710,12 @@ switch (step) {
     s.tmp_13 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_13);
     if (!r0) { step = 9; continue; }
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Collision__C4356_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Collision__C28626_VT);
     s.tmp_14 = r0;
-    s.tmp_15 = dot_Collision_constructor__P4357_mk(s);
+    s.tmp_15 = dot_Collision_constructor__P28627_mk(s);
     s.tmp_15.arg0 = s.tmp_14;
-    s.tmp_15.arg1 = s.src___7486;
-    s.tmp_15.arg2 = s.dst___7489;
+    s.tmp_15.arg1 = s.src___28776;
+    s.tmp_15.arg2 = s.dst___28779;
     s.callLocIdx = 83; s.pc = 22; return s.tmp_15;
   case 22:
     r0 = s.retval;
@@ -9724,18 +9724,18 @@ switch (step) {
     r0 = pxsim_Array__push(s.tmp_16, s.tmp_14);
   case 9:
   case 10:
-    r0 = s.dst___7489.fields["_mask"];
+    r0 = s.dst___28779.fields["_mask"];
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBool(s.tmp_0);
     if (r0) { step = 11; continue; }
     r0 = s.tmp_0;
     { step = 12; continue; }
   case 11:
-    r0 = pxsim_pxtcore_mkAction(1, dot_collision__internal_calcCollisions_inline__P7529);
+    r0 = pxsim_pxtcore_mkAction(1, dot_collision__internal_calcCollisions_inline__P28819);
     s.tmp_1 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_1, 0, s.src___7486);
+    r0 = pxsim_pxtrt_stclo(s.tmp_1, 0, s.src___28776);
     s.tmp_2 = helpers_arrayFind__P111_mk(s);
-    r0 = s.dst___7489.fields["_mask"];
+    r0 = s.dst___28779.fields["_mask"];
     s.tmp_2.arg0 = r0;
     s.tmp_2.arg1 = s.tmp_1;
     s.callLocIdx = 84; s.pc = 23; return s.tmp_2;
@@ -9746,12 +9746,12 @@ switch (step) {
     s.tmp_3 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_3);
     if (!r0) { step = 13; continue; }
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Collision__C4356_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Collision__C28626_VT);
     s.tmp_4 = r0;
-    s.tmp_5 = dot_Collision_constructor__P4357_mk(s);
+    s.tmp_5 = dot_Collision_constructor__P28627_mk(s);
     s.tmp_5.arg0 = s.tmp_4;
-    s.tmp_5.arg1 = s.dst___7489;
-    s.tmp_5.arg2 = s.src___7486;
+    s.tmp_5.arg1 = s.dst___28779;
+    s.tmp_5.arg2 = s.src___28776;
     s.callLocIdx = 85; s.pc = 24; return s.tmp_5;
   case 24:
     r0 = s.retval;
@@ -9763,26 +9763,26 @@ switch (step) {
   case 15:
   case 16:
   case 17:
-    r0 = (s.unnamed415___U7 + 1);
-    s.unnamed415___U7 = (r0);
+    r0 = (s.unnamed659___U7 + 1);
+    s.unnamed659___U7 = (r0);
     { step = 2; continue; }
   case 18:
-    s.unnamed414___U6 = (undefined);
-    r0 = (s.unnamed413___U4 + 1);
-    s.unnamed413___U4 = (r0);
+    s.unnamed658___U6 = (undefined);
+    r0 = (s.unnamed657___U4 + 1);
+    s.unnamed657___U4 = (r0);
     { step = 1; continue; }
   case 19:
-    s.unnamed412___U3 = (undefined);
+    s.unnamed656___U3 = (undefined);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-dot_collision__internal_calcCollisions__P7476.info = {"start":2387,"length":835,"line":68,"column":12,"endLine":84,"endColumn":13,"fileName":"collision.ts","functionName":"calcCollisions","argumentNames":["r0","r1"]}
+dot_collision__internal_calcCollisions__P28766.info = {"start":2622,"length":835,"line":75,"column":12,"endLine":91,"endColumn":13,"fileName":"collision.ts","functionName":"calcCollisions","argumentNames":["r0","r1"]}
 
-function dot_collision__internal_calcCollisions__P7476_mk(s) {
+function dot_collision__internal_calcCollisions__P28766_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_collision__internal_calcCollisions__P7476, depth: s.depth + 1,
+        parent: s, fn: dot_collision__internal_calcCollisions__P28766, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -9801,14 +9801,14 @@ function dot_collision__internal_calcCollisions__P7476_mk(s) {
   tmp_14: undefined,
   tmp_15: undefined,
   tmp_16: undefined,
-  srcs___7479: undefined,
-  dsts___7482: undefined,
-  src___7486: undefined,
-  unnamed412___U3: undefined,
-  unnamed413___U4: undefined,
-  dst___7489: undefined,
-  unnamed414___U6: undefined,
-  unnamed415___U7: undefined,
+  srcs___28769: undefined,
+  dsts___28772: undefined,
+  src___28776: undefined,
+  unnamed656___U3: undefined,
+  unnamed657___U4: undefined,
+  dst___28779: undefined,
+  unnamed658___U6: undefined,
+  unnamed659___U7: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -9817,7 +9817,7 @@ function dot_collision__internal_calcCollisions__P7476_mk(s) {
 
 
 
-function dot_collision__internal_calcCollisions_inline__P7509(s) {
+function dot_collision__internal_calcCollisions_inline__P28799(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9837,12 +9837,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_collision__internal_calcCollisions_inline__P7509.info = {"start":2817,"length":20,"line":75,"column":60,"endLine":75,"endColumn":80,"fileName":"collision.ts","functionName":"inline","argumentNames":["c"]}
+dot_collision__internal_calcCollisions_inline__P28799.info = {"start":3052,"length":20,"line":82,"column":60,"endLine":82,"endColumn":80,"fileName":"collision.ts","functionName":"inline","argumentNames":["c"]}
 
-function dot_collision__internal_calcCollisions_inline__P7509_mk(s) {
+function dot_collision__internal_calcCollisions_inline__P28799_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_collision__internal_calcCollisions_inline__P7509, depth: s.depth + 1,
+        parent: s, fn: dot_collision__internal_calcCollisions_inline__P28799, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -9852,7 +9852,7 @@ function dot_collision__internal_calcCollisions_inline__P7509_mk(s) {
 
 
 
-function dot_collision__internal_calcCollisions_inline__P7529(s) {
+function dot_collision__internal_calcCollisions_inline__P28819(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9872,12 +9872,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_collision__internal_calcCollisions_inline__P7529.info = {"start":3010,"length":20,"line":78,"column":60,"endLine":78,"endColumn":80,"fileName":"collision.ts","functionName":"inline","argumentNames":["c"]}
+dot_collision__internal_calcCollisions_inline__P28819.info = {"start":3245,"length":20,"line":85,"column":60,"endLine":85,"endColumn":80,"fileName":"collision.ts","functionName":"inline","argumentNames":["c"]}
 
-function dot_collision__internal_calcCollisions_inline__P7529_mk(s) {
+function dot_collision__internal_calcCollisions_inline__P28819_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_collision__internal_calcCollisions_inline__P7529, depth: s.depth + 1,
+        parent: s, fn: dot_collision__internal_calcCollisions_inline__P28819, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -9887,7 +9887,7 @@ function dot_collision__internal_calcCollisions_inline__P7529_mk(s) {
 
 
 
-function dot_Collision_constructor__P4357(s) {
+function dot_Collision_constructor__P28627(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9904,19 +9904,19 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_Collision__C4356_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_Collision__C28626_VT)) failedCast(r0);
     r0 = (s.arg0).fields["src"] = (s.arg1);
     r0 = (s.arg0).fields["dst"] = (s.arg2);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-dot_Collision_constructor__P4357.info = {"start":244,"length":88,"line":9,"column":8,"endLine":11,"endColumn":39,"fileName":"collision.ts","functionName":"inline","argumentNames":["this","src","dst"]}
+dot_Collision_constructor__P28627.info = {"start":244,"length":88,"line":9,"column":8,"endLine":11,"endColumn":39,"fileName":"collision.ts","functionName":"inline","argumentNames":["this","src","dst"]}
 
-function dot_Collision_constructor__P4357_mk(s) {
+function dot_Collision_constructor__P28627_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_Collision_constructor__P4357, depth: s.depth + 1,
+        parent: s, fn: dot_Collision_constructor__P28627, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -10409,7 +10409,7 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.tmp_2 = dot_collision_newReporter__P4368_mk(s);
+    s.tmp_2 = dot_collision_newReporter__P28718_mk(s);
     s.callLocIdx = 135; s.pc = 18; return s.tmp_2;
   case 18:
     r0 = s.retval;
@@ -10543,7 +10543,7 @@ switch (step) {
     s.callLocIdx = 140; s.pc = 22; return s.tmp_1;
   case 22:
     r0 = s.retval;
-    s.tmp_2 = dot_CollisionReporter__add__P4364_mk(s);
+    s.tmp_2 = dot_CollisionReporter__add__P28632_mk(s);
     s.tmp_2.arg0 = s.arg8;
     s.tmp_2.arg1 = s.arg0;
     s.tmp_2.arg2 = s.tmp_0;
@@ -10624,7 +10624,7 @@ function dot_draw__internal_rect__P7868_mk(s) {
 
 
 
-function dot_CollisionReporter__add__P4364(s) {
+function dot_CollisionReporter__add__P28632(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -10643,7 +10643,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_CollisionReporter__C4358_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_CollisionReporter__C28631_VT)) failedCast(r0);
     r0 = pxsim_Array_.indexOf(s.arg4, 0, undefined);
     s.tmp_3 = r0;
     r0 = (s.tmp_3 >= 0);
@@ -10654,9 +10654,9 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Collidable__C4354_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Collidable__C28619_VT);
     s.tmp_4 = r0;
-    s.tmp_5 = dot_Collidable_constructor__P4355_mk(s);
+    s.tmp_5 = dot_Collidable_constructor__P28620_mk(s);
     s.tmp_5.arg0 = s.tmp_4;
     s.tmp_5.arg1 = s.arg1;
     s.tmp_5.arg2 = s.arg2;
@@ -10668,7 +10668,7 @@ switch (step) {
     r0 = s.arg0.fields["_srcs"];
     s.tmp_6 = r0;
     r0 = pxsim_Array__push(s.tmp_6, s.tmp_4);
-    s.tmp_0 = dot_collision__internal_enqueue__P4373_mk(s);
+    s.tmp_0 = dot_collision__internal_enqueue__P28676_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 74; s.pc = 4; return s.tmp_0;
   case 4:
@@ -10679,12 +10679,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_CollisionReporter__add__P4364.info = {"start":667,"length":246,"line":24,"column":8,"endLine":29,"endColumn":9,"fileName":"collision.ts","functionName":"_add","argumentNames":["this","id","rect","c","mask"]}
+dot_CollisionReporter__add__P28632.info = {"start":667,"length":246,"line":24,"column":8,"endLine":29,"endColumn":9,"fileName":"collision.ts","functionName":"_add","argumentNames":["this","id","rect","c","mask"]}
 
-function dot_CollisionReporter__add__P4364_mk(s) {
+function dot_CollisionReporter__add__P28632_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_CollisionReporter__add__P4364, depth: s.depth + 1,
+        parent: s, fn: dot_CollisionReporter__add__P28632, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -10704,7 +10704,7 @@ function dot_CollisionReporter__add__P4364_mk(s) {
 
 
 
-function dot_collision__internal_enqueue__P4373(s) {
+function dot_collision__internal_enqueue__P28676(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -10720,18 +10720,18 @@ switch (step) {
     }
     r0 = s.arg0.fields["_gen"];
     s.tmp_1 = r0;
-    r0 = (s.tmp_1 !== globals.gen___4371);
+    r0 = (s.tmp_1 !== globals.gen___28682);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
     r0 = pxsim_pxtcore.throwValue("Don't cache CollisionReporters across updates");
   case 1:
   case 2:
-    r0 = pxsim_pxtcore_mkAction(1, dot_collision__internal_enqueue_inline__P7463);
+    r0 = pxsim_pxtcore_mkAction(1, dot_collision__internal_enqueue_inline__P28753);
     s.tmp_2 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_2, 0, s.arg0);
     s.tmp_6 = helpers_arrayFind__P111_mk(s);
-    s.tmp_6.arg0 = globals.dirty___7429;
+    s.tmp_6.arg0 = globals.dirty___28716;
     s.tmp_6.arg1 = s.tmp_2;
     s.callLocIdx = 80; s.pc = 5; return s.tmp_6;
   case 5:
@@ -10743,19 +10743,19 @@ switch (step) {
     s.tmp_3 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_3);
     if (!r0) { step = 3; continue; }
-    r0 = pxsim_Array__push(globals.dirty___7429, s.arg0);
+    r0 = pxsim_Array__push(globals.dirty___28716, s.arg0);
   case 3:
   case 4:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-dot_collision__internal_enqueue__P4373.info = {"start":2084,"length":290,"line":62,"column":12,"endLine":67,"endColumn":13,"fileName":"collision.ts","functionName":"enqueue","argumentNames":["reporter"]}
+dot_collision__internal_enqueue__P28676.info = {"start":2319,"length":290,"line":69,"column":12,"endLine":74,"endColumn":13,"fileName":"collision.ts","functionName":"enqueue","argumentNames":["reporter"]}
 
-function dot_collision__internal_enqueue__P4373_mk(s) {
+function dot_collision__internal_enqueue__P28676_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_collision__internal_enqueue__P4373, depth: s.depth + 1,
+        parent: s, fn: dot_collision__internal_enqueue__P28676, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -10771,7 +10771,7 @@ function dot_collision__internal_enqueue__P4373_mk(s) {
 
 
 
-function dot_collision__internal_enqueue_inline__P7463(s) {
+function dot_collision__internal_enqueue_inline__P28753(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -10793,12 +10793,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_collision__internal_enqueue_inline__P7463.info = {"start":2269,"length":27,"line":64,"column":32,"endLine":64,"endColumn":59,"fileName":"collision.ts","functionName":"inline","argumentNames":["r"]}
+dot_collision__internal_enqueue_inline__P28753.info = {"start":2504,"length":27,"line":71,"column":32,"endLine":71,"endColumn":59,"fileName":"collision.ts","functionName":"inline","argumentNames":["r"]}
 
-function dot_collision__internal_enqueue_inline__P7463_mk(s) {
+function dot_collision__internal_enqueue_inline__P28753_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_collision__internal_enqueue_inline__P7463, depth: s.depth + 1,
+        parent: s, fn: dot_collision__internal_enqueue_inline__P28753, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -10809,7 +10809,7 @@ function dot_collision__internal_enqueue_inline__P7463_mk(s) {
 
 
 
-function dot_Collidable_constructor__P4355(s) {
+function dot_Collidable_constructor__P28620(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -10828,7 +10828,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_Collidable__C4354_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_Collidable__C28619_VT)) failedCast(r0);
     r0 = (s.arg0).fields["id"] = (s.arg1);
     r0 = (s.arg0).fields["rect"] = (s.arg2);
     r0 = (s.arg0).fields["color"] = (s.arg3);
@@ -10837,12 +10837,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_Collidable_constructor__P4355.info = {"start":54,"length":146,"line":2,"column":8,"endLine":6,"endColumn":38,"fileName":"collision.ts","functionName":"inline","argumentNames":["this","id","rect","color","_mask"]}
+dot_Collidable_constructor__P28620.info = {"start":54,"length":146,"line":2,"column":8,"endLine":6,"endColumn":38,"fileName":"collision.ts","functionName":"inline","argumentNames":["this","id","rect","color","_mask"]}
 
-function dot_Collidable_constructor__P4355_mk(s) {
+function dot_Collidable_constructor__P28620_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_Collidable_constructor__P4355, depth: s.depth + 1,
+        parent: s, fn: dot_Collidable_constructor__P28620, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -10890,7 +10890,7 @@ function dot_color_isNoncollidable__P4406_mk(s) {
 
 
 
-function dot_collision_newReporter__P4368(s) {
+function dot_collision_newReporter__P28718(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -10900,48 +10900,48 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.reporter___7431 = undefined;
-    r0 = pxsim_pxtcore_mkClassInstance(dot_CollisionReporter__C4358_VT);
+    s.reporter___28719 = undefined;
+    r0 = pxsim_pxtcore_mkClassInstance(dot_CollisionReporter__C28631_VT);
     s.tmp_0 = r0;
-    r0 = (globals.nextId___4370 + 1);
+    r0 = (globals.nextId___28724 + 1);
     s.tmp_1 = r0;
-    globals.nextId___4370 = (r0);
-    s.tmp_2 = dot_CollisionReporter_constructor__P4363_mk(s);
+    globals.nextId___28724 = (r0);
+    s.tmp_2 = dot_CollisionReporter_constructor__P28636_mk(s);
     s.tmp_2.arg0 = s.tmp_0;
     s.tmp_2.arg1 = s.tmp_1;
-    s.tmp_2.arg2 = globals.gen___4371;
+    s.tmp_2.arg2 = globals.gen___28682;
     s.callLocIdx = 76; s.pc = 1; return s.tmp_2;
   case 1:
     r0 = s.retval;
-    s.reporter___7431 = (s.tmp_0);
-    r0 = pxsim_Array__push(globals.reporters___7427, s.reporter___7431);
-    s.tmp_0 = dot_collision__internal_enqueue__P4373_mk(s);
-    s.tmp_0.arg0 = s.reporter___7431;
+    s.reporter___28719 = (s.tmp_0);
+    r0 = pxsim_Array__push(globals.reporters___28714, s.reporter___28719);
+    s.tmp_0 = dot_collision__internal_enqueue__P28676_mk(s);
+    s.tmp_0.arg0 = s.reporter___28719;
     s.callLocIdx = 77; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
-    r0 = s.reporter___7431;
+    r0 = s.reporter___28719;
     return leave(s, r0)
   default: oops()
 } } }
-dot_collision_newReporter__P4368.info = {"start":1534,"length":255,"line":47,"column":8,"endLine":52,"endColumn":9,"fileName":"collision.ts","functionName":"newReporter","argumentNames":[]}
+dot_collision_newReporter__P28718.info = {"start":1769,"length":255,"line":54,"column":8,"endLine":59,"endColumn":9,"fileName":"collision.ts","functionName":"newReporter","argumentNames":[]}
 
-function dot_collision_newReporter__P4368_mk(s) {
+function dot_collision_newReporter__P28718_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_collision_newReporter__P4368, depth: s.depth + 1,
+        parent: s, fn: dot_collision_newReporter__P28718, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
-  reporter___7431: undefined,
+  reporter___28719: undefined,
 } }
 
 
 
 
 
-function dot_CollisionReporter_constructor__P4363(s) {
+function dot_CollisionReporter_constructor__P28636(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -10958,7 +10958,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_CollisionReporter__C4358_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_CollisionReporter__C28631_VT)) failedCast(r0);
     r0 = (s.arg0).fields["_id"] = (s.arg1);
     r0 = (s.arg0).fields["_gen"] = (s.arg2);
     s.tmp_0 = r0 = s.arg0;
@@ -10973,12 +10973,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_CollisionReporter_constructor__P4363.info = {"start":490,"length":168,"line":18,"column":8,"endLine":23,"endColumn":9,"fileName":"collision.ts","functionName":"inline","argumentNames":["this","id","gen"]}
+dot_CollisionReporter_constructor__P28636.info = {"start":490,"length":168,"line":18,"column":8,"endLine":23,"endColumn":9,"fileName":"collision.ts","functionName":"inline","argumentNames":["this","id","gen"]}
 
-function dot_CollisionReporter_constructor__P4363_mk(s) {
+function dot_CollisionReporter_constructor__P28636_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_CollisionReporter_constructor__P4363, depth: s.depth + 1,
+        parent: s, fn: dot_CollisionReporter_constructor__P28636, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -11101,12 +11101,12 @@ switch (step) {
     s.arg4 = (r0);
   case 3:
   case 4:
-    s.tmp_0 = dot_collision_newReporter__P4368_mk(s);
+    s.tmp_0 = dot_collision_newReporter__P28718_mk(s);
     s.callLocIdx = 119; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
     s.reporter___8001 = (r0);
-    s.tmp_0 = dot_CollisionReporter__add__P4364_mk(s);
+    s.tmp_0 = dot_CollisionReporter__add__P28632_mk(s);
     s.tmp_0.arg0 = s.reporter___8001;
     s.tmp_0.arg1 = s.arg5;
     s.tmp_1 = dot_rect_make__P4349_mk(s);
@@ -11476,7 +11476,7 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.tmp_2 = dot_collision_newReporter__P4368_mk(s);
+    s.tmp_2 = dot_collision_newReporter__P28718_mk(s);
     s.callLocIdx = 155; s.pc = 10; return s.tmp_2;
   case 10:
     r0 = s.retval;
@@ -11695,7 +11695,7 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.tmp_2 = dot_collision_newReporter__P4368_mk(s);
+    s.tmp_2 = dot_collision_newReporter__P28718_mk(s);
     s.callLocIdx = 144; s.pc = 7; return s.tmp_2;
   case 7:
     r0 = s.retval;
@@ -51682,7 +51682,7 @@ const control_EventHandler__C4623_VT = mkVTable({
     "unregister": control_EventHandler_unregister__P4625,
   },
 });
-const dot_CollisionReporter__C4358_VT = mkVTable({
+const dot_CollisionReporter__C28631_VT = mkVTable({
   name: "CollisionReporter",
   numFields: 4,
   classNo: 38,
@@ -51699,11 +51699,11 @@ const dot_CollisionReporter__C4358_VT = mkVTable({
     "set/_srcs": null,
     "_collisions": null,
     "set/_collisions": null,
-    "_add": dot_CollisionReporter__add__P4364,
-    "collisions": dot_CollisionReporter_collisions__P4365,
+    "_add": dot_CollisionReporter__add__P28632,
+    "collisions": dot_CollisionReporter_collisions__P28633,
   },
 });
-const dot_Collision__C4356_VT = mkVTable({
+const dot_Collision__C28626_VT = mkVTable({
   name: "Collision",
   numFields: 2,
   classNo: 39,
@@ -51718,7 +51718,7 @@ const dot_Collision__C4356_VT = mkVTable({
     "set/dst": null,
   },
 });
-const dot_Collidable__C4354_VT = mkVTable({
+const dot_Collidable__C28619_VT = mkVTable({
   name: "Collidable",
   numFields: 4,
   classNo: 40,
@@ -52921,7 +52921,7 @@ const sprites_BaseSpriteSayRenderer__C2260_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["SCREEN_WIDTH___4377","SCREEN_HEIGHT___4378","scoreboardFont___8625","titleFont___8629","input___4450","state___4444","input___4452","scoreFont___4454","pool___9205","pool___9532","random___9543","gameTitle___4436","gameDescription___4437","insertCoinText___4438","rand___10146","collisions___10150","duck___10153","boxColors___10159","boxes___10155","commands___7722","_gameUpdate___8633","difficulty___4441","tick___4440","restartAt___8623","_colorStack___7615","gen___4371","reporters___7427","dirty___7429","textColor___4435","_gameOverText___8632","scoreboardColor___4434","score___4442","high___4443","ALL_COLORS___7612","d___10228","a___10230","nextId___4370"])
+const breakpoints = setupDebugger(1, ["SCREEN_WIDTH___4377","SCREEN_HEIGHT___4378","scoreboardFont___8625","titleFont___8629","input___4450","state___4444","input___4452","scoreFont___4454","pool___9205","pool___9532","random___9543","gameTitle___4436","gameDescription___4437","insertCoinText___4438","rand___10146","collisions___10150","duck___10153","boxColors___10159","boxes___10155","commands___7722","_gameUpdate___8633","difficulty___4441","tick___4440","restartAt___8623","_colorStack___7615","gen___28682","reporters___28714","dirty___28716","textColor___4435","_gameOverText___8632","scoreboardColor___4434","score___4442","high___4443","ALL_COLORS___7612","d___10228","a___10230","nextId___28724"])
 
-return _main___P26193
+return _main___P30039
 })
