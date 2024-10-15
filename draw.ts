@@ -77,7 +77,7 @@ namespace dot {
             p: Vec,
             img: Image,
             alignCenter = false,
-            layer: Color = Color.Transparent,
+            layer: Color = Color.Black,
             collidesWith?: Color[],
             id?: string
         ): CollisionReporter {
