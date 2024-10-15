@@ -38,8 +38,6 @@ namespace dot {
         export function end(gameOverText?: string) {
             if (state === GameState.Playing) {
                 gotoGameOver(gameOverText);
-            } else {
-                restartAt = tick + 1;
             }
         }
 
