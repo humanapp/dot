@@ -1,6 +1,10 @@
 game.stats = true;
 
 namespace test {
+    dot.gameTitle = "DOT TEST";
+    dot.insertCoinText = "INSERT COIN";
+    dot.game.start(gameUpdate);
+
     const rand = new dot.Random();
 
     class Box {
@@ -35,9 +39,8 @@ namespace test {
     const f = 20;
 
     function gameUpdate() {
-        if (dot.game.state === dot.GameState.Title) {
+        if (dot.game.tick === 0) {
             d = 1;
-        } else if (dot.game.tick === 0) {
             a = 0;
         }
 
@@ -86,11 +89,4 @@ namespace test {
             }
         }
     }
-
-    const opts = new dot.GameOptions();
-    opts.update = gameUpdate;
-    opts.gameTitle = "DOT TEST";
-    opts.insertCoinText = "INSERT COIN";
-
-    dot.game.start(opts);
 }

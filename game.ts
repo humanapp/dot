@@ -1,16 +1,14 @@
 namespace dot {
-    export class GameOptions {
-        update: () => void;
-        scoreColor?: number;
-        textColor?: number;
-        gameTitle?: string;
-        insertCoinText?: string;
-    }
     export enum GameState {
         Title,
         Playing,
         GameOver
     }
+
+    export let scoreboardColor: Color = Color.Red;
+    export let textColor: Color = Color.Blue;
+    export let gameTitle: string = "MY GAME";
+    export let insertCoinText: string = "PRESS ANY KEY";
 
     export namespace game {
         export let tick = 0;
@@ -21,17 +19,13 @@ namespace dot {
         const scoreboardFont = image.scaledFont(image.font5, 2);
         const titleFont = image.scaledFont(image.font8, 2);
         let _gameOverText = "GAME OVER";
+        let _gameUpdate: () => void;
 
-        let gameOpts: GameOptions;
-        export function start(opts: GameOptions) {
+        export function start(gameUpdate: () => void) {
+            _gameUpdate = gameUpdate;
             setTimeout(() => {
                 input.block();
                 dot._input_internal.input.block();
-                opts.scoreColor = opts.scoreColor || Color.Red;
-                opts.textColor = opts.textColor || Color.Blue;
-                gameOpts = opts;
-                score = 0;
-                difficulty = 1;
                 scores._internal.init();
                 particles._internal.init();
                 state = GameState.Title;
@@ -43,13 +37,11 @@ namespace dot {
         }
 
         function drawScoreboard() {
-            color.push(gameOpts.scoreColor);
-            if (state !== GameState.Title) {
-                draw.text(
-                    new Vec2(2, 2),
-                    "" + Math.floor(score), TextAlignment.Left,
-                    scoreboardFont);
-            }
+            color.push(scoreboardColor);
+            draw.text(
+                new Vec2(2, 2),
+                "" + Math.floor(score), TextAlignment.Left,
+                scoreboardFont);
             draw.text(
                 new Vec2(SCREEN_WIDTH, 2),
                 "HI " + Math.floor(high), TextAlignment.Right,
@@ -58,27 +50,27 @@ namespace dot {
         }
 
         function drawTitle() {
-            if (gameOpts.gameTitle) {
-                color.push(gameOpts.textColor);
+            if (gameTitle) {
+                color.push(textColor);
                 draw.text(
                     new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3),
-                    gameOpts.gameTitle, TextAlignment.Center,
+                    gameTitle, TextAlignment.Center,
                     titleFont);
                 color.pop();
             }
             if (tick % 80 < 40) {
-                color.push(gameOpts.textColor);
-                const insertCoinText = gameOpts.insertCoinText || "PRESS ANY KEY";
+                color.push(textColor);
+                const text = insertCoinText || "PRESS ANY KEY";
                 draw.text(
                     new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 5 / 6),
-                    insertCoinText, TextAlignment.Center,
+                    text, TextAlignment.Center,
                     image.font5);
                 color.pop();
             }
         }
 
         function drawGameOver() {
-            color.push(gameOpts.textColor);
+            color.push(textColor);
             const text = _gameOverText || "GAME OVER";
             draw.text(
                 new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - titleFont.charHeight / 2),
@@ -86,7 +78,7 @@ namespace dot {
                 titleFont);
             color.pop();
             if (tick % 80 < 40) {
-                color.push(gameOpts.textColor);
+                color.push(textColor);
                 draw.text(
                     new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 5 / 6),
                     "PRESS ANY KEY", TextAlignment.Center,
@@ -118,7 +110,7 @@ namespace dot {
 
         export namespace _internal {
             export function update() {
-                if (!gameOpts) return;
+                if (!_gameUpdate) return;
 
                 if (state === GameState.Playing) {
                     difficulty = tick / 3600 + 1;
@@ -128,12 +120,10 @@ namespace dot {
                     gotoPlaying();
                 }
                 if (state === GameState.GameOver && _input_internal.input.justPressed) {
-                    start(gameOpts);
+                    start(_gameUpdate);
                 }
 
-                if (gameOpts.update) {
-                    gameOpts.update()
-                }
+                _gameUpdate();
 
                 scores._internal.update();
                 particles._internal.update();

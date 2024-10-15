@@ -1,5 +1,5 @@
 namespace dot {
-    const scoreFont = image.font8;
+    export let scoreFont = image.font8;
 
     class Score {
         public str: string;
