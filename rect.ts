@@ -10,7 +10,7 @@ namespace dot {
         constructor(public pos: Vec, public size: Vec) { }
     }
     export namespace rect {
-        export function mk(pos: Vec, size: Vec): Rect {
+        export function make(pos: Vec, size: Vec): Rect {
             return new Rect(pos, size);
         }
         export function contains(r: Rect, v: Vec): boolean {

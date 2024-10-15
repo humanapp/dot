@@ -3,24 +3,30 @@ namespace dot {
         enum GfxCommandType {
             Rect,
             Box,
-            Icon
+            Icon,
+            Img
         }
         class GfxCommand {
-            constructor(public type: GfxCommandType, public color: number) { }
+            constructor(public type: GfxCommandType) { }
         }
         class GfxRectCommand extends GfxCommand {
-            constructor(public x: number, public y: number, public w: number, public h: number, color: number) {
-                super(GfxCommandType.Rect, color);
+            constructor(public x: number, public y: number, public w: number, public h: number, public color: number) {
+                super(GfxCommandType.Rect);
             }
         }
         class GfxBoxCommand extends GfxCommand {
-            constructor(public x: number, public y: number, public w: number, public h: number, color: number) {
-                super(GfxCommandType.Box, color);
+            constructor(public x: number, public y: number, public w: number, public h: number, public color: number) {
+                super(GfxCommandType.Box);
             }
         }
         class GfxIconCommand extends GfxCommand {
-            constructor(public x: number, public y: number, public buf: Buffer, color: number) {
-                super(GfxCommandType.Icon, color);
+            constructor(public x: number, public y: number, public buf: Buffer, public color: number) {
+                super(GfxCommandType.Icon);
+            }
+        }
+        class GfxImgCommand extends GfxCommand {
+            constructor(public x: number, public y: number, public img: Image) {
+                super(GfxCommandType.Img);
             }
         }
         const commands: GfxCommand[] = [];
@@ -32,6 +38,9 @@ namespace dot {
         }
         export function icon(x: number, y: number, buf: Buffer) {
             commands.push(new GfxIconCommand(x, y, buf, color.curr()));
+        }
+        export function img(x: number, y: number, img: Image) {
+            commands.push(new GfxImgCommand(x, y, img));
         }
         export namespace _internal {
             export function update() {
@@ -50,6 +59,11 @@ namespace dot {
                         case GfxCommandType.Icon: {
                             const c = cmd as GfxIconCommand;
                             screen.drawIcon(c.buf, c.x, c.y, c.color);
+                            break;
+                        }
+                        case GfxCommandType.Img: {
+                            const c = cmd as GfxImgCommand;
+                            screen.drawTransparentImage(c.img, c.x, c.y);
                             break;
                         }
                     }

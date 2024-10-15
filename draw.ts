@@ -73,6 +73,26 @@ namespace dot {
             return _internal.arc(id, collidesWith, p, radius, thickness, angleFrom, angleTo);
         }
 
+        export function img(
+            p: Vec,
+            img: Image,
+            alignCenter = false,
+            layer: Color = Color.Transparent,
+            collidesWith?: Color[],
+            id?: string
+        ): CollisionReporter {
+            const pos = alignCenter
+                ? new Vec(p.x - img.width / 2, p.y - img.height / 2)
+                : new Vec(p.x, p.y);
+            if (collidesWith == null) {
+                collidesWith = color.all();
+            }
+            const reporter = collision.newReporter();
+            reporter._add(id, dot.rect.make(pos, vec.make(img.width, img.height)), layer, collidesWith);
+            gfx.img(pos.x, pos.y, img);
+            return reporter;
+        }
+
         // Copied from screen/text.ts imagePrint
         // TODO: Support collision with text
         export function text(
@@ -95,14 +115,6 @@ namespace dot {
             let dataSize = 2 + charSize
             let fontdata = font.data
             let lastchar = Math.idiv(fontdata.length, dataSize) - 1
-            let imgBuf: Buffer
-            if (mult == 1) {
-                imgBuf = control.createBuffer(8 + charSize)
-                imgBuf[0] = 0x87
-                imgBuf[1] = 1
-                imgBuf[2] = dataW
-                imgBuf[4] = dataH
-            }
             let width = s.length * font.charWidth;
             switch (alignment) {
                 case TextAlignment.Center: {
@@ -152,13 +164,17 @@ namespace dot {
                     }
                 }
 
-                // DOESN'T WORK (???)
-                //if (mult == 1) {
-                //    imgBuf.write(8, fontdata.slice(off + 2, charSize))
-                //    gfx.icon(x + xOffset, y + yOffset, imgBuf)
-                //    x += font.charWidth
-                //} else {
-                {
+                if (mult == 1) {
+                    let imgBuf: Buffer
+                    imgBuf = control.createBuffer(8 + charSize)
+                    imgBuf[0] = 0x87
+                    imgBuf[1] = 1
+                    imgBuf[2] = dataW
+                    imgBuf[4] = dataH
+                    imgBuf.write(8, fontdata.slice(off + 2, charSize))
+                    gfx.icon(x + xOffset, y + yOffset, imgBuf)
+                    x += font.charWidth
+                } else {
                     off += 2
                     for (let i = 0; i < dataW; ++i) {
                         let j = 0
