@@ -36,7 +36,11 @@ namespace dot {
         }
 
         export function end(gameOverText?: string) {
-            gotoGameOver(gameOverText);
+            if (state === GameState.Playing) {
+                gotoGameOver(gameOverText);
+            } else {
+                restartAt = tick + 1;
+            }
         }
 
         function drawScoreboard() {
@@ -119,8 +123,7 @@ namespace dot {
                 if (state === GameState.Title && _input_internal.input.justPressed) {
                     gotoPlaying();
                 }
-                if (state === GameState.GameOver &&
-                (_input_internal.input.justPressed || (restartAt && restartAt < tick))) {
+                if ((restartAt && restartAt < tick) || (state === GameState.GameOver && _input_internal.input.justPressed)) {
                     start(_gameUpdate);
                 }
 
