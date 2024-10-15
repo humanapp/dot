@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.56/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.4","target":"arcade","targetVersion":"1.12.56","repo":"humanapp/dot"}
-// total=1535446 new=21.42% cached=73.29% other=5.29%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.56/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.5","target":"arcade","targetVersion":"1.12.56","repo":"humanapp/dot"}
+// total=1535505 new=21.42% cached=73.29% other=5.29%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -486,7 +486,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P400280(s) {
+function _main___P403929(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -496,8 +496,8 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.i___381039 = undefined;
-    s.b___381045 = undefined;
+    s.i___403115 = undefined;
+    s.b___403121 = undefined;
     globals._intervals___375636 = (undefined);
     globals._pollEventQueue___375645 = (undefined);
     globals.minPriority___371424 = (1);
@@ -996,7 +996,7 @@ switch (step) {
     globals.gameTitle___375525 = ("DOT TEST");
     globals.insertCoinText___375526 = ("INSERT COIN");
     s.tmp_0 = dot_game_start__P375533_mk(s);
-    s.tmp_0.arg0 = test_gameUpdate__P381023;
+    s.tmp_0.arg0 = test_gameUpdate__P403099;
     s.callLocIdx = 301; s.pc = 46; return s.tmp_0;
   case 46:
     r0 = s.retval;
@@ -1008,7 +1008,7 @@ switch (step) {
     s.callLocIdx = 302; s.pc = 47; return s.tmp_1;
   case 47:
     r0 = s.retval;
-    globals.rand___381025 = (s.tmp_0);
+    globals.rand___403101 = (s.tmp_0);
     r0 = pxsim_pxtcore_mkClassInstance(dot_Set__C375576_VT);
     s.tmp_0 = r0;
     s.tmp_1 = dot_Set_constructor__P375578_mk(s);
@@ -1016,9 +1016,9 @@ switch (step) {
     s.callLocIdx = 303; s.pc = 48; return s.tmp_1;
   case 48:
     r0 = s.retval;
-    globals.collisions___381029 = (s.tmp_0);
+    globals.collisions___403105 = (s.tmp_0);
     r0 = pxsim_Array__mk();
-    globals.boxes___381031 = (r0);
+    globals.boxes___403107 = (r0);
     r0 = pxsim_Array__mk();
     s.tmp_0 = r0;
     r0 = pxsim_Array__push(s.tmp_0, 1);
@@ -1028,15 +1028,15 @@ switch (step) {
     s.callLocIdx = 304; s.pc = 49; return s.tmp_1;
   case 49:
     r0 = s.retval;
-    globals.boxColors___381035 = (r0);
-    s.i___381039 = (0);
+    globals.boxColors___403111 = (r0);
+    s.i___403115 = (0);
   case 1:
-    r0 = (s.i___381039 < 5);
+    r0 = (s.i___403115 < 5);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_pxtcore_mkClassInstance(test_Box__C381027_VT);
-    s.b___381045 = (r0);
+    r0 = pxsim_pxtcore_mkClassInstance(test_Box__C403103_VT);
+    s.b___403121 = (r0);
     r0 = pxsim_pxtcore_mkClassInstance(dot_Rect__C375431_VT);
     s.tmp_0 = r0;
     r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C375388_VT);
@@ -1044,7 +1044,7 @@ switch (step) {
     s.tmp_2 = dot_Vec2_constructor__P375393_mk(s);
     s.tmp_2.arg0 = s.tmp_1;
     s.tmp_3 = dot_Random_get__P375555_mk(s);
-    s.tmp_3.arg0 = globals.rand___381025;
+    s.tmp_3.arg0 = globals.rand___403101;
     s.tmp_3.arg1 = 0;
     r0 = (globals.SCREEN_WIDTH___375468 - 10);
     s.tmp_3.arg2 = r0;
@@ -1053,7 +1053,7 @@ switch (step) {
     r0 = s.retval;
     s.tmp_2.arg1 = r0;
     s.tmp_4 = dot_Random_get__P375555_mk(s);
-    s.tmp_4.arg0 = globals.rand___381025;
+    s.tmp_4.arg0 = globals.rand___403101;
     s.tmp_4.arg1 = 0;
     r0 = (globals.SCREEN_HEIGHT___375469 - 10);
     s.tmp_4.arg2 = r0;
@@ -1080,11 +1080,11 @@ switch (step) {
     s.callLocIdx = 309; s.pc = 54; return s.tmp_7;
   case 54:
     r0 = s.retval;
-    r0 = (s.b___381045).fields["r"] = (s.tmp_0);
-    s.tmp_0 = r0 = s.b___381045;
+    r0 = (s.b___403121).fields["r"] = (s.tmp_0);
+    s.tmp_0 = r0 = s.b___403121;
     s.tmp_2 = dot_Random_select__P375558_mk(s);
-    s.tmp_2.arg0 = globals.rand___381025;
-    s.tmp_2.arg1 = globals.boxColors___381035;
+    s.tmp_2.arg0 = globals.rand___403101;
+    s.tmp_2.arg1 = globals.boxColors___403111;
     s.callLocIdx = 310; s.pc = 55; return s.tmp_2;
   case 55:
     r0 = s.retval;
@@ -1095,7 +1095,7 @@ switch (step) {
     s.tmp_1 = dot_Vec2_constructor__P375393_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_2 = dot_Random_get__P375555_mk(s);
-    s.tmp_2.arg0 = globals.rand___381025;
+    s.tmp_2.arg0 = globals.rand___403101;
     s.tmp_2.arg1 = -3;
     s.tmp_2.arg2 = 3;
     s.callLocIdx = 311; s.pc = 57; return s.tmp_2;
@@ -1103,7 +1103,7 @@ switch (step) {
     r0 = s.retval;
     s.tmp_1.arg1 = r0;
     s.tmp_3 = dot_Random_get__P375555_mk(s);
-    s.tmp_3.arg0 = globals.rand___381025;
+    s.tmp_3.arg0 = globals.rand___403101;
     s.tmp_3.arg1 = -3;
     s.tmp_3.arg2 = 3;
     s.callLocIdx = 312; s.pc = 58; return s.tmp_3;
@@ -1113,27 +1113,27 @@ switch (step) {
     s.callLocIdx = 313; s.pc = 56; return s.tmp_1;
   case 56:
     r0 = s.retval;
-    r0 = (s.b___381045).fields["v"] = (s.tmp_0);
-    s.tmp_0 = r0 = s.b___381045;
-    if ((s.i___381039) && (s.i___381039).vtable) {
+    r0 = (s.b___403121).fields["v"] = (s.tmp_0);
+    s.tmp_0 = r0 = s.b___403121;
+    if ((s.i___403115) && (s.i___403115).vtable) {
     setupResume(s, 59);
-    pxsim_String__stringConv(s.i___381039);
+    pxsim_String__stringConv(s.i___403115);
     checkResumeConsumed();
     return;
-    } else { s.retval = (s.i___381039) + ""; }
+    } else { s.retval = (s.i___403115) + ""; }
   case 59:
     r0 = s.retval;
     s.tmp_2 = r0;
     r0 = pxsim_String__concat("box", s.tmp_2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["id"] = (s.tmp_1);
-    r0 = pxsim_Array__push(globals.boxes___381031, s.b___381045);
-    r0 = (s.i___381039 + 1);
-    s.i___381039 = (r0);
+    r0 = pxsim_Array__push(globals.boxes___403107, s.b___403121);
+    r0 = (s.i___403115 + 1);
+    s.i___403115 = (r0);
     { step = 1; continue; }
   case 2:
-    globals.d___381104 = (1);
-    globals.a___381106 = (0);
+    globals.d___403180 = (1);
+    globals.a___403182 = (0);
     s.tmp_0 = control_EventContext_registerFrameHandler__P371452_mk(s);
     s.tmp_1 = control_eventContext__P371457_mk(s);
     s.callLocIdx = 342; s.pc = 61; return s.tmp_1;
@@ -1171,13 +1171,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P400280.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
-_main___P400280.continuations = [ 59 ]
+_main___P403929.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
+_main___P403929.continuations = [ 59 ]
 
-function _main___P400280_mk(s) {
+function _main___P403929_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P400280, depth: s.depth + 1,
+        parent: s, fn: _main___P403929, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1187,8 +1187,8 @@ function _main___P400280_mk(s) {
   tmp_5: undefined,
   tmp_6: undefined,
   tmp_7: undefined,
-  i___381039: undefined,
-  b___381045: undefined,
+  i___403115: undefined,
+  b___403121: undefined,
 } }
 
 const _hex381925 = pxsim.BufferMethods.createBufferFromHex("2000000000000000210000005e0000002200000e000e0000230028fe28fe280024004c92ff926400250002651248a64026006c92926ca000270000000e000000280000007c82000029000000827c00002a005438103854002b0010107c1010002c000000907000002d001010101010002e000000606000002f000060100806003000003c42423c00310000447e4000003200004462524c00330000424a4e320034003028247e20003500004e4a4a32003600003c4a4a30003700000262120e00380000344a4a34003900000c52523c003a0000006c6c00003b000000967600003c001028284444003d002828282828003e004444282810003f0000025909060040003c425a560800410078141214780042007e4a4a4a34004300003c424224004400007e42423c004500007e4a4a42004600007e0a0a02004700003c425234004800007e08087e00490000427e4200004a002040423e02004b00007e081462004c00007e404040004d007e0418047e004e00007e04087e004f003c4242423c005000007e12120c005100003c5262bc005200007e12126c00530000244a522400540002027e0202005500003e40403e005600001e70701e0057007e2018207e00580042241824420059000608700806005a000062524a46005b00007e424200005c000006081060005d000042427e00005e000804020408005f00808080808000600000000204000061000030484878006200007e4848300063000030484848006400003048487e006500003068585000660000107c12040067000018a4a478006800007e08087000690000487a4000006a000040847d00006b00007e102840006c0000427e4000006d007808300870006e000078080870006f00003048483000700000fc24241800710000182424fc0072000078100810007300005058682800740000083e48200075000038404078007600001860601800770038403040380078000048303048007900005ca0a07c007a000048685848007b000008364100007c000000fe0000007d000041360800007e00000804080400a000000000000000a10000007a000000a200003048fc4800a30090fc92928400a400542844285400a5002a2c782c2a00a6000000ee000000a7000094aaaa5200a800000200020000a9003e414955413eaa0000242a2e0000ab00102854284400ac00001010107000ad00001010101000ae003e415d45413eaf00000202020200b000000814140800b1008888be888800b2000024322c0000b30000222a140000b400000004020000b50000f840207800b6000c1e7e027e00b700000010000000b800000080400000b90000243e200000ba0000242a240000bb00442854281000bc00025f70f84000bd00021f90c8b000be0011557af84000bf000030484d2000c000601916186000c100601816196000c200601a151a6000c300601a151a6100c400601914196000c500601a151a6000c6007c0a7e4a4200c700001ea1611200c800007c55564400c900007c56554400ca00007c56554600cb00007c55544500cc0000457e440000cd0000447e450000ce0000467d460000cf0000457c450000d000087e4a423c00d100007e09127d00d200003845463800d300003846453800d400003846453a00d500003a45463900d600003845443900d700442810284400d80000fc724e3f00d900003c41423c00da00003c42413c00db00003c42413e00dc00003c41403d00dd00040872090400de00007e24241800df00007c025a2400e0000030494a7800e10000304a497800e20000304a497a00e3000032494a7900e40000304a487a00e50000304a4d7a00e600304878685000e7000018a4642400e8000030695a5000e90000306a595000ea0000306a595200eb0000306a585200ec0000497a400000ed0000487a410000ee00004a79420000ef00004a78420000f00000304a4b3d00f100007a090a7100f2000030494a3000f30000304a493000f40000304a493200f5000032494a3100f60000304a483200f700101054101000f800007068583800f900003841427800fa00003842417800fb00003842417a00fc00003842407a00fd0000b84241f800fe0000ff24241800ff00005ca1a07d000001601915196000010100304a4a7a000201611a16196000030100314a4a790004013c0a094abc00050100182464bc000601003846452800070100304a4948000801003846452a00090100304a494a000a010038444528000b010030484a48000c010038454629000d010030494a49000e01007c454639000f0100314a497e001001087e4a423c00110130484c7e04001201007d55554500130100326a5a52001401007d56564500150100316a5a51001601007c55544400170100306a5850001801003f65a521001901001874ac28001a01007c555645001b010030695a51001c010038465536001d0100304a49f2001e010039465635001f0100314a4af100200100384455340021010018a4a578002201001ea1691a0023010018a6a578002401007812117a0025017e080a7102002601047e147e04002701047e0c08700028010002457e450029010002497a41002a0100457d4500002b01004a7a4200002c0100014a7a49002d0100014a7a41002e0100217fa100002f0100247da00000300100447d440000310100487840000032017e0022423e0033013d0040847d0034012040463d0600350100800af90200360100bf440a3100370100bf4814200038010078102848003901007c404241003a0100467d4000003b01003fa06020003c0100a17f2000003d01007c414241003e0100457e4100003f01007e40484000400100427e4008004101107e48404000420100527e4800004301007c0a117c00440100780a097000450100bf42043f00460100bc440438004701007c09127d00480100790a09700049010a06780870004a01003f02847f004b01003c048478004c013945454539004d0100324a4a32004e013946464639004f0100314a4a310050013a4544463900510132494832010052013c427e4a420053013048306850005401007c163548005501007812091000560100bf49093600570100bc480408005801007d1635480059010079120910005a010048565524005b0100505a6928005c010048565526005d0100505a692a005e010012a56912005f010028ac741400600100485556250061010050596a290062010101bf410100630100049f641000640104057e050400650100083d4a2100660102127e120200670100183e5820006801003a414239006901003a414279006a01003d41413d006b01003a42427a006c010039424239006d010039424279006e01003a45453a006f01003a45457a0070013a41403a010071013a41407a01007201001f60a01f007301001c60a03c00740178221122780075013842314238007601081261120800770100b84241fa00780104097009040079010064564d44007a0100486a5948007b010064544d44007c010048685a48007d010064554e45007e010048695a49007f0100087c0204008f01003452523c00920100887e090200a0013c42423c0806a101003048483008af01003e403e0806b001003840781008b501006a5a4a4e00b601005878585800d101003845463900d2010030494a3100e601003845563500e7010030494af100fa0100742a750000fb0100304c4a7d00fc0178147e554400fd0130487a695000fe010078744e3d00ff0100706a59380018020012a569120019020028ac7414001a020101bf4101001b0200049f641000bb0200000c0a0000bc0200000a060000bd020000060a0000c602000201020000c702000102010000c902000202020000d802000102020100d902000002000000da02000205020000db02000040800000dc02000201020100dd02020100020100740300000201000075030000804000007a030000c08000007e03000096760000840300000300000085030200030002008603037c12127c008703000010000000880303007e4a4200890303007e087e008a030300427e42008c03033c42423c008e0303000e700e008f03035c62625c00900302003b400200910378141214780092037e4a4a4a34009303007e0202020094036058465860009503007e4a4a420096030062524a46009703007e08087e0098033c4a4a4a3c00990300427e4200009a03007e081462009b036018061860009c037e0418047e009d03007e04087e009e0300424a4a42009f033c4242423c00a003007e02027e00a103007e12120c00a30300665a424200a40302027e020200a503060870080600a60318247e241800a703422418244200a8030e107e100e00a9035c6202625c00aa0300457c450000ab03040970090400ac030030484a7900ad030030685a5100ae0378100a09f000af03003a41200000b0033a4043403a00b103003048487800b20300fe25251a00b3030c30c0300c00b403344a4a4a3000b503003068585000b603021aa6a24200b7033c080404f800b803003c4a4a3c00b903003840200000ba03007820504800bb03641212227c00bc03fc2020103c00bd03182040201800be03112d2ba94100bf03003048483000c003087808780800c103f82424241800c2031824a4a44800c303304848582800c403000838482800c503384040403800c6031c20f8241800c703c4281028c400c8031c20fc201c00c903304820483000ca03000238422000cb03384240423800cc0330484a493000cd03384042413800ce03304822493000d0033c52525c2000d10310344a3c0800d203067804020400d303120a7c020400d4030d7009040800d5031824ff241800d603384828483800d70348302221d800da031c2221a14200db031824a4a44200dc037e1212020200dd0300fc24240400de033e2010087c00df030c0ac9281800e003700c621c7000e10301092516f800e2039ea0bea07e00e30398a0b8a07800e4030c1214107e00e503001028207800e603be9088887000e70348544e443800e803245252524c00e903285454544800ea0364524c526400eb03086458640800ec03385454542200ed03306848682400ee03184a7e4a1800ef031848ff0a0800f003483020205800f10378a4a4a49800f203304848485000f303006080847d00f4033c4a4a4a3c00f5030030585848000004007c555644000104007c55544500020401013f8579000304007c0605040004043c4a4a422400050400244a522400060400427e420000070400457c45000008042040423e020009047c027e4830000a047e087e4830000b0402027e0a72000c04007c102a45000d047c2112087c000e040c5152523d000f043f20e0203f00100478141214780011047e4a4a4a300012047e4a4a4a34001304007e020202001404c07c427ec0001504007e4a4a4200160476087e087600170424424a4a34001804007e08047e001904007d120a7d001a04007e081462001b04403c02027e001c047e0418047e001d04007e08087e001e043c4242423c001f047e0202027e002004007e12120c002104003c42422400220402027e02020023040e5050503e00240418247e241800250442241824420026043f2020bf600027040e1010107e0028047e407e407e0029043f203fa07f002a04027e484830002b047e4848307e002c04007e484830002d0424424a4a3c002e047e183c423c002f04006c12127e0030043048487840003104003c4a4a3100320400786850200033040078080808003404c0704878c000350430686850000036044830783048003704004058683000380478402010780039047942221279003a040078203048003b044030080878003c047810201078003d047810101078003e043048484830003f047808080878004004fc24242418004104304848485000420408087808080043041ca0a0a07c0044041824ff241800450400483030480046043c2020bc60004704182020207800480478407840780049043c203ca07c004a040878505020004b047850502078004c040078505020004d044858683000004e047830304830004f0450282878000050040030696a500051040032686a50005204023f0a887000530400780a09080054040030685848005504005058682800560400487a4000005704004a784200005804004080847d0059047008785020005a047810785020005b04047e141060005c040078223148005d047841221078005e0418a1a2a279005f043c20e0203c006204027f4a4830006304087e5850200070040e107e100e00710418207820180072043c4a4a4a3c0073043068586830007404001e70180c0075040018603010009004007e020203009104007808080c009204087e0a0a0200930420782808080096043b043f043be0970424183c1824c09a04003f040a31c09b04003c101824c0ae04060870080600af040c10e0100c00b004161870181600b1042c30e0302c00b20421120c1221c0b3040024181824c0ba047e0808087000bb04007e08087000d804003452523c00d904002868583000e20400457d450000e304004a7a420000e8043c4a4a4a3c00e904003058583000ee04003d41413d00ef04003a42427a00d005681020285000d105484848784000d205004830600000d305080808780800d405680808087800d505000008780000d605080818680800d705087808087800d805784050487800d905000008180000da0504040404fc00db05484848483800dc050e4848281800dd05087848487800de05582010487000df05000004fc0000e005004040487800e105000878483800e205487840281800e305041c0404fc00e405485848483800e50504f820140800e605485060685000e705f40424241c00e805080808087000e905785058403800ea05487808087800f005087800087800f105081800087800f205081800081800f305000010080000f405100800100800021e7c5455542800031e007e484930000a1e007c454438000b1e003049487e001e1e007c151404001f1e001079140800401e7e0419047e00411e780832087000561e007c15140800571e00fc25241800601e004854552400611e0050586a28006a1e04047d0404006b1e00083d482000801e7c2112207c00811e384132403800821e7c2012217c00831e384032413800841e7c2110217c00851e384230423800f21e040972080400f31e00b84142f800a3207e0a7a120a00a420a8fcaa828400a720087e2a1c0800ab200098a4a6bf02ac20183c5a5a4200af20627f224438009021103854101000912108047e0408009221101054381000932110207e201000942110381010381095212844fe442800")
@@ -2981,7 +2981,7 @@ switch (step) {
     s.callLocIdx = 187; s.pc = 6; return s.tmp_1;
   case 6:
     r0 = s.retval;
-    s.tmp_6 = dot_draw_text__P375517_mk(s);
+    s.tmp_6 = dot_draw_text__P402465_mk(s);
     s.tmp_6.arg0 = s.tmp_0;
     s.tmp_6.arg1 = s.text___380085;
     s.tmp_6.arg2 = 1;
@@ -3017,7 +3017,7 @@ switch (step) {
     s.callLocIdx = 191; s.pc = 11; return s.tmp_1;
   case 11:
     r0 = s.retval;
-    s.tmp_3 = dot_draw_text__P375517_mk(s);
+    s.tmp_3 = dot_draw_text__P402465_mk(s);
     s.tmp_3.arg0 = s.tmp_0;
     s.tmp_3.arg1 = "PRESS ANY KEY";
     s.tmp_3.arg2 = 1;
@@ -3135,7 +3135,7 @@ function dot_color_curr__P375489_mk(s) {
 
 
 
-function dot_draw_text__P375517(s) {
+function dot_draw_text__P402465(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3145,34 +3145,34 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.x___379416 = undefined;
-    s.y___379421 = undefined;
-    s.x0___379431 = undefined;
-    s.cp___379433 = undefined;
-    s.mult___379434 = undefined;
-    s.dataW___379439 = undefined;
-    s.dataH___379445 = undefined;
-    s.byteHeight___379451 = undefined;
-    s.charSize___379457 = undefined;
-    s.dataSize___379461 = undefined;
-    s.fontdata___379465 = undefined;
-    s.lastchar___379468 = undefined;
-    s.imgBuf___379475 = undefined;
-    s.width___379494 = undefined;
-    s.xOffset___379518 = undefined;
-    s.yOffset___379519 = undefined;
-    s.ch___379520 = undefined;
-    s.l___379539 = undefined;
-    s.r___379540 = undefined;
-    s.off___379542 = undefined;
-    s.guess___379543 = undefined;
-    s.m___379562 = undefined;
-    s.v___379571 = undefined;
-    s.i___379600 = undefined;
-    s.j___379605 = undefined;
-    s.mask___379606 = undefined;
-    s.c___379607 = undefined;
-    s.n___379624 = undefined;
+    s.x___402470 = undefined;
+    s.y___402475 = undefined;
+    s.x0___402485 = undefined;
+    s.cp___402487 = undefined;
+    s.mult___402488 = undefined;
+    s.dataW___402493 = undefined;
+    s.dataH___402499 = undefined;
+    s.byteHeight___402505 = undefined;
+    s.charSize___402511 = undefined;
+    s.dataSize___402515 = undefined;
+    s.fontdata___402519 = undefined;
+    s.lastchar___402522 = undefined;
+    s.imgBuf___402529 = undefined;
+    s.width___402548 = undefined;
+    s.xOffset___402574 = undefined;
+    s.yOffset___402575 = undefined;
+    s.ch___402576 = undefined;
+    s.l___402595 = undefined;
+    s.r___402596 = undefined;
+    s.off___402598 = undefined;
+    s.guess___402599 = undefined;
+    s.m___402618 = undefined;
+    s.v___402627 = undefined;
+    s.i___402656 = undefined;
+    s.j___402661 = undefined;
+    s.mask___402662 = undefined;
+    s.c___402663 = undefined;
+    s.n___402680 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -3183,11 +3183,11 @@ switch (step) {
     r0 = s.arg0.fields["x"];
     s.tmp_0 = r0;
     r0 = pxsim.Math_.floor(s.tmp_0);
-    s.x___379416 = (r0);
+    s.x___402470 = (r0);
     r0 = s.arg0.fields["y"];
     s.tmp_0 = r0;
     r0 = pxsim.Math_.floor(s.tmp_0);
-    s.y___379421 = (r0);
+    s.y___402475 = (r0);
     r0 = pxsim_numops_toBoolDecr(s.arg3);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
@@ -3202,8 +3202,8 @@ switch (step) {
     s.arg3 = (r0);
   case 1:
   case 2:
-    s.x0___379431 = (s.x___379416);
-    s.cp___379433 = (0);
+    s.x0___402485 = (s.x___402470);
+    s.cp___402487 = (0);
     s.tmp_1 = if_multiplier_1_mk(s);
     s.tmp_1.arg0 = s.arg3;
     if (!s.tmp_1.arg0.vtable.iface) {
@@ -3237,7 +3237,7 @@ switch (step) {
   case 4:
     // jmp value (already in r0)
     s.tmp_3 = r0;
-    s.mult___379434 = (s.tmp_3);
+    s.mult___402488 = (s.tmp_3);
     s.tmp_1 = if_charWidth_1_mk(s);
     s.tmp_1.arg0 = s.arg3;
     if (!s.tmp_1.arg0.vtable.iface) {
@@ -3251,8 +3251,8 @@ switch (step) {
   case 37:
     r0 = s.retval;
     s.tmp_0 = r0;
-    r0 = pxsim.Math_.idiv(s.tmp_0, s.mult___379434);
-    s.dataW___379439 = (r0);
+    r0 = pxsim.Math_.idiv(s.tmp_0, s.mult___402488);
+    s.dataW___402493 = (r0);
     s.tmp_1 = if_charHeight_1_mk(s);
     s.tmp_1.arg0 = s.arg3;
     if (!s.tmp_1.arg0.vtable.iface) {
@@ -3266,16 +3266,16 @@ switch (step) {
   case 38:
     r0 = s.retval;
     s.tmp_0 = r0;
-    r0 = pxsim.Math_.idiv(s.tmp_0, s.mult___379434);
-    s.dataH___379445 = (r0);
-    r0 = (s.dataH___379445 + 7);
+    r0 = pxsim.Math_.idiv(s.tmp_0, s.mult___402488);
+    s.dataH___402499 = (r0);
+    r0 = (s.dataH___402499 + 7);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 >> 3);
-    s.byteHeight___379451 = (r0);
-    r0 = (s.byteHeight___379451 * s.dataW___379439);
-    s.charSize___379457 = (r0);
-    r0 = (2 + s.charSize___379457);
-    s.dataSize___379461 = (r0);
+    s.byteHeight___402505 = (r0);
+    r0 = (s.byteHeight___402505 * s.dataW___402493);
+    s.charSize___402511 = (r0);
+    r0 = (2 + s.charSize___402511);
+    s.dataSize___402515 = (r0);
     s.tmp_0 = if_data_1_mk(s);
     s.tmp_0.arg0 = s.arg3;
     if (!s.tmp_0.arg0.vtable.iface) {
@@ -3288,25 +3288,25 @@ switch (step) {
     }
   case 39:
     r0 = s.retval;
-    s.fontdata___379465 = (r0);
-    r0 = pxsim.BufferMethods.length(s.fontdata___379465);
+    s.fontdata___402519 = (r0);
+    r0 = pxsim.BufferMethods.length(s.fontdata___402519);
     s.tmp_1 = r0;
-    r0 = pxsim.Math_.idiv(s.tmp_1, s.dataSize___379461);
+    r0 = pxsim.Math_.idiv(s.tmp_1, s.dataSize___402515);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 - 1);
-    s.lastchar___379468 = (r0);
-    r0 = (s.mult___379434 == 1);
+    s.lastchar___402522 = (r0);
+    r0 = (s.mult___402488 == 1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 5; continue; }
-    r0 = (8 + s.charSize___379457);
+    r0 = (8 + s.charSize___402511);
     s.tmp_1 = r0;
     r0 = pxsim.control.createBuffer(s.tmp_1);
-    s.imgBuf___379475 = (r0);
-    r0 = pxsim.BufferMethods.setByte(s.imgBuf___379475, 0, 135);
-    r0 = pxsim.BufferMethods.setByte(s.imgBuf___379475, 1, 1);
-    r0 = pxsim.BufferMethods.setByte(s.imgBuf___379475, 2, s.dataW___379439);
-    r0 = pxsim.BufferMethods.setByte(s.imgBuf___379475, 4, s.dataH___379445);
+    s.imgBuf___402529 = (r0);
+    r0 = pxsim.BufferMethods.setByte(s.imgBuf___402529, 0, 135);
+    r0 = pxsim.BufferMethods.setByte(s.imgBuf___402529, 1, 1);
+    r0 = pxsim.BufferMethods.setByte(s.imgBuf___402529, 2, s.dataW___402493);
+    r0 = pxsim.BufferMethods.setByte(s.imgBuf___402529, 4, s.dataH___402499);
   case 5:
   case 6:
     r0 = pxsim_String_.length(s.arg1);
@@ -3325,7 +3325,7 @@ switch (step) {
     r0 = s.retval;
     s.tmp_1 = r0;
     r0 = (s.tmp_0 * s.tmp_1);
-    s.width___379494 = (r0);
+    s.width___402548 = (r0);
     s.tmp_0 = r0 = s.arg2;
     r0 = pxsim_pxtcore.switch_eq(1, s.tmp_0);
     if (r0) { step = 7; continue; }
@@ -3334,36 +3334,36 @@ switch (step) {
     r0 = s.tmp_0;
     { step = 9; continue; }
   case 7:
-    s.tmp_1 = r0 = s.x___379416;
-    r0 = (s.width___379494 / 2);
+    s.tmp_1 = r0 = s.x___402470;
+    r0 = (s.width___402548 / 2);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 - s.tmp_2);
-    s.x___379416 = (r0);
+    s.x___402470 = (r0);
     { step = 9; continue; }
   case 8:
-    r0 = (s.x___379416 - s.width___379494);
-    s.x___379416 = (r0);
+    r0 = (s.x___402470 - s.width___402548);
+    s.x___402470 = (r0);
   case 9:
   case 10:
-    s.tmp_1 = r0 = s.cp___379433;
+    s.tmp_1 = r0 = s.cp___402487;
     r0 = pxsim_String_.length(s.arg1);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 < s.tmp_2);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 33; continue; }
-    s.xOffset___379518 = (0);
-    s.yOffset___379519 = (0);
-    s.tmp_0 = r0 = s.cp___379433;
+    s.xOffset___402574 = (0);
+    s.yOffset___402575 = (0);
+    s.tmp_0 = r0 = s.cp___402487;
     r0 = (s.tmp_0 + 1);
-    s.cp___379433 = (r0);
+    s.cp___402487 = (r0);
     r0 = pxsim_String_.charCodeAt(s.arg1, s.tmp_0);
-    s.ch___379520 = (r0);
-    r0 = (s.ch___379520 == 10);
+    s.ch___402576 = (r0);
+    r0 = (s.ch___402576 == 10);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 11; continue; }
-    s.tmp_1 = r0 = s.y___379421;
+    s.tmp_1 = r0 = s.y___402475;
     s.tmp_4 = if_charHeight_1_mk(s);
     s.tmp_4.arg0 = s.arg3;
     if (!s.tmp_4.arg0.vtable.iface) {
@@ -3380,153 +3380,153 @@ switch (step) {
     r0 = (s.tmp_3 + 2);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 + s.tmp_2);
-    s.y___379421 = (r0);
-    s.x___379416 = (s.x0___379431);
+    s.y___402475 = (r0);
+    s.x___402470 = (s.x0___402485);
   case 11:
   case 12:
-    r0 = (s.ch___379520 < 32);
+    r0 = (s.ch___402576 < 32);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 13; continue; }
     { step = 10; continue; }
   case 13:
   case 14:
-    s.l___379539 = (0);
-    s.r___379540 = (s.lastchar___379468);
-    s.off___379542 = (0);
-    r0 = (s.ch___379520 - 32);
+    s.l___402595 = (0);
+    s.r___402596 = (s.lastchar___402522);
+    s.off___402598 = (0);
+    r0 = (s.ch___402576 - 32);
     s.tmp_0 = r0;
-    r0 = (s.tmp_0 * s.dataSize___379461);
-    s.guess___379543 = (r0);
-    r0 = pxsim.BufferMethods.getNumber(s.fontdata___379465, 4, s.guess___379543);
+    r0 = (s.tmp_0 * s.dataSize___402515);
+    s.guess___402599 = (r0);
+    r0 = pxsim.BufferMethods.getNumber(s.fontdata___402519, 4, s.guess___402599);
     s.tmp_1 = r0;
-    r0 = (s.tmp_1 == s.ch___379520);
+    r0 = (s.tmp_1 == s.ch___402576);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 15; continue; }
-    s.off___379542 = (s.guess___379543);
+    s.off___402598 = (s.guess___402599);
     { step = 22; continue; }
   case 15:
   case 16:
-    r0 = (s.l___379539 <= s.r___379540);
+    r0 = (s.l___402595 <= s.r___402596);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 21; continue; }
-    s.tmp_1 = r0 = s.l___379539;
-    r0 = (s.r___379540 - s.l___379539);
+    s.tmp_1 = r0 = s.l___402595;
+    r0 = (s.r___402596 - s.l___402595);
     s.tmp_3 = r0;
     r0 = (s.tmp_3 >> 1);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 + s.tmp_2);
-    s.m___379562 = (r0);
-    s.tmp_0 = r0 = s.fontdata___379465;
-    r0 = (s.m___379562 * s.dataSize___379461);
+    s.m___402618 = (r0);
+    s.tmp_0 = r0 = s.fontdata___402519;
+    r0 = (s.m___402618 * s.dataSize___402515);
     s.tmp_1 = r0;
     r0 = pxsim.BufferMethods.getNumber(s.tmp_0, 4, s.tmp_1);
-    s.v___379571 = (r0);
-    r0 = (s.v___379571 == s.ch___379520);
+    s.v___402627 = (r0);
+    r0 = (s.v___402627 == s.ch___402576);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 17; continue; }
-    r0 = (s.m___379562 * s.dataSize___379461);
-    s.off___379542 = (r0);
+    r0 = (s.m___402618 * s.dataSize___402515);
+    s.off___402598 = (r0);
     { step = 21; continue; }
   case 17:
   case 18:
-    r0 = (s.v___379571 < s.ch___379520);
+    r0 = (s.v___402627 < s.ch___402576);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 19; continue; }
-    r0 = (s.m___379562 + 1);
-    s.l___379539 = (r0);
+    r0 = (s.m___402618 + 1);
+    s.l___402595 = (r0);
     { step = 20; continue; }
   case 19:
-    r0 = (s.m___379562 - 1);
-    s.r___379540 = (r0);
+    r0 = (s.m___402618 - 1);
+    s.r___402596 = (r0);
   case 20:
     { step = 16; continue; }
   case 21:
   case 22:
-    r0 = (s.off___379542 + 2);
-    s.off___379542 = (r0);
-    s.i___379600 = (0);
+    r0 = (s.off___402598 + 2);
+    s.off___402598 = (r0);
+    s.i___402656 = (0);
   case 23:
-    r0 = (s.i___379600 < s.dataW___379439);
+    r0 = (s.i___402656 < s.dataW___402493);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 32; continue; }
-    s.j___379605 = (0);
-    s.mask___379606 = (1);
-    s.tmp_0 = r0 = s.off___379542;
+    s.j___402661 = (0);
+    s.mask___402662 = (1);
+    s.tmp_0 = r0 = s.off___402598;
     r0 = (s.tmp_0 + 1);
-    s.off___379542 = (r0);
-    r0 = pxsim.BufferMethods.getByte(s.fontdata___379465, s.tmp_0);
-    s.c___379607 = (r0);
+    s.off___402598 = (r0);
+    r0 = pxsim.BufferMethods.getByte(s.fontdata___402519, s.tmp_0);
+    s.c___402663 = (r0);
   case 24:
-    r0 = (s.j___379605 < s.dataH___379445);
+    r0 = (s.j___402661 < s.dataH___402499);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 31; continue; }
-    r0 = (s.mask___379606 == 256);
+    r0 = (s.mask___402662 == 256);
     s.tmp_1 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_1);
     if (!r0) { step = 25; continue; }
-    s.tmp_2 = r0 = s.off___379542;
+    s.tmp_2 = r0 = s.off___402598;
     r0 = (s.tmp_2 + 1);
-    s.off___379542 = (r0);
-    r0 = pxsim.BufferMethods.getByte(s.fontdata___379465, s.tmp_2);
-    s.c___379607 = (r0);
-    s.mask___379606 = (1);
+    s.off___402598 = (r0);
+    r0 = pxsim.BufferMethods.getByte(s.fontdata___402519, s.tmp_2);
+    s.c___402663 = (r0);
+    s.mask___402662 = (1);
   case 25:
   case 26:
-    s.n___379624 = (0);
+    s.n___402680 = (0);
   case 27:
-    r0 = (s.c___379607 & s.mask___379606);
+    r0 = (s.c___402663 & s.mask___402662);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 28; continue; }
-    r0 = (s.n___379624 + 1);
-    s.n___379624 = (r0);
-    r0 = (s.mask___379606 << 1);
-    s.mask___379606 = (r0);
+    r0 = (s.n___402680 + 1);
+    s.n___402680 = (r0);
+    r0 = (s.mask___402662 << 1);
+    s.mask___402662 = (r0);
     { step = 27; continue; }
   case 28:
-    r0 = pxsim_numops_toBoolDecr(s.n___379624);
+    r0 = pxsim_numops_toBoolDecr(s.n___402680);
     if (!r0) { step = 29; continue; }
     s.tmp_0 = dot_gfx_box__P375503_mk(s);
-    s.tmp_1 = r0 = s.x___379416;
-    r0 = (s.xOffset___379518 * s.mult___379434);
+    s.tmp_1 = r0 = s.x___402470;
+    r0 = (s.xOffset___402574 * s.mult___402488);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 + s.tmp_2);
     s.tmp_0.arg0 = r0;
-    s.tmp_3 = r0 = s.y___379421;
-    r0 = (s.j___379605 + s.yOffset___379519);
+    s.tmp_3 = r0 = s.y___402475;
+    r0 = (s.j___402661 + s.yOffset___402575);
     s.tmp_5 = r0;
-    r0 = (s.tmp_5 * s.mult___379434);
+    r0 = (s.tmp_5 * s.mult___402488);
     s.tmp_4 = r0;
     r0 = (s.tmp_3 + s.tmp_4);
     s.tmp_0.arg1 = r0;
-    s.tmp_0.arg2 = s.mult___379434;
-    r0 = (s.mult___379434 * s.n___379624);
+    s.tmp_0.arg2 = s.mult___402488;
+    r0 = (s.mult___402488 * s.n___402680);
     s.tmp_0.arg3 = r0;
     s.callLocIdx = 127; s.pc = 42; return s.tmp_0;
   case 42:
     r0 = s.retval;
-    r0 = (s.j___379605 + s.n___379624);
-    s.j___379605 = (r0);
+    r0 = (s.j___402661 + s.n___402680);
+    s.j___402661 = (r0);
     { step = 30; continue; }
   case 29:
-    r0 = (s.mask___379606 << 1);
-    s.mask___379606 = (r0);
-    r0 = (s.j___379605 + 1);
-    s.j___379605 = (r0);
+    r0 = (s.mask___402662 << 1);
+    s.mask___402662 = (r0);
+    r0 = (s.j___402661 + 1);
+    s.j___402661 = (r0);
   case 30:
     { step = 24; continue; }
   case 31:
-    r0 = (s.x___379416 + s.mult___379434);
-    s.x___379416 = (r0);
-    r0 = (s.i___379600 + 1);
-    s.i___379600 = (r0);
+    r0 = (s.x___402470 + s.mult___402488);
+    s.x___402470 = (r0);
+    r0 = (s.i___402656 + 1);
+    s.i___402656 = (r0);
     { step = 23; continue; }
   case 32:
     { step = 10; continue; }
@@ -3535,12 +3535,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_draw_text__P375517.info = {"start":2361,"length":4043,"line":75,"column":8,"endLine":186,"endColumn":9,"fileName":"draw.ts","functionName":"text","argumentNames":["p","s","alignment","font"]}
+dot_draw_text__P402465.info = {"start":2397,"length":4043,"line":77,"column":8,"endLine":188,"endColumn":9,"fileName":"draw.ts","functionName":"text","argumentNames":["p","s","alignment","font"]}
 
-function dot_draw_text__P375517_mk(s) {
+function dot_draw_text__P402465_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_draw_text__P375517, depth: s.depth + 1,
+        parent: s, fn: dot_draw_text__P402465, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3548,34 +3548,34 @@ function dot_draw_text__P375517_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   tmp_5: undefined,
-  x___379416: undefined,
-  y___379421: undefined,
-  x0___379431: undefined,
-  cp___379433: undefined,
-  mult___379434: undefined,
-  dataW___379439: undefined,
-  dataH___379445: undefined,
-  byteHeight___379451: undefined,
-  charSize___379457: undefined,
-  dataSize___379461: undefined,
-  fontdata___379465: undefined,
-  lastchar___379468: undefined,
-  imgBuf___379475: undefined,
-  width___379494: undefined,
-  xOffset___379518: undefined,
-  yOffset___379519: undefined,
-  ch___379520: undefined,
-  l___379539: undefined,
-  r___379540: undefined,
-  off___379542: undefined,
-  guess___379543: undefined,
-  m___379562: undefined,
-  v___379571: undefined,
-  i___379600: undefined,
-  j___379605: undefined,
-  mask___379606: undefined,
-  c___379607: undefined,
-  n___379624: undefined,
+  x___402470: undefined,
+  y___402475: undefined,
+  x0___402485: undefined,
+  cp___402487: undefined,
+  mult___402488: undefined,
+  dataW___402493: undefined,
+  dataH___402499: undefined,
+  byteHeight___402505: undefined,
+  charSize___402511: undefined,
+  dataSize___402515: undefined,
+  fontdata___402519: undefined,
+  lastchar___402522: undefined,
+  imgBuf___402529: undefined,
+  width___402548: undefined,
+  xOffset___402574: undefined,
+  yOffset___402575: undefined,
+  ch___402576: undefined,
+  l___402595: undefined,
+  r___402596: undefined,
+  off___402598: undefined,
+  guess___402599: undefined,
+  m___402618: undefined,
+  v___402627: undefined,
+  i___402656: undefined,
+  j___402661: undefined,
+  mask___402662: undefined,
+  c___402663: undefined,
+  n___402680: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -3869,7 +3869,7 @@ switch (step) {
     s.callLocIdx = 178; s.pc = 8; return s.tmp_1;
   case 8:
     r0 = s.retval;
-    s.tmp_2 = dot_draw_text__P375517_mk(s);
+    s.tmp_2 = dot_draw_text__P402465_mk(s);
     s.tmp_2.arg0 = s.tmp_0;
     s.tmp_2.arg1 = globals.gameTitle___375525;
     s.tmp_2.arg2 = 1;
@@ -3918,7 +3918,7 @@ switch (step) {
     s.callLocIdx = 182; s.pc = 12; return s.tmp_1;
   case 12:
     r0 = s.retval;
-    s.tmp_3 = dot_draw_text__P375517_mk(s);
+    s.tmp_3 = dot_draw_text__P402465_mk(s);
     s.tmp_3.arg0 = s.tmp_0;
     s.tmp_3.arg1 = s.text___380067;
     s.tmp_3.arg2 = 1;
@@ -3978,7 +3978,7 @@ switch (step) {
     s.callLocIdx = 172; s.pc = 2; return s.tmp_1;
   case 2:
     r0 = s.retval;
-    s.tmp_2 = dot_draw_text__P375517_mk(s);
+    s.tmp_2 = dot_draw_text__P402465_mk(s);
     s.tmp_2.arg0 = s.tmp_0;
     r0 = pxsim_String_.mkEmpty();
     s.tmp_3 = r0;
@@ -4009,7 +4009,7 @@ switch (step) {
     s.callLocIdx = 174; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
-    s.tmp_2 = dot_draw_text__P375517_mk(s);
+    s.tmp_2 = dot_draw_text__P402465_mk(s);
     s.tmp_2.arg0 = s.tmp_0;
     r0 = pxsim.Math_.floor(globals.high___375531);
     s.tmp_4 = r0;
@@ -4716,7 +4716,7 @@ switch (step) {
     s.callLocIdx = 263; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    s.tmp_0 = dot_draw_text__P375517_mk(s);
+    s.tmp_0 = dot_draw_text__P402465_mk(s);
     r0 = s.arg0.fields["pos"];
     s.tmp_0.arg0 = r0;
     r0 = s.arg0.fields["str"];
@@ -7871,7 +7871,7 @@ function dot_Set_constructor__P375578_mk(s) {
 
 
 
-function test_gameUpdate__P381023(s) {
+function test_gameUpdate__P403099(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -7881,25 +7881,25 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.s___381123 = undefined;
-    s.c___381128 = undefined;
-    s.p0___381132 = undefined;
-    s.p1___381139 = undefined;
-    s.det___381151 = undefined;
-    s.colls___381273 = undefined;
-    s.coll___381278 = undefined;
-    s.unnamed12412___U7 = undefined;
-    s.unnamed12413___U8 = undefined;
-    s.pos___381289 = undefined;
-    s.coll___381312 = undefined;
-    s.unnamed12414___U11 = undefined;
-    s.unnamed12415___U12 = undefined;
+    s.s___403199 = undefined;
+    s.c___403204 = undefined;
+    s.p0___403208 = undefined;
+    s.p1___403215 = undefined;
+    s.det___403227 = undefined;
+    s.colls___403353 = undefined;
+    s.coll___403358 = undefined;
+    s.unnamed12576___U7 = undefined;
+    s.unnamed12577___U8 = undefined;
+    s.pos___403369 = undefined;
+    s.coll___403392 = undefined;
+    s.unnamed12578___U11 = undefined;
+    s.unnamed12579___U12 = undefined;
     r0 = (globals.tick___375528 === 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    globals.d___381104 = (1);
-    globals.a___381106 = (0);
+    globals.d___403180 = (1);
+    globals.a___403182 = (0);
   case 1:
   case 2:
     s.tmp_0 = scene_setBackgroundColor__P373933_mk(s);
@@ -7907,19 +7907,19 @@ switch (step) {
     s.callLocIdx = 314; s.pc = 22; return s.tmp_0;
   case 22:
     r0 = s.retval;
-    s.tmp_0 = r0 = globals.a___381106;
-    r0 = (globals.difficulty___375529 * globals.d___381104);
+    s.tmp_0 = r0 = globals.a___403182;
+    r0 = (globals.difficulty___375529 * globals.d___403180);
     s.tmp_2 = r0;
     r0 = (s.tmp_2 / 20);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 + s.tmp_1);
-    globals.a___381106 = (r0);
-    r0 = pxsim.Math_.sin(globals.a___381106);
+    globals.a___403182 = (r0);
+    r0 = pxsim.Math_.sin(globals.a___403182);
     s.tmp_0 = r0;
     r0 = (0 - s.tmp_0);
-    s.s___381123 = (r0);
-    r0 = pxsim.Math_.cos(globals.a___381106);
-    s.c___381128 = (r0);
+    s.s___403199 = (r0);
+    r0 = pxsim.Math_.cos(globals.a___403182);
+    s.c___403204 = (r0);
     r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C375388_VT);
     s.tmp_0 = r0;
     s.tmp_1 = dot_Vec2_constructor__P375393_mk(s);
@@ -7931,13 +7931,13 @@ switch (step) {
     s.callLocIdx = 315; s.pc = 23; return s.tmp_1;
   case 23:
     r0 = s.retval;
-    s.p0___381132 = (s.tmp_0);
+    s.p0___403208 = (s.tmp_0);
     s.tmp_0 = dot_vec2_add__P375407_mk(s);
-    s.tmp_0.arg0 = s.p0___381132;
+    s.tmp_0.arg0 = s.p0___403208;
     s.tmp_1 = dot_Vec2_scale__P375397_mk(s);
     s.tmp_2 = dot_vec2_mk__P375403_mk(s);
-    s.tmp_2.arg0 = s.s___381123;
-    s.tmp_2.arg1 = s.c___381128;
+    s.tmp_2.arg0 = s.s___403199;
+    s.tmp_2.arg1 = s.c___403204;
     s.callLocIdx = 316; s.pc = 26; return s.tmp_2;
   case 26:
     r0 = s.retval;
@@ -7951,15 +7951,15 @@ switch (step) {
     s.callLocIdx = 318; s.pc = 24; return s.tmp_0;
   case 24:
     r0 = s.retval;
-    s.p1___381139 = (r0);
+    s.p1___403215 = (r0);
     s.tmp_0 = dot_color_set__P375490_mk(s);
     s.tmp_0.arg0 = 1;
     s.callLocIdx = 319; s.pc = 27; return s.tmp_0;
   case 27:
     r0 = s.retval;
-    s.tmp_0 = dot_draw_line__P375515_mk(s);
-    s.tmp_0.arg0 = s.p0___381132;
-    s.tmp_0.arg1 = s.p1___381139;
+    s.tmp_0 = dot_draw_line__P402404_mk(s);
+    s.tmp_0.arg0 = s.p0___403208;
+    s.tmp_0.arg1 = s.p1___403215;
     s.tmp_0.arg2 = 3;
     s.tmp_0.arg3 = 0;
     s.tmp_0.arg4 = null;
@@ -7967,14 +7967,14 @@ switch (step) {
     s.callLocIdx = 320; s.pc = 28; return s.tmp_0;
   case 28:
     r0 = s.retval;
-    s.det___381151 = (r0);
+    s.det___403227 = (r0);
     s.tmp_0 = dot_color_set__P375490_mk(s);
     s.tmp_0.arg0 = 11;
     s.callLocIdx = 321; s.pc = 29; return s.tmp_0;
   case 29:
     r0 = s.retval;
-    s.tmp_0 = dot_draw_arc__P375516_mk(s);
-    s.tmp_0.arg0 = s.p0___381132;
+    s.tmp_0 = dot_draw_arc__P402428_mk(s);
+    s.tmp_0.arg0 = s.p0___403208;
     r0 = (globals.tick___375528 / 4);
     s.tmp_1 = r0;
     r0 = (globals.SCREEN_WIDTH___375468 / 2);
@@ -7994,8 +7994,8 @@ switch (step) {
   case 30:
     r0 = s.retval;
     s.tmp_0 = helpers_arrayForEach__P371158_mk(s);
-    s.tmp_0.arg0 = globals.boxes___381031;
-    s.tmp_0.arg1 = test_gameUpdate_inline__P381175;
+    s.tmp_0.arg0 = globals.boxes___403107;
+    s.tmp_0.arg1 = test_gameUpdate_inline__P403251;
     s.callLocIdx = 327; s.pc = 32; return s.tmp_0;
   case 32:
     r0 = s.retval;
@@ -8012,7 +8012,7 @@ switch (step) {
     s.tmp_1 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_1);
     if (!r0) { step = 3; continue; }
-    globals.d___381104 = (-1);
+    globals.d___403180 = (-1);
     { step = 8; continue; }
   case 3:
     s.tmp_1 = dot_Button_justPressed__P380190_mk(s);
@@ -8024,7 +8024,7 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 4; continue; }
-    globals.d___381104 = (1);
+    globals.d___403180 = (1);
     { step = 7; continue; }
   case 4:
     s.tmp_1 = dot_Input_justPressed__P380160_mk(s);
@@ -8045,23 +8045,23 @@ switch (step) {
   case 7:
   case 8:
     s.tmp_0 = dot_CollisionReporter_collisions__P399415_mk(s);
-    s.tmp_0.arg0 = s.det___381151;
+    s.tmp_0.arg0 = s.det___403227;
     s.callLocIdx = 334; s.pc = 37; return s.tmp_0;
   case 37:
     r0 = s.retval;
-    s.colls___381273 = (r0);
-    s.coll___381278 = (undefined);
-    s.unnamed12412___U7 = (s.colls___381273);
-    s.unnamed12413___U8 = (0);
+    s.colls___403353 = (r0);
+    s.coll___403358 = (undefined);
+    s.unnamed12576___U7 = (s.colls___403353);
+    s.unnamed12577___U8 = (0);
   case 9:
-    s.tmp_0 = r0 = s.unnamed12413___U8;
-    r0 = pxsim_Array__length(s.unnamed12412___U7);
+    s.tmp_0 = r0 = s.unnamed12577___U8;
+    r0 = pxsim_Array__length(s.unnamed12576___U7);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 15; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed12412___U7, s.unnamed12413___U8);
-    s.coll___381278 = (r0);
-    r0 = s.coll___381278.fields["dst"];
+    r0 = pxsim_Array__getAt(s.unnamed12576___U7, s.unnamed12577___U8);
+    s.coll___403358 = (r0);
+    r0 = s.coll___403358.fields["dst"];
     r0 = r0.fields["id"];
     s.tmp_4 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_4);
@@ -8073,10 +8073,10 @@ switch (step) {
     { step = 14; continue; }
   case 10:
   case 11:
-    r0 = s.coll___381278.fields["dst"];
+    r0 = s.coll___403358.fields["dst"];
     r0 = r0.fields["id"];
     s.tmp_6 = r0;
-    r0 = globals.collisions___381029.fields["_items"];
+    r0 = globals.collisions___403105.fields["_items"];
     s.tmp_8 = r0;
     r0 = pxsim_pxtrt.mapGetGeneric(s.tmp_8, s.tmp_6);
     s.tmp_7 = r0;
@@ -8088,15 +8088,15 @@ switch (step) {
   case 12:
   case 13:
     s.tmp_9 = dot_Rect_center__P375438_mk(s);
-    r0 = s.coll___381278.fields["dst"];
+    r0 = s.coll___403358.fields["dst"];
     r0 = r0.fields["rect"];
     s.tmp_9.arg0 = r0;
     s.callLocIdx = 336; s.pc = 38; return s.tmp_9;
   case 38:
     r0 = s.retval;
-    s.pos___381289 = (r0);
+    s.pos___403369 = (r0);
     s.tmp_0 = dot_color_set__P375490_mk(s);
-    r0 = s.coll___381278.fields["dst"];
+    r0 = s.coll___403358.fields["dst"];
     r0 = r0.fields["color"];
     s.tmp_0.arg0 = r0;
     s.callLocIdx = 337; s.pc = 39; return s.tmp_0;
@@ -8104,12 +8104,12 @@ switch (step) {
     r0 = s.retval;
     s.tmp_0 = dot_scores_add__P395543_mk(s);
     s.tmp_0.arg0 = 10;
-    s.tmp_0.arg1 = s.pos___381289;
+    s.tmp_0.arg1 = s.pos___403369;
     s.callLocIdx = 338; s.pc = 40; return s.tmp_0;
   case 40:
     r0 = s.retval;
     s.tmp_0 = dot_particles_add__P375571_mk(s);
-    s.tmp_0.arg0 = s.pos___381289;
+    s.tmp_0.arg0 = s.pos___403369;
     s.tmp_0.arg1 = 10;
     s.tmp_0.arg2 = 2;
     s.tmp_0.arg3 = 1.5707963267948966;
@@ -8118,35 +8118,35 @@ switch (step) {
   case 41:
     r0 = s.retval;
   case 14:
-    r0 = (s.unnamed12413___U8 + 1);
-    s.unnamed12413___U8 = (r0);
+    r0 = (s.unnamed12577___U8 + 1);
+    s.unnamed12577___U8 = (r0);
     { step = 9; continue; }
   case 15:
-    s.unnamed12412___U7 = (undefined);
+    s.unnamed12576___U7 = (undefined);
     s.tmp_0 = dot_Set_clear__P375582_mk(s);
-    s.tmp_0.arg0 = globals.collisions___381029;
+    s.tmp_0.arg0 = globals.collisions___403105;
     s.callLocIdx = 340; s.pc = 42; return s.tmp_0;
   case 42:
     r0 = s.retval;
-    s.coll___381312 = (undefined);
-    s.unnamed12414___U11 = (s.colls___381273);
-    s.unnamed12415___U12 = (0);
+    s.coll___403392 = (undefined);
+    s.unnamed12578___U11 = (s.colls___403353);
+    s.unnamed12579___U12 = (0);
   case 16:
-    s.tmp_0 = r0 = s.unnamed12415___U12;
-    r0 = pxsim_Array__length(s.unnamed12414___U11);
+    s.tmp_0 = r0 = s.unnamed12579___U12;
+    r0 = pxsim_Array__length(s.unnamed12578___U11);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 19; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed12414___U11, s.unnamed12415___U12);
-    s.coll___381312 = (r0);
-    r0 = s.coll___381312.fields["dst"];
+    r0 = pxsim_Array__getAt(s.unnamed12578___U11, s.unnamed12579___U12);
+    s.coll___403392 = (r0);
+    r0 = s.coll___403392.fields["dst"];
     r0 = r0.fields["id"];
     s.tmp_2 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
     if (!r0) { step = 17; continue; }
     s.tmp_3 = dot_Set_set__P375581_mk(s);
-    s.tmp_3.arg0 = globals.collisions___381029;
-    r0 = s.coll___381312.fields["dst"];
+    s.tmp_3.arg0 = globals.collisions___403105;
+    r0 = s.coll___403392.fields["dst"];
     r0 = r0.fields["id"];
     s.tmp_3.arg1 = r0;
     s.tmp_3.arg2 = true;
@@ -8155,23 +8155,23 @@ switch (step) {
     r0 = s.retval;
   case 17:
   case 18:
-    r0 = (s.unnamed12415___U12 + 1);
-    s.unnamed12415___U12 = (r0);
+    r0 = (s.unnamed12579___U12 + 1);
+    s.unnamed12579___U12 = (r0);
     { step = 16; continue; }
   case 19:
-    s.unnamed12414___U11 = (undefined);
+    s.unnamed12578___U11 = (undefined);
   case 20:
   case 21:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-test_gameUpdate__P381023.info = {"start":967,"length":2055,"line":40,"column":4,"endLine":93,"endColumn":5,"fileName":"test.ts","functionName":"gameUpdate","argumentNames":[]}
+test_gameUpdate__P403099.info = {"start":967,"length":2069,"line":40,"column":4,"endLine":93,"endColumn":5,"fileName":"test.ts","functionName":"gameUpdate","argumentNames":[]}
 
-function test_gameUpdate__P381023_mk(s) {
+function test_gameUpdate__P403099_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: test_gameUpdate__P381023, depth: s.depth + 1,
+        parent: s, fn: test_gameUpdate__P403099, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -8183,26 +8183,26 @@ function test_gameUpdate__P381023_mk(s) {
   tmp_7: undefined,
   tmp_8: undefined,
   tmp_9: undefined,
-  s___381123: undefined,
-  c___381128: undefined,
-  p0___381132: undefined,
-  p1___381139: undefined,
-  det___381151: undefined,
-  colls___381273: undefined,
-  coll___381278: undefined,
-  unnamed12412___U7: undefined,
-  unnamed12413___U8: undefined,
-  pos___381289: undefined,
-  coll___381312: undefined,
-  unnamed12414___U11: undefined,
-  unnamed12415___U12: undefined,
+  s___403199: undefined,
+  c___403204: undefined,
+  p0___403208: undefined,
+  p1___403215: undefined,
+  det___403227: undefined,
+  colls___403353: undefined,
+  coll___403358: undefined,
+  unnamed12576___U7: undefined,
+  unnamed12577___U8: undefined,
+  pos___403369: undefined,
+  coll___403392: undefined,
+  unnamed12578___U11: undefined,
+  unnamed12579___U12: undefined,
 } }
 
 
 
 
 
-function test_gameUpdate_inline__P381175(s) {
+function test_gameUpdate_inline__P403251(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8320,14 +8320,18 @@ switch (step) {
     s.callLocIdx = 324; s.pc = 9; return s.tmp_0;
   case 9:
     r0 = s.retval;
-    s.tmp_0 = dot_draw_box__P375514_mk(s);
+    s.tmp_0 = dot_draw_box__P402372_mk(s);
     r0 = s.arg0.fields["r"];
+    r0 = r0.fields["pos"];
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = false;
+    r0 = s.arg0.fields["r"];
+    r0 = r0.fields["size"];
+    s.tmp_0.arg1 = r0;
+    s.tmp_0.arg2 = false;
     r0 = pxsim_Array__mk();
-    s.tmp_0.arg2 = r0;
-    r0 = s.arg0.fields["id"];
     s.tmp_0.arg3 = r0;
+    r0 = s.arg0.fields["id"];
+    s.tmp_0.arg4 = r0;
     s.callLocIdx = 326; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
@@ -8335,12 +8339,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-test_gameUpdate_inline__P381175.info = {"start":1700,"length":397,"line":59,"column":22,"endLine":66,"endColumn":9,"fileName":"test.ts","functionName":"inline","argumentNames":["b"]}
+test_gameUpdate_inline__P403251.info = {"start":1700,"length":411,"line":59,"column":22,"endLine":66,"endColumn":9,"fileName":"test.ts","functionName":"inline","argumentNames":["b"]}
 
-function test_gameUpdate_inline__P381175_mk(s) {
+function test_gameUpdate_inline__P403251_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: test_gameUpdate_inline__P381175, depth: s.depth + 1,
+        parent: s, fn: test_gameUpdate_inline__P403251, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -9383,11 +9387,11 @@ switch (step) {
     s.srcs___399537 = undefined;
     s.dsts___399540 = undefined;
     s.src___399544 = undefined;
-    s.unnamed12408___U3 = undefined;
-    s.unnamed12409___U4 = undefined;
+    s.unnamed12572___U3 = undefined;
+    s.unnamed12573___U4 = undefined;
     s.dst___399547 = undefined;
-    s.unnamed12410___U6 = undefined;
-    s.unnamed12411___U7 = undefined;
+    s.unnamed12574___U6 = undefined;
+    s.unnamed12575___U7 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -9398,26 +9402,26 @@ switch (step) {
     r0 = s.arg1.fields["_srcs"];
     s.dsts___399540 = (r0);
     s.src___399544 = (undefined);
-    s.unnamed12408___U3 = (s.srcs___399537);
-    s.unnamed12409___U4 = (0);
+    s.unnamed12572___U3 = (s.srcs___399537);
+    s.unnamed12573___U4 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed12409___U4;
-    r0 = pxsim_Array__length(s.unnamed12408___U3);
+    s.tmp_0 = r0 = s.unnamed12573___U4;
+    r0 = pxsim_Array__length(s.unnamed12572___U3);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 19; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed12408___U3, s.unnamed12409___U4);
+    r0 = pxsim_Array__getAt(s.unnamed12572___U3, s.unnamed12573___U4);
     s.src___399544 = (r0);
     s.dst___399547 = (undefined);
-    s.unnamed12410___U6 = (s.dsts___399540);
-    s.unnamed12411___U7 = (0);
+    s.unnamed12574___U6 = (s.dsts___399540);
+    s.unnamed12575___U7 = (0);
   case 2:
-    s.tmp_0 = r0 = s.unnamed12411___U7;
-    r0 = pxsim_Array__length(s.unnamed12410___U6);
+    s.tmp_0 = r0 = s.unnamed12575___U7;
+    r0 = pxsim_Array__length(s.unnamed12574___U6);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 18; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed12410___U6, s.unnamed12411___U7);
+    r0 = pxsim_Array__getAt(s.unnamed12574___U6, s.unnamed12575___U7);
     s.dst___399547 = (r0);
     r0 = s.src___399544.fields["_mask"];
     s.tmp_4 = r0;
@@ -9529,16 +9533,16 @@ switch (step) {
   case 15:
   case 16:
   case 17:
-    r0 = (s.unnamed12411___U7 + 1);
-    s.unnamed12411___U7 = (r0);
+    r0 = (s.unnamed12575___U7 + 1);
+    s.unnamed12575___U7 = (r0);
     { step = 2; continue; }
   case 18:
-    s.unnamed12410___U6 = (undefined);
-    r0 = (s.unnamed12409___U4 + 1);
-    s.unnamed12409___U4 = (r0);
+    s.unnamed12574___U6 = (undefined);
+    r0 = (s.unnamed12573___U4 + 1);
+    s.unnamed12573___U4 = (r0);
     { step = 1; continue; }
   case 19:
-    s.unnamed12408___U3 = (undefined);
+    s.unnamed12572___U3 = (undefined);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
@@ -9570,11 +9574,11 @@ function dot_collision__internal_calcCollisions__P399534_mk(s) {
   srcs___399537: undefined,
   dsts___399540: undefined,
   src___399544: undefined,
-  unnamed12408___U3: undefined,
-  unnamed12409___U4: undefined,
+  unnamed12572___U3: undefined,
+  unnamed12573___U4: undefined,
   dst___399547: undefined,
-  unnamed12410___U6: undefined,
-  unnamed12411___U7: undefined,
+  unnamed12574___U6: undefined,
+  unnamed12575___U7: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -10061,7 +10065,7 @@ function dot_color_none__P375495_mk(s) {
 
 
 
-function dot_draw_box__P375514(s) {
+function dot_draw_box__P402372(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -10071,30 +10075,27 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.x___379323 = undefined;
-    s.y___379327 = undefined;
-    s.w___379331 = undefined;
-    s.h___379335 = undefined;
+    s.x___402378 = undefined;
+    s.y___402381 = undefined;
+    s.w___402384 = undefined;
+    s.h___402387 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.arg2 = (s.lambdaArgs[2]);
       s.arg3 = (s.lambdaArgs[3]);
+      s.arg4 = (s.lambdaArgs[4]);
       s.lambdaArgs = null;
     }
-    r0 = s.arg0.fields["pos"];
-    r0 = r0.fields["x"];
-    s.x___379323 = (r0);
-    r0 = s.arg0.fields["pos"];
-    r0 = r0.fields["y"];
-    s.y___379327 = (r0);
-    r0 = s.arg0.fields["size"];
-    r0 = r0.fields["x"];
-    s.w___379331 = (r0);
-    r0 = s.arg0.fields["size"];
-    r0 = r0.fields["y"];
-    s.h___379335 = (r0);
-    r0 = (s.arg2 == null);
+    r0 = s.arg0.fields["x"];
+    s.x___402378 = (r0);
+    r0 = s.arg0.fields["y"];
+    s.y___402381 = (r0);
+    r0 = s.arg1.fields["x"];
+    s.w___402384 = (r0);
+    r0 = s.arg1.fields["y"];
+    s.h___402387 = (r0);
+    r0 = (s.arg3 == null);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
@@ -10102,18 +10103,18 @@ switch (step) {
     s.callLocIdx = 113; s.pc = 3; return s.tmp_1;
   case 3:
     r0 = s.retval;
-    s.arg2 = (r0);
+    s.arg3 = (r0);
   case 1:
   case 2:
-    s.tmp_0 = dot_draw__internal_rect__P379310_mk(s);
-    s.tmp_0.arg0 = s.arg3;
-    s.tmp_0.arg1 = s.arg1;
+    s.tmp_0 = dot_draw__internal_rect__P402363_mk(s);
+    s.tmp_0.arg0 = s.arg4;
+    s.tmp_0.arg1 = s.arg2;
     s.tmp_0.arg2 = true;
-    s.tmp_0.arg3 = s.arg2;
-    s.tmp_0.arg4 = s.x___379323;
-    s.tmp_0.arg5 = s.y___379327;
-    s.tmp_0.arg6 = s.w___379331;
-    s.tmp_0.arg7 = s.h___379335;
+    s.tmp_0.arg3 = s.arg3;
+    s.tmp_0.arg4 = s.x___402378;
+    s.tmp_0.arg5 = s.y___402381;
+    s.tmp_0.arg6 = s.w___402384;
+    s.tmp_0.arg7 = s.h___402387;
     s.tmp_0.arg8 = undefined;
     s.callLocIdx = 114; s.pc = 4; return s.tmp_0;
   case 4:
@@ -10121,30 +10122,31 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_draw_box__P375514.info = {"start":634,"length":489,"line":22,"column":8,"endLine":36,"endColumn":9,"fileName":"draw.ts","functionName":"box","argumentNames":["r","alignCenter","collidesWith","id"]}
+dot_draw_box__P402372.info = {"start":652,"length":507,"line":23,"column":8,"endLine":38,"endColumn":9,"fileName":"draw.ts","functionName":"box","argumentNames":["pos","size","alignCenter","collidesWith","id"]}
 
-function dot_draw_box__P375514_mk(s) {
+function dot_draw_box__P402372_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_draw_box__P375514, depth: s.depth + 1,
+        parent: s, fn: dot_draw_box__P402372, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  x___379323: undefined,
-  y___379327: undefined,
-  w___379331: undefined,
-  h___379335: undefined,
+  x___402378: undefined,
+  y___402381: undefined,
+  w___402384: undefined,
+  h___402387: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
   arg3: undefined,
+  arg4: undefined,
 } }
 
 
 
 
 
-function dot_draw__internal_rect__P379310(s) {
+function dot_draw__internal_rect__P402363(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -10154,9 +10156,9 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.pos___379682 = undefined;
-    s.size___379699 = undefined;
-    s.c___379712 = undefined;
+    s.pos___402738 = undefined;
+    s.size___402755 = undefined;
+    s.c___402768 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -10217,7 +10219,7 @@ switch (step) {
   case 4:
     // jmp value (already in r0)
     s.tmp_8 = r0;
-    s.pos___379682 = (s.tmp_8);
+    s.pos___402738 = (s.tmp_8);
     r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C375388_VT);
     s.tmp_0 = r0;
     s.tmp_1 = dot_Vec2_constructor__P375393_mk(s);
@@ -10227,8 +10229,8 @@ switch (step) {
     s.callLocIdx = 131; s.pc = 21; return s.tmp_1;
   case 21:
     r0 = s.retval;
-    s.size___379699 = (s.tmp_0);
-    r0 = s.size___379699.fields["x"];
+    s.size___402755 = (s.tmp_0);
+    r0 = s.size___402755.fields["x"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 === 0);
     s.tmp_0 = r0;
@@ -10237,7 +10239,7 @@ switch (step) {
     r0 = s.tmp_0;
     { step = 6; continue; }
   case 5:
-    r0 = s.size___379699.fields["y"];
+    r0 = s.size___402755.fields["y"];
     s.tmp_2 = r0;
     r0 = (s.tmp_2 === 0);
   case 6:
@@ -10255,22 +10257,22 @@ switch (step) {
     r0 = (s.tmp_6 - 1);
     s.tmp_5 = r0;
     r0 = pxsim_Array__getAt(s.tmp_4, s.tmp_5);
-    s.c___379712 = (r0);
-    r0 = s.size___379699.fields["x"];
+    s.c___402768 = (r0);
+    r0 = s.size___402755.fields["x"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 < 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 9; continue; }
-    s.tmp_2 = r0 = s.pos___379682;
+    s.tmp_2 = r0 = s.pos___402738;
     r0 = s.tmp_2.fields["x"];
     s.tmp_4 = r0;
-    r0 = s.size___379699.fields["x"];
+    r0 = s.size___402755.fields["x"];
     s.tmp_5 = r0;
     r0 = (s.tmp_4 + s.tmp_5);
     s.tmp_3 = r0;
     r0 = (s.tmp_2).fields["x"] = (s.tmp_3);
-    s.tmp_0 = r0 = s.size___379699;
+    s.tmp_0 = r0 = s.size___402755;
     r0 = s.tmp_0.fields["x"];
     s.tmp_2 = r0;
     r0 = (s.tmp_2 * -1);
@@ -10278,21 +10280,21 @@ switch (step) {
     r0 = (s.tmp_0).fields["x"] = (s.tmp_1);
   case 9:
   case 10:
-    r0 = s.size___379699.fields["y"];
+    r0 = s.size___402755.fields["y"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 < 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 11; continue; }
-    s.tmp_2 = r0 = s.pos___379682;
+    s.tmp_2 = r0 = s.pos___402738;
     r0 = s.tmp_2.fields["y"];
     s.tmp_4 = r0;
-    r0 = s.size___379699.fields["y"];
+    r0 = s.size___402755.fields["y"];
     s.tmp_5 = r0;
     r0 = (s.tmp_4 + s.tmp_5);
     s.tmp_3 = r0;
     r0 = (s.tmp_2).fields["y"] = (s.tmp_3);
-    s.tmp_0 = r0 = s.size___379699;
+    s.tmp_0 = r0 = s.size___402755;
     r0 = s.tmp_0.fields["y"];
     s.tmp_2 = r0;
     r0 = (s.tmp_2 * -1);
@@ -10304,8 +10306,8 @@ switch (step) {
     s.tmp_0 = r0;
     s.tmp_1 = dot_Rect_constructor__P375439_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
-    s.tmp_1.arg1 = s.pos___379682;
-    s.tmp_1.arg2 = s.size___379699;
+    s.tmp_1.arg1 = s.pos___402738;
+    s.tmp_1.arg2 = s.size___402755;
     s.callLocIdx = 133; s.pc = 22; return s.tmp_1;
   case 22:
     r0 = s.retval;
@@ -10313,23 +10315,23 @@ switch (step) {
     s.tmp_2.arg0 = s.arg8;
     s.tmp_2.arg1 = s.arg0;
     s.tmp_2.arg2 = s.tmp_0;
-    s.tmp_2.arg3 = s.c___379712;
+    s.tmp_2.arg3 = s.c___402768;
     s.tmp_2.arg4 = s.arg3;
     s.callLocIdx = 134; s.pc = 23; return s.tmp_2;
   case 23:
     r0 = s.retval;
-    r0 = pxsim_numops_toBoolDecr(s.c___379712);
+    r0 = pxsim_numops_toBoolDecr(s.c___402768);
     if (!r0) { step = 15; continue; }
     r0 = pxsim_numops_toBoolDecr(s.arg2);
     if (!r0) { step = 13; continue; }
     s.tmp_0 = dot_gfx_box__P375503_mk(s);
-    r0 = s.pos___379682.fields["x"];
+    r0 = s.pos___402738.fields["x"];
     s.tmp_0.arg0 = r0;
-    r0 = s.pos___379682.fields["y"];
+    r0 = s.pos___402738.fields["y"];
     s.tmp_0.arg1 = r0;
-    r0 = s.size___379699.fields["x"];
+    r0 = s.size___402755.fields["x"];
     s.tmp_0.arg2 = r0;
-    r0 = s.size___379699.fields["y"];
+    r0 = s.size___402755.fields["y"];
     s.tmp_0.arg3 = r0;
     s.callLocIdx = 135; s.pc = 24; return s.tmp_0;
   case 24:
@@ -10337,13 +10339,13 @@ switch (step) {
     { step = 14; continue; }
   case 13:
     s.tmp_0 = dot_gfx_rect__P375502_mk(s);
-    r0 = s.pos___379682.fields["x"];
+    r0 = s.pos___402738.fields["x"];
     s.tmp_0.arg0 = r0;
-    r0 = s.pos___379682.fields["y"];
+    r0 = s.pos___402738.fields["y"];
     s.tmp_0.arg1 = r0;
-    r0 = s.size___379699.fields["x"];
+    r0 = s.size___402755.fields["x"];
     s.tmp_0.arg2 = r0;
-    r0 = s.size___379699.fields["y"];
+    r0 = s.size___402755.fields["y"];
     s.tmp_0.arg3 = r0;
     s.callLocIdx = 136; s.pc = 25; return s.tmp_0;
   case 25:
@@ -10356,12 +10358,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_draw__internal_rect__P379310.info = {"start":6448,"length":1492,"line":189,"column":12,"endLine":233,"endColumn":13,"fileName":"draw.ts","functionName":"rect","argumentNames":["id","alignCenter","fill","collidesWith","x","y","w","h","reporter"]}
+dot_draw__internal_rect__P402363.info = {"start":6484,"length":1492,"line":191,"column":12,"endLine":235,"endColumn":13,"fileName":"draw.ts","functionName":"rect","argumentNames":["id","alignCenter","fill","collidesWith","x","y","w","h","reporter"]}
 
-function dot_draw__internal_rect__P379310_mk(s) {
+function dot_draw__internal_rect__P402363_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_draw__internal_rect__P379310, depth: s.depth + 1,
+        parent: s, fn: dot_draw__internal_rect__P402363, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -10372,9 +10374,9 @@ function dot_draw__internal_rect__P379310_mk(s) {
   tmp_6: undefined,
   tmp_7: undefined,
   tmp_8: undefined,
-  pos___379682: undefined,
-  size___379699: undefined,
-  c___379712: undefined,
+  pos___402738: undefined,
+  size___402755: undefined,
+  c___402768: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -10822,7 +10824,7 @@ function dot_color_noncollidable__P375496_mk(s) {
 
 
 
-function dot_draw_arc__P375516(s) {
+function dot_draw_arc__P402428(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -10875,7 +10877,7 @@ switch (step) {
     s.arg5 = (r0);
   case 7:
   case 8:
-    s.tmp_0 = dot_draw__internal_arc__P379403_mk(s);
+    s.tmp_0 = dot_draw__internal_arc__P402456_mk(s);
     s.tmp_0.arg0 = s.arg6;
     s.tmp_0.arg1 = s.arg5;
     s.tmp_0.arg2 = s.arg0;
@@ -10891,12 +10893,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_draw_arc__P375516.info = {"start":1581,"length":676,"line":51,"column":8,"endLine":71,"endColumn":9,"fileName":"draw.ts","functionName":"arc","argumentNames":["p","radius","thickness","angleFrom","angleTo","collidesWith","id"]}
+dot_draw_arc__P402428.info = {"start":1617,"length":676,"line":53,"column":8,"endLine":73,"endColumn":9,"fileName":"draw.ts","functionName":"arc","argumentNames":["p","radius","thickness","angleFrom","angleTo","collidesWith","id"]}
 
-function dot_draw_arc__P375516_mk(s) {
+function dot_draw_arc__P402428_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_draw_arc__P375516, depth: s.depth + 1,
+        parent: s, fn: dot_draw_arc__P402428, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -10913,7 +10915,7 @@ function dot_draw_arc__P375516_mk(s) {
 
 
 
-function dot_draw__internal_arc__P379403(s) {
+function dot_draw__internal_arc__P402456(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -10923,15 +10925,15 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.af___379893 = undefined;
-    s.ao___379894 = undefined;
-    s.lc___379919 = undefined;
-    s.ai___379930 = undefined;
-    s.a___379934 = undefined;
-    s.p1___379936 = undefined;
-    s.p2___379943 = undefined;
-    s.o___379945 = undefined;
-    s.i___379947 = undefined;
+    s.af___402949 = undefined;
+    s.ao___402950 = undefined;
+    s.lc___402975 = undefined;
+    s.ai___402986 = undefined;
+    s.a___402990 = undefined;
+    s.p1___402992 = undefined;
+    s.p2___402999 = undefined;
+    s.o___403001 = undefined;
+    s.i___403003 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -10960,24 +10962,24 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    s.af___379893 = (s.arg6);
+    s.af___402949 = (s.arg6);
     r0 = (s.arg5 - s.arg6);
-    s.ao___379894 = (r0);
+    s.ao___402950 = (r0);
     { step = 4; continue; }
   case 3:
-    s.af___379893 = (s.arg5);
+    s.af___402949 = (s.arg5);
     r0 = (s.arg6 - s.arg5);
-    s.ao___379894 = (r0);
+    s.ao___402950 = (r0);
   case 4:
     s.tmp_0 = Math_clamp__P371176_mk(s);
     s.tmp_0.arg0 = 0;
     s.tmp_0.arg1 = 6.283185307179586;
-    s.tmp_0.arg2 = s.ao___379894;
+    s.tmp_0.arg2 = s.ao___402950;
     s.callLocIdx = 149; s.pc = 11; return s.tmp_0;
   case 11:
     r0 = s.retval;
-    s.ao___379894 = (r0);
-    r0 = (s.ao___379894 < 0.01);
+    s.ao___402950 = (r0);
+    r0 = (s.ao___402950 < 0.01);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 5; continue; }
@@ -10988,7 +10990,7 @@ switch (step) {
     s.tmp_1 = Math_clamp__P371176_mk(s);
     s.tmp_1.arg0 = 1;
     s.tmp_1.arg1 = 36;
-    s.tmp_3 = r0 = s.ao___379894;
+    s.tmp_3 = r0 = s.ao___402950;
     r0 = (s.arg3 * 0.25);
     s.tmp_5 = r0;
     r0 = pxsim.Math_.sqrt(s.tmp_5);
@@ -11000,10 +11002,10 @@ switch (step) {
     s.callLocIdx = 150; s.pc = 12; return s.tmp_1;
   case 12:
     r0 = s.retval;
-    s.lc___379919 = (r0);
-    r0 = (s.ao___379894 / s.lc___379919);
-    s.ai___379930 = (r0);
-    s.a___379934 = (s.af___379893);
+    s.lc___402975 = (r0);
+    r0 = (s.ao___402950 / s.lc___402975);
+    s.ai___402986 = (r0);
+    s.a___402990 = (s.af___402949);
     s.tmp_0 = dot_Vec2_add__P375394_mk(s);
     s.tmp_1 = dot_Vec2_rotate__P375398_mk(s);
     s.tmp_2 = dot_vec2_mk__P375403_mk(s);
@@ -11013,7 +11015,7 @@ switch (step) {
   case 15:
     r0 = s.retval;
     s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = s.a___379934;
+    s.tmp_1.arg1 = s.a___402990;
     s.callLocIdx = 152; s.pc = 14; return s.tmp_1;
   case 14:
     r0 = s.retval;
@@ -11022,36 +11024,36 @@ switch (step) {
     s.callLocIdx = 153; s.pc = 13; return s.tmp_0;
   case 13:
     r0 = s.retval;
-    s.p1___379936 = (r0);
+    s.p1___402992 = (r0);
     s.tmp_0 = dot_vec2_mk0__P375405_mk(s);
     s.callLocIdx = 154; s.pc = 16; return s.tmp_0;
   case 16:
     r0 = s.retval;
-    s.p2___379943 = (r0);
+    s.p2___402999 = (r0);
     s.tmp_0 = dot_vec2_mk0__P375405_mk(s);
     s.callLocIdx = 155; s.pc = 17; return s.tmp_0;
   case 17:
     r0 = s.retval;
-    s.o___379945 = (r0);
-    s.i___379947 = (0);
+    s.o___403001 = (r0);
+    s.i___403003 = (0);
   case 7:
-    r0 = (s.i___379947 < s.lc___379919);
+    r0 = (s.i___403003 < s.lc___402975);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 8; continue; }
-    r0 = (s.a___379934 + s.ai___379930);
-    s.a___379934 = (r0);
+    r0 = (s.a___402990 + s.ai___402986);
+    s.a___402990 = (r0);
     s.tmp_0 = dot_Vec2_add__P375394_mk(s);
     s.tmp_1 = dot_Vec2_rotate__P375398_mk(s);
     s.tmp_2 = dot_Vec2_set__P375399_mk(s);
-    s.tmp_2.arg0 = s.p2___379943;
+    s.tmp_2.arg0 = s.p2___402999;
     s.tmp_2.arg1 = s.arg3;
     s.tmp_2.arg2 = 0;
     s.callLocIdx = 156; s.pc = 20; return s.tmp_2;
   case 20:
     r0 = s.retval;
     s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = s.a___379934;
+    s.tmp_1.arg1 = s.a___402990;
     s.callLocIdx = 157; s.pc = 19; return s.tmp_1;
   case 19:
     r0 = s.retval;
@@ -11062,21 +11064,21 @@ switch (step) {
     r0 = s.retval;
     s.tmp_0 = dot_Vec2_sub__P375395_mk(s);
     s.tmp_1 = dot_Vec2_setv__P375401_mk(s);
-    s.tmp_1.arg0 = s.o___379945;
-    s.tmp_1.arg1 = s.p2___379943;
+    s.tmp_1.arg0 = s.o___403001;
+    s.tmp_1.arg1 = s.p2___402999;
     s.callLocIdx = 159; s.pc = 22; return s.tmp_1;
   case 22:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = s.p1___379936;
+    s.tmp_0.arg1 = s.p1___402992;
     s.callLocIdx = 160; s.pc = 21; return s.tmp_0;
   case 21:
     r0 = s.retval;
-    s.tmp_0 = dot_draw__internal_line__P379368_mk(s);
+    s.tmp_0 = dot_draw__internal_line__P402420_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.tmp_0.arg1 = s.arg1;
-    s.tmp_0.arg2 = s.p1___379936;
-    s.tmp_0.arg3 = s.p2___379943;
+    s.tmp_0.arg2 = s.p1___402992;
+    s.tmp_0.arg3 = s.p2___402999;
     s.tmp_0.arg4 = s.arg4;
     s.tmp_0.arg5 = 0;
     s.tmp_0.arg6 = s.arg7;
@@ -11084,13 +11086,13 @@ switch (step) {
   case 23:
     r0 = s.retval;
     s.tmp_0 = dot_Vec2_setv__P375401_mk(s);
-    s.tmp_0.arg0 = s.p1___379936;
-    s.tmp_0.arg1 = s.p2___379943;
+    s.tmp_0.arg0 = s.p1___402992;
+    s.tmp_0.arg1 = s.p2___402999;
     s.callLocIdx = 162; s.pc = 24; return s.tmp_0;
   case 24:
     r0 = s.retval;
-    r0 = (s.i___379947 + 1);
-    s.i___379947 = (r0);
+    r0 = (s.i___403003 + 1);
+    s.i___403003 = (r0);
     { step = 7; continue; }
   case 8:
     r0 = s.arg7;
@@ -11098,12 +11100,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_draw__internal_arc__P379403.info = {"start":9360,"length":1520,"line":267,"column":12,"endLine":307,"endColumn":13,"fileName":"draw.ts","functionName":"arc","argumentNames":["id","collidesWith","p","radius","thickness","angleFrom","angleTo","reporter"]}
+dot_draw__internal_arc__P402456.info = {"start":9396,"length":1520,"line":269,"column":12,"endLine":309,"endColumn":13,"fileName":"draw.ts","functionName":"arc","argumentNames":["id","collidesWith","p","radius","thickness","angleFrom","angleTo","reporter"]}
 
-function dot_draw__internal_arc__P379403_mk(s) {
+function dot_draw__internal_arc__P402456_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_draw__internal_arc__P379403, depth: s.depth + 1,
+        parent: s, fn: dot_draw__internal_arc__P402456, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -11111,15 +11113,15 @@ function dot_draw__internal_arc__P379403_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   tmp_5: undefined,
-  af___379893: undefined,
-  ao___379894: undefined,
-  lc___379919: undefined,
-  ai___379930: undefined,
-  a___379934: undefined,
-  p1___379936: undefined,
-  p2___379943: undefined,
-  o___379945: undefined,
-  i___379947: undefined,
+  af___402949: undefined,
+  ao___402950: undefined,
+  lc___402975: undefined,
+  ai___402986: undefined,
+  a___402990: undefined,
+  p1___402992: undefined,
+  p2___402999: undefined,
+  o___403001: undefined,
+  i___403003: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -11134,7 +11136,7 @@ function dot_draw__internal_arc__P379403_mk(s) {
 
 
 
-function dot_draw__internal_line__P379368(s) {
+function dot_draw__internal_line__P402420(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11144,14 +11146,14 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.d___379795 = undefined;
-    s.len___379800 = undefined;
-    s.norm___379804 = undefined;
-    s.numBoxes___379808 = undefined;
-    s.actualGap___379819 = undefined;
-    s.step___379844 = undefined;
-    s.p___379850 = undefined;
-    s.i___379860 = undefined;
+    s.d___402851 = undefined;
+    s.len___402856 = undefined;
+    s.norm___402860 = undefined;
+    s.numBoxes___402864 = undefined;
+    s.actualGap___402875 = undefined;
+    s.step___402900 = undefined;
+    s.p___402906 = undefined;
+    s.i___402916 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -11197,61 +11199,61 @@ switch (step) {
     s.callLocIdx = 140; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
-    s.d___379795 = (r0);
+    s.d___402851 = (r0);
     s.tmp_0 = dot_vec2_length__P375416_mk(s);
-    s.tmp_0.arg0 = s.d___379795;
+    s.tmp_0.arg0 = s.d___402851;
     s.callLocIdx = 141; s.pc = 11; return s.tmp_0;
   case 11:
     r0 = s.retval;
-    s.len___379800 = (r0);
+    s.len___402856 = (r0);
     s.tmp_0 = dot_vec2_normal__P375417_mk(s);
-    s.tmp_0.arg0 = s.d___379795;
+    s.tmp_0.arg0 = s.d___402851;
     s.callLocIdx = 142; s.pc = 12; return s.tmp_0;
   case 12:
     r0 = s.retval;
-    s.norm___379804 = (r0);
-    r0 = (s.len___379800 + s.arg5);
+    s.norm___402860 = (r0);
+    r0 = (s.len___402856 + s.arg5);
     s.tmp_1 = r0;
     r0 = (s.arg4 + s.arg5);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 / s.tmp_2);
     s.tmp_0 = r0;
     r0 = pxsim.Math_.round(s.tmp_0);
-    s.numBoxes___379808 = (r0);
-    s.tmp_1 = r0 = s.len___379800;
-    r0 = (s.numBoxes___379808 * s.arg4);
+    s.numBoxes___402864 = (r0);
+    s.tmp_1 = r0 = s.len___402856;
+    r0 = (s.numBoxes___402864 * s.arg4);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 - s.tmp_2);
     s.tmp_0 = r0;
-    r0 = (s.numBoxes___379808 - 1);
+    r0 = (s.numBoxes___402864 - 1);
     s.tmp_3 = r0;
     r0 = (s.tmp_0 / s.tmp_3);
-    s.actualGap___379819 = (r0);
-    r0 = (s.actualGap___379819 > s.arg5);
+    s.actualGap___402875 = (r0);
+    r0 = (s.actualGap___402875 > s.arg5);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    r0 = (s.numBoxes___379808 + 1);
-    s.numBoxes___379808 = (r0);
-    s.tmp_1 = r0 = s.len___379800;
-    r0 = (s.numBoxes___379808 * s.arg4);
+    r0 = (s.numBoxes___402864 + 1);
+    s.numBoxes___402864 = (r0);
+    s.tmp_1 = r0 = s.len___402856;
+    r0 = (s.numBoxes___402864 * s.arg4);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 - s.tmp_2);
     s.tmp_0 = r0;
-    r0 = (s.numBoxes___379808 - 1);
+    r0 = (s.numBoxes___402864 - 1);
     s.tmp_3 = r0;
     r0 = (s.tmp_0 / s.tmp_3);
-    s.actualGap___379819 = (r0);
+    s.actualGap___402875 = (r0);
   case 3:
   case 4:
     s.tmp_0 = dot_vec2_scale__P375411_mk(s);
-    s.tmp_0.arg0 = s.norm___379804;
-    r0 = (s.arg4 + s.actualGap___379819);
+    s.tmp_0.arg0 = s.norm___402860;
+    r0 = (s.arg4 + s.actualGap___402875);
     s.tmp_0.arg1 = r0;
     s.callLocIdx = 143; s.pc = 13; return s.tmp_0;
   case 13:
     r0 = s.retval;
-    s.step___379844 = (r0);
+    s.step___402900 = (r0);
     r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C375388_VT);
     s.tmp_0 = r0;
     s.tmp_1 = dot_Vec2_constructor__P375393_mk(s);
@@ -11269,21 +11271,21 @@ switch (step) {
     s.callLocIdx = 145; s.pc = 15; return s.tmp_2;
   case 15:
     r0 = s.retval;
-    s.p___379850 = (r0);
-    s.i___379860 = (0);
+    s.p___402906 = (r0);
+    s.i___402916 = (0);
   case 5:
-    r0 = (s.i___379860 <= s.numBoxes___379808);
+    r0 = (s.i___402916 <= s.numBoxes___402864);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 6; continue; }
-    s.tmp_1 = dot_draw__internal_rect__P379310_mk(s);
+    s.tmp_1 = dot_draw__internal_rect__P402363_mk(s);
     s.tmp_1.arg0 = s.arg0;
     s.tmp_1.arg1 = false;
     s.tmp_1.arg2 = true;
     s.tmp_1.arg3 = s.arg1;
-    r0 = s.p___379850.fields["x"];
+    r0 = s.p___402906.fields["x"];
     s.tmp_1.arg4 = r0;
-    r0 = s.p___379850.fields["y"];
+    r0 = s.p___402906.fields["y"];
     s.tmp_1.arg5 = r0;
     s.tmp_1.arg6 = s.arg4;
     s.tmp_1.arg7 = s.arg4;
@@ -11292,38 +11294,38 @@ switch (step) {
   case 16:
     r0 = s.retval;
     s.tmp_0 = dot_Vec2_add__P375394_mk(s);
-    s.tmp_0.arg0 = s.p___379850;
-    s.tmp_0.arg1 = s.step___379844;
+    s.tmp_0.arg0 = s.p___402906;
+    s.tmp_0.arg1 = s.step___402900;
     s.callLocIdx = 147; s.pc = 17; return s.tmp_0;
   case 17:
     r0 = s.retval;
-    r0 = (s.i___379860 + 1);
-    s.i___379860 = (r0);
+    r0 = (s.i___402916 + 1);
+    s.i___402916 = (r0);
     { step = 5; continue; }
   case 6:
     r0 = s.arg6;
     return leave(s, r0)
   default: oops()
 } } }
-dot_draw__internal_line__P379368.info = {"start":7954,"length":1392,"line":235,"column":12,"endLine":265,"endColumn":13,"fileName":"draw.ts","functionName":"line","argumentNames":["id","collidesWith","a","b","thickness","idealGap","reporter"]}
+dot_draw__internal_line__P402420.info = {"start":7990,"length":1392,"line":237,"column":12,"endLine":267,"endColumn":13,"fileName":"draw.ts","functionName":"line","argumentNames":["id","collidesWith","a","b","thickness","idealGap","reporter"]}
 
-function dot_draw__internal_line__P379368_mk(s) {
+function dot_draw__internal_line__P402420_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_draw__internal_line__P379368, depth: s.depth + 1,
+        parent: s, fn: dot_draw__internal_line__P402420, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
-  d___379795: undefined,
-  len___379800: undefined,
-  norm___379804: undefined,
-  numBoxes___379808: undefined,
-  actualGap___379819: undefined,
-  step___379844: undefined,
-  p___379850: undefined,
-  i___379860: undefined,
+  d___402851: undefined,
+  len___402856: undefined,
+  norm___402860: undefined,
+  numBoxes___402864: undefined,
+  actualGap___402875: undefined,
+  step___402900: undefined,
+  p___402906: undefined,
+  i___402916: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -11720,7 +11722,7 @@ function dot_vec2_mk0__P375405_mk(s) {
 
 
 
-function dot_draw_line__P375515(s) {
+function dot_draw_line__P402404(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11758,7 +11760,7 @@ switch (step) {
     s.arg4 = (r0);
   case 3:
   case 4:
-    s.tmp_0 = dot_draw__internal_line__P379368_mk(s);
+    s.tmp_0 = dot_draw__internal_line__P402420_mk(s);
     s.tmp_0.arg0 = s.arg5;
     s.tmp_0.arg1 = s.arg4;
     s.tmp_0.arg2 = s.arg0;
@@ -11773,12 +11775,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_draw_line__P375515.info = {"start":1132,"length":440,"line":37,"column":8,"endLine":50,"endColumn":9,"fileName":"draw.ts","functionName":"line","argumentNames":["a","b","thickness","gap","collidesWith","id"]}
+dot_draw_line__P402404.info = {"start":1168,"length":440,"line":39,"column":8,"endLine":52,"endColumn":9,"fileName":"draw.ts","functionName":"line","argumentNames":["a","b","thickness","gap","collidesWith","id"]}
 
-function dot_draw_line__P375515_mk(s) {
+function dot_draw_line__P402404_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_draw_line__P375515, depth: s.depth + 1,
+        parent: s, fn: dot_draw_line__P402404, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -50741,7 +50743,7 @@ const dot_Set__C375576_VT = mkVTable({
     "clear": dot_Set_clear__P375582,
   },
 });
-const test_Box__C381027_VT = mkVTable({
+const test_Box__C403103_VT = mkVTable({
   name: "Box",
   numFields: 4,
   classNo: 25,
@@ -52211,7 +52213,7 @@ const sprites_BaseSpriteSayRenderer__C373309_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["SCREEN_WIDTH___375468","SCREEN_HEIGHT___375469","scoreboardFont___379989","titleFont___379993","input___375538","state___375532","input___375540","scoreFont___395489","pool___395533","pool___380887","random___380898","gameTitle___375525","insertCoinText___375526","rand___381025","collisions___381029","boxColors___381035","boxes___381031","commands___379185","_gameUpdate___379997","difficulty___375529","tick___375528","_colorStack___379084","gen___399463","reporters___399482","dirty___399484","textColor___375524","_gameOverText___379996","scoreboardColor___375523","score___375530","high___375531","ALL_COLORS___379081","d___381104","a___381106","nextId___399492"])
+const breakpoints = setupDebugger(1, ["SCREEN_WIDTH___375468","SCREEN_HEIGHT___375469","scoreboardFont___379989","titleFont___379993","input___375538","state___375532","input___375540","scoreFont___395489","pool___395533","pool___380887","random___380898","gameTitle___375525","insertCoinText___375526","rand___403101","collisions___403105","boxColors___403111","boxes___403107","commands___379185","_gameUpdate___379997","difficulty___375529","tick___375528","_colorStack___379084","gen___399463","reporters___399482","dirty___399484","textColor___375524","_gameOverText___379996","scoreboardColor___375523","score___375530","high___375531","ALL_COLORS___379081","d___403180","a___403182","nextId___399492"])
 
-return _main___P400280
+return _main___P403929
 })
