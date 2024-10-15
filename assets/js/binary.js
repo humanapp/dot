@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.56/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.14","target":"arcade","targetVersion":"1.12.56","repo":"humanapp/dot"}
-// total=1539347 new=22.35% cached=72.37% other=5.28%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.56/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.15","target":"arcade","targetVersion":"1.12.56","repo":"humanapp/dot"}
+// total=1539753 new=22.37% cached=72.36% other=5.28%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -487,7 +487,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P45865(s) {
+function _main___P48491(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1178,13 +1178,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P45865.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
-_main___P45865.continuations = [ 59 ]
+_main___P48491.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
+_main___P48491.continuations = [ 59 ]
 
-function _main___P45865_mk(s) {
+function _main___P48491_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P45865, depth: s.depth + 1,
+        parent: s, fn: _main___P48491, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3027,7 +3027,7 @@ switch (step) {
     s.callLocIdx = 196; s.pc = 4; return s.tmp_1;
   case 4:
     r0 = s.retval;
-    s.tmp_6 = dot_draw_text__P4428_mk(s);
+    s.tmp_6 = dot_draw_text__P47242_mk(s);
     s.tmp_6.arg0 = s.tmp_0;
     s.tmp_6.arg1 = s.text___45120;
     s.tmp_6.arg2 = 1;
@@ -3143,7 +3143,7 @@ function dot_color_curr__P4398_mk(s) {
 
 
 
-function dot_draw_text__P4428(s) {
+function dot_draw_text__P47242(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3153,34 +3153,34 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.x___8027 = undefined;
-    s.y___8032 = undefined;
-    s.x0___8042 = undefined;
-    s.cp___8044 = undefined;
-    s.mult___8045 = undefined;
-    s.dataW___8050 = undefined;
-    s.dataH___8056 = undefined;
-    s.byteHeight___8062 = undefined;
-    s.charSize___8068 = undefined;
-    s.dataSize___8072 = undefined;
-    s.fontdata___8076 = undefined;
-    s.lastchar___8079 = undefined;
-    s.width___8086 = undefined;
-    s.xOffset___8110 = undefined;
-    s.yOffset___8111 = undefined;
-    s.ch___8112 = undefined;
-    s.l___8131 = undefined;
-    s.r___8132 = undefined;
-    s.off___8134 = undefined;
-    s.guess___8135 = undefined;
-    s.m___8154 = undefined;
-    s.v___8163 = undefined;
-    s.imgBuf___8190 = undefined;
-    s.i___8234 = undefined;
-    s.j___8239 = undefined;
-    s.mask___8240 = undefined;
-    s.c___8241 = undefined;
-    s.n___8258 = undefined;
+    s.x___47247 = undefined;
+    s.y___47252 = undefined;
+    s.x0___47262 = undefined;
+    s.cp___47264 = undefined;
+    s.mult___47265 = undefined;
+    s.dataW___47270 = undefined;
+    s.dataH___47276 = undefined;
+    s.byteHeight___47282 = undefined;
+    s.charSize___47288 = undefined;
+    s.dataSize___47292 = undefined;
+    s.fontdata___47296 = undefined;
+    s.lastchar___47299 = undefined;
+    s.width___47306 = undefined;
+    s.xOffset___47332 = undefined;
+    s.yOffset___47333 = undefined;
+    s.ch___47334 = undefined;
+    s.l___47353 = undefined;
+    s.r___47354 = undefined;
+    s.off___47356 = undefined;
+    s.guess___47357 = undefined;
+    s.m___47376 = undefined;
+    s.v___47385 = undefined;
+    s.imgBuf___47412 = undefined;
+    s.i___47456 = undefined;
+    s.j___47461 = undefined;
+    s.mask___47462 = undefined;
+    s.c___47463 = undefined;
+    s.n___47480 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -3191,11 +3191,11 @@ switch (step) {
     r0 = s.arg0.fields["x"];
     s.tmp_0 = r0;
     r0 = pxsim.Math_.floor(s.tmp_0);
-    s.x___8027 = (r0);
+    s.x___47247 = (r0);
     r0 = s.arg0.fields["y"];
     s.tmp_0 = r0;
     r0 = pxsim.Math_.floor(s.tmp_0);
-    s.y___8032 = (r0);
+    s.y___47252 = (r0);
     r0 = pxsim_numops_toBoolDecr(s.arg3);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
@@ -3210,8 +3210,8 @@ switch (step) {
     s.arg3 = (r0);
   case 1:
   case 2:
-    s.x0___8042 = (s.x___8027);
-    s.cp___8044 = (0);
+    s.x0___47262 = (s.x___47247);
+    s.cp___47264 = (0);
     s.tmp_1 = if_multiplier_1_mk(s);
     s.tmp_1.arg0 = s.arg3;
     if (!s.tmp_1.arg0.vtable.iface) {
@@ -3245,7 +3245,7 @@ switch (step) {
   case 4:
     // jmp value (already in r0)
     s.tmp_3 = r0;
-    s.mult___8045 = (s.tmp_3);
+    s.mult___47265 = (s.tmp_3);
     s.tmp_1 = if_charWidth_1_mk(s);
     s.tmp_1.arg0 = s.arg3;
     if (!s.tmp_1.arg0.vtable.iface) {
@@ -3259,8 +3259,8 @@ switch (step) {
   case 37:
     r0 = s.retval;
     s.tmp_0 = r0;
-    r0 = pxsim.Math_.idiv(s.tmp_0, s.mult___8045);
-    s.dataW___8050 = (r0);
+    r0 = pxsim.Math_.idiv(s.tmp_0, s.mult___47265);
+    s.dataW___47270 = (r0);
     s.tmp_1 = if_charHeight_1_mk(s);
     s.tmp_1.arg0 = s.arg3;
     if (!s.tmp_1.arg0.vtable.iface) {
@@ -3274,16 +3274,16 @@ switch (step) {
   case 38:
     r0 = s.retval;
     s.tmp_0 = r0;
-    r0 = pxsim.Math_.idiv(s.tmp_0, s.mult___8045);
-    s.dataH___8056 = (r0);
-    r0 = (s.dataH___8056 + 7);
+    r0 = pxsim.Math_.idiv(s.tmp_0, s.mult___47265);
+    s.dataH___47276 = (r0);
+    r0 = (s.dataH___47276 + 7);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 >> 3);
-    s.byteHeight___8062 = (r0);
-    r0 = (s.byteHeight___8062 * s.dataW___8050);
-    s.charSize___8068 = (r0);
-    r0 = (2 + s.charSize___8068);
-    s.dataSize___8072 = (r0);
+    s.byteHeight___47282 = (r0);
+    r0 = (s.byteHeight___47282 * s.dataW___47270);
+    s.charSize___47288 = (r0);
+    r0 = (2 + s.charSize___47288);
+    s.dataSize___47292 = (r0);
     s.tmp_0 = if_data_1_mk(s);
     s.tmp_0.arg0 = s.arg3;
     if (!s.tmp_0.arg0.vtable.iface) {
@@ -3296,13 +3296,13 @@ switch (step) {
     }
   case 39:
     r0 = s.retval;
-    s.fontdata___8076 = (r0);
-    r0 = pxsim.BufferMethods.length(s.fontdata___8076);
+    s.fontdata___47296 = (r0);
+    r0 = pxsim.BufferMethods.length(s.fontdata___47296);
     s.tmp_1 = r0;
-    r0 = pxsim.Math_.idiv(s.tmp_1, s.dataSize___8072);
+    r0 = pxsim.Math_.idiv(s.tmp_1, s.dataSize___47292);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 - 1);
-    s.lastchar___8079 = (r0);
+    s.lastchar___47299 = (r0);
     r0 = pxsim_String_.length(s.arg1);
     s.tmp_0 = r0;
     s.tmp_2 = if_charWidth_1_mk(s);
@@ -3319,7 +3319,7 @@ switch (step) {
     r0 = s.retval;
     s.tmp_1 = r0;
     r0 = (s.tmp_0 * s.tmp_1);
-    s.width___8086 = (r0);
+    s.width___47306 = (r0);
     s.tmp_0 = r0 = s.arg2;
     r0 = pxsim_pxtcore.switch_eq(1, s.tmp_0);
     if (r0) { step = 5; continue; }
@@ -3328,36 +3328,36 @@ switch (step) {
     r0 = s.tmp_0;
     { step = 7; continue; }
   case 5:
-    s.tmp_1 = r0 = s.x___8027;
-    r0 = (s.width___8086 / 2);
+    s.tmp_1 = r0 = s.x___47247;
+    r0 = (s.width___47306 / 2);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 - s.tmp_2);
-    s.x___8027 = (r0);
+    s.x___47247 = (r0);
     { step = 7; continue; }
   case 6:
-    r0 = (s.x___8027 - s.width___8086);
-    s.x___8027 = (r0);
+    r0 = (s.x___47247 - s.width___47306);
+    s.x___47247 = (r0);
   case 7:
   case 8:
-    s.tmp_1 = r0 = s.cp___8044;
+    s.tmp_1 = r0 = s.cp___47264;
     r0 = pxsim_String_.length(s.arg1);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 < s.tmp_2);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 33; continue; }
-    s.xOffset___8110 = (0);
-    s.yOffset___8111 = (0);
-    s.tmp_0 = r0 = s.cp___8044;
+    s.xOffset___47332 = (0);
+    s.yOffset___47333 = (0);
+    s.tmp_0 = r0 = s.cp___47264;
     r0 = (s.tmp_0 + 1);
-    s.cp___8044 = (r0);
+    s.cp___47264 = (r0);
     r0 = pxsim_String_.charCodeAt(s.arg1, s.tmp_0);
-    s.ch___8112 = (r0);
-    r0 = (s.ch___8112 == 10);
+    s.ch___47334 = (r0);
+    r0 = (s.ch___47334 == 10);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 9; continue; }
-    s.tmp_1 = r0 = s.y___8032;
+    s.tmp_1 = r0 = s.y___47252;
     s.tmp_4 = if_charHeight_1_mk(s);
     s.tmp_4.arg0 = s.arg3;
     if (!s.tmp_4.arg0.vtable.iface) {
@@ -3374,103 +3374,103 @@ switch (step) {
     r0 = (s.tmp_3 + 2);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 + s.tmp_2);
-    s.y___8032 = (r0);
-    s.x___8027 = (s.x0___8042);
+    s.y___47252 = (r0);
+    s.x___47247 = (s.x0___47262);
   case 9:
   case 10:
-    r0 = (s.ch___8112 < 32);
+    r0 = (s.ch___47334 < 32);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 11; continue; }
     { step = 8; continue; }
   case 11:
   case 12:
-    s.l___8131 = (0);
-    s.r___8132 = (s.lastchar___8079);
-    s.off___8134 = (0);
-    r0 = (s.ch___8112 - 32);
+    s.l___47353 = (0);
+    s.r___47354 = (s.lastchar___47299);
+    s.off___47356 = (0);
+    r0 = (s.ch___47334 - 32);
     s.tmp_0 = r0;
-    r0 = (s.tmp_0 * s.dataSize___8072);
-    s.guess___8135 = (r0);
-    r0 = pxsim.BufferMethods.getNumber(s.fontdata___8076, 4, s.guess___8135);
+    r0 = (s.tmp_0 * s.dataSize___47292);
+    s.guess___47357 = (r0);
+    r0 = pxsim.BufferMethods.getNumber(s.fontdata___47296, 4, s.guess___47357);
     s.tmp_1 = r0;
-    r0 = (s.tmp_1 == s.ch___8112);
+    r0 = (s.tmp_1 == s.ch___47334);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 13; continue; }
-    s.off___8134 = (s.guess___8135);
+    s.off___47356 = (s.guess___47357);
     { step = 20; continue; }
   case 13:
   case 14:
-    r0 = (s.l___8131 <= s.r___8132);
+    r0 = (s.l___47353 <= s.r___47354);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 19; continue; }
-    s.tmp_1 = r0 = s.l___8131;
-    r0 = (s.r___8132 - s.l___8131);
+    s.tmp_1 = r0 = s.l___47353;
+    r0 = (s.r___47354 - s.l___47353);
     s.tmp_3 = r0;
     r0 = (s.tmp_3 >> 1);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 + s.tmp_2);
-    s.m___8154 = (r0);
-    s.tmp_0 = r0 = s.fontdata___8076;
-    r0 = (s.m___8154 * s.dataSize___8072);
+    s.m___47376 = (r0);
+    s.tmp_0 = r0 = s.fontdata___47296;
+    r0 = (s.m___47376 * s.dataSize___47292);
     s.tmp_1 = r0;
     r0 = pxsim.BufferMethods.getNumber(s.tmp_0, 4, s.tmp_1);
-    s.v___8163 = (r0);
-    r0 = (s.v___8163 == s.ch___8112);
+    s.v___47385 = (r0);
+    r0 = (s.v___47385 == s.ch___47334);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 15; continue; }
-    r0 = (s.m___8154 * s.dataSize___8072);
-    s.off___8134 = (r0);
+    r0 = (s.m___47376 * s.dataSize___47292);
+    s.off___47356 = (r0);
     { step = 19; continue; }
   case 15:
   case 16:
-    r0 = (s.v___8163 < s.ch___8112);
+    r0 = (s.v___47385 < s.ch___47334);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 17; continue; }
-    r0 = (s.m___8154 + 1);
-    s.l___8131 = (r0);
+    r0 = (s.m___47376 + 1);
+    s.l___47353 = (r0);
     { step = 18; continue; }
   case 17:
-    r0 = (s.m___8154 - 1);
-    s.r___8132 = (r0);
+    r0 = (s.m___47376 - 1);
+    s.r___47354 = (r0);
   case 18:
     { step = 14; continue; }
   case 19:
   case 20:
-    r0 = (s.mult___8045 == 1);
+    r0 = (s.mult___47265 == 1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 21; continue; }
-    s.imgBuf___8190 = (undefined);
-    r0 = (8 + s.charSize___8068);
+    s.imgBuf___47412 = (undefined);
+    r0 = (8 + s.charSize___47288);
     s.tmp_0 = r0;
     r0 = pxsim.control.createBuffer(s.tmp_0);
-    s.imgBuf___8190 = (r0);
-    r0 = pxsim.BufferMethods.setByte(s.imgBuf___8190, 0, 135);
-    r0 = pxsim.BufferMethods.setByte(s.imgBuf___8190, 1, 1);
-    r0 = pxsim.BufferMethods.setByte(s.imgBuf___8190, 2, s.dataW___8050);
-    r0 = pxsim.BufferMethods.setByte(s.imgBuf___8190, 4, s.dataH___8056);
-    s.tmp_0 = r0 = s.imgBuf___8190;
-    s.tmp_2 = r0 = s.fontdata___8076;
-    r0 = (s.off___8134 + 2);
+    s.imgBuf___47412 = (r0);
+    r0 = pxsim.BufferMethods.setByte(s.imgBuf___47412, 0, 135);
+    r0 = pxsim.BufferMethods.setByte(s.imgBuf___47412, 1, 1);
+    r0 = pxsim.BufferMethods.setByte(s.imgBuf___47412, 2, s.dataW___47270);
+    r0 = pxsim.BufferMethods.setByte(s.imgBuf___47412, 4, s.dataH___47276);
+    s.tmp_0 = r0 = s.imgBuf___47412;
+    s.tmp_2 = r0 = s.fontdata___47296;
+    r0 = (s.off___47356 + 2);
     s.tmp_3 = r0;
-    r0 = pxsim.BufferMethods.slice(s.tmp_2, s.tmp_3, s.charSize___8068);
+    r0 = pxsim.BufferMethods.slice(s.tmp_2, s.tmp_3, s.charSize___47288);
     s.tmp_1 = r0;
     r0 = pxsim.BufferMethods.write(s.tmp_0, 8, s.tmp_1);
     s.tmp_0 = dot_gfx_icon__P4413_mk(s);
-    r0 = (s.x___8027 + s.xOffset___8110);
+    r0 = (s.x___47247 + s.xOffset___47332);
     s.tmp_0.arg0 = r0;
-    r0 = (s.y___8032 + s.yOffset___8111);
+    r0 = (s.y___47252 + s.yOffset___47333);
     s.tmp_0.arg1 = r0;
-    s.tmp_0.arg2 = s.imgBuf___8190;
+    s.tmp_0.arg2 = s.imgBuf___47412;
     s.callLocIdx = 132; s.pc = 42; return s.tmp_0;
   case 42:
     r0 = s.retval;
-    s.tmp_0 = r0 = s.x___8027;
+    s.tmp_0 = r0 = s.x___47247;
     s.tmp_2 = if_charWidth_1_mk(s);
     s.tmp_2.arg0 = s.arg3;
     if (!s.tmp_2.arg0.vtable.iface) {
@@ -3485,89 +3485,89 @@ switch (step) {
     r0 = s.retval;
     s.tmp_1 = r0;
     r0 = (s.tmp_0 + s.tmp_1);
-    s.x___8027 = (r0);
+    s.x___47247 = (r0);
     { step = 32; continue; }
   case 21:
-    r0 = (s.off___8134 + 2);
-    s.off___8134 = (r0);
-    s.i___8234 = (0);
+    r0 = (s.off___47356 + 2);
+    s.off___47356 = (r0);
+    s.i___47456 = (0);
   case 22:
-    r0 = (s.i___8234 < s.dataW___8050);
+    r0 = (s.i___47456 < s.dataW___47270);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 31; continue; }
-    s.j___8239 = (0);
-    s.mask___8240 = (1);
-    s.tmp_0 = r0 = s.off___8134;
+    s.j___47461 = (0);
+    s.mask___47462 = (1);
+    s.tmp_0 = r0 = s.off___47356;
     r0 = (s.tmp_0 + 1);
-    s.off___8134 = (r0);
-    r0 = pxsim.BufferMethods.getByte(s.fontdata___8076, s.tmp_0);
-    s.c___8241 = (r0);
+    s.off___47356 = (r0);
+    r0 = pxsim.BufferMethods.getByte(s.fontdata___47296, s.tmp_0);
+    s.c___47463 = (r0);
   case 23:
-    r0 = (s.j___8239 < s.dataH___8056);
+    r0 = (s.j___47461 < s.dataH___47276);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 30; continue; }
-    r0 = (s.mask___8240 == 256);
+    r0 = (s.mask___47462 == 256);
     s.tmp_1 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_1);
     if (!r0) { step = 24; continue; }
-    s.tmp_2 = r0 = s.off___8134;
+    s.tmp_2 = r0 = s.off___47356;
     r0 = (s.tmp_2 + 1);
-    s.off___8134 = (r0);
-    r0 = pxsim.BufferMethods.getByte(s.fontdata___8076, s.tmp_2);
-    s.c___8241 = (r0);
-    s.mask___8240 = (1);
+    s.off___47356 = (r0);
+    r0 = pxsim.BufferMethods.getByte(s.fontdata___47296, s.tmp_2);
+    s.c___47463 = (r0);
+    s.mask___47462 = (1);
   case 24:
   case 25:
-    s.n___8258 = (0);
+    s.n___47480 = (0);
   case 26:
-    r0 = (s.c___8241 & s.mask___8240);
+    r0 = (s.c___47463 & s.mask___47462);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 27; continue; }
-    r0 = (s.n___8258 + 1);
-    s.n___8258 = (r0);
-    r0 = (s.mask___8240 << 1);
-    s.mask___8240 = (r0);
+    r0 = (s.n___47480 + 1);
+    s.n___47480 = (r0);
+    r0 = (s.mask___47462 << 1);
+    s.mask___47462 = (r0);
     { step = 26; continue; }
   case 27:
-    r0 = pxsim_numops_toBoolDecr(s.n___8258);
+    r0 = pxsim_numops_toBoolDecr(s.n___47480);
     if (!r0) { step = 28; continue; }
     s.tmp_0 = dot_gfx_box__P4412_mk(s);
-    s.tmp_1 = r0 = s.x___8027;
-    r0 = (s.xOffset___8110 * s.mult___8045);
+    s.tmp_1 = r0 = s.x___47247;
+    r0 = (s.xOffset___47332 * s.mult___47265);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 + s.tmp_2);
     s.tmp_0.arg0 = r0;
-    s.tmp_3 = r0 = s.y___8032;
-    r0 = (s.j___8239 + s.yOffset___8111);
+    s.tmp_3 = r0 = s.y___47252;
+    r0 = (s.j___47461 + s.yOffset___47333);
     s.tmp_5 = r0;
-    r0 = (s.tmp_5 * s.mult___8045);
+    r0 = (s.tmp_5 * s.mult___47265);
     s.tmp_4 = r0;
     r0 = (s.tmp_3 + s.tmp_4);
     s.tmp_0.arg1 = r0;
-    s.tmp_0.arg2 = s.mult___8045;
-    r0 = (s.mult___8045 * s.n___8258);
+    s.tmp_0.arg2 = s.mult___47265;
+    r0 = (s.mult___47265 * s.n___47480);
     s.tmp_0.arg3 = r0;
     s.callLocIdx = 134; s.pc = 44; return s.tmp_0;
   case 44:
     r0 = s.retval;
-    r0 = (s.j___8239 + s.n___8258);
-    s.j___8239 = (r0);
+    r0 = (s.j___47461 + s.n___47480);
+    s.j___47461 = (r0);
     { step = 29; continue; }
   case 28:
-    r0 = (s.mask___8240 << 1);
-    s.mask___8240 = (r0);
-    r0 = (s.j___8239 + 1);
-    s.j___8239 = (r0);
+    r0 = (s.mask___47462 << 1);
+    s.mask___47462 = (r0);
+    r0 = (s.j___47461 + 1);
+    s.j___47461 = (r0);
   case 29:
     { step = 23; continue; }
   case 30:
-    r0 = (s.x___8027 + s.mult___8045);
-    s.x___8027 = (r0);
-    r0 = (s.i___8234 + 1);
-    s.i___8234 = (r0);
+    r0 = (s.x___47247 + s.mult___47265);
+    s.x___47247 = (r0);
+    r0 = (s.i___47456 + 1);
+    s.i___47456 = (r0);
     { step = 22; continue; }
   case 31:
   case 32:
@@ -3577,12 +3577,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_draw_text__P4428.info = {"start":3112,"length":3961,"line":97,"column":8,"endLine":204,"endColumn":9,"fileName":"draw.ts","functionName":"text","argumentNames":["p","s","alignment","font"]}
+dot_draw_text__P47242.info = {"start":3106,"length":3961,"line":97,"column":8,"endLine":204,"endColumn":9,"fileName":"draw.ts","functionName":"text","argumentNames":["p","s","alignment","font"]}
 
-function dot_draw_text__P4428_mk(s) {
+function dot_draw_text__P47242_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_draw_text__P4428, depth: s.depth + 1,
+        parent: s, fn: dot_draw_text__P47242, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3590,34 +3590,34 @@ function dot_draw_text__P4428_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   tmp_5: undefined,
-  x___8027: undefined,
-  y___8032: undefined,
-  x0___8042: undefined,
-  cp___8044: undefined,
-  mult___8045: undefined,
-  dataW___8050: undefined,
-  dataH___8056: undefined,
-  byteHeight___8062: undefined,
-  charSize___8068: undefined,
-  dataSize___8072: undefined,
-  fontdata___8076: undefined,
-  lastchar___8079: undefined,
-  width___8086: undefined,
-  xOffset___8110: undefined,
-  yOffset___8111: undefined,
-  ch___8112: undefined,
-  l___8131: undefined,
-  r___8132: undefined,
-  off___8134: undefined,
-  guess___8135: undefined,
-  m___8154: undefined,
-  v___8163: undefined,
-  imgBuf___8190: undefined,
-  i___8234: undefined,
-  j___8239: undefined,
-  mask___8240: undefined,
-  c___8241: undefined,
-  n___8258: undefined,
+  x___47247: undefined,
+  y___47252: undefined,
+  x0___47262: undefined,
+  cp___47264: undefined,
+  mult___47265: undefined,
+  dataW___47270: undefined,
+  dataH___47276: undefined,
+  byteHeight___47282: undefined,
+  charSize___47288: undefined,
+  dataSize___47292: undefined,
+  fontdata___47296: undefined,
+  lastchar___47299: undefined,
+  width___47306: undefined,
+  xOffset___47332: undefined,
+  yOffset___47333: undefined,
+  ch___47334: undefined,
+  l___47353: undefined,
+  r___47354: undefined,
+  off___47356: undefined,
+  guess___47357: undefined,
+  m___47376: undefined,
+  v___47385: undefined,
+  imgBuf___47412: undefined,
+  i___47456: undefined,
+  j___47461: undefined,
+  mask___47462: undefined,
+  c___47463: undefined,
+  n___47480: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -4020,7 +4020,7 @@ switch (step) {
     s.callLocIdx = 185; s.pc = 8; return s.tmp_1;
   case 8:
     r0 = s.retval;
-    s.tmp_2 = dot_draw_text__P4428_mk(s);
+    s.tmp_2 = dot_draw_text__P47242_mk(s);
     s.tmp_2.arg0 = s.tmp_0;
     s.tmp_2.arg1 = globals.gameTitle___44991;
     s.tmp_2.arg2 = 1;
@@ -4041,7 +4041,7 @@ switch (step) {
     s.callLocIdx = 187; s.pc = 10; return s.tmp_1;
   case 10:
     r0 = s.retval;
-    s.tmp_3 = dot_draw_text__P4428_mk(s);
+    s.tmp_3 = dot_draw_text__P47242_mk(s);
     s.tmp_3.arg0 = s.tmp_0;
     s.tmp_3.arg1 = globals.gameDescription___44992;
     s.tmp_3.arg2 = 1;
@@ -4090,7 +4090,7 @@ switch (step) {
     s.callLocIdx = 191; s.pc = 14; return s.tmp_1;
   case 14:
     r0 = s.retval;
-    s.tmp_3 = dot_draw_text__P4428_mk(s);
+    s.tmp_3 = dot_draw_text__P47242_mk(s);
     s.tmp_3.arg0 = s.tmp_0;
     s.tmp_3.arg1 = s.text___45102;
     s.tmp_3.arg2 = 1;
@@ -4150,7 +4150,7 @@ switch (step) {
     s.callLocIdx = 179; s.pc = 2; return s.tmp_1;
   case 2:
     r0 = s.retval;
-    s.tmp_2 = dot_draw_text__P4428_mk(s);
+    s.tmp_2 = dot_draw_text__P47242_mk(s);
     s.tmp_2.arg0 = s.tmp_0;
     r0 = pxsim_String_.mkEmpty();
     s.tmp_3 = r0;
@@ -4181,7 +4181,7 @@ switch (step) {
     s.callLocIdx = 181; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
-    s.tmp_2 = dot_draw_text__P4428_mk(s);
+    s.tmp_2 = dot_draw_text__P47242_mk(s);
     s.tmp_2.arg0 = s.tmp_0;
     r0 = pxsim.Math_.floor(globals.high___45001);
     s.tmp_4 = r0;
@@ -4888,7 +4888,7 @@ switch (step) {
     s.callLocIdx = 268; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    s.tmp_0 = dot_draw_text__P4428_mk(s);
+    s.tmp_0 = dot_draw_text__P47242_mk(s);
     r0 = s.arg0.fields["pos"];
     s.tmp_0.arg0 = r0;
     r0 = s.arg0.fields["str"];
@@ -8058,12 +8058,12 @@ switch (step) {
     s.det___10265 = undefined;
     s.colls___10397 = undefined;
     s.coll___10402 = undefined;
-    s.unnamed1548___U5 = undefined;
-    s.unnamed1549___U6 = undefined;
+    s.unnamed1708___U5 = undefined;
+    s.unnamed1709___U6 = undefined;
     s.pos___10413 = undefined;
     s.coll___10436 = undefined;
-    s.unnamed1550___U9 = undefined;
-    s.unnamed1551___U10 = undefined;
+    s.unnamed1710___U9 = undefined;
+    s.unnamed1711___U10 = undefined;
     r0 = (globals.tick___44995 === 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
@@ -8117,7 +8117,7 @@ switch (step) {
     s.callLocIdx = 334; s.pc = 27; return s.tmp_0;
   case 27:
     r0 = s.retval;
-    s.tmp_0 = dot_draw_line__P4425_mk(s);
+    s.tmp_0 = dot_draw_line__P47124_mk(s);
     s.tmp_0.arg0 = s.p0___10247;
     s.tmp_0.arg1 = s.p1___10254;
     s.tmp_0.arg2 = 3;
@@ -8133,7 +8133,7 @@ switch (step) {
     s.callLocIdx = 336; s.pc = 29; return s.tmp_0;
   case 29:
     r0 = s.retval;
-    s.tmp_0 = dot_draw_arc__P4426_mk(s);
+    s.tmp_0 = dot_draw_arc__P47148_mk(s);
     s.tmp_0.arg0 = s.p0___10247;
     r0 = (globals.tick___44995 / 4);
     s.tmp_1 = r0;
@@ -8153,11 +8153,11 @@ switch (step) {
     s.callLocIdx = 338; s.pc = 30; return s.tmp_0;
   case 30:
     r0 = s.retval;
-    s.tmp_0 = dot_draw_img__P4427_mk(s);
+    s.tmp_0 = dot_draw_img__P47185_mk(s);
     s.tmp_0.arg0 = s.p1___10254;
     s.tmp_0.arg1 = globals.duck___10153;
     s.tmp_0.arg2 = true;
-    s.tmp_0.arg3 = 0;
+    s.tmp_0.arg3 = 15;
     s.tmp_0.arg4 = undefined;
     s.tmp_0.arg5 = undefined;
     s.callLocIdx = 339; s.pc = 32; return s.tmp_0;
@@ -8221,15 +8221,15 @@ switch (step) {
     r0 = s.retval;
     s.colls___10397 = (r0);
     s.coll___10402 = (undefined);
-    s.unnamed1548___U5 = (s.colls___10397);
-    s.unnamed1549___U6 = (0);
+    s.unnamed1708___U5 = (s.colls___10397);
+    s.unnamed1709___U6 = (0);
   case 9:
-    s.tmp_0 = r0 = s.unnamed1549___U6;
-    r0 = pxsim_Array__length(s.unnamed1548___U5);
+    s.tmp_0 = r0 = s.unnamed1709___U6;
+    r0 = pxsim_Array__length(s.unnamed1708___U5);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 15; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed1548___U5, s.unnamed1549___U6);
+    r0 = pxsim_Array__getAt(s.unnamed1708___U5, s.unnamed1709___U6);
     s.coll___10402 = (r0);
     r0 = s.coll___10402.fields["dst"];
     r0 = r0.fields["id"];
@@ -8288,26 +8288,26 @@ switch (step) {
   case 42:
     r0 = s.retval;
   case 14:
-    r0 = (s.unnamed1549___U6 + 1);
-    s.unnamed1549___U6 = (r0);
+    r0 = (s.unnamed1709___U6 + 1);
+    s.unnamed1709___U6 = (r0);
     { step = 9; continue; }
   case 15:
-    s.unnamed1548___U5 = (undefined);
+    s.unnamed1708___U5 = (undefined);
     s.tmp_0 = dot_Set_clear__P4494_mk(s);
     s.tmp_0.arg0 = globals.collisions___10150;
     s.callLocIdx = 356; s.pc = 43; return s.tmp_0;
   case 43:
     r0 = s.retval;
     s.coll___10436 = (undefined);
-    s.unnamed1550___U9 = (s.colls___10397);
-    s.unnamed1551___U10 = (0);
+    s.unnamed1710___U9 = (s.colls___10397);
+    s.unnamed1711___U10 = (0);
   case 16:
-    s.tmp_0 = r0 = s.unnamed1551___U10;
-    r0 = pxsim_Array__length(s.unnamed1550___U9);
+    s.tmp_0 = r0 = s.unnamed1711___U10;
+    r0 = pxsim_Array__length(s.unnamed1710___U9);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 19; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed1550___U9, s.unnamed1551___U10);
+    r0 = pxsim_Array__getAt(s.unnamed1710___U9, s.unnamed1711___U10);
     s.coll___10436 = (r0);
     r0 = s.coll___10436.fields["dst"];
     r0 = r0.fields["id"];
@@ -8325,11 +8325,11 @@ switch (step) {
     r0 = s.retval;
   case 17:
   case 18:
-    r0 = (s.unnamed1551___U10 + 1);
-    s.unnamed1551___U10 = (r0);
+    r0 = (s.unnamed1711___U10 + 1);
+    s.unnamed1711___U10 = (r0);
     { step = 16; continue; }
   case 19:
-    s.unnamed1550___U9 = (undefined);
+    s.unnamed1710___U9 = (undefined);
   case 20:
   case 21:
     r0 = undefined;
@@ -8358,12 +8358,12 @@ function test_gameUpdate__P10144_mk(s) {
   det___10265: undefined,
   colls___10397: undefined,
   coll___10402: undefined,
-  unnamed1548___U5: undefined,
-  unnamed1549___U6: undefined,
+  unnamed1708___U5: undefined,
+  unnamed1709___U6: undefined,
   pos___10413: undefined,
   coll___10436: undefined,
-  unnamed1550___U9: undefined,
-  unnamed1551___U10: undefined,
+  unnamed1710___U9: undefined,
+  unnamed1711___U10: undefined,
 } }
 
 
@@ -8488,7 +8488,7 @@ switch (step) {
     s.callLocIdx = 340; s.pc = 9; return s.tmp_0;
   case 9:
     r0 = s.retval;
-    s.tmp_0 = dot_draw_box__P4424_mk(s);
+    s.tmp_0 = dot_draw_box__P47092_mk(s);
     r0 = s.arg0.fields["r"];
     r0 = r0.fields["pos"];
     s.tmp_0.arg0 = r0;
@@ -9614,11 +9614,11 @@ switch (step) {
     s.srcs___28769 = undefined;
     s.dsts___28772 = undefined;
     s.src___28776 = undefined;
-    s.unnamed1544___U3 = undefined;
-    s.unnamed1545___U4 = undefined;
+    s.unnamed1704___U3 = undefined;
+    s.unnamed1705___U4 = undefined;
     s.dst___28779 = undefined;
-    s.unnamed1546___U6 = undefined;
-    s.unnamed1547___U7 = undefined;
+    s.unnamed1706___U6 = undefined;
+    s.unnamed1707___U7 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -9629,26 +9629,26 @@ switch (step) {
     r0 = s.arg1.fields["_srcs"];
     s.dsts___28772 = (r0);
     s.src___28776 = (undefined);
-    s.unnamed1544___U3 = (s.srcs___28769);
-    s.unnamed1545___U4 = (0);
+    s.unnamed1704___U3 = (s.srcs___28769);
+    s.unnamed1705___U4 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed1545___U4;
-    r0 = pxsim_Array__length(s.unnamed1544___U3);
+    s.tmp_0 = r0 = s.unnamed1705___U4;
+    r0 = pxsim_Array__length(s.unnamed1704___U3);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 19; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed1544___U3, s.unnamed1545___U4);
+    r0 = pxsim_Array__getAt(s.unnamed1704___U3, s.unnamed1705___U4);
     s.src___28776 = (r0);
     s.dst___28779 = (undefined);
-    s.unnamed1546___U6 = (s.dsts___28772);
-    s.unnamed1547___U7 = (0);
+    s.unnamed1706___U6 = (s.dsts___28772);
+    s.unnamed1707___U7 = (0);
   case 2:
-    s.tmp_0 = r0 = s.unnamed1547___U7;
-    r0 = pxsim_Array__length(s.unnamed1546___U6);
+    s.tmp_0 = r0 = s.unnamed1707___U7;
+    r0 = pxsim_Array__length(s.unnamed1706___U6);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 18; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed1546___U6, s.unnamed1547___U7);
+    r0 = pxsim_Array__getAt(s.unnamed1706___U6, s.unnamed1707___U7);
     s.dst___28779 = (r0);
     r0 = s.src___28776.fields["_mask"];
     s.tmp_4 = r0;
@@ -9760,16 +9760,16 @@ switch (step) {
   case 15:
   case 16:
   case 17:
-    r0 = (s.unnamed1547___U7 + 1);
-    s.unnamed1547___U7 = (r0);
+    r0 = (s.unnamed1707___U7 + 1);
+    s.unnamed1707___U7 = (r0);
     { step = 2; continue; }
   case 18:
-    s.unnamed1546___U6 = (undefined);
-    r0 = (s.unnamed1545___U4 + 1);
-    s.unnamed1545___U4 = (r0);
+    s.unnamed1706___U6 = (undefined);
+    r0 = (s.unnamed1705___U4 + 1);
+    s.unnamed1705___U4 = (r0);
     { step = 1; continue; }
   case 19:
-    s.unnamed1544___U3 = (undefined);
+    s.unnamed1704___U3 = (undefined);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
@@ -9801,11 +9801,11 @@ function dot_collision__internal_calcCollisions__P28766_mk(s) {
   srcs___28769: undefined,
   dsts___28772: undefined,
   src___28776: undefined,
-  unnamed1544___U3: undefined,
-  unnamed1545___U4: undefined,
+  unnamed1704___U3: undefined,
+  unnamed1705___U4: undefined,
   dst___28779: undefined,
-  unnamed1546___U6: undefined,
-  unnamed1547___U7: undefined,
+  unnamed1706___U6: undefined,
+  unnamed1707___U7: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -10301,7 +10301,7 @@ function dot_color_none__P4404_mk(s) {
 
 
 
-function dot_draw_box__P4424(s) {
+function dot_draw_box__P47092(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -10311,10 +10311,10 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.x___7882 = undefined;
-    s.y___7885 = undefined;
-    s.w___7888 = undefined;
-    s.h___7891 = undefined;
+    s.x___47098 = undefined;
+    s.y___47101 = undefined;
+    s.w___47104 = undefined;
+    s.h___47107 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -10324,13 +10324,13 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0.fields["x"];
-    s.x___7882 = (r0);
+    s.x___47098 = (r0);
     r0 = s.arg0.fields["y"];
-    s.y___7885 = (r0);
+    s.y___47101 = (r0);
     r0 = s.arg1.fields["x"];
-    s.w___7888 = (r0);
+    s.w___47104 = (r0);
     r0 = s.arg1.fields["y"];
-    s.h___7891 = (r0);
+    s.h___47107 = (r0);
     r0 = (s.arg3 == null);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
@@ -10342,15 +10342,15 @@ switch (step) {
     s.arg3 = (r0);
   case 1:
   case 2:
-    s.tmp_0 = dot_draw__internal_rect__P7868_mk(s);
+    s.tmp_0 = dot_draw__internal_rect__P47083_mk(s);
     s.tmp_0.arg0 = s.arg4;
     s.tmp_0.arg1 = s.arg2;
     s.tmp_0.arg2 = true;
     s.tmp_0.arg3 = s.arg3;
-    s.tmp_0.arg4 = s.x___7882;
-    s.tmp_0.arg5 = s.y___7885;
-    s.tmp_0.arg6 = s.w___7888;
-    s.tmp_0.arg7 = s.h___7891;
+    s.tmp_0.arg4 = s.x___47098;
+    s.tmp_0.arg5 = s.y___47101;
+    s.tmp_0.arg6 = s.w___47104;
+    s.tmp_0.arg7 = s.h___47107;
     s.tmp_0.arg8 = undefined;
     s.callLocIdx = 111; s.pc = 4; return s.tmp_0;
   case 4:
@@ -10358,19 +10358,19 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_draw_box__P4424.info = {"start":650,"length":505,"line":23,"column":8,"endLine":38,"endColumn":9,"fileName":"draw.ts","functionName":"box","argumentNames":["pos","size","alignCenter","collidesWith","id"]}
+dot_draw_box__P47092.info = {"start":650,"length":505,"line":23,"column":8,"endLine":38,"endColumn":9,"fileName":"draw.ts","functionName":"box","argumentNames":["pos","size","alignCenter","collidesWith","id"]}
 
-function dot_draw_box__P4424_mk(s) {
+function dot_draw_box__P47092_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_draw_box__P4424, depth: s.depth + 1,
+        parent: s, fn: dot_draw_box__P47092, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  x___7882: undefined,
-  y___7885: undefined,
-  w___7888: undefined,
-  h___7891: undefined,
+  x___47098: undefined,
+  y___47101: undefined,
+  w___47104: undefined,
+  h___47107: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -10382,7 +10382,7 @@ function dot_draw_box__P4424_mk(s) {
 
 
 
-function dot_draw__internal_rect__P7868(s) {
+function dot_draw__internal_rect__P47083(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -10392,9 +10392,9 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.pos___8316 = undefined;
-    s.size___8333 = undefined;
-    s.c___8346 = undefined;
+    s.pos___47538 = undefined;
+    s.size___47555 = undefined;
+    s.c___47568 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -10455,7 +10455,7 @@ switch (step) {
   case 4:
     // jmp value (already in r0)
     s.tmp_8 = r0;
-    s.pos___8316 = (s.tmp_8);
+    s.pos___47538 = (s.tmp_8);
     r0 = pxsim_pxtcore_mkClassInstance(dot_Vec__C4496_VT);
     s.tmp_0 = r0;
     s.tmp_1 = dot_Vec_constructor__P4505_mk(s);
@@ -10465,8 +10465,8 @@ switch (step) {
     s.callLocIdx = 138; s.pc = 21; return s.tmp_1;
   case 21:
     r0 = s.retval;
-    s.size___8333 = (s.tmp_0);
-    r0 = s.size___8333.fields["x"];
+    s.size___47555 = (s.tmp_0);
+    r0 = s.size___47555.fields["x"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 === 0);
     s.tmp_0 = r0;
@@ -10475,7 +10475,7 @@ switch (step) {
     r0 = s.tmp_0;
     { step = 6; continue; }
   case 5:
-    r0 = s.size___8333.fields["y"];
+    r0 = s.size___47555.fields["y"];
     s.tmp_2 = r0;
     r0 = (s.tmp_2 === 0);
   case 6:
@@ -10493,22 +10493,22 @@ switch (step) {
     r0 = (s.tmp_6 - 1);
     s.tmp_5 = r0;
     r0 = pxsim_Array__getAt(s.tmp_4, s.tmp_5);
-    s.c___8346 = (r0);
-    r0 = s.size___8333.fields["x"];
+    s.c___47568 = (r0);
+    r0 = s.size___47555.fields["x"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 < 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 9; continue; }
-    s.tmp_2 = r0 = s.pos___8316;
+    s.tmp_2 = r0 = s.pos___47538;
     r0 = s.tmp_2.fields["x"];
     s.tmp_4 = r0;
-    r0 = s.size___8333.fields["x"];
+    r0 = s.size___47555.fields["x"];
     s.tmp_5 = r0;
     r0 = (s.tmp_4 + s.tmp_5);
     s.tmp_3 = r0;
     r0 = (s.tmp_2).fields["x"] = (s.tmp_3);
-    s.tmp_0 = r0 = s.size___8333;
+    s.tmp_0 = r0 = s.size___47555;
     r0 = s.tmp_0.fields["x"];
     s.tmp_2 = r0;
     r0 = (s.tmp_2 * -1);
@@ -10516,21 +10516,21 @@ switch (step) {
     r0 = (s.tmp_0).fields["x"] = (s.tmp_1);
   case 9:
   case 10:
-    r0 = s.size___8333.fields["y"];
+    r0 = s.size___47555.fields["y"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 < 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 11; continue; }
-    s.tmp_2 = r0 = s.pos___8316;
+    s.tmp_2 = r0 = s.pos___47538;
     r0 = s.tmp_2.fields["y"];
     s.tmp_4 = r0;
-    r0 = s.size___8333.fields["y"];
+    r0 = s.size___47555.fields["y"];
     s.tmp_5 = r0;
     r0 = (s.tmp_4 + s.tmp_5);
     s.tmp_3 = r0;
     r0 = (s.tmp_2).fields["y"] = (s.tmp_3);
-    s.tmp_0 = r0 = s.size___8333;
+    s.tmp_0 = r0 = s.size___47555;
     r0 = s.tmp_0.fields["y"];
     s.tmp_2 = r0;
     r0 = (s.tmp_2 * -1);
@@ -10542,8 +10542,8 @@ switch (step) {
     s.tmp_0 = r0;
     s.tmp_1 = dot_Rect_constructor__P4347_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
-    s.tmp_1.arg1 = s.pos___8316;
-    s.tmp_1.arg2 = s.size___8333;
+    s.tmp_1.arg1 = s.pos___47538;
+    s.tmp_1.arg2 = s.size___47555;
     s.callLocIdx = 140; s.pc = 22; return s.tmp_1;
   case 22:
     r0 = s.retval;
@@ -10551,23 +10551,23 @@ switch (step) {
     s.tmp_2.arg0 = s.arg8;
     s.tmp_2.arg1 = s.arg0;
     s.tmp_2.arg2 = s.tmp_0;
-    s.tmp_2.arg3 = s.c___8346;
+    s.tmp_2.arg3 = s.c___47568;
     s.tmp_2.arg4 = s.arg3;
     s.callLocIdx = 141; s.pc = 23; return s.tmp_2;
   case 23:
     r0 = s.retval;
-    r0 = pxsim_numops_toBoolDecr(s.c___8346);
+    r0 = pxsim_numops_toBoolDecr(s.c___47568);
     if (!r0) { step = 15; continue; }
     r0 = pxsim_numops_toBoolDecr(s.arg2);
     if (!r0) { step = 13; continue; }
     s.tmp_0 = dot_gfx_box__P4412_mk(s);
-    r0 = s.pos___8316.fields["x"];
+    r0 = s.pos___47538.fields["x"];
     s.tmp_0.arg0 = r0;
-    r0 = s.pos___8316.fields["y"];
+    r0 = s.pos___47538.fields["y"];
     s.tmp_0.arg1 = r0;
-    r0 = s.size___8333.fields["x"];
+    r0 = s.size___47555.fields["x"];
     s.tmp_0.arg2 = r0;
-    r0 = s.size___8333.fields["y"];
+    r0 = s.size___47555.fields["y"];
     s.tmp_0.arg3 = r0;
     s.callLocIdx = 142; s.pc = 24; return s.tmp_0;
   case 24:
@@ -10575,13 +10575,13 @@ switch (step) {
     { step = 14; continue; }
   case 13:
     s.tmp_0 = dot_gfx_rect__P4411_mk(s);
-    r0 = s.pos___8316.fields["x"];
+    r0 = s.pos___47538.fields["x"];
     s.tmp_0.arg0 = r0;
-    r0 = s.pos___8316.fields["y"];
+    r0 = s.pos___47538.fields["y"];
     s.tmp_0.arg1 = r0;
-    r0 = s.size___8333.fields["x"];
+    r0 = s.size___47555.fields["x"];
     s.tmp_0.arg2 = r0;
-    r0 = s.size___8333.fields["y"];
+    r0 = s.size___47555.fields["y"];
     s.tmp_0.arg3 = r0;
     s.callLocIdx = 143; s.pc = 25; return s.tmp_0;
   case 25:
@@ -10594,12 +10594,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_draw__internal_rect__P7868.info = {"start":7117,"length":1489,"line":207,"column":12,"endLine":251,"endColumn":13,"fileName":"draw.ts","functionName":"rect","argumentNames":["id","alignCenter","fill","collidesWith","x","y","w","h","reporter"]}
+dot_draw__internal_rect__P47083.info = {"start":7111,"length":1489,"line":207,"column":12,"endLine":251,"endColumn":13,"fileName":"draw.ts","functionName":"rect","argumentNames":["id","alignCenter","fill","collidesWith","x","y","w","h","reporter"]}
 
-function dot_draw__internal_rect__P7868_mk(s) {
+function dot_draw__internal_rect__P47083_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_draw__internal_rect__P7868, depth: s.depth + 1,
+        parent: s, fn: dot_draw__internal_rect__P47083, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -10610,9 +10610,9 @@ function dot_draw__internal_rect__P7868_mk(s) {
   tmp_6: undefined,
   tmp_7: undefined,
   tmp_8: undefined,
-  pos___8316: undefined,
-  size___8333: undefined,
-  c___8346: undefined,
+  pos___47538: undefined,
+  size___47555: undefined,
+  c___47568: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -11029,7 +11029,7 @@ function dot_color_all__P4403_mk(s) {
 
 
 
-function dot_draw_img__P4427(s) {
+function dot_draw_img__P47185(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11039,8 +11039,8 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.pos___7973 = undefined;
-    s.reporter___8001 = undefined;
+    s.pos___47192 = undefined;
+    s.reporter___47220 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -11093,7 +11093,7 @@ switch (step) {
   case 2:
     // jmp value (already in r0)
     s.tmp_10 = r0;
-    s.pos___7973 = (s.tmp_10);
+    s.pos___47192 = (s.tmp_10);
     r0 = (s.arg4 == null);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
@@ -11109,12 +11109,12 @@ switch (step) {
     s.callLocIdx = 119; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
-    s.reporter___8001 = (r0);
+    s.reporter___47220 = (r0);
     s.tmp_0 = dot_CollisionReporter__add__P28632_mk(s);
-    s.tmp_0.arg0 = s.reporter___8001;
+    s.tmp_0.arg0 = s.reporter___47220;
     s.tmp_0.arg1 = s.arg5;
     s.tmp_1 = dot_rect_make__P4349_mk(s);
-    s.tmp_1.arg0 = s.pos___7973;
+    s.tmp_1.arg0 = s.pos___47192;
     s.tmp_2 = dot_vec_make__P4515_mk(s);
     r0 = pxsim_ImageMethods.width(s.arg1);
     s.tmp_2.arg0 = r0;
@@ -11134,24 +11134,24 @@ switch (step) {
   case 9:
     r0 = s.retval;
     s.tmp_0 = dot_gfx_img__P4414_mk(s);
-    r0 = s.pos___7973.fields["x"];
+    r0 = s.pos___47192.fields["x"];
     s.tmp_0.arg0 = r0;
-    r0 = s.pos___7973.fields["y"];
+    r0 = s.pos___47192.fields["y"];
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = s.arg1;
     s.callLocIdx = 123; s.pc = 12; return s.tmp_0;
   case 12:
     r0 = s.retval;
-    r0 = s.reporter___8001;
+    r0 = s.reporter___47220;
     return leave(s, r0)
   default: oops()
 } } }
-dot_draw_img__P4427.info = {"start":2296,"length":712,"line":75,"column":8,"endLine":93,"endColumn":9,"fileName":"draw.ts","functionName":"img","argumentNames":["p","img","alignCenter","layer","collidesWith","id"]}
+dot_draw_img__P47185.info = {"start":2296,"length":706,"line":75,"column":8,"endLine":93,"endColumn":9,"fileName":"draw.ts","functionName":"img","argumentNames":["p","img","alignCenter","layer","collidesWith","id"]}
 
-function dot_draw_img__P4427_mk(s) {
+function dot_draw_img__P47185_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_draw_img__P4427, depth: s.depth + 1,
+        parent: s, fn: dot_draw_img__P47185, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -11164,8 +11164,8 @@ function dot_draw_img__P4427_mk(s) {
   tmp_8: undefined,
   tmp_9: undefined,
   tmp_10: undefined,
-  pos___7973: undefined,
-  reporter___8001: undefined,
+  pos___47192: undefined,
+  reporter___47220: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -11353,7 +11353,7 @@ function dot_color_noncollidable__P4405_mk(s) {
 
 
 
-function dot_draw_arc__P4426(s) {
+function dot_draw_arc__P47148(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11406,7 +11406,7 @@ switch (step) {
     s.arg5 = (r0);
   case 7:
   case 8:
-    s.tmp_0 = dot_draw__internal_arc__P7958_mk(s);
+    s.tmp_0 = dot_draw__internal_arc__P47176_mk(s);
     s.tmp_0.arg0 = s.arg6;
     s.tmp_0.arg1 = s.arg5;
     s.tmp_0.arg2 = s.arg0;
@@ -11422,12 +11422,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_draw_arc__P4426.info = {"start":1611,"length":675,"line":53,"column":8,"endLine":73,"endColumn":9,"fileName":"draw.ts","functionName":"arc","argumentNames":["p","radius","thickness","angleFrom","angleTo","collidesWith","id"]}
+dot_draw_arc__P47148.info = {"start":1611,"length":675,"line":53,"column":8,"endLine":73,"endColumn":9,"fileName":"draw.ts","functionName":"arc","argumentNames":["p","radius","thickness","angleFrom","angleTo","collidesWith","id"]}
 
-function dot_draw_arc__P4426_mk(s) {
+function dot_draw_arc__P47148_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_draw_arc__P4426, depth: s.depth + 1,
+        parent: s, fn: dot_draw_arc__P47148, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -11444,7 +11444,7 @@ function dot_draw_arc__P4426_mk(s) {
 
 
 
-function dot_draw__internal_arc__P7958(s) {
+function dot_draw__internal_arc__P47176(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11454,15 +11454,15 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.af___8527 = undefined;
-    s.ao___8528 = undefined;
-    s.lc___8553 = undefined;
-    s.ai___8564 = undefined;
-    s.a___8568 = undefined;
-    s.p1___8570 = undefined;
-    s.p2___8577 = undefined;
-    s.o___8579 = undefined;
-    s.i___8581 = undefined;
+    s.af___47749 = undefined;
+    s.ao___47750 = undefined;
+    s.lc___47775 = undefined;
+    s.ai___47786 = undefined;
+    s.a___47790 = undefined;
+    s.p1___47792 = undefined;
+    s.p2___47799 = undefined;
+    s.o___47801 = undefined;
+    s.i___47803 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -11491,24 +11491,24 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    s.af___8527 = (s.arg6);
+    s.af___47749 = (s.arg6);
     r0 = (s.arg5 - s.arg6);
-    s.ao___8528 = (r0);
+    s.ao___47750 = (r0);
     { step = 4; continue; }
   case 3:
-    s.af___8527 = (s.arg5);
+    s.af___47749 = (s.arg5);
     r0 = (s.arg6 - s.arg5);
-    s.ao___8528 = (r0);
+    s.ao___47750 = (r0);
   case 4:
     s.tmp_0 = Math_clamp__P127_mk(s);
     s.tmp_0.arg0 = 0;
     s.tmp_0.arg1 = 6.283185307179586;
-    s.tmp_0.arg2 = s.ao___8528;
+    s.tmp_0.arg2 = s.ao___47750;
     s.callLocIdx = 156; s.pc = 11; return s.tmp_0;
   case 11:
     r0 = s.retval;
-    s.ao___8528 = (r0);
-    r0 = (s.ao___8528 < 0.01);
+    s.ao___47750 = (r0);
+    r0 = (s.ao___47750 < 0.01);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 5; continue; }
@@ -11519,7 +11519,7 @@ switch (step) {
     s.tmp_1 = Math_clamp__P127_mk(s);
     s.tmp_1.arg0 = 1;
     s.tmp_1.arg1 = 36;
-    s.tmp_3 = r0 = s.ao___8528;
+    s.tmp_3 = r0 = s.ao___47750;
     r0 = (s.arg3 * 0.25);
     s.tmp_5 = r0;
     r0 = pxsim.Math_.sqrt(s.tmp_5);
@@ -11531,10 +11531,10 @@ switch (step) {
     s.callLocIdx = 157; s.pc = 12; return s.tmp_1;
   case 12:
     r0 = s.retval;
-    s.lc___8553 = (r0);
-    r0 = (s.ao___8528 / s.lc___8553);
-    s.ai___8564 = (r0);
-    s.a___8568 = (s.af___8527);
+    s.lc___47775 = (r0);
+    r0 = (s.ao___47750 / s.lc___47775);
+    s.ai___47786 = (r0);
+    s.a___47790 = (s.af___47749);
     s.tmp_0 = dot_Vec_add__P4506_mk(s);
     s.tmp_1 = dot_Vec_rotate__P4510_mk(s);
     s.tmp_2 = dot_vec_make__P4515_mk(s);
@@ -11544,7 +11544,7 @@ switch (step) {
   case 15:
     r0 = s.retval;
     s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = s.a___8568;
+    s.tmp_1.arg1 = s.a___47790;
     s.callLocIdx = 159; s.pc = 14; return s.tmp_1;
   case 14:
     r0 = s.retval;
@@ -11553,36 +11553,36 @@ switch (step) {
     s.callLocIdx = 160; s.pc = 13; return s.tmp_0;
   case 13:
     r0 = s.retval;
-    s.p1___8570 = (r0);
+    s.p1___47792 = (r0);
     s.tmp_0 = dot_vec_zero__P4516_mk(s);
     s.callLocIdx = 161; s.pc = 16; return s.tmp_0;
   case 16:
     r0 = s.retval;
-    s.p2___8577 = (r0);
+    s.p2___47799 = (r0);
     s.tmp_0 = dot_vec_zero__P4516_mk(s);
     s.callLocIdx = 162; s.pc = 17; return s.tmp_0;
   case 17:
     r0 = s.retval;
-    s.o___8579 = (r0);
-    s.i___8581 = (0);
+    s.o___47801 = (r0);
+    s.i___47803 = (0);
   case 7:
-    r0 = (s.i___8581 < s.lc___8553);
+    r0 = (s.i___47803 < s.lc___47775);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 8; continue; }
-    r0 = (s.a___8568 + s.ai___8564);
-    s.a___8568 = (r0);
+    r0 = (s.a___47790 + s.ai___47786);
+    s.a___47790 = (r0);
     s.tmp_0 = dot_Vec_add__P4506_mk(s);
     s.tmp_1 = dot_Vec_rotate__P4510_mk(s);
     s.tmp_2 = dot_Vec_set__P4511_mk(s);
-    s.tmp_2.arg0 = s.p2___8577;
+    s.tmp_2.arg0 = s.p2___47799;
     s.tmp_2.arg1 = s.arg3;
     s.tmp_2.arg2 = 0;
     s.callLocIdx = 163; s.pc = 20; return s.tmp_2;
   case 20:
     r0 = s.retval;
     s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = s.a___8568;
+    s.tmp_1.arg1 = s.a___47790;
     s.callLocIdx = 164; s.pc = 19; return s.tmp_1;
   case 19:
     r0 = s.retval;
@@ -11593,21 +11593,21 @@ switch (step) {
     r0 = s.retval;
     s.tmp_0 = dot_Vec_sub__P4507_mk(s);
     s.tmp_1 = dot_Vec_setv__P4513_mk(s);
-    s.tmp_1.arg0 = s.o___8579;
-    s.tmp_1.arg1 = s.p2___8577;
+    s.tmp_1.arg0 = s.o___47801;
+    s.tmp_1.arg1 = s.p2___47799;
     s.callLocIdx = 166; s.pc = 22; return s.tmp_1;
   case 22:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = s.p1___8570;
+    s.tmp_0.arg1 = s.p1___47792;
     s.callLocIdx = 167; s.pc = 21; return s.tmp_0;
   case 21:
     r0 = s.retval;
-    s.tmp_0 = dot_draw__internal_line__P7923_mk(s);
+    s.tmp_0 = dot_draw__internal_line__P47140_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.tmp_0.arg1 = s.arg1;
-    s.tmp_0.arg2 = s.p1___8570;
-    s.tmp_0.arg3 = s.p2___8577;
+    s.tmp_0.arg2 = s.p1___47792;
+    s.tmp_0.arg3 = s.p2___47799;
     s.tmp_0.arg4 = s.arg4;
     s.tmp_0.arg5 = 0;
     s.tmp_0.arg6 = s.arg7;
@@ -11615,13 +11615,13 @@ switch (step) {
   case 23:
     r0 = s.retval;
     s.tmp_0 = dot_Vec_setv__P4513_mk(s);
-    s.tmp_0.arg0 = s.p1___8570;
-    s.tmp_0.arg1 = s.p2___8577;
+    s.tmp_0.arg0 = s.p1___47792;
+    s.tmp_0.arg1 = s.p2___47799;
     s.callLocIdx = 169; s.pc = 24; return s.tmp_0;
   case 24:
     r0 = s.retval;
-    r0 = (s.i___8581 + 1);
-    s.i___8581 = (r0);
+    r0 = (s.i___47803 + 1);
+    s.i___47803 = (r0);
     { step = 7; continue; }
   case 8:
     r0 = s.arg7;
@@ -11629,12 +11629,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_draw__internal_arc__P7958.info = {"start":10018,"length":1520,"line":285,"column":12,"endLine":325,"endColumn":13,"fileName":"draw.ts","functionName":"arc","argumentNames":["id","collidesWith","p","radius","thickness","angleFrom","angleTo","reporter"]}
+dot_draw__internal_arc__P47176.info = {"start":10012,"length":1520,"line":285,"column":12,"endLine":325,"endColumn":13,"fileName":"draw.ts","functionName":"arc","argumentNames":["id","collidesWith","p","radius","thickness","angleFrom","angleTo","reporter"]}
 
-function dot_draw__internal_arc__P7958_mk(s) {
+function dot_draw__internal_arc__P47176_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_draw__internal_arc__P7958, depth: s.depth + 1,
+        parent: s, fn: dot_draw__internal_arc__P47176, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -11642,15 +11642,15 @@ function dot_draw__internal_arc__P7958_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   tmp_5: undefined,
-  af___8527: undefined,
-  ao___8528: undefined,
-  lc___8553: undefined,
-  ai___8564: undefined,
-  a___8568: undefined,
-  p1___8570: undefined,
-  p2___8577: undefined,
-  o___8579: undefined,
-  i___8581: undefined,
+  af___47749: undefined,
+  ao___47750: undefined,
+  lc___47775: undefined,
+  ai___47786: undefined,
+  a___47790: undefined,
+  p1___47792: undefined,
+  p2___47799: undefined,
+  o___47801: undefined,
+  i___47803: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -11665,7 +11665,7 @@ function dot_draw__internal_arc__P7958_mk(s) {
 
 
 
-function dot_draw__internal_line__P7923(s) {
+function dot_draw__internal_line__P47140(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11675,14 +11675,14 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.d___8429 = undefined;
-    s.len___8434 = undefined;
-    s.norm___8438 = undefined;
-    s.numBoxes___8442 = undefined;
-    s.actualGap___8453 = undefined;
-    s.step___8478 = undefined;
-    s.p___8484 = undefined;
-    s.i___8494 = undefined;
+    s.d___47651 = undefined;
+    s.len___47656 = undefined;
+    s.norm___47660 = undefined;
+    s.numBoxes___47664 = undefined;
+    s.actualGap___47675 = undefined;
+    s.step___47700 = undefined;
+    s.p___47706 = undefined;
+    s.i___47716 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -11728,61 +11728,61 @@ switch (step) {
     s.callLocIdx = 147; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
-    s.d___8429 = (r0);
+    s.d___47651 = (r0);
     s.tmp_0 = dot_vec_length__P4529_mk(s);
-    s.tmp_0.arg0 = s.d___8429;
+    s.tmp_0.arg0 = s.d___47651;
     s.callLocIdx = 148; s.pc = 11; return s.tmp_0;
   case 11:
     r0 = s.retval;
-    s.len___8434 = (r0);
+    s.len___47656 = (r0);
     s.tmp_0 = dot_vec_normal__P4530_mk(s);
-    s.tmp_0.arg0 = s.d___8429;
+    s.tmp_0.arg0 = s.d___47651;
     s.callLocIdx = 149; s.pc = 12; return s.tmp_0;
   case 12:
     r0 = s.retval;
-    s.norm___8438 = (r0);
-    r0 = (s.len___8434 + s.arg5);
+    s.norm___47660 = (r0);
+    r0 = (s.len___47656 + s.arg5);
     s.tmp_1 = r0;
     r0 = (s.arg4 + s.arg5);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 / s.tmp_2);
     s.tmp_0 = r0;
     r0 = pxsim.Math_.round(s.tmp_0);
-    s.numBoxes___8442 = (r0);
-    s.tmp_1 = r0 = s.len___8434;
-    r0 = (s.numBoxes___8442 * s.arg4);
+    s.numBoxes___47664 = (r0);
+    s.tmp_1 = r0 = s.len___47656;
+    r0 = (s.numBoxes___47664 * s.arg4);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 - s.tmp_2);
     s.tmp_0 = r0;
-    r0 = (s.numBoxes___8442 - 1);
+    r0 = (s.numBoxes___47664 - 1);
     s.tmp_3 = r0;
     r0 = (s.tmp_0 / s.tmp_3);
-    s.actualGap___8453 = (r0);
-    r0 = (s.actualGap___8453 > s.arg5);
+    s.actualGap___47675 = (r0);
+    r0 = (s.actualGap___47675 > s.arg5);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    r0 = (s.numBoxes___8442 + 1);
-    s.numBoxes___8442 = (r0);
-    s.tmp_1 = r0 = s.len___8434;
-    r0 = (s.numBoxes___8442 * s.arg4);
+    r0 = (s.numBoxes___47664 + 1);
+    s.numBoxes___47664 = (r0);
+    s.tmp_1 = r0 = s.len___47656;
+    r0 = (s.numBoxes___47664 * s.arg4);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 - s.tmp_2);
     s.tmp_0 = r0;
-    r0 = (s.numBoxes___8442 - 1);
+    r0 = (s.numBoxes___47664 - 1);
     s.tmp_3 = r0;
     r0 = (s.tmp_0 / s.tmp_3);
-    s.actualGap___8453 = (r0);
+    s.actualGap___47675 = (r0);
   case 3:
   case 4:
     s.tmp_0 = dot_vec_scale__P4524_mk(s);
-    s.tmp_0.arg0 = s.norm___8438;
-    r0 = (s.arg4 + s.actualGap___8453);
+    s.tmp_0.arg0 = s.norm___47660;
+    r0 = (s.arg4 + s.actualGap___47675);
     s.tmp_0.arg1 = r0;
     s.callLocIdx = 150; s.pc = 13; return s.tmp_0;
   case 13:
     r0 = s.retval;
-    s.step___8478 = (r0);
+    s.step___47700 = (r0);
     r0 = pxsim_pxtcore_mkClassInstance(dot_Vec__C4496_VT);
     s.tmp_0 = r0;
     s.tmp_1 = dot_Vec_constructor__P4505_mk(s);
@@ -11800,21 +11800,21 @@ switch (step) {
     s.callLocIdx = 152; s.pc = 15; return s.tmp_2;
   case 15:
     r0 = s.retval;
-    s.p___8484 = (r0);
-    s.i___8494 = (0);
+    s.p___47706 = (r0);
+    s.i___47716 = (0);
   case 5:
-    r0 = (s.i___8494 <= s.numBoxes___8442);
+    r0 = (s.i___47716 <= s.numBoxes___47664);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 6; continue; }
-    s.tmp_1 = dot_draw__internal_rect__P7868_mk(s);
+    s.tmp_1 = dot_draw__internal_rect__P47083_mk(s);
     s.tmp_1.arg0 = s.arg0;
     s.tmp_1.arg1 = false;
     s.tmp_1.arg2 = true;
     s.tmp_1.arg3 = s.arg1;
-    r0 = s.p___8484.fields["x"];
+    r0 = s.p___47706.fields["x"];
     s.tmp_1.arg4 = r0;
-    r0 = s.p___8484.fields["y"];
+    r0 = s.p___47706.fields["y"];
     s.tmp_1.arg5 = r0;
     s.tmp_1.arg6 = s.arg4;
     s.tmp_1.arg7 = s.arg4;
@@ -11823,38 +11823,38 @@ switch (step) {
   case 16:
     r0 = s.retval;
     s.tmp_0 = dot_Vec_add__P4506_mk(s);
-    s.tmp_0.arg0 = s.p___8484;
-    s.tmp_0.arg1 = s.step___8478;
+    s.tmp_0.arg0 = s.p___47706;
+    s.tmp_0.arg1 = s.step___47700;
     s.callLocIdx = 154; s.pc = 17; return s.tmp_0;
   case 17:
     r0 = s.retval;
-    r0 = (s.i___8494 + 1);
-    s.i___8494 = (r0);
+    r0 = (s.i___47716 + 1);
+    s.i___47716 = (r0);
     { step = 5; continue; }
   case 6:
     r0 = s.arg6;
     return leave(s, r0)
   default: oops()
 } } }
-dot_draw__internal_line__P7923.info = {"start":8620,"length":1384,"line":253,"column":12,"endLine":283,"endColumn":13,"fileName":"draw.ts","functionName":"line","argumentNames":["id","collidesWith","a","b","thickness","idealGap","reporter"]}
+dot_draw__internal_line__P47140.info = {"start":8614,"length":1384,"line":253,"column":12,"endLine":283,"endColumn":13,"fileName":"draw.ts","functionName":"line","argumentNames":["id","collidesWith","a","b","thickness","idealGap","reporter"]}
 
-function dot_draw__internal_line__P7923_mk(s) {
+function dot_draw__internal_line__P47140_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_draw__internal_line__P7923, depth: s.depth + 1,
+        parent: s, fn: dot_draw__internal_line__P47140, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
-  d___8429: undefined,
-  len___8434: undefined,
-  norm___8438: undefined,
-  numBoxes___8442: undefined,
-  actualGap___8453: undefined,
-  step___8478: undefined,
-  p___8484: undefined,
-  i___8494: undefined,
+  d___47651: undefined,
+  len___47656: undefined,
+  norm___47660: undefined,
+  numBoxes___47664: undefined,
+  actualGap___47675: undefined,
+  step___47700: undefined,
+  p___47706: undefined,
+  i___47716: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -12251,7 +12251,7 @@ function dot_vec_zero__P4516_mk(s) {
 
 
 
-function dot_draw_line__P4425(s) {
+function dot_draw_line__P47124(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -12289,7 +12289,7 @@ switch (step) {
     s.arg4 = (r0);
   case 3:
   case 4:
-    s.tmp_0 = dot_draw__internal_line__P7923_mk(s);
+    s.tmp_0 = dot_draw__internal_line__P47140_mk(s);
     s.tmp_0.arg0 = s.arg5;
     s.tmp_0.arg1 = s.arg4;
     s.tmp_0.arg2 = s.arg0;
@@ -12304,12 +12304,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_draw_line__P4425.info = {"start":1164,"length":438,"line":39,"column":8,"endLine":52,"endColumn":9,"fileName":"draw.ts","functionName":"line","argumentNames":["a","b","thickness","gap","collidesWith","id"]}
+dot_draw_line__P47124.info = {"start":1164,"length":438,"line":39,"column":8,"endLine":52,"endColumn":9,"fileName":"draw.ts","functionName":"line","argumentNames":["a","b","thickness","gap","collidesWith","id"]}
 
-function dot_draw_line__P4425_mk(s) {
+function dot_draw_line__P47124_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_draw_line__P4425, depth: s.depth + 1,
+        parent: s, fn: dot_draw_line__P47124, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -52927,5 +52927,5 @@ const sprites_BaseSpriteSayRenderer__C2260_VT = mkVTable({
 
 const breakpoints = setupDebugger(1, ["SCREEN_WIDTH___4377","SCREEN_HEIGHT___4378","scoreboardFont___45008","titleFont___45012","input___4450","state___45004","input___4452","scoreFont___4454","pool___9205","pool___9532","random___9543","gameTitle___44991","gameDescription___44992","insertCoinText___44993","rand___10146","collisions___10150","duck___10153","boxColors___10159","boxes___10155","commands___7722","_gameUpdate___45016","difficulty___44997","tick___44995","restartAt___45006","_colorStack___7615","gen___28682","reporters___28714","dirty___28716","textColor___44990","_gameOverText___45015","scoreboardColor___44988","score___44999","high___45001","ALL_COLORS___7612","d___10228","a___10230","nextId___28724"])
 
-return _main___P45865
+return _main___P48491
 })
