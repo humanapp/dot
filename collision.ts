@@ -40,6 +40,13 @@ namespace dot {
             }
             return false;
         }
+        collidingWithId(id: string): boolean {
+            const colls = this.collisions();
+            for (const coll of colls) {
+                if (coll.dst.id === id) return true;
+            }
+            return false;
+        }
     }
     export namespace collision {
         const reporters: CollisionReporter[] = [];
