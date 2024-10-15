@@ -22,7 +22,8 @@
         "scores.ts",
         "random.ts",
         "pool.ts",
-        "particles.ts"
+        "particles.ts",
+        "set.ts"
     ],
     "testFiles": [
         "test.ts"

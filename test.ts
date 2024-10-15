@@ -14,7 +14,7 @@ namespace test {
         id: string;
     }
 
-    let collisions: any = {};
+    let collisions = new dot.Set<boolean>();
 
     const boxes: Box[] = [];
     const boxColors: dot.Color[] = dot.color.allExcept([dot.Color.White, dot.Color.Tan]);
@@ -55,7 +55,7 @@ namespace test {
         dot.draw.arc(
             p0,
             (dot.game.tick / 4) % (dot.SCREEN_WIDTH / 2),
-            1, 0, Math.PI * 2, dot.color.none());
+            1, 0, Math.PI * 2, dot.color.noncollidable());
 
         boxes.forEach(b => {
             b.r.pos.x += b.v.x * dot.game.difficulty;
@@ -63,7 +63,7 @@ namespace test {
             if (b.r.pos.x < 0 || b.r.pos.x > dot.SCREEN_WIDTH - b.r.size.x) b.v.x *= -1;
             if (b.r.pos.y < 0 || b.r.pos.y > dot.SCREEN_HEIGHT - b.r.size.y) b.v.y *= -1;
             dot.color.set(b.c);
-            dot.draw.box(b.r);
+            dot.draw.box(b.r, false, dot.color.none(), b.id);
         });
 
         if (dot.game.state === dot.GameState.Playing) {
@@ -77,19 +77,18 @@ namespace test {
 
             const colls = det.collisions();
             for (const coll of colls) {
-                if (collisions[coll.dst.id]) continue;
+                if (!coll.dst.id) continue;
+                if (collisions.has(coll.dst.id)) continue;
                 const pos = coll.dst.rect.center();
                 dot.color.set(coll.dst.color);
-                dot.scores.add(
-                    10,
-                    pos);
-                dot.particles.add(
-                    pos, 10, 2, Math.PI / 2, Math.PI / 6
-                );
+                dot.scores.add(10, pos);
+                dot.particles.add(pos, 10, 2, Math.PI / 2, Math.PI / 6);
             }
-            collisions = {};
+            collisions.clear();
             for (const coll of colls) {
-                collisions[coll.dst.id] = true;
+                if (coll.dst.id) {
+                    collisions.set(coll.dst.id, true);
+                }
             }
         }
     }

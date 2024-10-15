@@ -64,6 +64,12 @@ namespace dot {
         export function none(): Color[] {
             return [];
         }
+        export function noncollidable(): Color[] {
+            return [Color.Transparent];
+        }
+        export function isNoncollidable(mask: Color[]): boolean {
+            return mask.indexOf(Color.Transparent) >= 0;
+        }
         export namespace _internal {
             export function reset() {
                 _colorStack = [Color.Red];

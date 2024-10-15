@@ -22,9 +22,11 @@ namespace dot {
             this._srcs = [];
             this._collisions = [];
         }
-        _add(id: string, rect: Rect, color: Color, mask: Color[]) {
-            this._srcs.push(new Collidable(id, rect, color, mask));
-            collision._internal.enqueue(this);
+        _add(id: string, rect: Rect, c: Color, mask: Color[]) {
+            if (!color.isNoncollidable(mask)) {
+                this._srcs.push(new Collidable(id, rect, c, mask));
+                collision._internal.enqueue(this);
+            }
         }
         collisions(): Collision[] {
             if (this._gen !== collision._internal.gen) throw "Don't cache CollisionReporters across updates";
