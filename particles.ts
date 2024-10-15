@@ -1,15 +1,15 @@
 namespace dot {
     class Particle {
-        public pos: Vec2;
-        public vel: Vec2;
+        public pos: Vec;
+        public vel: Vec;
         public color: Color;
         public ticks: number;
         static create() { return new Particle(); }
         static init(
             particle: Particle,
             args: any[]) {
-            const pos: Vec2 = args[0];
-            const vel: Vec2 = args[1];
+            const pos: Vec = args[0];
+            const vel: Vec = args[1];
             const color: Color = args[2];
             const ticks: number = args[3];
             particle.pos = pos;
@@ -26,7 +26,7 @@ namespace dot {
 
     export namespace particles {
         export function add(
-            pos: Vec2,
+            pos: Vec,
             count = 16,
             speed = 1,
             angle = 0,
@@ -41,8 +41,8 @@ namespace dot {
             for (let i = 0; i < count; i++) {
                 const a = angle + random.get(angleWidth) - angleWidth / 2;
                 pool.alloc([
-                    vec2.dup(pos),
-                    new Vec2(speed * random.get(0.5, 1), 0).rotate(a),
+                    vec.dup(pos),
+                    new Vec(speed * random.get(0.5, 1), 0).rotate(a),
                     color.curr(),
                     Math.clamp(10, 60, random.get(10, 20) * Math.sqrt(Math.abs(speed)))]);
             }

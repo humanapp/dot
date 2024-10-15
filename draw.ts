@@ -6,8 +6,8 @@ namespace dot {
     }
     export namespace draw {
         export function rect(
-            pos: Vec2,
-            size: Vec2,
+            pos: Vec,
+            size: Vec,
             alignCenter = false,
             collidesWith: Color[] = null,
             id?: string
@@ -22,8 +22,8 @@ namespace dot {
             return _internal.rect(id, alignCenter, false, collidesWith, x, y, w, h);
         }
         export function box(
-            pos: Vec2,
-            size: Vec2,
+            pos: Vec,
+            size: Vec,
             alignCenter = false,
             collidesWith: Color[] = null,
             id?: string
@@ -38,8 +38,8 @@ namespace dot {
             return _internal.rect(id, alignCenter, true, collidesWith, x, y, w, h);
         }
         export function line(
-            a: Vec2,
-            b: Vec2,
+            a: Vec,
+            b: Vec,
             thickness: number,
             gap = 0,
             collidesWith: Color[] = null,
@@ -52,7 +52,7 @@ namespace dot {
             return _internal.line(id, collidesWith, a, b, thickness, gap);
         }
         export function arc(
-            p: Vec2,
+            p: Vec,
             radius: number,
             thickness: number,
             angleFrom?: number,
@@ -76,7 +76,7 @@ namespace dot {
         // Copied from screen/text.ts imagePrint
         // TODO: Support collision with text
         export function text(
-            p: Vec2,
+            p: Vec,
             s: string,
             alignment = TextAlignment.Left,
             font?: image.Font
@@ -204,9 +204,9 @@ namespace dot {
                     reporter = collision.newReporter();
                 }
                 const pos = alignCenter
-                    ? new Vec2(x - w / 2, y - h / 2)
-                    : new Vec2(x, y);
-                const size = new Vec2(w, h);
+                    ? new Vec(x - w / 2, y - h / 2)
+                    : new Vec(x, y);
+                const size = new Vec(w, h);
                 if (size.x === 0 || size.y === 0) {
                     return reporter;
                 }
@@ -238,8 +238,8 @@ namespace dot {
             export function line(
                 id: string,
                 collidesWith: Color[],
-                a: Vec2,
-                b: Vec2,
+                a: Vec,
+                b: Vec,
                 thickness: number,
                 idealGap: number,
                 reporter?: CollisionReporter
@@ -249,17 +249,17 @@ namespace dot {
                 }
                 thickness = Math.floor(Math.clamp(1, SCREEN_WIDTH, thickness));
                 idealGap = Math.abs(idealGap);
-                const d = vec2.sub(b, a);
-                const len = vec2.length(d);
-                const norm = vec2.normal(d);
+                const d = vec.sub(b, a);
+                const len = vec.length(d);
+                const norm = vec.normal(d);
                 let numBoxes = Math.round((len + idealGap) / (thickness + idealGap));
                 let actualGap = (len - (numBoxes * thickness)) / (numBoxes - 1);
                 if (actualGap > idealGap) {
                     numBoxes++;
                     actualGap = (len - (numBoxes * thickness)) / (numBoxes - 1);
                 }
-                let step = vec2.scale(norm, thickness + actualGap);
-                const p = vec2.sub(a, new Vec2(thickness / 2, thickness / 2));
+                let step = vec.scale(norm, thickness + actualGap);
+                const p = vec.sub(a, new Vec(thickness / 2, thickness / 2));
                 for (let i = 0; i <= numBoxes; i++) {
                     rect(id, false, true, collidesWith, p.x, p.y, thickness, thickness, reporter);
                     p.add(step);
@@ -270,7 +270,7 @@ namespace dot {
             export function arc(
                 id: string,
                 collidesWith: Color[],
-                p: Vec2,
+                p: Vec,
                 radius: number,
                 thickness: number,
                 angleFrom: number,
@@ -296,9 +296,9 @@ namespace dot {
                 const lc = Math.clamp(1, 36, Math.ceil(ao * Math.sqrt(radius * 0.25)));
                 const ai = ao / lc;
                 let a = af;
-                let p1 = vec2.mk(radius, 0).rotate(a).add(p);
-                let p2 = vec2.mk0();
-                let o = vec2.mk0();
+                let p1 = vec.make(radius, 0).rotate(a).add(p);
+                let p2 = vec.zero();
+                let o = vec.zero();
                 for (let i = 0; i < lc; i++) {
                     a += ai;
                     p2.set(radius, 0).rotate(a).add(p);

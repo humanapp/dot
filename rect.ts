@@ -6,20 +6,20 @@ namespace dot {
         get height() { return this.pos.height; }
         get right() { return this.left + this.width; }
         get bottom() { return this.top + this.height; }
-        center() { return vec2.add(this.pos, vec2.scale(this.size, 0.5)) }
-        constructor(public pos: Vec2, public size: Vec2) { }
+        center() { return vec.add(this.pos, vec.scale(this.size, 0.5)) }
+        constructor(public pos: Vec, public size: Vec) { }
     }
     export namespace rect {
-        export function mk(pos: Vec2, size: Vec2): Rect {
+        export function mk(pos: Vec, size: Vec): Rect {
             return new Rect(pos, size);
         }
-        export function contains(r: Rect, v: Vec2): boolean {
+        export function contains(r: Rect, v: Vec): boolean {
             return util.isInRange(v.x, r.left, r.right) && util.isInRange(v.y, r.top, r.bottom);
         }
         export function scale(r: Rect, s: number): Rect {
             return new Rect(
-                vec2.scale(r.pos, s),
-                vec2.scale(r.size, s)
+                vec.scale(r.pos, s),
+                vec.scale(r.size, s)
             );
         }
         export function overlapping(a: Rect, b: Rect): boolean {

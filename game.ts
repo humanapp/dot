@@ -41,11 +41,11 @@ namespace dot {
         function drawScoreboard() {
             color.push(scoreboardColor);
             draw.text(
-                new Vec2(2, 2),
+                new Vec(2, 2),
                 "" + Math.floor(score), TextAlignment.Left,
                 scoreboardFont);
             draw.text(
-                new Vec2(SCREEN_WIDTH, 2),
+                new Vec(SCREEN_WIDTH, 2),
                 "HI " + Math.floor(high), TextAlignment.Right,
                 scoreboardFont);
             color.pop();
@@ -55,7 +55,7 @@ namespace dot {
             if (gameTitle) {
                 color.push(textColor);
                 draw.text(
-                    new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3),
+                    new Vec(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3),
                     gameTitle, TextAlignment.Center,
                     titleFont);
                 color.pop();
@@ -64,7 +64,7 @@ namespace dot {
                 color.push(textColor);
                 const text = insertCoinText || "PRESS ANY KEY";
                 draw.text(
-                    new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 5 / 6),
+                    new Vec(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 5 / 6),
                     text, TextAlignment.Center,
                     image.font5);
                 color.pop();
@@ -75,7 +75,7 @@ namespace dot {
             color.push(textColor);
             const text = _gameOverText || "GAME OVER";
             draw.text(
-                new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - titleFont.charHeight / 2),
+                new Vec(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - titleFont.charHeight / 2),
                 text, TextAlignment.Center,
                 titleFont);
             color.pop();

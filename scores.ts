@@ -3,7 +3,7 @@ namespace dot {
 
     class Score {
         public str: string;
-        public pos: Vec2;
+        public pos: Vec;
         public vy: number;
         public deathTick: number;
         public color: Color;
@@ -13,7 +13,7 @@ namespace dot {
             args: any[]
         ) {
             const str: string = args[0];
-            const pos: Vec2 = args[1];
+            const pos: Vec = args[1];
             const vy: number = args[2];
             const deathTick: number = args[3];
             const color: Color = args[4];
@@ -30,7 +30,7 @@ namespace dot {
         (s, a) => Score.init(s, a));
 
     export namespace scores {
-        export function add(value: number, pos?: Vec2) {
+        export function add(value: number, pos?: Vec) {
             if (game.state === GameState.Playing) {
                 game.score += value;
             }
@@ -39,7 +39,7 @@ namespace dot {
             const str = `${prefix}${Math.floor(value)}`;
             pool.alloc([
                 str,
-                new Vec2(pos.x, pos.y - scoreFont.charHeight / 2),
+                new Vec(pos.x, pos.y - scoreFont.charHeight / 2),
                 -2,
                 game.tick + 30,
                 color.curr()]);

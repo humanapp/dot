@@ -10,7 +10,6 @@
         "README.md",
         "assets.json",
         "util.ts",
-        "vec2.ts",
         "rect.ts",
         "collision.ts",
         "consts.ts",
@@ -23,7 +22,8 @@
         "random.ts",
         "pool.ts",
         "particles.ts",
-        "set.ts"
+        "set.ts",
+        "vec.ts"
     ],
     "testFiles": [
         "test.ts"

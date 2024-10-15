@@ -10,7 +10,7 @@ namespace test {
     class Box {
         r: dot.Rect;
         c: dot.Color;
-        v: dot.Vec2;
+        v: dot.Vec;
         id: string;
     }
 
@@ -22,12 +22,12 @@ namespace test {
         const sz = 10;
         let b = new Box();
         b.r = new dot.Rect(
-            new dot.Vec2(
+            new dot.Vec(
                 rand.get(0, dot.SCREEN_WIDTH - sz),
                 rand.get(0, dot.SCREEN_HEIGHT - sz)),
-            new dot.Vec2(sz, sz));
+            new dot.Vec(sz, sz));
         b.c = rand.select(boxColors);
-        b.v = new dot.Vec2(
+        b.v = new dot.Vec(
             rand.get(-3, 3),
             rand.get(-3, 3));
         b.id = "box" + i;
@@ -45,10 +45,8 @@ namespace test {
         }
         scene.setBackgroundColor(dot.Color.Tan);
         a += dot.game.difficulty * d / f;
-        const s = -Math.sin(a);
-        const c = Math.cos(a);
-        const p0 = new dot.Vec2(dot.SCREEN_WIDTH / 2, dot.SCREEN_HEIGHT / 2);
-        const p1 = dot.vec2.add(p0, dot.vec2.mk(s, c).scale(dot.SCREEN_WIDTH / 2));
+        const p0 = dot.vec.make(dot.SCREEN_WIDTH / 2, dot.SCREEN_HEIGHT / 2);
+        const p1 = dot.vec.fromAngle(a).scale(dot.SCREEN_WIDTH / 2).add(p0);
         dot.color.set(dot.Color.White);
         const det = dot.draw.line(p0, p1, 3);
         dot.color.set(dot.Color.LightPurple);
