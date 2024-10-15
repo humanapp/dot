@@ -18,7 +18,6 @@
         "gfx.ts",
         "draw.ts",
         "game.ts",
-        "test.ts",
         "input.ts",
         "scores.ts",
         "random.ts",
