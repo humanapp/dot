@@ -16,6 +16,7 @@ namespace dot {
         export let score = 0;
         export let high = 0;
         export let state = GameState.Title;
+        let restartAt = 0;
         const scoreboardFont = image.scaledFont(image.font5, 2);
         const titleFont = image.scaledFont(image.font8, 2);
         let _gameOverText = "GAME OVER";
@@ -23,6 +24,7 @@ namespace dot {
 
         export function start(gameUpdate: () => void) {
             _gameUpdate = gameUpdate;
+            restartAt = 0;
             setTimeout(() => {
                 input.block();
                 dot._input_internal.input.block();
@@ -77,14 +79,6 @@ namespace dot {
                 text, TextAlignment.Center,
                 titleFont);
             color.pop();
-            if (tick % 80 < 40) {
-                color.push(textColor);
-                draw.text(
-                    new Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 5 / 6),
-                    "PRESS ANY KEY", TextAlignment.Center,
-                    image.font5);
-                color.pop();
-            }
         }
 
         function gotoPlaying() {
@@ -105,6 +99,7 @@ namespace dot {
                 high = score;
             }
             _gameOverText = gameOverText;
+            restartAt = tick + 100;
             state = GameState.GameOver;
         }
 
@@ -119,7 +114,8 @@ namespace dot {
                 if (state === GameState.Title && _input_internal.input.justPressed) {
                     gotoPlaying();
                 }
-                if (state === GameState.GameOver && _input_internal.input.justPressed) {
+                if (state === GameState.GameOver &&
+                (_input_internal.input.justPressed || (restartAt && restartAt < tick))) {
                     start(_gameUpdate);
                 }
 
