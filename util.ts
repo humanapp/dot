@@ -33,4 +33,12 @@ namespace dot {
         }
         return removed;
     }
+
+    export function times<T>(count: number, func: (index: number) => T): T[] {
+        const arr: T[] = [];
+        for (let i = 0; i < count; ++i) {
+            arr.push(func(i));
+        }
+        return arr;
+    }
 }
