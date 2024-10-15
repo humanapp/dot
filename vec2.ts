@@ -4,6 +4,10 @@ namespace dot {
         get top() { return this.y; }
         get width() { return this.x; }
         get height() { return this.y; }
+        set left(v: number) { this.x = v; }
+        set top(v: number) { this.y = v; }
+        set width(v: number) { this.x = v; }
+        set height(v: number) { this.y = v; }
         constructor(public x: number, public y: number) { }
         public add(v: Vec2): this {
             this.x += v.x;
