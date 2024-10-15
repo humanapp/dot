@@ -30,10 +30,11 @@ namespace dot {
         (s, a) => Score.init(s, a));
 
     export namespace scores {
-        export function add(value: number, pos: Vec2) {
+        export function add(value: number, pos?: Vec2) {
             if (game.state === GameState.Playing) {
                 game.score += value;
             }
+            if (!pos) return;
             const prefix = value > 0 ? "+" : "";
             const str = `${prefix}${Math.floor(value)}`;
             pool.alloc([
