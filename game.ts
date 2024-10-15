@@ -26,11 +26,12 @@ namespace dot {
         export function start(opts: GameOptions) {
             setTimeout(() => {
                 input.block();
-                _internal.input.block();
+                dot._input_internal.input.block();
                 opts.scoreColor = opts.scoreColor || Color.Red;
                 opts.textColor = opts.textColor || Color.Blue;
                 gameOpts = opts;
                 score = 0;
+                difficulty = 1;
                 scores._internal.init();
                 particles._internal.init();
                 state = GameState.Title;
@@ -96,7 +97,7 @@ namespace dot {
 
         function gotoPlaying() {
             input.block();
-            _internal.input.block();
+            _input_internal.input.block();
             tick = 0;
             score = 0;
             difficulty = 1;
@@ -107,7 +108,7 @@ namespace dot {
 
         function gotoGameOver(gameOverText: string) {
             input.block();
-            _internal.input.block();
+            _input_internal.input.block();
             if (score > high) {
                 high = score;
             }
@@ -115,7 +116,7 @@ namespace dot {
             state = GameState.GameOver;
         }
 
-        export namespace _control {
+        export namespace _internal {
             export function update() {
                 if (!gameOpts) return;
 
@@ -123,10 +124,10 @@ namespace dot {
                     difficulty = tick / 3600 + 1;
                 }
 
-                if (state === GameState.Title && dot._internal.input.justPressed) {
+                if (state === GameState.Title && _input_internal.input.justPressed) {
                     gotoPlaying();
                 }
-                if (state === GameState.GameOver && dot._internal.input.justPressed) {
+                if (state === GameState.GameOver && _input_internal.input.justPressed) {
                     start(gameOpts);
                 }
 

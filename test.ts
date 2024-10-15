@@ -29,21 +29,30 @@ namespace test {
         b.id = "box" + i;
         boxes.push(b);
     }
+    
+    let d = 1;
+    let a = 0;
+    const f = 20;
 
     function gameUpdate() {
+        if (dot.game.state === dot.GameState.Title) {
+            d = 1;
+        } else if (dot.game.tick === 0) {
+            a = 0;
+        }
+
         scene.setBackgroundColor(dot.Color.Tan);
-        const f = 20;
-        const s = -Math.sin(dot.game.tick / f);
-        const c = Math.cos(dot.game.tick / f);
+        a += dot.game.difficulty * d / f;
+        const s = -Math.sin(a);
+        const c = Math.cos(a);
         const p0 = new dot.Vec2(dot.SCREEN_WIDTH / 2, dot.SCREEN_HEIGHT / 2);
         const p1 = dot.vec2.add(p0, dot.vec2.mk(s, c).scale(dot.SCREEN_HEIGHT * 0.6));
         dot.color.set(dot.Color.White);
-        //const det = dot.draw.line(p0, p1, 3, 0, boxColors);
-        const det = dot.draw.line(p0, p1, 3, 0);
+        const det = dot.draw.line(p0, p1, 3);
 
         boxes.forEach(b => {
-            b.r.pos.x += b.v.x;
-            b.r.pos.y += b.v.y;
+            b.r.pos.x += b.v.x * dot.game.difficulty;
+            b.r.pos.y += b.v.y * dot.game.difficulty;
             if (b.r.pos.x < 0 || b.r.pos.x > dot.SCREEN_WIDTH - b.r.size.x) b.v.x *= -1;
             if (b.r.pos.y < 0 || b.r.pos.y > dot.SCREEN_HEIGHT - b.r.size.y) b.v.y *= -1;
             dot.color.set(b.c);
@@ -51,7 +60,11 @@ namespace test {
         });
 
         if (dot.game.state === dot.GameState.Playing) {
-            if (dot.input.justPressed) {
+            if (dot.input.Left.justPressed) {
+                d = -1;
+            } else if (dot.input.Right.justPressed) {
+                d = 1;
+            } else if (dot.input.justPressed) {
                 dot.game.end();
             }
 

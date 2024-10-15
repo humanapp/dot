@@ -33,7 +33,7 @@ namespace dot {
         export function icon(x: number, y: number, buf: Buffer) {
             commands.push(new GfxIconCommand(x, y, buf, color.curr()));
         }
-        export namespace _control {
+        export namespace _internal {
             export function update() {
                 commands.forEach(cmd => {
                     switch (cmd.type) {

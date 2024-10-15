@@ -125,7 +125,7 @@ namespace dot {
     // Input for public consumption. Only works during gameplay.
     export const input = new Input(() => game.state === GameState.Playing);
 
-    export namespace _internal {
+    export namespace _input_internal {
         // Input for private consumption. Works in all game states.
         export const input = new Input(() => true);
     }
