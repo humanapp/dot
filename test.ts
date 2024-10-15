@@ -63,7 +63,7 @@ namespace test {
             if (b.r.pos.x < 0 || b.r.pos.x > dot.SCREEN_WIDTH - b.r.size.x) b.v.x *= -1;
             if (b.r.pos.y < 0 || b.r.pos.y > dot.SCREEN_HEIGHT - b.r.size.y) b.v.y *= -1;
             dot.color.set(b.c);
-            dot.draw.box(b.r, false, dot.color.none(), b.id);
+            dot.draw.box(b.r.pos, b.r.size, false, dot.color.none(), b.id);
         });
 
         if (dot.game.state === dot.GameState.Playing) {

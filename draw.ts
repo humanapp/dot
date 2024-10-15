@@ -6,30 +6,32 @@ namespace dot {
     }
     export namespace draw {
         export function rect(
-            r: Rect,
+            pos: Vec2,
+            size: Vec2,
             alignCenter = false,
             collidesWith: Color[] = null,
             id?: string
         ): CollisionReporter {
-            const x = r.pos.x;
-            const y = r.pos.y;
-            const w = r.size.x;
-            const h = r.size.y;
+            const x = pos.x;
+            const y = pos.y;
+            const w = size.x;
+            const h = size.y;
             if (collidesWith == null) {
                 collidesWith = color.all();
             }
             return _internal.rect(id, alignCenter, false, collidesWith, x, y, w, h);
         }
         export function box(
-            r: Rect,
+            pos: Vec2,
+            size: Vec2,
             alignCenter = false,
             collidesWith: Color[] = null,
             id?: string
         ): CollisionReporter {
-            const x = r.pos.x;
-            const y = r.pos.y;
-            const w = r.size.x;
-            const h = r.size.y;
+            const x = pos.x;
+            const y = pos.y;
+            const w = size.x;
+            const h = size.y;
             if (collidesWith == null) {
                 collidesWith = color.all();
             }
