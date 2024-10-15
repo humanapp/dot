@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.56/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.8","target":"arcade","targetVersion":"1.12.56","repo":"humanapp/dot"}
-// total=1540011 new=21.64% cached=73.07% other=5.29%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.56/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.9","target":"arcade","targetVersion":"1.12.56","repo":"humanapp/dot"}
+// total=1540869 new=21.68% cached=73.03% other=5.29%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -486,7 +486,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P496793(s) {
+function _main___P507301(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -496,8 +496,8 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.i___495770 = undefined;
-    s.b___495776 = undefined;
+    s.i___498354 = undefined;
+    s.b___498360 = undefined;
     globals._intervals___474885 = (undefined);
     globals._pollEventQueue___474894 = (undefined);
     globals.minPriority___470667 = (1);
@@ -920,37 +920,39 @@ switch (step) {
     globals._colorStack___477917 = (s.tmp_0);
     r0 = pxsim_Array__mk();
     globals.commands___478018 = (r0);
-    globals.scoreboardColor___478816 = (2);
-    globals.textColor___478818 = (8);
-    globals.gameTitle___478819 = ("MY GAME");
-    globals.insertCoinText___478820 = ("PRESS ANY KEY");
-    globals.tick___478822 = (0);
-    globals.difficulty___478824 = (1);
-    globals.score___478826 = (0);
-    globals.high___478828 = (0);
-    globals.state___478831 = (0);
-    globals.restartAt___478833 = (0);
+    globals.scoreboardColor___505340 = (2);
+    globals.textColor___505342 = (8);
+    globals.gameTitle___505343 = ("MY GAME");
+    r0 = pxsim_String_.mkEmpty();
+    globals.gameDescription___505344 = (r0);
+    globals.insertCoinText___505345 = ("PRESS ANY KEY");
+    globals.tick___505347 = (0);
+    globals.difficulty___505349 = (1);
+    globals.score___505351 = (0);
+    globals.high___505353 = (0);
+    globals.state___505356 = (0);
+    globals.restartAt___505358 = (0);
     s.tmp_0 = image_scaledFont__P472272_mk(s);
     s.tmp_0.arg0 = globals.font5___472273;
     s.tmp_0.arg1 = 2;
     s.callLocIdx = 154; s.pc = 39; return s.tmp_0;
   case 39:
     r0 = s.retval;
-    globals.scoreboardFont___478835 = (r0);
+    globals.scoreboardFont___505360 = (r0);
     s.tmp_0 = image_scaledFont__P472272_mk(s);
     s.tmp_0.arg0 = globals.font8___472268;
     s.tmp_0.arg1 = 2;
     s.callLocIdx = 155; s.pc = 40; return s.tmp_0;
   case 40:
     r0 = s.retval;
-    globals.titleFont___478839 = (r0);
-    globals._gameOverText___478842 = ("GAME OVER");
+    globals.titleFont___505364 = (r0);
+    globals._gameOverText___505367 = ("GAME OVER");
     r0 = pxsim_pxtcore_mkClassInstance(dot_Input__C479123_VT);
     s.tmp_0 = r0;
     s.tmp_1 = dot_Input_constructor__P479180_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = input_inline__P479363;
-    s.callLocIdx = 239; s.pc = 41; return s.tmp_1;
+    s.callLocIdx = 241; s.pc = 41; return s.tmp_1;
   case 41:
     r0 = s.retval;
     globals.input___474739 = (s.tmp_0);
@@ -959,7 +961,7 @@ switch (step) {
     s.tmp_1 = dot_Input_constructor__P479180_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = input_inline__P479368;
-    s.callLocIdx = 240; s.pc = 42; return s.tmp_1;
+    s.callLocIdx = 242; s.pc = 42; return s.tmp_1;
   case 42:
     r0 = s.retval;
     globals.input___474741 = (s.tmp_0);
@@ -970,7 +972,7 @@ switch (step) {
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = pool_inline__P479416;
     s.tmp_1.arg2 = pool_inline__P479418;
-    s.callLocIdx = 243; s.pc = 43; return s.tmp_1;
+    s.callLocIdx = 245; s.pc = 43; return s.tmp_1;
   case 43:
     r0 = s.retval;
     globals.pool___479414 = (s.tmp_0);
@@ -980,7 +982,7 @@ switch (step) {
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = pool_inline__P479744;
     s.tmp_1.arg2 = pool_inline__P479746;
-    s.callLocIdx = 267; s.pc = 44; return s.tmp_1;
+    s.callLocIdx = 269; s.pc = 44; return s.tmp_1;
   case 44:
     r0 = s.retval;
     globals.pool___479742 = (s.tmp_0);
@@ -989,16 +991,17 @@ switch (step) {
     s.tmp_1 = dot_Random_constructor__P474755_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = null;
-    s.callLocIdx = 268; s.pc = 45; return s.tmp_1;
+    s.callLocIdx = 270; s.pc = 45; return s.tmp_1;
   case 45:
     r0 = s.retval;
     globals.random___479753 = (s.tmp_0);
     globals.stats___473261 = (true);
-    globals.gameTitle___478819 = ("DOT TEST");
-    globals.insertCoinText___478820 = ("INSERT COIN");
-    s.tmp_0 = dot_game_start__P478844_mk(s);
-    s.tmp_0.arg0 = test_gameUpdate__P495754;
-    s.callLocIdx = 298; s.pc = 46; return s.tmp_0;
+    globals.gameTitle___505343 = ("DOT TEST");
+    globals.gameDescription___505344 = ("testing features");
+    globals.insertCoinText___505345 = ("INSERT COIN");
+    s.tmp_0 = dot_game_start__P505369_mk(s);
+    s.tmp_0.arg0 = test_gameUpdate__P498338;
+    s.callLocIdx = 300; s.pc = 46; return s.tmp_0;
   case 46:
     r0 = s.retval;
     r0 = pxsim_pxtcore_mkClassInstance(dot_Random__C474750_VT);
@@ -1006,38 +1009,38 @@ switch (step) {
     s.tmp_1 = dot_Random_constructor__P474755_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = null;
-    s.callLocIdx = 299; s.pc = 47; return s.tmp_1;
+    s.callLocIdx = 301; s.pc = 47; return s.tmp_1;
   case 47:
     r0 = s.retval;
-    globals.rand___495756 = (s.tmp_0);
+    globals.rand___498340 = (s.tmp_0);
     r0 = pxsim_pxtcore_mkClassInstance(dot_Set__C474777_VT);
     s.tmp_0 = r0;
     s.tmp_1 = dot_Set_constructor__P474779_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
-    s.callLocIdx = 300; s.pc = 48; return s.tmp_1;
+    s.callLocIdx = 302; s.pc = 48; return s.tmp_1;
   case 48:
     r0 = s.retval;
-    globals.collisions___495760 = (s.tmp_0);
+    globals.collisions___498344 = (s.tmp_0);
     r0 = pxsim_Array__mk();
-    globals.boxes___495762 = (r0);
+    globals.boxes___498346 = (r0);
     r0 = pxsim_Array__mk();
     s.tmp_0 = r0;
     r0 = pxsim_Array__push(s.tmp_0, 1);
     r0 = pxsim_Array__push(s.tmp_0, 13);
     s.tmp_1 = dot_color_allExcept__P474694_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
-    s.callLocIdx = 301; s.pc = 49; return s.tmp_1;
+    s.callLocIdx = 303; s.pc = 49; return s.tmp_1;
   case 49:
     r0 = s.retval;
-    globals.boxColors___495766 = (r0);
-    s.i___495770 = (0);
+    globals.boxColors___498350 = (r0);
+    s.i___498354 = (0);
   case 1:
-    r0 = (s.i___495770 < 5);
+    r0 = (s.i___498354 < 5);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_pxtcore_mkClassInstance(test_Box__C495758_VT);
-    s.b___495776 = (r0);
+    r0 = pxsim_pxtcore_mkClassInstance(test_Box__C498342_VT);
+    s.b___498360 = (r0);
     r0 = pxsim_pxtcore_mkClassInstance(dot_Rect__C477536_VT);
     s.tmp_0 = r0;
     r0 = pxsim_pxtcore_mkClassInstance(dot_Vec__C474785_VT);
@@ -1045,24 +1048,24 @@ switch (step) {
     s.tmp_2 = dot_Vec_constructor__P474794_mk(s);
     s.tmp_2.arg0 = s.tmp_1;
     s.tmp_3 = dot_Random_get__P474756_mk(s);
-    s.tmp_3.arg0 = globals.rand___495756;
+    s.tmp_3.arg0 = globals.rand___498340;
     s.tmp_3.arg1 = 0;
     r0 = (globals.SCREEN_WIDTH___474669 - 10);
     s.tmp_3.arg2 = r0;
-    s.callLocIdx = 302; s.pc = 51; return s.tmp_3;
+    s.callLocIdx = 304; s.pc = 51; return s.tmp_3;
   case 51:
     r0 = s.retval;
     s.tmp_2.arg1 = r0;
     s.tmp_4 = dot_Random_get__P474756_mk(s);
-    s.tmp_4.arg0 = globals.rand___495756;
+    s.tmp_4.arg0 = globals.rand___498340;
     s.tmp_4.arg1 = 0;
     r0 = (globals.SCREEN_HEIGHT___474670 - 10);
     s.tmp_4.arg2 = r0;
-    s.callLocIdx = 303; s.pc = 52; return s.tmp_4;
+    s.callLocIdx = 305; s.pc = 52; return s.tmp_4;
   case 52:
     r0 = s.retval;
     s.tmp_2.arg2 = r0;
-    s.callLocIdx = 304; s.pc = 50; return s.tmp_2;
+    s.callLocIdx = 306; s.pc = 50; return s.tmp_2;
   case 50:
     r0 = s.retval;
     r0 = pxsim_pxtcore_mkClassInstance(dot_Vec__C474785_VT);
@@ -1071,22 +1074,22 @@ switch (step) {
     s.tmp_6.arg0 = s.tmp_5;
     s.tmp_6.arg1 = 10;
     s.tmp_6.arg2 = 10;
-    s.callLocIdx = 305; s.pc = 53; return s.tmp_6;
+    s.callLocIdx = 307; s.pc = 53; return s.tmp_6;
   case 53:
     r0 = s.retval;
     s.tmp_7 = dot_Rect_constructor__P477577_mk(s);
     s.tmp_7.arg0 = s.tmp_0;
     s.tmp_7.arg1 = s.tmp_1;
     s.tmp_7.arg2 = s.tmp_5;
-    s.callLocIdx = 306; s.pc = 54; return s.tmp_7;
+    s.callLocIdx = 308; s.pc = 54; return s.tmp_7;
   case 54:
     r0 = s.retval;
-    r0 = (s.b___495776).fields["r"] = (s.tmp_0);
-    s.tmp_0 = r0 = s.b___495776;
+    r0 = (s.b___498360).fields["r"] = (s.tmp_0);
+    s.tmp_0 = r0 = s.b___498360;
     s.tmp_2 = dot_Random_select__P474759_mk(s);
-    s.tmp_2.arg0 = globals.rand___495756;
-    s.tmp_2.arg1 = globals.boxColors___495766;
-    s.callLocIdx = 307; s.pc = 55; return s.tmp_2;
+    s.tmp_2.arg0 = globals.rand___498340;
+    s.tmp_2.arg1 = globals.boxColors___498350;
+    s.callLocIdx = 309; s.pc = 55; return s.tmp_2;
   case 55:
     r0 = s.retval;
     s.tmp_1 = r0;
@@ -1096,89 +1099,89 @@ switch (step) {
     s.tmp_1 = dot_Vec_constructor__P474794_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_2 = dot_Random_get__P474756_mk(s);
-    s.tmp_2.arg0 = globals.rand___495756;
+    s.tmp_2.arg0 = globals.rand___498340;
     s.tmp_2.arg1 = -3;
     s.tmp_2.arg2 = 3;
-    s.callLocIdx = 308; s.pc = 57; return s.tmp_2;
+    s.callLocIdx = 310; s.pc = 57; return s.tmp_2;
   case 57:
     r0 = s.retval;
     s.tmp_1.arg1 = r0;
     s.tmp_3 = dot_Random_get__P474756_mk(s);
-    s.tmp_3.arg0 = globals.rand___495756;
+    s.tmp_3.arg0 = globals.rand___498340;
     s.tmp_3.arg1 = -3;
     s.tmp_3.arg2 = 3;
-    s.callLocIdx = 309; s.pc = 58; return s.tmp_3;
+    s.callLocIdx = 311; s.pc = 58; return s.tmp_3;
   case 58:
     r0 = s.retval;
     s.tmp_1.arg2 = r0;
-    s.callLocIdx = 310; s.pc = 56; return s.tmp_1;
+    s.callLocIdx = 312; s.pc = 56; return s.tmp_1;
   case 56:
     r0 = s.retval;
-    r0 = (s.b___495776).fields["v"] = (s.tmp_0);
-    s.tmp_0 = r0 = s.b___495776;
-    if ((s.i___495770) && (s.i___495770).vtable) {
+    r0 = (s.b___498360).fields["v"] = (s.tmp_0);
+    s.tmp_0 = r0 = s.b___498360;
+    if ((s.i___498354) && (s.i___498354).vtable) {
     setupResume(s, 59);
-    pxsim_String__stringConv(s.i___495770);
+    pxsim_String__stringConv(s.i___498354);
     checkResumeConsumed();
     return;
-    } else { s.retval = (s.i___495770) + ""; }
+    } else { s.retval = (s.i___498354) + ""; }
   case 59:
     r0 = s.retval;
     s.tmp_2 = r0;
     r0 = pxsim_String__concat("box", s.tmp_2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["id"] = (s.tmp_1);
-    r0 = pxsim_Array__push(globals.boxes___495762, s.b___495776);
-    r0 = (s.i___495770 + 1);
-    s.i___495770 = (r0);
+    r0 = pxsim_Array__push(globals.boxes___498346, s.b___498360);
+    r0 = (s.i___498354 + 1);
+    s.i___498354 = (r0);
     { step = 1; continue; }
   case 2:
-    globals.d___495835 = (1);
-    globals.a___495837 = (0);
+    globals.d___498419 = (1);
+    globals.a___498421 = (0);
     s.tmp_0 = control_EventContext_registerFrameHandler__P470695_mk(s);
     s.tmp_1 = control_eventContext__P470700_mk(s);
-    s.callLocIdx = 339; s.pc = 61; return s.tmp_1;
+    s.callLocIdx = 341; s.pc = 61; return s.tmp_1;
   case 61:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = 13;
     s.tmp_0.arg2 = dot_inline__P480660;
-    s.callLocIdx = 342; s.pc = 60; return s.tmp_0;
+    s.callLocIdx = 344; s.pc = 60; return s.tmp_0;
   case 60:
     r0 = s.retval;
     s.tmp_0 = control_EventContext_registerFrameHandler__P470695_mk(s);
     s.tmp_1 = control_eventContext__P470700_mk(s);
-    s.callLocIdx = 343; s.pc = 63; return s.tmp_1;
+    s.callLocIdx = 345; s.pc = 63; return s.tmp_1;
   case 63:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = 20;
-    s.tmp_0.arg2 = dot_game__internal_update__P478987;
-    s.callLocIdx = 344; s.pc = 62; return s.tmp_0;
+    s.tmp_0.arg2 = dot_game__internal_update__P505518;
+    s.callLocIdx = 346; s.pc = 62; return s.tmp_0;
   case 62:
     r0 = s.retval;
     s.tmp_0 = control_EventContext_registerFrameHandler__P470695_mk(s);
     s.tmp_1 = control_eventContext__P470700_mk(s);
-    s.callLocIdx = 345; s.pc = 65; return s.tmp_1;
+    s.callLocIdx = 347; s.pc = 65; return s.tmp_1;
   case 65:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = 90;
     s.tmp_0.arg2 = dot_gfx__internal_update__P474707;
-    s.callLocIdx = 346; s.pc = 64; return s.tmp_0;
+    s.callLocIdx = 348; s.pc = 64; return s.tmp_0;
   case 64:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-_main___P496793.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
-_main___P496793.continuations = [ 59 ]
+_main___P507301.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
+_main___P507301.continuations = [ 59 ]
 
-function _main___P496793_mk(s) {
+function _main___P507301_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P496793, depth: s.depth + 1,
+        parent: s, fn: _main___P507301, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1188,8 +1191,8 @@ function _main___P496793_mk(s) {
   tmp_5: undefined,
   tmp_6: undefined,
   tmp_7: undefined,
-  i___495770: undefined,
-  b___495776: undefined,
+  i___498354: undefined,
+  b___498360: undefined,
 } }
 
 const _hex481281 = pxsim.BufferMethods.createBufferFromHex("2000000000000000210000005e0000002200000e000e0000230028fe28fe280024004c92ff926400250002651248a64026006c92926ca000270000000e000000280000007c82000029000000827c00002a005438103854002b0010107c1010002c000000907000002d001010101010002e000000606000002f000060100806003000003c42423c00310000447e4000003200004462524c00330000424a4e320034003028247e20003500004e4a4a32003600003c4a4a30003700000262120e00380000344a4a34003900000c52523c003a0000006c6c00003b000000967600003c001028284444003d002828282828003e004444282810003f0000025909060040003c425a560800410078141214780042007e4a4a4a34004300003c424224004400007e42423c004500007e4a4a42004600007e0a0a02004700003c425234004800007e08087e00490000427e4200004a002040423e02004b00007e081462004c00007e404040004d007e0418047e004e00007e04087e004f003c4242423c005000007e12120c005100003c5262bc005200007e12126c00530000244a522400540002027e0202005500003e40403e005600001e70701e0057007e2018207e00580042241824420059000608700806005a000062524a46005b00007e424200005c000006081060005d000042427e00005e000804020408005f00808080808000600000000204000061000030484878006200007e4848300063000030484848006400003048487e006500003068585000660000107c12040067000018a4a478006800007e08087000690000487a4000006a000040847d00006b00007e102840006c0000427e4000006d007808300870006e000078080870006f00003048483000700000fc24241800710000182424fc0072000078100810007300005058682800740000083e48200075000038404078007600001860601800770038403040380078000048303048007900005ca0a07c007a000048685848007b000008364100007c000000fe0000007d000041360800007e00000804080400a000000000000000a10000007a000000a200003048fc4800a30090fc92928400a400542844285400a5002a2c782c2a00a6000000ee000000a7000094aaaa5200a800000200020000a9003e414955413eaa0000242a2e0000ab00102854284400ac00001010107000ad00001010101000ae003e415d45413eaf00000202020200b000000814140800b1008888be888800b2000024322c0000b30000222a140000b400000004020000b50000f840207800b6000c1e7e027e00b700000010000000b800000080400000b90000243e200000ba0000242a240000bb00442854281000bc00025f70f84000bd00021f90c8b000be0011557af84000bf000030484d2000c000601916186000c100601816196000c200601a151a6000c300601a151a6100c400601914196000c500601a151a6000c6007c0a7e4a4200c700001ea1611200c800007c55564400c900007c56554400ca00007c56554600cb00007c55544500cc0000457e440000cd0000447e450000ce0000467d460000cf0000457c450000d000087e4a423c00d100007e09127d00d200003845463800d300003846453800d400003846453a00d500003a45463900d600003845443900d700442810284400d80000fc724e3f00d900003c41423c00da00003c42413c00db00003c42413e00dc00003c41403d00dd00040872090400de00007e24241800df00007c025a2400e0000030494a7800e10000304a497800e20000304a497a00e3000032494a7900e40000304a487a00e50000304a4d7a00e600304878685000e7000018a4642400e8000030695a5000e90000306a595000ea0000306a595200eb0000306a585200ec0000497a400000ed0000487a410000ee00004a79420000ef00004a78420000f00000304a4b3d00f100007a090a7100f2000030494a3000f30000304a493000f40000304a493200f5000032494a3100f60000304a483200f700101054101000f800007068583800f900003841427800fa00003842417800fb00003842417a00fc00003842407a00fd0000b84241f800fe0000ff24241800ff00005ca1a07d000001601915196000010100304a4a7a000201611a16196000030100314a4a790004013c0a094abc00050100182464bc000601003846452800070100304a4948000801003846452a00090100304a494a000a010038444528000b010030484a48000c010038454629000d010030494a49000e01007c454639000f0100314a497e001001087e4a423c00110130484c7e04001201007d55554500130100326a5a52001401007d56564500150100316a5a51001601007c55544400170100306a5850001801003f65a521001901001874ac28001a01007c555645001b010030695a51001c010038465536001d0100304a49f2001e010039465635001f0100314a4af100200100384455340021010018a4a578002201001ea1691a0023010018a6a578002401007812117a0025017e080a7102002601047e147e04002701047e0c08700028010002457e450029010002497a41002a0100457d4500002b01004a7a4200002c0100014a7a49002d0100014a7a41002e0100217fa100002f0100247da00000300100447d440000310100487840000032017e0022423e0033013d0040847d0034012040463d0600350100800af90200360100bf440a3100370100bf4814200038010078102848003901007c404241003a0100467d4000003b01003fa06020003c0100a17f2000003d01007c414241003e0100457e4100003f01007e40484000400100427e4008004101107e48404000420100527e4800004301007c0a117c00440100780a097000450100bf42043f00460100bc440438004701007c09127d00480100790a09700049010a06780870004a01003f02847f004b01003c048478004c013945454539004d0100324a4a32004e013946464639004f0100314a4a310050013a4544463900510132494832010052013c427e4a420053013048306850005401007c163548005501007812091000560100bf49093600570100bc480408005801007d1635480059010079120910005a010048565524005b0100505a6928005c010048565526005d0100505a692a005e010012a56912005f010028ac741400600100485556250061010050596a290062010101bf410100630100049f641000640104057e050400650100083d4a2100660102127e120200670100183e5820006801003a414239006901003a414279006a01003d41413d006b01003a42427a006c010039424239006d010039424279006e01003a45453a006f01003a45457a0070013a41403a010071013a41407a01007201001f60a01f007301001c60a03c00740178221122780075013842314238007601081261120800770100b84241fa00780104097009040079010064564d44007a0100486a5948007b010064544d44007c010048685a48007d010064554e45007e010048695a49007f0100087c0204008f01003452523c00920100887e090200a0013c42423c0806a101003048483008af01003e403e0806b001003840781008b501006a5a4a4e00b601005878585800d101003845463900d2010030494a3100e601003845563500e7010030494af100fa0100742a750000fb0100304c4a7d00fc0178147e554400fd0130487a695000fe010078744e3d00ff0100706a59380018020012a569120019020028ac7414001a020101bf4101001b0200049f641000bb0200000c0a0000bc0200000a060000bd020000060a0000c602000201020000c702000102010000c902000202020000d802000102020100d902000002000000da02000205020000db02000040800000dc02000201020100dd02020100020100740300000201000075030000804000007a030000c08000007e03000096760000840300000300000085030200030002008603037c12127c008703000010000000880303007e4a4200890303007e087e008a030300427e42008c03033c42423c008e0303000e700e008f03035c62625c00900302003b400200910378141214780092037e4a4a4a34009303007e0202020094036058465860009503007e4a4a420096030062524a46009703007e08087e0098033c4a4a4a3c00990300427e4200009a03007e081462009b036018061860009c037e0418047e009d03007e04087e009e0300424a4a42009f033c4242423c00a003007e02027e00a103007e12120c00a30300665a424200a40302027e020200a503060870080600a60318247e241800a703422418244200a8030e107e100e00a9035c6202625c00aa0300457c450000ab03040970090400ac030030484a7900ad030030685a5100ae0378100a09f000af03003a41200000b0033a4043403a00b103003048487800b20300fe25251a00b3030c30c0300c00b403344a4a4a3000b503003068585000b603021aa6a24200b7033c080404f800b803003c4a4a3c00b903003840200000ba03007820504800bb03641212227c00bc03fc2020103c00bd03182040201800be03112d2ba94100bf03003048483000c003087808780800c103f82424241800c2031824a4a44800c303304848582800c403000838482800c503384040403800c6031c20f8241800c703c4281028c400c8031c20fc201c00c903304820483000ca03000238422000cb03384240423800cc0330484a493000cd03384042413800ce03304822493000d0033c52525c2000d10310344a3c0800d203067804020400d303120a7c020400d4030d7009040800d5031824ff241800d603384828483800d70348302221d800da031c2221a14200db031824a4a44200dc037e1212020200dd0300fc24240400de033e2010087c00df030c0ac9281800e003700c621c7000e10301092516f800e2039ea0bea07e00e30398a0b8a07800e4030c1214107e00e503001028207800e603be9088887000e70348544e443800e803245252524c00e903285454544800ea0364524c526400eb03086458640800ec03385454542200ed03306848682400ee03184a7e4a1800ef031848ff0a0800f003483020205800f10378a4a4a49800f203304848485000f303006080847d00f4033c4a4a4a3c00f5030030585848000004007c555644000104007c55544500020401013f8579000304007c0605040004043c4a4a422400050400244a522400060400427e420000070400457c45000008042040423e020009047c027e4830000a047e087e4830000b0402027e0a72000c04007c102a45000d047c2112087c000e040c5152523d000f043f20e0203f00100478141214780011047e4a4a4a300012047e4a4a4a34001304007e020202001404c07c427ec0001504007e4a4a4200160476087e087600170424424a4a34001804007e08047e001904007d120a7d001a04007e081462001b04403c02027e001c047e0418047e001d04007e08087e001e043c4242423c001f047e0202027e002004007e12120c002104003c42422400220402027e02020023040e5050503e00240418247e241800250442241824420026043f2020bf600027040e1010107e0028047e407e407e0029043f203fa07f002a04027e484830002b047e4848307e002c04007e484830002d0424424a4a3c002e047e183c423c002f04006c12127e0030043048487840003104003c4a4a3100320400786850200033040078080808003404c0704878c000350430686850000036044830783048003704004058683000380478402010780039047942221279003a040078203048003b044030080878003c047810201078003d047810101078003e043048484830003f047808080878004004fc24242418004104304848485000420408087808080043041ca0a0a07c0044041824ff241800450400483030480046043c2020bc60004704182020207800480478407840780049043c203ca07c004a040878505020004b047850502078004c040078505020004d044858683000004e047830304830004f0450282878000050040030696a500051040032686a50005204023f0a887000530400780a09080054040030685848005504005058682800560400487a4000005704004a784200005804004080847d0059047008785020005a047810785020005b04047e141060005c040078223148005d047841221078005e0418a1a2a279005f043c20e0203c006204027f4a4830006304087e5850200070040e107e100e00710418207820180072043c4a4a4a3c0073043068586830007404001e70180c0075040018603010009004007e020203009104007808080c009204087e0a0a0200930420782808080096043b043f043be0970424183c1824c09a04003f040a31c09b04003c101824c0ae04060870080600af040c10e0100c00b004161870181600b1042c30e0302c00b20421120c1221c0b3040024181824c0ba047e0808087000bb04007e08087000d804003452523c00d904002868583000e20400457d450000e304004a7a420000e8043c4a4a4a3c00e904003058583000ee04003d41413d00ef04003a42427a00d005681020285000d105484848784000d205004830600000d305080808780800d405680808087800d505000008780000d605080818680800d705087808087800d805784050487800d905000008180000da0504040404fc00db05484848483800dc050e4848281800dd05087848487800de05582010487000df05000004fc0000e005004040487800e105000878483800e205487840281800e305041c0404fc00e405485848483800e50504f820140800e605485060685000e705f40424241c00e805080808087000e905785058403800ea05487808087800f005087800087800f105081800087800f205081800081800f305000010080000f405100800100800021e7c5455542800031e007e484930000a1e007c454438000b1e003049487e001e1e007c151404001f1e001079140800401e7e0419047e00411e780832087000561e007c15140800571e00fc25241800601e004854552400611e0050586a28006a1e04047d0404006b1e00083d482000801e7c2112207c00811e384132403800821e7c2012217c00831e384032413800841e7c2110217c00851e384230423800f21e040972080400f31e00b84142f800a3207e0a7a120a00a420a8fcaa828400a720087e2a1c0800ab200098a4a6bf02ac20183c5a5a4200af20627f224438009021103854101000912108047e0408009221101054381000932110207e201000942110381010381095212844fe442800")
@@ -1731,7 +1734,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = (globals.state___478831 === 1);
+    r0 = (globals.state___505356 === 1);
     return leave(s, r0)
   default: oops()
 } } }
@@ -1820,7 +1823,7 @@ switch (step) {
     s.tmp_0 = dot_Score_init__P479373_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.tmp_0.arg1 = s.arg1;
-    s.callLocIdx = 242; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 244; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     r0 = undefined;
@@ -1888,7 +1891,7 @@ switch (step) {
     s.tmp_0 = dot_Particle_init__P479708_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.tmp_0.arg1 = s.arg1;
-    s.callLocIdx = 266; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 268; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     r0 = undefined;
@@ -1923,12 +1926,12 @@ switch (step) {
 
     s.tmp_0 = dot_Input_update__P479132_mk(s);
     s.tmp_0.arg0 = globals.input___474739;
-    s.callLocIdx = 340; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 342; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = dot_Input_update__P479132_mk(s);
     s.tmp_0.arg0 = globals.input___474741;
-    s.callLocIdx = 341; s.pc = 2; return s.tmp_0;
+    s.callLocIdx = 343; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     r0 = undefined;
@@ -2703,7 +2706,7 @@ function helpers_arrayForEach__P470401_mk(s) {
 
 
 
-function dot_game__internal_update__P478987(s) {
+function dot_game__internal_update__P505518(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2713,7 +2716,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = pxsim_numops_toBoolDecr(globals._gameUpdate___478843);
+    r0 = pxsim_numops_toBoolDecr(globals._gameUpdate___505368);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
     s.tmp_0 = r0;
@@ -2722,17 +2725,17 @@ switch (step) {
     { step = 21; continue; }
   case 1:
   case 2:
-    r0 = (globals.state___478831 === 1);
+    r0 = (globals.state___505356 === 1);
     s.tmp_2 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
     if (!r0) { step = 3; continue; }
-    r0 = (globals.tick___478822 / 3600);
+    r0 = (globals.tick___505347 / 3600);
     s.tmp_3 = r0;
     r0 = (s.tmp_3 + 1);
-    globals.difficulty___478824 = (r0);
+    globals.difficulty___505349 = (r0);
   case 3:
   case 4:
-    r0 = (globals.state___478831 === 0);
+    r0 = (globals.state___505356 === 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBool(s.tmp_0);
     if (r0) { step = 5; continue; }
@@ -2741,7 +2744,7 @@ switch (step) {
   case 5:
     s.tmp_1 = dot_Input_justPressed__P479003_mk(s);
     s.tmp_1.arg0 = globals.input___474741;
-    s.callLocIdx = 187; s.pc = 22; return s.tmp_1;
+    s.callLocIdx = 189; s.pc = 22; return s.tmp_1;
   case 22:
     r0 = s.retval;
   case 6:
@@ -2749,13 +2752,13 @@ switch (step) {
     s.tmp_2 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
     if (!r0) { step = 7; continue; }
-    s.tmp_3 = dot_game_gotoPlaying__P478955_mk(s);
-    s.callLocIdx = 188; s.pc = 23; return s.tmp_3;
+    s.tmp_3 = dot_game_gotoPlaying__P505486_mk(s);
+    s.callLocIdx = 190; s.pc = 23; return s.tmp_3;
   case 23:
     r0 = s.retval;
   case 7:
   case 8:
-    r0 = (globals.state___478831 === 2);
+    r0 = (globals.state___505356 === 2);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBool(s.tmp_0);
     if (r0) { step = 9; continue; }
@@ -2764,7 +2767,7 @@ switch (step) {
   case 9:
     s.tmp_2 = dot_Input_justPressed__P479003_mk(s);
     s.tmp_2.arg0 = globals.input___474741;
-    s.callLocIdx = 189; s.pc = 24; return s.tmp_2;
+    s.callLocIdx = 191; s.pc = 24; return s.tmp_2;
   case 24:
     r0 = s.retval;
     s.tmp_1 = r0;
@@ -2773,13 +2776,13 @@ switch (step) {
     r0 = s.tmp_1;
     { step = 13; continue; }
   case 10:
-    s.tmp_3 = r0 = globals.restartAt___478833;
+    s.tmp_3 = r0 = globals.restartAt___505358;
     r0 = pxsim_numops_toBool(s.tmp_3);
     if (r0) { step = 11; continue; }
     r0 = s.tmp_3;
     { step = 12; continue; }
   case 11:
-    r0 = (globals.restartAt___478833 < globals.tick___478822);
+    r0 = (globals.restartAt___505358 < globals.tick___505347);
   case 12:
     // jmp value (already in r0)
     s.tmp_4 = r0;
@@ -2793,59 +2796,59 @@ switch (step) {
     s.tmp_6 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_6);
     if (!r0) { step = 15; continue; }
-    s.tmp_7 = dot_game_start__P478844_mk(s);
-    s.tmp_7.arg0 = globals._gameUpdate___478843;
-    s.callLocIdx = 190; s.pc = 25; return s.tmp_7;
+    s.tmp_7 = dot_game_start__P505369_mk(s);
+    s.tmp_7.arg0 = globals._gameUpdate___505368;
+    s.callLocIdx = 192; s.pc = 25; return s.tmp_7;
   case 25:
     r0 = s.retval;
   case 15:
   case 16:
     s.tmp_0 = lambda_1_mk(s);
-    s.tmp_0.argL = globals._gameUpdate___478843;
+    s.tmp_0.argL = globals._gameUpdate___505368;
     setupLambda(s.tmp_0, s.tmp_0.argL);
-    s.callLocIdx = 191; s.pc = 26; return s.tmp_0;
+    s.callLocIdx = 193; s.pc = 26; return s.tmp_0;
   case 26:
     r0 = s.retval;
     s.tmp_0 = dot_scores__internal_update__P479022_mk(s);
-    s.callLocIdx = 192; s.pc = 27; return s.tmp_0;
+    s.callLocIdx = 194; s.pc = 27; return s.tmp_0;
   case 27:
     r0 = s.retval;
     s.tmp_0 = dot_particles__internal_update__P479024_mk(s);
-    s.callLocIdx = 193; s.pc = 28; return s.tmp_0;
+    s.callLocIdx = 195; s.pc = 28; return s.tmp_0;
   case 28:
     r0 = s.retval;
-    s.tmp_0 = dot_game_drawScoreboard__P478869_mk(s);
-    s.callLocIdx = 194; s.pc = 29; return s.tmp_0;
+    s.tmp_0 = dot_game_drawScoreboard__P505389_mk(s);
+    s.callLocIdx = 196; s.pc = 29; return s.tmp_0;
   case 29:
     r0 = s.retval;
-    r0 = (globals.state___478831 === 0);
+    r0 = (globals.state___505356 === 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 17; continue; }
-    s.tmp_1 = dot_game_drawTitle__P478899_mk(s);
-    s.callLocIdx = 195; s.pc = 30; return s.tmp_1;
+    s.tmp_1 = dot_game_drawTitle__P505418_mk(s);
+    s.callLocIdx = 197; s.pc = 30; return s.tmp_1;
   case 30:
     r0 = s.retval;
   case 17:
   case 18:
-    r0 = (globals.state___478831 === 2);
+    r0 = (globals.state___505356 === 2);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 19; continue; }
-    s.tmp_1 = dot_game_drawGameOver__P478934_mk(s);
-    s.callLocIdx = 196; s.pc = 31; return s.tmp_1;
+    s.tmp_1 = dot_game_drawGameOver__P505465_mk(s);
+    s.callLocIdx = 198; s.pc = 31; return s.tmp_1;
   case 31:
     r0 = s.retval;
   case 19:
   case 20:
-    r0 = (globals.tick___478822 + 1);
-    globals.tick___478822 = (r0);
+    r0 = (globals.tick___505347 + 1);
+    globals.tick___505347 = (r0);
     s.tmp_0 = dot_collision__internal_clear__P474664_mk(s);
-    s.callLocIdx = 197; s.pc = 32; return s.tmp_0;
+    s.callLocIdx = 199; s.pc = 32; return s.tmp_0;
   case 32:
     r0 = s.retval;
     s.tmp_0 = dot_color__internal_reset__P474700_mk(s);
-    s.callLocIdx = 198; s.pc = 33; return s.tmp_0;
+    s.callLocIdx = 200; s.pc = 33; return s.tmp_0;
   case 33:
     r0 = s.retval;
   case 21:
@@ -2853,12 +2856,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_game__internal_update__P478987.info = {"start":3357,"length":1018,"line":106,"column":12,"endLine":139,"endColumn":13,"fileName":"game.ts","functionName":"update","argumentNames":[]}
+dot_game__internal_update__P505518.info = {"start":3592,"length":1018,"line":111,"column":12,"endLine":144,"endColumn":13,"fileName":"game.ts","functionName":"update","argumentNames":[]}
 
-function dot_game__internal_update__P478987_mk(s) {
+function dot_game__internal_update__P505518_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_game__internal_update__P478987, depth: s.depth + 1,
+        parent: s, fn: dot_game__internal_update__P505518, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2952,7 +2955,7 @@ function dot_collision__internal_clear__P474664_mk(s) {
 
 
 
-function dot_game_drawGameOver__P478934(s) {
+function dot_game_drawGameOver__P505465(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2962,13 +2965,13 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.text___478937 = undefined;
+    s.text___505468 = undefined;
     s.tmp_0 = dot_color_push__P474692_mk(s);
-    s.tmp_0.arg0 = globals.textColor___478818;
-    s.callLocIdx = 176; s.pc = 3; return s.tmp_0;
+    s.tmp_0.arg0 = globals.textColor___505342;
+    s.callLocIdx = 178; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    s.tmp_0 = r0 = globals._gameOverText___478842;
+    s.tmp_0 = r0 = globals._gameOverText___505367;
     r0 = pxsim_numops_toBool(s.tmp_0);
     if (!r0) { step = 1; continue; }
     r0 = s.tmp_0;
@@ -2978,7 +2981,7 @@ switch (step) {
   case 2:
     // jmp value (already in r0)
     s.tmp_1 = r0;
-    s.text___478937 = (s.tmp_1);
+    s.text___505468 = (s.tmp_1);
     r0 = pxsim_pxtcore_mkClassInstance(dot_Vec__C474785_VT);
     s.tmp_0 = r0;
     s.tmp_1 = dot_Vec_constructor__P474794_mk(s);
@@ -2988,14 +2991,14 @@ switch (step) {
     r0 = (globals.SCREEN_HEIGHT___474670 / 2);
     s.tmp_2 = r0;
     s.tmp_5 = if_charHeight_1_mk(s);
-    s.tmp_5.arg0 = globals.titleFont___478839;
+    s.tmp_5.arg0 = globals.titleFont___505364;
     if (!s.tmp_5.arg0.vtable.iface) {
       s.retval = pxsim_pxtrt.mapGetByString(s.tmp_5.arg0, "charHeight");
     } else {
       s.tmp_5.fn = s.tmp_5.arg0.vtable.iface["charHeight"];
       if (s.tmp_5.fn == null) { s.retval = s.tmp_5.arg0.fields["charHeight"]; }
       else if (!s.tmp_5.fn.isGetter) { s.retval = bind(s.tmp_5); }
-     else { s.callLocIdx = 177; s.pc = 5; return s.tmp_5; }
+     else { s.callLocIdx = 179; s.pc = 5; return s.tmp_5; }
     }
   case 5:
     r0 = s.retval;
@@ -3004,31 +3007,31 @@ switch (step) {
     s.tmp_3 = r0;
     r0 = (s.tmp_2 - s.tmp_3);
     s.tmp_1.arg2 = r0;
-    s.callLocIdx = 178; s.pc = 4; return s.tmp_1;
+    s.callLocIdx = 180; s.pc = 4; return s.tmp_1;
   case 4:
     r0 = s.retval;
     s.tmp_6 = dot_draw_text__P478243_mk(s);
     s.tmp_6.arg0 = s.tmp_0;
-    s.tmp_6.arg1 = s.text___478937;
+    s.tmp_6.arg1 = s.text___505468;
     s.tmp_6.arg2 = 1;
-    s.tmp_6.arg3 = globals.titleFont___478839;
-    s.callLocIdx = 179; s.pc = 6; return s.tmp_6;
+    s.tmp_6.arg3 = globals.titleFont___505364;
+    s.callLocIdx = 181; s.pc = 6; return s.tmp_6;
   case 6:
     r0 = s.retval;
     s.tmp_0 = dot_color_pop__P474693_mk(s);
-    s.callLocIdx = 180; s.pc = 7; return s.tmp_0;
+    s.callLocIdx = 182; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-dot_game_drawGameOver__P478934.info = {"start":2340,"length":334,"line":73,"column":8,"endLine":81,"endColumn":9,"fileName":"game.ts","functionName":"drawGameOver","argumentNames":[]}
+dot_game_drawGameOver__P505465.info = {"start":2575,"length":334,"line":78,"column":8,"endLine":86,"endColumn":9,"fileName":"game.ts","functionName":"drawGameOver","argumentNames":[]}
 
-function dot_game_drawGameOver__P478934_mk(s) {
+function dot_game_drawGameOver__P505465_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_game_drawGameOver__P478934, depth: s.depth + 1,
+        parent: s, fn: dot_game_drawGameOver__P505465, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3037,7 +3040,7 @@ function dot_game_drawGameOver__P478934_mk(s) {
   tmp_4: undefined,
   tmp_5: undefined,
   tmp_6: undefined,
-  text___478937: undefined,
+  text___505468: undefined,
 } }
 
 
@@ -3828,7 +3831,7 @@ function dot_color_push__P474692_mk(s) {
 
 
 
-function dot_game_drawTitle__P478899(s) {
+function dot_game_drawTitle__P505418(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3838,11 +3841,11 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.text___478919 = undefined;
-    r0 = pxsim_numops_toBoolDecr(globals.gameTitle___478819);
+    s.text___505450 = undefined;
+    r0 = pxsim_numops_toBoolDecr(globals.gameTitle___505343);
     if (!r0) { step = 1; continue; }
     s.tmp_0 = dot_color_push__P474692_mk(s);
-    s.tmp_0.arg0 = globals.textColor___478818;
+    s.tmp_0.arg0 = globals.textColor___505342;
     s.callLocIdx = 168; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
@@ -3859,30 +3862,51 @@ switch (step) {
     r0 = s.retval;
     s.tmp_2 = dot_draw_text__P478243_mk(s);
     s.tmp_2.arg0 = s.tmp_0;
-    s.tmp_2.arg1 = globals.gameTitle___478819;
+    s.tmp_2.arg1 = globals.gameTitle___505343;
     s.tmp_2.arg2 = 1;
-    s.tmp_2.arg3 = globals.titleFont___478839;
+    s.tmp_2.arg3 = globals.titleFont___505364;
     s.callLocIdx = 170; s.pc = 9; return s.tmp_2;
   case 9:
     r0 = s.retval;
-    s.tmp_0 = dot_color_pop__P474693_mk(s);
-    s.callLocIdx = 171; s.pc = 10; return s.tmp_0;
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec__C474785_VT);
+    s.tmp_0 = r0;
+    s.tmp_1 = dot_Vec_constructor__P474794_mk(s);
+    s.tmp_1.arg0 = s.tmp_0;
+    r0 = (globals.SCREEN_WIDTH___474669 / 2);
+    s.tmp_1.arg1 = r0;
+    r0 = (globals.SCREEN_HEIGHT___474670 / 2);
+    s.tmp_2 = r0;
+    r0 = (8 + s.tmp_2);
+    s.tmp_1.arg2 = r0;
+    s.callLocIdx = 171; s.pc = 10; return s.tmp_1;
   case 10:
+    r0 = s.retval;
+    s.tmp_3 = dot_draw_text__P478243_mk(s);
+    s.tmp_3.arg0 = s.tmp_0;
+    s.tmp_3.arg1 = globals.gameDescription___505344;
+    s.tmp_3.arg2 = 1;
+    s.tmp_3.arg3 = globals.font8___472268;
+    s.callLocIdx = 172; s.pc = 11; return s.tmp_3;
+  case 11:
+    r0 = s.retval;
+    s.tmp_0 = dot_color_pop__P474693_mk(s);
+    s.callLocIdx = 173; s.pc = 12; return s.tmp_0;
+  case 12:
     r0 = s.retval;
   case 1:
   case 2:
-    r0 = (globals.tick___478822 % 80);
+    r0 = (globals.tick___505347 % 80);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 < 40);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 5; continue; }
     s.tmp_2 = dot_color_push__P474692_mk(s);
-    s.tmp_2.arg0 = globals.textColor___478818;
-    s.callLocIdx = 172; s.pc = 11; return s.tmp_2;
-  case 11:
+    s.tmp_2.arg0 = globals.textColor___505342;
+    s.callLocIdx = 174; s.pc = 13; return s.tmp_2;
+  case 13:
     r0 = s.retval;
-    s.tmp_0 = r0 = globals.insertCoinText___478820;
+    s.tmp_0 = r0 = globals.insertCoinText___505345;
     r0 = pxsim_numops_toBool(s.tmp_0);
     if (!r0) { step = 3; continue; }
     r0 = s.tmp_0;
@@ -3892,7 +3916,7 @@ switch (step) {
   case 4:
     // jmp value (already in r0)
     s.tmp_1 = r0;
-    s.text___478919 = (s.tmp_1);
+    s.text___505450 = (s.tmp_1);
     r0 = pxsim_pxtcore_mkClassInstance(dot_Vec__C474785_VT);
     s.tmp_0 = r0;
     s.tmp_1 = dot_Vec_constructor__P474794_mk(s);
@@ -3903,20 +3927,20 @@ switch (step) {
     s.tmp_2 = r0;
     r0 = (s.tmp_2 / 6);
     s.tmp_1.arg2 = r0;
-    s.callLocIdx = 173; s.pc = 12; return s.tmp_1;
-  case 12:
+    s.callLocIdx = 175; s.pc = 14; return s.tmp_1;
+  case 14:
     r0 = s.retval;
     s.tmp_3 = dot_draw_text__P478243_mk(s);
     s.tmp_3.arg0 = s.tmp_0;
-    s.tmp_3.arg1 = s.text___478919;
+    s.tmp_3.arg1 = s.text___505450;
     s.tmp_3.arg2 = 1;
     s.tmp_3.arg3 = globals.font5___472273;
-    s.callLocIdx = 174; s.pc = 13; return s.tmp_3;
-  case 13:
+    s.callLocIdx = 176; s.pc = 15; return s.tmp_3;
+  case 15:
     r0 = s.retval;
     s.tmp_0 = dot_color_pop__P474693_mk(s);
-    s.callLocIdx = 175; s.pc = 14; return s.tmp_0;
-  case 14:
+    s.callLocIdx = 177; s.pc = 16; return s.tmp_0;
+  case 16:
     r0 = s.retval;
   case 5:
   case 6:
@@ -3924,25 +3948,25 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_game_drawTitle__P478899.info = {"start":1650,"length":680,"line":53,"column":8,"endLine":71,"endColumn":9,"fileName":"game.ts","functionName":"drawTitle","argumentNames":[]}
+dot_game_drawTitle__P505418.info = {"start":1695,"length":870,"line":54,"column":8,"endLine":76,"endColumn":9,"fileName":"game.ts","functionName":"drawTitle","argumentNames":[]}
 
-function dot_game_drawTitle__P478899_mk(s) {
+function dot_game_drawTitle__P505418_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_game_drawTitle__P478899, depth: s.depth + 1,
+        parent: s, fn: dot_game_drawTitle__P505418, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
-  text___478919: undefined,
+  text___505450: undefined,
 } }
 
 
 
 
 
-function dot_game_drawScoreboard__P478869(s) {
+function dot_game_drawScoreboard__P505389(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3953,7 +3977,7 @@ switch (step) {
   case 0:
 
     s.tmp_0 = dot_color_push__P474692_mk(s);
-    s.tmp_0.arg0 = globals.scoreboardColor___478816;
+    s.tmp_0.arg0 = globals.scoreboardColor___505340;
     s.callLocIdx = 162; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
@@ -3970,7 +3994,7 @@ switch (step) {
     s.tmp_2.arg0 = s.tmp_0;
     r0 = pxsim_String_.mkEmpty();
     s.tmp_3 = r0;
-    r0 = pxsim.Math_.floor(globals.score___478826);
+    r0 = pxsim.Math_.floor(globals.score___505351);
     s.tmp_5 = r0;
     if ((s.tmp_5) && (s.tmp_5).vtable) {
     setupResume(s, 4);
@@ -3984,7 +4008,7 @@ switch (step) {
     r0 = pxsim_String__concat(s.tmp_3, s.tmp_4);
     s.tmp_2.arg1 = r0;
     s.tmp_2.arg2 = 0;
-    s.tmp_2.arg3 = globals.scoreboardFont___478835;
+    s.tmp_2.arg3 = globals.scoreboardFont___505360;
     s.callLocIdx = 164; s.pc = 3; return s.tmp_2;
   case 3:
     r0 = s.retval;
@@ -3999,7 +4023,7 @@ switch (step) {
     r0 = s.retval;
     s.tmp_2 = dot_draw_text__P478243_mk(s);
     s.tmp_2.arg0 = s.tmp_0;
-    r0 = pxsim.Math_.floor(globals.high___478828);
+    r0 = pxsim.Math_.floor(globals.high___505353);
     s.tmp_4 = r0;
     if ((s.tmp_4) && (s.tmp_4).vtable) {
     setupResume(s, 7);
@@ -4013,7 +4037,7 @@ switch (step) {
     r0 = pxsim_String__concat("HI ", s.tmp_3);
     s.tmp_2.arg1 = r0;
     s.tmp_2.arg2 = 2;
-    s.tmp_2.arg3 = globals.scoreboardFont___478835;
+    s.tmp_2.arg3 = globals.scoreboardFont___505360;
     s.callLocIdx = 166; s.pc = 6; return s.tmp_2;
   case 6:
     r0 = s.retval;
@@ -4025,12 +4049,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_game_drawScoreboard__P478869.info = {"start":1229,"length":411,"line":40,"column":8,"endLine":51,"endColumn":9,"fileName":"game.ts","functionName":"drawScoreboard","argumentNames":[]}
+dot_game_drawScoreboard__P505389.info = {"start":1274,"length":411,"line":41,"column":8,"endLine":52,"endColumn":9,"fileName":"game.ts","functionName":"drawScoreboard","argumentNames":[]}
 
-function dot_game_drawScoreboard__P478869_mk(s) {
+function dot_game_drawScoreboard__P505389_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_game_drawScoreboard__P478869, depth: s.depth + 1,
+        parent: s, fn: dot_game_drawScoreboard__P505389, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -4065,12 +4089,12 @@ switch (step) {
     s.tmp_0 = dot_Pool_update__P474769_mk(s);
     s.tmp_0.arg0 = globals.pool___479742;
     s.tmp_0.arg1 = dot_particles__internal_update_inline__P479819;
-    s.callLocIdx = 286; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 288; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = dot_color_set__P474691_mk(s);
     s.tmp_0.arg0 = s.c___479814;
-    s.callLocIdx = 287; s.pc = 2; return s.tmp_0;
+    s.callLocIdx = 289; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     r0 = undefined;
@@ -4129,20 +4153,20 @@ switch (step) {
     s.tmp_2.arg0 = r0;
     r0 = s.arg0.fields["vel"];
     s.tmp_2.arg1 = r0;
-    s.callLocIdx = 282; s.pc = 4; return s.tmp_2;
+    s.callLocIdx = 284; s.pc = 4; return s.tmp_2;
   case 4:
     r0 = s.retval;
     s.tmp_0 = dot_Vec_scale__P474798_mk(s);
     r0 = s.arg0.fields["vel"];
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = 0.98;
-    s.callLocIdx = 283; s.pc = 5; return s.tmp_0;
+    s.callLocIdx = 285; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
     s.tmp_0 = dot_color_set__P474691_mk(s);
     r0 = s.arg0.fields["color"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 284; s.pc = 6; return s.tmp_0;
+    s.callLocIdx = 286; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
     s.tmp_0 = dot_gfx_rect__P474703_mk(s);
@@ -4154,7 +4178,7 @@ switch (step) {
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 1;
     s.tmp_0.arg3 = 1;
-    s.callLocIdx = 285; s.pc = 7; return s.tmp_0;
+    s.callLocIdx = 287; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
     r0 = false;
@@ -4471,7 +4495,7 @@ switch (step) {
     s.tmp_1.arg1 = s.tmp_0;
     r0 = s.arg0.fields["pool"];
     s.tmp_1.arg2 = r0;
-    s.callLocIdx = 264; s.pc = 1; return s.tmp_1;
+    s.callLocIdx = 266; s.pc = 1; return s.tmp_1;
   case 1:
     r0 = s.retval;
     r0 = undefined;
@@ -4513,7 +4537,7 @@ switch (step) {
     s.tmp_0.argL = s.caps[0];
     s.tmp_0.arg0 = s.arg0;
     setupLambda(s.tmp_0, s.tmp_0.argL);
-    s.callLocIdx = 263; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 265; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     return leave(s, r0)
@@ -4655,12 +4679,12 @@ switch (step) {
     s.tmp_0 = dot_Pool_update__P474769_mk(s);
     s.tmp_0.arg0 = globals.pool___479414;
     s.tmp_0.arg1 = dot_scores__internal_update_inline__P479478;
-    s.callLocIdx = 252; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 254; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = dot_color_set__P474691_mk(s);
     s.tmp_0.arg0 = s.c___479473;
-    s.callLocIdx = 253; s.pc = 2; return s.tmp_0;
+    s.callLocIdx = 255; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     r0 = undefined;
@@ -4701,7 +4725,7 @@ switch (step) {
     s.tmp_0 = dot_color_set__P474691_mk(s);
     r0 = s.arg0.fields["color"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 250; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 252; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = dot_draw_text__P478243_mk(s);
@@ -4711,7 +4735,7 @@ switch (step) {
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 1;
     s.tmp_0.arg3 = globals.scoreFont___479370;
-    s.callLocIdx = 251; s.pc = 2; return s.tmp_0;
+    s.callLocIdx = 253; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     r0 = s.arg0.fields["pos"];
@@ -4731,7 +4755,7 @@ switch (step) {
     r0 = (s.tmp_0).fields["vy"] = (s.tmp_1);
     r0 = s.arg0.fields["deathTick"];
     s.tmp_0 = r0;
-    r0 = (s.tmp_0 <= globals.tick___478822);
+    r0 = (s.tmp_0 <= globals.tick___505347);
     return leave(s, r0)
   default: oops()
 } } }
@@ -4753,7 +4777,7 @@ function dot_scores__internal_update_inline__P479478_mk(s) {
 
 
 
-function dot_game_gotoPlaying__P478955(s) {
+function dot_game_gotoPlaying__P505486(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -4765,36 +4789,36 @@ switch (step) {
 
     s.tmp_0 = dot_Input_block__P478852_mk(s);
     s.tmp_0.arg0 = globals.input___474739;
-    s.callLocIdx = 181; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 183; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = dot_Input_block__P478852_mk(s);
     s.tmp_0.arg0 = globals.input___474741;
-    s.callLocIdx = 182; s.pc = 2; return s.tmp_0;
+    s.callLocIdx = 184; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
-    globals.tick___478822 = (0);
-    globals.score___478826 = (0);
-    globals.difficulty___478824 = (1);
+    globals.tick___505347 = (0);
+    globals.score___505351 = (0);
+    globals.difficulty___505349 = (1);
     s.tmp_0 = dot_scores__internal_init__P478859_mk(s);
-    s.callLocIdx = 183; s.pc = 3; return s.tmp_0;
+    s.callLocIdx = 185; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
     s.tmp_0 = dot_particles__internal_init__P478861_mk(s);
-    s.callLocIdx = 184; s.pc = 4; return s.tmp_0;
+    s.callLocIdx = 186; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
-    globals.state___478831 = (1);
+    globals.state___505356 = (1);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-dot_game_gotoPlaying__P478955.info = {"start":2684,"length":293,"line":83,"column":8,"endLine":92,"endColumn":9,"fileName":"game.ts","functionName":"gotoPlaying","argumentNames":[]}
+dot_game_gotoPlaying__P505486.info = {"start":2919,"length":293,"line":88,"column":8,"endLine":97,"endColumn":9,"fileName":"game.ts","functionName":"gotoPlaying","argumentNames":[]}
 
-function dot_game_gotoPlaying__P478955_mk(s) {
+function dot_game_gotoPlaying__P505486_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_game_gotoPlaying__P478955, depth: s.depth + 1,
+        parent: s, fn: dot_game_gotoPlaying__P505486, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -4815,7 +4839,7 @@ switch (step) {
 
     s.tmp_0 = dot_Pool_reset__P474768_mk(s);
     s.tmp_0.arg0 = globals.pool___479742;
-    s.callLocIdx = 280; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 282; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     r0 = undefined;
@@ -4858,7 +4882,7 @@ switch (step) {
     s.tmp_2.arg0 = r0;
     r0 = s.arg0.fields["active"];
     s.tmp_2.arg1 = r0;
-    s.callLocIdx = 261; s.pc = 1; return s.tmp_2;
+    s.callLocIdx = 263; s.pc = 1; return s.tmp_2;
   case 1:
     r0 = s.retval;
     s.tmp_1 = r0;
@@ -4871,7 +4895,7 @@ switch (step) {
     s.tmp_1 = r0;
     r0 = pxsim_Array__length(s.tmp_1);
     s.tmp_0.arg2 = r0;
-    s.callLocIdx = 262; s.pc = 2; return s.tmp_0;
+    s.callLocIdx = 264; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     r0 = undefined;
@@ -4993,7 +5017,7 @@ switch (step) {
 
     s.tmp_0 = dot_Pool_reset__P474768_mk(s);
     s.tmp_0.arg0 = globals.pool___479414;
-    s.callLocIdx = 248; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 250; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     r0 = undefined;
@@ -5033,37 +5057,37 @@ switch (step) {
     s.tmp_0 = dot_Button_block__P479045_mk(s);
     r0 = s.arg0.fields["_A"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 233; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 235; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = dot_Button_block__P479045_mk(s);
     r0 = s.arg0.fields["_B"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 234; s.pc = 2; return s.tmp_0;
+    s.callLocIdx = 236; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     s.tmp_0 = dot_Button_block__P479045_mk(s);
     r0 = s.arg0.fields["_Up"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 235; s.pc = 3; return s.tmp_0;
+    s.callLocIdx = 237; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
     s.tmp_0 = dot_Button_block__P479045_mk(s);
     r0 = s.arg0.fields["_Down"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 236; s.pc = 4; return s.tmp_0;
+    s.callLocIdx = 238; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
     s.tmp_0 = dot_Button_block__P479045_mk(s);
     r0 = s.arg0.fields["_Left"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 237; s.pc = 5; return s.tmp_0;
+    s.callLocIdx = 239; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
     s.tmp_0 = dot_Button_block__P479045_mk(s);
     r0 = s.arg0.fields["_Right"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 238; s.pc = 6; return s.tmp_0;
+    s.callLocIdx = 240; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
     r0 = (s.arg0).fields["_isPressed"] = (false);
@@ -5150,12 +5174,12 @@ switch (step) {
     s.tmp_1.arg0 = s.arg0;
     if (!s.tmp_1.arg0.vtable.iface) {
       setupLambda(s.tmp_1, pxsim_pxtrt.mapGetByString(s.tmp_1.arg0, "condition"), 1);
-      s.callLocIdx = 202; s.pc = 3; return s.tmp_1;
+      s.callLocIdx = 204; s.pc = 3; return s.tmp_1;
     } else {
       s.tmp_1.fn = s.tmp_1.arg0.vtable.iface["condition"];
-      if (s.tmp_1.fn == null) { setupLambda(s.tmp_1, s.tmp_1.arg0.fields["condition"], 1); s.callLocIdx = 202; s.pc = 3; return s.tmp_1; }
-      else if (s.tmp_1.fn.isGetter) { s.tmp_1.stage2Call = true; s.callLocIdx = 202; s.pc = 3; return s.tmp_1;; }
-     else { s.callLocIdx = 202; s.pc = 3; return s.tmp_1; }
+      if (s.tmp_1.fn == null) { setupLambda(s.tmp_1, s.tmp_1.arg0.fields["condition"], 1); s.callLocIdx = 204; s.pc = 3; return s.tmp_1; }
+      else if (s.tmp_1.fn.isGetter) { s.tmp_1.stage2Call = true; s.callLocIdx = 204; s.pc = 3; return s.tmp_1;; }
+     else { s.callLocIdx = 204; s.pc = 3; return s.tmp_1; }
     }
   case 3:
     r0 = s.retval;
@@ -5210,43 +5234,43 @@ switch (step) {
     s.tmp_0 = dot_Button_update__P479043_mk(s);
     r0 = s.arg0.fields["_A"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 209; s.pc = 31; return s.tmp_0;
+    s.callLocIdx = 211; s.pc = 31; return s.tmp_0;
   case 31:
     r0 = s.retval;
     s.tmp_0 = dot_Button_update__P479043_mk(s);
     r0 = s.arg0.fields["_B"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 210; s.pc = 32; return s.tmp_0;
+    s.callLocIdx = 212; s.pc = 32; return s.tmp_0;
   case 32:
     r0 = s.retval;
     s.tmp_0 = dot_Button_update__P479043_mk(s);
     r0 = s.arg0.fields["_Up"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 211; s.pc = 33; return s.tmp_0;
+    s.callLocIdx = 213; s.pc = 33; return s.tmp_0;
   case 33:
     r0 = s.retval;
     s.tmp_0 = dot_Button_update__P479043_mk(s);
     r0 = s.arg0.fields["_Down"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 212; s.pc = 34; return s.tmp_0;
+    s.callLocIdx = 214; s.pc = 34; return s.tmp_0;
   case 34:
     r0 = s.retval;
     s.tmp_0 = dot_Button_update__P479043_mk(s);
     r0 = s.arg0.fields["_Left"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 213; s.pc = 35; return s.tmp_0;
+    s.callLocIdx = 215; s.pc = 35; return s.tmp_0;
   case 35:
     r0 = s.retval;
     s.tmp_0 = dot_Button_update__P479043_mk(s);
     r0 = s.arg0.fields["_Right"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 214; s.pc = 36; return s.tmp_0;
+    s.callLocIdx = 216; s.pc = 36; return s.tmp_0;
   case 36:
     r0 = s.retval;
     s.tmp_1 = dot_Button_isPressed__P479040_mk(s);
     r0 = s.arg0.fields["_A"];
     s.tmp_1.arg0 = r0;
-    s.callLocIdx = 215; s.pc = 37; return s.tmp_1;
+    s.callLocIdx = 217; s.pc = 37; return s.tmp_1;
   case 37:
     r0 = s.retval;
     s.tmp_0 = r0;
@@ -5258,7 +5282,7 @@ switch (step) {
     s.tmp_2 = dot_Button_isPressed__P479040_mk(s);
     r0 = s.arg0.fields["_B"];
     s.tmp_2.arg0 = r0;
-    s.callLocIdx = 216; s.pc = 38; return s.tmp_2;
+    s.callLocIdx = 218; s.pc = 38; return s.tmp_2;
   case 38:
     r0 = s.retval;
   case 2:
@@ -5272,7 +5296,7 @@ switch (step) {
     s.tmp_4 = dot_Button_isPressed__P479040_mk(s);
     r0 = s.arg0.fields["_Up"];
     s.tmp_4.arg0 = r0;
-    s.callLocIdx = 217; s.pc = 39; return s.tmp_4;
+    s.callLocIdx = 219; s.pc = 39; return s.tmp_4;
   case 39:
     r0 = s.retval;
   case 4:
@@ -5286,7 +5310,7 @@ switch (step) {
     s.tmp_6 = dot_Button_isPressed__P479040_mk(s);
     r0 = s.arg0.fields["_Down"];
     s.tmp_6.arg0 = r0;
-    s.callLocIdx = 218; s.pc = 40; return s.tmp_6;
+    s.callLocIdx = 220; s.pc = 40; return s.tmp_6;
   case 40:
     r0 = s.retval;
   case 6:
@@ -5300,7 +5324,7 @@ switch (step) {
     s.tmp_8 = dot_Button_isPressed__P479040_mk(s);
     r0 = s.arg0.fields["_Left"];
     s.tmp_8.arg0 = r0;
-    s.callLocIdx = 219; s.pc = 41; return s.tmp_8;
+    s.callLocIdx = 221; s.pc = 41; return s.tmp_8;
   case 41:
     r0 = s.retval;
   case 8:
@@ -5314,7 +5338,7 @@ switch (step) {
     s.tmp_10 = dot_Button_isPressed__P479040_mk(s);
     r0 = s.arg0.fields["_Right"];
     s.tmp_10.arg0 = r0;
-    s.callLocIdx = 220; s.pc = 42; return s.tmp_10;
+    s.callLocIdx = 222; s.pc = 42; return s.tmp_10;
   case 42:
     r0 = s.retval;
   case 10:
@@ -5324,7 +5348,7 @@ switch (step) {
     s.tmp_1 = dot_Button_justPressed__P479041_mk(s);
     r0 = s.arg0.fields["_A"];
     s.tmp_1.arg0 = r0;
-    s.callLocIdx = 221; s.pc = 43; return s.tmp_1;
+    s.callLocIdx = 223; s.pc = 43; return s.tmp_1;
   case 43:
     r0 = s.retval;
     s.tmp_0 = r0;
@@ -5336,7 +5360,7 @@ switch (step) {
     s.tmp_2 = dot_Button_justPressed__P479041_mk(s);
     r0 = s.arg0.fields["_B"];
     s.tmp_2.arg0 = r0;
-    s.callLocIdx = 222; s.pc = 44; return s.tmp_2;
+    s.callLocIdx = 224; s.pc = 44; return s.tmp_2;
   case 44:
     r0 = s.retval;
   case 12:
@@ -5350,7 +5374,7 @@ switch (step) {
     s.tmp_4 = dot_Button_justPressed__P479041_mk(s);
     r0 = s.arg0.fields["_Up"];
     s.tmp_4.arg0 = r0;
-    s.callLocIdx = 223; s.pc = 45; return s.tmp_4;
+    s.callLocIdx = 225; s.pc = 45; return s.tmp_4;
   case 45:
     r0 = s.retval;
   case 14:
@@ -5364,7 +5388,7 @@ switch (step) {
     s.tmp_6 = dot_Button_justPressed__P479041_mk(s);
     r0 = s.arg0.fields["_Down"];
     s.tmp_6.arg0 = r0;
-    s.callLocIdx = 224; s.pc = 46; return s.tmp_6;
+    s.callLocIdx = 226; s.pc = 46; return s.tmp_6;
   case 46:
     r0 = s.retval;
   case 16:
@@ -5378,7 +5402,7 @@ switch (step) {
     s.tmp_8 = dot_Button_justPressed__P479041_mk(s);
     r0 = s.arg0.fields["_Left"];
     s.tmp_8.arg0 = r0;
-    s.callLocIdx = 225; s.pc = 47; return s.tmp_8;
+    s.callLocIdx = 227; s.pc = 47; return s.tmp_8;
   case 47:
     r0 = s.retval;
   case 18:
@@ -5392,7 +5416,7 @@ switch (step) {
     s.tmp_10 = dot_Button_justPressed__P479041_mk(s);
     r0 = s.arg0.fields["_Right"];
     s.tmp_10.arg0 = r0;
-    s.callLocIdx = 226; s.pc = 48; return s.tmp_10;
+    s.callLocIdx = 228; s.pc = 48; return s.tmp_10;
   case 48:
     r0 = s.retval;
   case 20:
@@ -5402,7 +5426,7 @@ switch (step) {
     s.tmp_1 = dot_Button_justReleased__P479042_mk(s);
     r0 = s.arg0.fields["_A"];
     s.tmp_1.arg0 = r0;
-    s.callLocIdx = 227; s.pc = 49; return s.tmp_1;
+    s.callLocIdx = 229; s.pc = 49; return s.tmp_1;
   case 49:
     r0 = s.retval;
     s.tmp_0 = r0;
@@ -5414,7 +5438,7 @@ switch (step) {
     s.tmp_2 = dot_Button_justReleased__P479042_mk(s);
     r0 = s.arg0.fields["_B"];
     s.tmp_2.arg0 = r0;
-    s.callLocIdx = 228; s.pc = 50; return s.tmp_2;
+    s.callLocIdx = 230; s.pc = 50; return s.tmp_2;
   case 50:
     r0 = s.retval;
   case 22:
@@ -5428,7 +5452,7 @@ switch (step) {
     s.tmp_4 = dot_Button_justReleased__P479042_mk(s);
     r0 = s.arg0.fields["_Up"];
     s.tmp_4.arg0 = r0;
-    s.callLocIdx = 229; s.pc = 51; return s.tmp_4;
+    s.callLocIdx = 231; s.pc = 51; return s.tmp_4;
   case 51:
     r0 = s.retval;
   case 24:
@@ -5442,7 +5466,7 @@ switch (step) {
     s.tmp_6 = dot_Button_justReleased__P479042_mk(s);
     r0 = s.arg0.fields["_Down"];
     s.tmp_6.arg0 = r0;
-    s.callLocIdx = 230; s.pc = 52; return s.tmp_6;
+    s.callLocIdx = 232; s.pc = 52; return s.tmp_6;
   case 52:
     r0 = s.retval;
   case 26:
@@ -5456,7 +5480,7 @@ switch (step) {
     s.tmp_8 = dot_Button_justReleased__P479042_mk(s);
     r0 = s.arg0.fields["_Left"];
     s.tmp_8.arg0 = r0;
-    s.callLocIdx = 231; s.pc = 53; return s.tmp_8;
+    s.callLocIdx = 233; s.pc = 53; return s.tmp_8;
   case 53:
     r0 = s.retval;
   case 28:
@@ -5470,7 +5494,7 @@ switch (step) {
     s.tmp_10 = dot_Button_justReleased__P479042_mk(s);
     r0 = s.arg0.fields["_Right"];
     s.tmp_10.arg0 = r0;
-    s.callLocIdx = 232; s.pc = 54; return s.tmp_10;
+    s.callLocIdx = 234; s.pc = 54; return s.tmp_10;
   case 54:
     r0 = s.retval;
   case 30:
@@ -5538,12 +5562,12 @@ switch (step) {
     s.tmp_3.arg0 = s.arg0;
     if (!s.tmp_3.arg0.vtable.iface) {
       setupLambda(s.tmp_3, pxsim_pxtrt.mapGetByString(s.tmp_3.arg0, "condition"), 1);
-      s.callLocIdx = 201; s.pc = 5; return s.tmp_3;
+      s.callLocIdx = 203; s.pc = 5; return s.tmp_3;
     } else {
       s.tmp_3.fn = s.tmp_3.arg0.vtable.iface["condition"];
-      if (s.tmp_3.fn == null) { setupLambda(s.tmp_3, s.tmp_3.arg0.fields["condition"], 1); s.callLocIdx = 201; s.pc = 5; return s.tmp_3; }
-      else if (s.tmp_3.fn.isGetter) { s.tmp_3.stage2Call = true; s.callLocIdx = 201; s.pc = 5; return s.tmp_3;; }
-     else { s.callLocIdx = 201; s.pc = 5; return s.tmp_3; }
+      if (s.tmp_3.fn == null) { setupLambda(s.tmp_3, s.tmp_3.arg0.fields["condition"], 1); s.callLocIdx = 203; s.pc = 5; return s.tmp_3; }
+      else if (s.tmp_3.fn.isGetter) { s.tmp_3.stage2Call = true; s.callLocIdx = 203; s.pc = 5; return s.tmp_3;; }
+     else { s.callLocIdx = 203; s.pc = 5; return s.tmp_3; }
     }
   case 5:
     r0 = s.retval;
@@ -5615,12 +5639,12 @@ switch (step) {
     s.tmp_3.arg0 = s.arg0;
     if (!s.tmp_3.arg0.vtable.iface) {
       setupLambda(s.tmp_3, pxsim_pxtrt.mapGetByString(s.tmp_3.arg0, "condition"), 1);
-      s.callLocIdx = 200; s.pc = 5; return s.tmp_3;
+      s.callLocIdx = 202; s.pc = 5; return s.tmp_3;
     } else {
       s.tmp_3.fn = s.tmp_3.arg0.vtable.iface["condition"];
-      if (s.tmp_3.fn == null) { setupLambda(s.tmp_3, s.tmp_3.arg0.fields["condition"], 1); s.callLocIdx = 200; s.pc = 5; return s.tmp_3; }
-      else if (s.tmp_3.fn.isGetter) { s.tmp_3.stage2Call = true; s.callLocIdx = 200; s.pc = 5; return s.tmp_3;; }
-     else { s.callLocIdx = 200; s.pc = 5; return s.tmp_3; }
+      if (s.tmp_3.fn == null) { setupLambda(s.tmp_3, s.tmp_3.arg0.fields["condition"], 1); s.callLocIdx = 202; s.pc = 5; return s.tmp_3; }
+      else if (s.tmp_3.fn.isGetter) { s.tmp_3.stage2Call = true; s.callLocIdx = 202; s.pc = 5; return s.tmp_3;; }
+     else { s.callLocIdx = 202; s.pc = 5; return s.tmp_3; }
     }
   case 5:
     r0 = s.retval;
@@ -5692,12 +5716,12 @@ switch (step) {
     s.tmp_3.arg0 = s.arg0;
     if (!s.tmp_3.arg0.vtable.iface) {
       setupLambda(s.tmp_3, pxsim_pxtrt.mapGetByString(s.tmp_3.arg0, "condition"), 1);
-      s.callLocIdx = 199; s.pc = 5; return s.tmp_3;
+      s.callLocIdx = 201; s.pc = 5; return s.tmp_3;
     } else {
       s.tmp_3.fn = s.tmp_3.arg0.vtable.iface["condition"];
-      if (s.tmp_3.fn == null) { setupLambda(s.tmp_3, s.tmp_3.arg0.fields["condition"], 1); s.callLocIdx = 199; s.pc = 5; return s.tmp_3; }
-      else if (s.tmp_3.fn.isGetter) { s.tmp_3.stage2Call = true; s.callLocIdx = 199; s.pc = 5; return s.tmp_3;; }
-     else { s.callLocIdx = 199; s.pc = 5; return s.tmp_3; }
+      if (s.tmp_3.fn == null) { setupLambda(s.tmp_3, s.tmp_3.arg0.fields["condition"], 1); s.callLocIdx = 201; s.pc = 5; return s.tmp_3; }
+      else if (s.tmp_3.fn.isGetter) { s.tmp_3.stage2Call = true; s.callLocIdx = 201; s.pc = 5; return s.tmp_3;; }
+     else { s.callLocIdx = 201; s.pc = 5; return s.tmp_3; }
     }
   case 5:
     r0 = s.retval;
@@ -7211,7 +7235,7 @@ switch (step) {
     r0 = pxsim_Array__length(s.arg1);
     s.tmp_5.arg1 = r0;
     s.tmp_5.arg2 = undefined;
-    s.callLocIdx = 257; s.pc = 3; return s.tmp_5;
+    s.callLocIdx = 259; s.pc = 3; return s.tmp_5;
   case 3:
     r0 = s.retval;
     s.tmp_4 = r0;
@@ -7282,7 +7306,7 @@ switch (step) {
   case 4:
     s.tmp_3 = dot_Random_next__P474761_mk(s);
     s.tmp_3.arg0 = s.arg0;
-    s.callLocIdx = 256; s.pc = 6; return s.tmp_3;
+    s.callLocIdx = 258; s.pc = 6; return s.tmp_3;
   case 6:
     r0 = s.retval;
     s.tmp_2 = r0;
@@ -7428,7 +7452,7 @@ switch (step) {
   case 2:
     s.tmp_3 = dot_Random_next__P474761_mk(s);
     s.tmp_3.arg0 = s.arg0;
-    s.callLocIdx = 255; s.pc = 3; return s.tmp_3;
+    s.callLocIdx = 257; s.pc = 3; return s.tmp_3;
   case 3:
     r0 = s.retval;
     s.tmp_2 = r0;
@@ -7859,7 +7883,7 @@ function dot_Set_constructor__P474779_mk(s) {
 
 
 
-function test_gameUpdate__P495754(s) {
+function test_gameUpdate__P498338(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -7869,89 +7893,89 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.p0___495854 = undefined;
-    s.p1___495861 = undefined;
-    s.det___495872 = undefined;
-    s.colls___495997 = undefined;
-    s.coll___496002 = undefined;
-    s.unnamed14948___U5 = undefined;
-    s.unnamed14949___U6 = undefined;
-    s.pos___496013 = undefined;
-    s.coll___496036 = undefined;
-    s.unnamed14950___U9 = undefined;
-    s.unnamed14951___U10 = undefined;
-    r0 = (globals.tick___478822 === 0);
+    s.p0___498438 = undefined;
+    s.p1___498445 = undefined;
+    s.det___498456 = undefined;
+    s.colls___498581 = undefined;
+    s.coll___498586 = undefined;
+    s.unnamed15504___U5 = undefined;
+    s.unnamed15505___U6 = undefined;
+    s.pos___498597 = undefined;
+    s.coll___498620 = undefined;
+    s.unnamed15506___U9 = undefined;
+    s.unnamed15507___U10 = undefined;
+    r0 = (globals.tick___505347 === 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    globals.d___495835 = (1);
-    globals.a___495837 = (0);
+    globals.d___498419 = (1);
+    globals.a___498421 = (0);
   case 1:
   case 2:
     s.tmp_0 = scene_setBackgroundColor__P473176_mk(s);
     s.tmp_0.arg0 = 13;
-    s.callLocIdx = 311; s.pc = 22; return s.tmp_0;
+    s.callLocIdx = 313; s.pc = 22; return s.tmp_0;
   case 22:
     r0 = s.retval;
-    s.tmp_0 = r0 = globals.a___495837;
-    r0 = (globals.difficulty___478824 * globals.d___495835);
+    s.tmp_0 = r0 = globals.a___498421;
+    r0 = (globals.difficulty___505349 * globals.d___498419);
     s.tmp_2 = r0;
     r0 = (s.tmp_2 / 20);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 + s.tmp_1);
-    globals.a___495837 = (r0);
+    globals.a___498421 = (r0);
     s.tmp_0 = dot_vec_make__P474804_mk(s);
     r0 = (globals.SCREEN_WIDTH___474669 / 2);
     s.tmp_0.arg0 = r0;
     r0 = (globals.SCREEN_HEIGHT___474670 / 2);
     s.tmp_0.arg1 = r0;
-    s.callLocIdx = 312; s.pc = 23; return s.tmp_0;
+    s.callLocIdx = 314; s.pc = 23; return s.tmp_0;
   case 23:
     r0 = s.retval;
-    s.p0___495854 = (r0);
+    s.p0___498438 = (r0);
     s.tmp_0 = dot_Vec_add__P474795_mk(s);
     s.tmp_1 = dot_Vec_scale__P474798_mk(s);
     s.tmp_2 = dot_vec_fromAngle__P474807_mk(s);
-    s.tmp_2.arg0 = globals.a___495837;
-    s.callLocIdx = 313; s.pc = 26; return s.tmp_2;
+    s.tmp_2.arg0 = globals.a___498421;
+    s.callLocIdx = 315; s.pc = 26; return s.tmp_2;
   case 26:
     r0 = s.retval;
     s.tmp_1.arg0 = r0;
     r0 = (globals.SCREEN_WIDTH___474669 / 2);
     s.tmp_1.arg1 = r0;
-    s.callLocIdx = 314; s.pc = 25; return s.tmp_1;
+    s.callLocIdx = 316; s.pc = 25; return s.tmp_1;
   case 25:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = s.p0___495854;
-    s.callLocIdx = 315; s.pc = 24; return s.tmp_0;
+    s.tmp_0.arg1 = s.p0___498438;
+    s.callLocIdx = 317; s.pc = 24; return s.tmp_0;
   case 24:
     r0 = s.retval;
-    s.p1___495861 = (r0);
+    s.p1___498445 = (r0);
     s.tmp_0 = dot_color_set__P474691_mk(s);
     s.tmp_0.arg0 = 1;
-    s.callLocIdx = 316; s.pc = 27; return s.tmp_0;
+    s.callLocIdx = 318; s.pc = 27; return s.tmp_0;
   case 27:
     r0 = s.retval;
     s.tmp_0 = dot_draw_line__P478182_mk(s);
-    s.tmp_0.arg0 = s.p0___495854;
-    s.tmp_0.arg1 = s.p1___495861;
+    s.tmp_0.arg0 = s.p0___498438;
+    s.tmp_0.arg1 = s.p1___498445;
     s.tmp_0.arg2 = 3;
     s.tmp_0.arg3 = 0;
     s.tmp_0.arg4 = null;
     s.tmp_0.arg5 = undefined;
-    s.callLocIdx = 317; s.pc = 28; return s.tmp_0;
+    s.callLocIdx = 319; s.pc = 28; return s.tmp_0;
   case 28:
     r0 = s.retval;
-    s.det___495872 = (r0);
+    s.det___498456 = (r0);
     s.tmp_0 = dot_color_set__P474691_mk(s);
     s.tmp_0.arg0 = 11;
-    s.callLocIdx = 318; s.pc = 29; return s.tmp_0;
+    s.callLocIdx = 320; s.pc = 29; return s.tmp_0;
   case 29:
     r0 = s.retval;
     s.tmp_0 = dot_draw_arc__P478206_mk(s);
-    s.tmp_0.arg0 = s.p0___495854;
-    r0 = (globals.tick___478822 / 4);
+    s.tmp_0.arg0 = s.p0___498438;
+    r0 = (globals.tick___505347 / 4);
     s.tmp_1 = r0;
     r0 = (globals.SCREEN_WIDTH___474669 / 2);
     s.tmp_2 = r0;
@@ -7961,59 +7985,59 @@ switch (step) {
     s.tmp_0.arg3 = 0;
     s.tmp_0.arg4 = 6.283185307179586;
     s.tmp_3 = dot_color_noncollidable__P474697_mk(s);
-    s.callLocIdx = 319; s.pc = 31; return s.tmp_3;
+    s.callLocIdx = 321; s.pc = 31; return s.tmp_3;
   case 31:
     r0 = s.retval;
     s.tmp_0.arg5 = r0;
     s.tmp_0.arg6 = undefined;
-    s.callLocIdx = 320; s.pc = 30; return s.tmp_0;
+    s.callLocIdx = 322; s.pc = 30; return s.tmp_0;
   case 30:
     r0 = s.retval;
     s.tmp_0 = helpers_arrayForEach__P470401_mk(s);
-    s.tmp_0.arg0 = globals.boxes___495762;
-    s.tmp_0.arg1 = test_gameUpdate_inline__P495895;
-    s.callLocIdx = 324; s.pc = 32; return s.tmp_0;
+    s.tmp_0.arg0 = globals.boxes___498346;
+    s.tmp_0.arg1 = test_gameUpdate_inline__P498479;
+    s.callLocIdx = 326; s.pc = 32; return s.tmp_0;
   case 32:
     r0 = s.retval;
-    r0 = (globals.state___478831 === 1);
+    r0 = (globals.state___505356 === 1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 20; continue; }
     s.tmp_2 = dot_Button_justPressed__P479041_mk(s);
     r0 = globals.input___474739.fields["_Left"];
     s.tmp_2.arg0 = r0;
-    s.callLocIdx = 326; s.pc = 33; return s.tmp_2;
+    s.callLocIdx = 328; s.pc = 33; return s.tmp_2;
   case 33:
     r0 = s.retval;
     s.tmp_1 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_1);
     if (!r0) { step = 3; continue; }
-    globals.d___495835 = (-1);
+    globals.d___498419 = (-1);
     { step = 8; continue; }
   case 3:
     s.tmp_1 = dot_Button_justPressed__P479041_mk(s);
     r0 = globals.input___474739.fields["_Right"];
     s.tmp_1.arg0 = r0;
-    s.callLocIdx = 328; s.pc = 34; return s.tmp_1;
+    s.callLocIdx = 330; s.pc = 34; return s.tmp_1;
   case 34:
     r0 = s.retval;
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 4; continue; }
-    globals.d___495835 = (1);
+    globals.d___498419 = (1);
     { step = 7; continue; }
   case 4:
     s.tmp_1 = dot_Input_justPressed__P479003_mk(s);
     s.tmp_1.arg0 = globals.input___474739;
-    s.callLocIdx = 329; s.pc = 35; return s.tmp_1;
+    s.callLocIdx = 331; s.pc = 35; return s.tmp_1;
   case 35:
     r0 = s.retval;
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 5; continue; }
-    s.tmp_2 = dot_game_end__P478864_mk(s);
+    s.tmp_2 = dot_game_end__P505384_mk(s);
     s.tmp_2.arg0 = undefined;
-    s.callLocIdx = 330; s.pc = 36; return s.tmp_2;
+    s.callLocIdx = 332; s.pc = 36; return s.tmp_2;
   case 36:
     r0 = s.retval;
   case 5:
@@ -8021,23 +8045,23 @@ switch (step) {
   case 7:
   case 8:
     s.tmp_0 = dot_CollisionReporter_collisions__P474657_mk(s);
-    s.tmp_0.arg0 = s.det___495872;
-    s.callLocIdx = 331; s.pc = 37; return s.tmp_0;
+    s.tmp_0.arg0 = s.det___498456;
+    s.callLocIdx = 333; s.pc = 37; return s.tmp_0;
   case 37:
     r0 = s.retval;
-    s.colls___495997 = (r0);
-    s.coll___496002 = (undefined);
-    s.unnamed14948___U5 = (s.colls___495997);
-    s.unnamed14949___U6 = (0);
+    s.colls___498581 = (r0);
+    s.coll___498586 = (undefined);
+    s.unnamed15504___U5 = (s.colls___498581);
+    s.unnamed15505___U6 = (0);
   case 9:
-    s.tmp_0 = r0 = s.unnamed14949___U6;
-    r0 = pxsim_Array__length(s.unnamed14948___U5);
+    s.tmp_0 = r0 = s.unnamed15505___U6;
+    r0 = pxsim_Array__length(s.unnamed15504___U5);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 15; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed14948___U5, s.unnamed14949___U6);
-    s.coll___496002 = (r0);
-    r0 = s.coll___496002.fields["dst"];
+    r0 = pxsim_Array__getAt(s.unnamed15504___U5, s.unnamed15505___U6);
+    s.coll___498586 = (r0);
+    r0 = s.coll___498586.fields["dst"];
     r0 = r0.fields["id"];
     s.tmp_4 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_4);
@@ -8049,10 +8073,10 @@ switch (step) {
     { step = 14; continue; }
   case 10:
   case 11:
-    r0 = s.coll___496002.fields["dst"];
+    r0 = s.coll___498586.fields["dst"];
     r0 = r0.fields["id"];
     s.tmp_6 = r0;
-    r0 = globals.collisions___495760.fields["_items"];
+    r0 = globals.collisions___498344.fields["_items"];
     s.tmp_8 = r0;
     r0 = pxsim_pxtrt.mapGetGeneric(s.tmp_8, s.tmp_6);
     s.tmp_7 = r0;
@@ -8064,90 +8088,90 @@ switch (step) {
   case 12:
   case 13:
     s.tmp_9 = dot_Rect_center__P477543_mk(s);
-    r0 = s.coll___496002.fields["dst"];
+    r0 = s.coll___498586.fields["dst"];
     r0 = r0.fields["rect"];
     s.tmp_9.arg0 = r0;
-    s.callLocIdx = 333; s.pc = 38; return s.tmp_9;
+    s.callLocIdx = 335; s.pc = 38; return s.tmp_9;
   case 38:
     r0 = s.retval;
-    s.pos___496013 = (r0);
+    s.pos___498597 = (r0);
     s.tmp_0 = dot_color_set__P474691_mk(s);
-    r0 = s.coll___496002.fields["dst"];
+    r0 = s.coll___498586.fields["dst"];
     r0 = r0.fields["color"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 334; s.pc = 39; return s.tmp_0;
+    s.callLocIdx = 336; s.pc = 39; return s.tmp_0;
   case 39:
     r0 = s.retval;
     s.tmp_0 = dot_scores_add__P479424_mk(s);
     s.tmp_0.arg0 = 10;
-    s.tmp_0.arg1 = s.pos___496013;
-    s.callLocIdx = 335; s.pc = 40; return s.tmp_0;
+    s.tmp_0.arg1 = s.pos___498597;
+    s.callLocIdx = 337; s.pc = 40; return s.tmp_0;
   case 40:
     r0 = s.retval;
     s.tmp_0 = dot_particles_add__P479756_mk(s);
-    s.tmp_0.arg0 = s.pos___496013;
+    s.tmp_0.arg0 = s.pos___498597;
     s.tmp_0.arg1 = 10;
     s.tmp_0.arg2 = 2;
     s.tmp_0.arg3 = 1.5707963267948966;
     s.tmp_0.arg4 = 0.5235987755982988;
-    s.callLocIdx = 336; s.pc = 41; return s.tmp_0;
+    s.callLocIdx = 338; s.pc = 41; return s.tmp_0;
   case 41:
     r0 = s.retval;
   case 14:
-    r0 = (s.unnamed14949___U6 + 1);
-    s.unnamed14949___U6 = (r0);
+    r0 = (s.unnamed15505___U6 + 1);
+    s.unnamed15505___U6 = (r0);
     { step = 9; continue; }
   case 15:
-    s.unnamed14948___U5 = (undefined);
+    s.unnamed15504___U5 = (undefined);
     s.tmp_0 = dot_Set_clear__P474783_mk(s);
-    s.tmp_0.arg0 = globals.collisions___495760;
-    s.callLocIdx = 337; s.pc = 42; return s.tmp_0;
+    s.tmp_0.arg0 = globals.collisions___498344;
+    s.callLocIdx = 339; s.pc = 42; return s.tmp_0;
   case 42:
     r0 = s.retval;
-    s.coll___496036 = (undefined);
-    s.unnamed14950___U9 = (s.colls___495997);
-    s.unnamed14951___U10 = (0);
+    s.coll___498620 = (undefined);
+    s.unnamed15506___U9 = (s.colls___498581);
+    s.unnamed15507___U10 = (0);
   case 16:
-    s.tmp_0 = r0 = s.unnamed14951___U10;
-    r0 = pxsim_Array__length(s.unnamed14950___U9);
+    s.tmp_0 = r0 = s.unnamed15507___U10;
+    r0 = pxsim_Array__length(s.unnamed15506___U9);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 19; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed14950___U9, s.unnamed14951___U10);
-    s.coll___496036 = (r0);
-    r0 = s.coll___496036.fields["dst"];
+    r0 = pxsim_Array__getAt(s.unnamed15506___U9, s.unnamed15507___U10);
+    s.coll___498620 = (r0);
+    r0 = s.coll___498620.fields["dst"];
     r0 = r0.fields["id"];
     s.tmp_2 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
     if (!r0) { step = 17; continue; }
     s.tmp_3 = dot_Set_set__P474782_mk(s);
-    s.tmp_3.arg0 = globals.collisions___495760;
-    r0 = s.coll___496036.fields["dst"];
+    s.tmp_3.arg0 = globals.collisions___498344;
+    r0 = s.coll___498620.fields["dst"];
     r0 = r0.fields["id"];
     s.tmp_3.arg1 = r0;
     s.tmp_3.arg2 = true;
-    s.callLocIdx = 338; s.pc = 43; return s.tmp_3;
+    s.callLocIdx = 340; s.pc = 43; return s.tmp_3;
   case 43:
     r0 = s.retval;
   case 17:
   case 18:
-    r0 = (s.unnamed14951___U10 + 1);
-    s.unnamed14951___U10 = (r0);
+    r0 = (s.unnamed15507___U10 + 1);
+    s.unnamed15507___U10 = (r0);
     { step = 16; continue; }
   case 19:
-    s.unnamed14950___U9 = (undefined);
+    s.unnamed15506___U9 = (undefined);
   case 20:
   case 21:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-test_gameUpdate__P495754.info = {"start":963,"length":1999,"line":40,"column":4,"endLine":91,"endColumn":5,"fileName":"test.ts","functionName":"gameUpdate","argumentNames":[]}
+test_gameUpdate__P498338.info = {"start":1009,"length":1999,"line":41,"column":4,"endLine":92,"endColumn":5,"fileName":"test.ts","functionName":"gameUpdate","argumentNames":[]}
 
-function test_gameUpdate__P495754_mk(s) {
+function test_gameUpdate__P498338_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: test_gameUpdate__P495754, depth: s.depth + 1,
+        parent: s, fn: test_gameUpdate__P498338, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -8159,24 +8183,24 @@ function test_gameUpdate__P495754_mk(s) {
   tmp_7: undefined,
   tmp_8: undefined,
   tmp_9: undefined,
-  p0___495854: undefined,
-  p1___495861: undefined,
-  det___495872: undefined,
-  colls___495997: undefined,
-  coll___496002: undefined,
-  unnamed14948___U5: undefined,
-  unnamed14949___U6: undefined,
-  pos___496013: undefined,
-  coll___496036: undefined,
-  unnamed14950___U9: undefined,
-  unnamed14951___U10: undefined,
+  p0___498438: undefined,
+  p1___498445: undefined,
+  det___498456: undefined,
+  colls___498581: undefined,
+  coll___498586: undefined,
+  unnamed15504___U5: undefined,
+  unnamed15505___U6: undefined,
+  pos___498597: undefined,
+  coll___498620: undefined,
+  unnamed15506___U9: undefined,
+  unnamed15507___U10: undefined,
 } }
 
 
 
 
 
-function test_gameUpdate_inline__P495895(s) {
+function test_gameUpdate_inline__P498479(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8198,7 +8222,7 @@ switch (step) {
     r0 = s.arg0.fields["v"];
     r0 = r0.fields["x"];
     s.tmp_4 = r0;
-    r0 = (s.tmp_4 * globals.difficulty___478824);
+    r0 = (s.tmp_4 * globals.difficulty___505349);
     s.tmp_3 = r0;
     r0 = (s.tmp_2 + s.tmp_3);
     s.tmp_1 = r0;
@@ -8211,7 +8235,7 @@ switch (step) {
     r0 = s.arg0.fields["v"];
     r0 = r0.fields["y"];
     s.tmp_4 = r0;
-    r0 = (s.tmp_4 * globals.difficulty___478824);
+    r0 = (s.tmp_4 * globals.difficulty___505349);
     s.tmp_3 = r0;
     r0 = (s.tmp_2 + s.tmp_3);
     s.tmp_1 = r0;
@@ -8291,7 +8315,7 @@ switch (step) {
     s.tmp_0 = dot_color_set__P474691_mk(s);
     r0 = s.arg0.fields["c"];
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 321; s.pc = 9; return s.tmp_0;
+    s.callLocIdx = 323; s.pc = 9; return s.tmp_0;
   case 9:
     r0 = s.retval;
     s.tmp_0 = dot_draw_box__P478150_mk(s);
@@ -8306,19 +8330,19 @@ switch (step) {
     s.tmp_0.arg3 = r0;
     r0 = s.arg0.fields["id"];
     s.tmp_0.arg4 = r0;
-    s.callLocIdx = 323; s.pc = 10; return s.tmp_0;
+    s.callLocIdx = 325; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-test_gameUpdate_inline__P495895.info = {"start":1626,"length":411,"line":57,"column":22,"endLine":64,"endColumn":9,"fileName":"test.ts","functionName":"inline","argumentNames":["b"]}
+test_gameUpdate_inline__P498479.info = {"start":1672,"length":411,"line":58,"column":22,"endLine":65,"endColumn":9,"fileName":"test.ts","functionName":"inline","argumentNames":["b"]}
 
-function test_gameUpdate_inline__P495895_mk(s) {
+function test_gameUpdate_inline__P498479_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: test_gameUpdate_inline__P495895, depth: s.depth + 1,
+        parent: s, fn: test_gameUpdate_inline__P498479, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -8446,7 +8470,7 @@ switch (step) {
     s.tmp_3.arg0 = globals.random___479753;
     s.tmp_3.arg1 = 1;
     s.tmp_3.arg2 = undefined;
-    s.callLocIdx = 269; s.pc = 8; return s.tmp_3;
+    s.callLocIdx = 271; s.pc = 8; return s.tmp_3;
   case 8:
     r0 = s.retval;
     s.tmp_2 = r0;
@@ -8471,7 +8495,7 @@ switch (step) {
     s.tmp_4.arg0 = globals.random___479753;
     s.tmp_4.arg1 = s.arg4;
     s.tmp_4.arg2 = undefined;
-    s.callLocIdx = 270; s.pc = 9; return s.tmp_4;
+    s.callLocIdx = 272; s.pc = 9; return s.tmp_4;
   case 9:
     r0 = s.retval;
     s.tmp_3 = r0;
@@ -8485,7 +8509,7 @@ switch (step) {
     s.tmp_0 = r0;
     s.tmp_2 = dot_vec_dup__P474808_mk(s);
     s.tmp_2.arg0 = s.arg0;
-    s.callLocIdx = 271; s.pc = 10; return s.tmp_2;
+    s.callLocIdx = 273; s.pc = 10; return s.tmp_2;
   case 10:
     r0 = s.retval;
     s.tmp_1 = r0;
@@ -8499,20 +8523,20 @@ switch (step) {
     s.tmp_7.arg0 = globals.random___479753;
     s.tmp_7.arg1 = 0.5;
     s.tmp_7.arg2 = 1;
-    s.callLocIdx = 272; s.pc = 12; return s.tmp_7;
+    s.callLocIdx = 274; s.pc = 12; return s.tmp_7;
   case 12:
     r0 = s.retval;
     s.tmp_6 = r0;
     r0 = (s.tmp_5 * s.tmp_6);
     s.tmp_4.arg1 = r0;
     s.tmp_4.arg2 = 0;
-    s.callLocIdx = 273; s.pc = 11; return s.tmp_4;
+    s.callLocIdx = 275; s.pc = 11; return s.tmp_4;
   case 11:
     r0 = s.retval;
     s.tmp_9 = dot_Vec_rotate__P474799_mk(s);
     s.tmp_9.arg0 = s.tmp_3;
     s.tmp_9.arg1 = s.a___479776;
-    s.callLocIdx = 274; s.pc = 13; return s.tmp_9;
+    s.callLocIdx = 276; s.pc = 13; return s.tmp_9;
   case 13:
     r0 = s.retval;
     s.tmp_8 = r0;
@@ -8532,13 +8556,13 @@ switch (step) {
     s.tmp_17.arg0 = globals.random___479753;
     s.tmp_17.arg1 = 10;
     s.tmp_17.arg2 = 20;
-    s.callLocIdx = 276; s.pc = 15; return s.tmp_17;
+    s.callLocIdx = 278; s.pc = 15; return s.tmp_17;
   case 15:
     r0 = s.retval;
     s.tmp_16 = r0;
     s.tmp_20 = Math_abs__P470420_mk(s);
     s.tmp_20.arg0 = s.arg2;
-    s.callLocIdx = 277; s.pc = 16; return s.tmp_20;
+    s.callLocIdx = 279; s.pc = 16; return s.tmp_20;
   case 16:
     r0 = s.retval;
     s.tmp_19 = r0;
@@ -8546,7 +8570,7 @@ switch (step) {
     s.tmp_18 = r0;
     r0 = (s.tmp_16 * s.tmp_18);
     s.tmp_15.arg2 = r0;
-    s.callLocIdx = 278; s.pc = 14; return s.tmp_15;
+    s.callLocIdx = 280; s.pc = 14; return s.tmp_15;
   case 14:
     r0 = s.retval;
     s.tmp_14 = r0;
@@ -8554,7 +8578,7 @@ switch (step) {
     s.tmp_21 = dot_Pool_alloc__P474767_mk(s);
     s.tmp_21.arg0 = globals.pool___479742;
     s.tmp_21.arg1 = s.tmp_0;
-    s.callLocIdx = 279; s.pc = 17; return s.tmp_21;
+    s.callLocIdx = 281; s.pc = 17; return s.tmp_21;
   case 17:
     r0 = s.retval;
     r0 = (s.i___479771 + 1);
@@ -8751,7 +8775,7 @@ switch (step) {
     s.tmp_1.arg1 = r0;
     r0 = s.arg0.fields["y"];
     s.tmp_1.arg2 = r0;
-    s.callLocIdx = 291; s.pc = 1; return s.tmp_1;
+    s.callLocIdx = 293; s.pc = 1; return s.tmp_1;
   case 1:
     r0 = s.retval;
     r0 = s.tmp_0;
@@ -8808,12 +8832,12 @@ switch (step) {
     s.tmp_0.arg0 = s.arg0;
     if (!s.tmp_0.arg0.vtable.iface) {
       setupLambda(s.tmp_0, pxsim_pxtrt.mapGetByString(s.tmp_0.arg0, "factoryFn"), 1);
-      s.callLocIdx = 259; s.pc = 3; return s.tmp_0;
+      s.callLocIdx = 261; s.pc = 3; return s.tmp_0;
     } else {
       s.tmp_0.fn = s.tmp_0.arg0.vtable.iface["factoryFn"];
-      if (s.tmp_0.fn == null) { setupLambda(s.tmp_0, s.tmp_0.arg0.fields["factoryFn"], 1); s.callLocIdx = 259; s.pc = 3; return s.tmp_0; }
-      else if (s.tmp_0.fn.isGetter) { s.tmp_0.stage2Call = true; s.callLocIdx = 259; s.pc = 3; return s.tmp_0;; }
-     else { s.callLocIdx = 259; s.pc = 3; return s.tmp_0; }
+      if (s.tmp_0.fn == null) { setupLambda(s.tmp_0, s.tmp_0.arg0.fields["factoryFn"], 1); s.callLocIdx = 261; s.pc = 3; return s.tmp_0; }
+      else if (s.tmp_0.fn.isGetter) { s.tmp_0.stage2Call = true; s.callLocIdx = 261; s.pc = 3; return s.tmp_0;; }
+     else { s.callLocIdx = 261; s.pc = 3; return s.tmp_0; }
     }
   case 3:
     r0 = s.retval;
@@ -8825,12 +8849,12 @@ switch (step) {
     s.tmp_0.arg2 = s.arg1;
     if (!s.tmp_0.arg0.vtable.iface) {
       setupLambda(s.tmp_0, pxsim_pxtrt.mapGetByString(s.tmp_0.arg0, "initFn"), 3);
-      s.callLocIdx = 260; s.pc = 4; return s.tmp_0;
+      s.callLocIdx = 262; s.pc = 4; return s.tmp_0;
     } else {
       s.tmp_0.fn = s.tmp_0.arg0.vtable.iface["initFn"];
-      if (s.tmp_0.fn == null) { setupLambda(s.tmp_0, s.tmp_0.arg0.fields["initFn"], 3); s.callLocIdx = 260; s.pc = 4; return s.tmp_0; }
-      else if (s.tmp_0.fn.isGetter) { s.tmp_0.stage2Call = true; s.callLocIdx = 260; s.pc = 4; return s.tmp_0;; }
-     else { s.callLocIdx = 260; s.pc = 4; return s.tmp_0; }
+      if (s.tmp_0.fn == null) { setupLambda(s.tmp_0, s.tmp_0.arg0.fields["initFn"], 3); s.callLocIdx = 262; s.pc = 4; return s.tmp_0; }
+      else if (s.tmp_0.fn.isGetter) { s.tmp_0.stage2Call = true; s.callLocIdx = 262; s.pc = 4; return s.tmp_0;; }
+     else { s.callLocIdx = 262; s.pc = 4; return s.tmp_0; }
     }
   case 4:
     r0 = s.retval;
@@ -8877,12 +8901,12 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    r0 = (globals.state___478831 === 1);
+    r0 = (globals.state___505356 === 1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    r0 = (globals.score___478826 + s.arg0);
-    globals.score___478826 = (r0);
+    r0 = (globals.score___505351 + s.arg0);
+    globals.score___505351 = (r0);
   case 1:
   case 2:
     r0 = pxsim_numops_toBoolDecr(s.arg1);
@@ -8951,7 +8975,7 @@ switch (step) {
       s.tmp_6.fn = s.tmp_6.arg0.vtable.iface["charHeight"];
       if (s.tmp_6.fn == null) { s.retval = s.tmp_6.arg0.fields["charHeight"]; }
       else if (!s.tmp_6.fn.isGetter) { s.retval = bind(s.tmp_6); }
-     else { s.callLocIdx = 244; s.pc = 11; return s.tmp_6; }
+     else { s.callLocIdx = 246; s.pc = 11; return s.tmp_6; }
     }
   case 11:
     r0 = s.retval;
@@ -8960,12 +8984,12 @@ switch (step) {
     s.tmp_4 = r0;
     r0 = (s.tmp_3 - s.tmp_4);
     s.tmp_2.arg2 = r0;
-    s.callLocIdx = 245; s.pc = 10; return s.tmp_2;
+    s.callLocIdx = 247; s.pc = 10; return s.tmp_2;
   case 10:
     r0 = s.retval;
     r0 = pxsim_Array__push(s.tmp_0, s.tmp_1);
     r0 = pxsim_Array__push(s.tmp_0, -2);
-    r0 = (globals.tick___478822 + 30);
+    r0 = (globals.tick___505347 + 30);
     s.tmp_7 = r0;
     r0 = pxsim_Array__push(s.tmp_0, s.tmp_7);
     s.tmp_9 = r0 = globals._colorStack___477917;
@@ -8979,7 +9003,7 @@ switch (step) {
     s.tmp_12 = dot_Pool_alloc__P474767_mk(s);
     s.tmp_12.arg0 = globals.pool___479414;
     s.tmp_12.arg1 = s.tmp_0;
-    s.callLocIdx = 247; s.pc = 12; return s.tmp_12;
+    s.callLocIdx = 249; s.pc = 12; return s.tmp_12;
   case 12:
     r0 = s.retval;
   case 7:
@@ -9093,7 +9117,7 @@ switch (step) {
     s.tmp_3 = r0;
     r0 = (s.tmp_3 * s.arg1);
     s.tmp_1.arg2 = r0;
-    s.callLocIdx = 294; s.pc = 1; return s.tmp_1;
+    s.callLocIdx = 296; s.pc = 1; return s.tmp_1;
   case 1:
     r0 = s.retval;
     r0 = s.tmp_0;
@@ -9150,7 +9174,7 @@ switch (step) {
     s.tmp_5 = r0;
     r0 = (s.tmp_4 + s.tmp_5);
     s.tmp_1.arg2 = r0;
-    s.callLocIdx = 292; s.pc = 1; return s.tmp_1;
+    s.callLocIdx = 294; s.pc = 1; return s.tmp_1;
   case 1:
     r0 = s.retval;
     r0 = s.tmp_0;
@@ -9420,11 +9444,11 @@ switch (step) {
     s.srcs___477781 = undefined;
     s.dsts___477784 = undefined;
     s.src___477788 = undefined;
-    s.unnamed14944___U3 = undefined;
-    s.unnamed14945___U4 = undefined;
+    s.unnamed15500___U3 = undefined;
+    s.unnamed15501___U4 = undefined;
     s.dst___477791 = undefined;
-    s.unnamed14946___U6 = undefined;
-    s.unnamed14947___U7 = undefined;
+    s.unnamed15502___U6 = undefined;
+    s.unnamed15503___U7 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -9435,26 +9459,26 @@ switch (step) {
     r0 = s.arg1.fields["_srcs"];
     s.dsts___477784 = (r0);
     s.src___477788 = (undefined);
-    s.unnamed14944___U3 = (s.srcs___477781);
-    s.unnamed14945___U4 = (0);
+    s.unnamed15500___U3 = (s.srcs___477781);
+    s.unnamed15501___U4 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed14945___U4;
-    r0 = pxsim_Array__length(s.unnamed14944___U3);
+    s.tmp_0 = r0 = s.unnamed15501___U4;
+    r0 = pxsim_Array__length(s.unnamed15500___U3);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 19; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed14944___U3, s.unnamed14945___U4);
+    r0 = pxsim_Array__getAt(s.unnamed15500___U3, s.unnamed15501___U4);
     s.src___477788 = (r0);
     s.dst___477791 = (undefined);
-    s.unnamed14946___U6 = (s.dsts___477784);
-    s.unnamed14947___U7 = (0);
+    s.unnamed15502___U6 = (s.dsts___477784);
+    s.unnamed15503___U7 = (0);
   case 2:
-    s.tmp_0 = r0 = s.unnamed14947___U7;
-    r0 = pxsim_Array__length(s.unnamed14946___U6);
+    s.tmp_0 = r0 = s.unnamed15503___U7;
+    r0 = pxsim_Array__length(s.unnamed15502___U6);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 18; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed14946___U6, s.unnamed14947___U7);
+    r0 = pxsim_Array__getAt(s.unnamed15502___U6, s.unnamed15503___U7);
     s.dst___477791 = (r0);
     r0 = s.src___477788.fields["_mask"];
     s.tmp_4 = r0;
@@ -9566,16 +9590,16 @@ switch (step) {
   case 15:
   case 16:
   case 17:
-    r0 = (s.unnamed14947___U7 + 1);
-    s.unnamed14947___U7 = (r0);
+    r0 = (s.unnamed15503___U7 + 1);
+    s.unnamed15503___U7 = (r0);
     { step = 2; continue; }
   case 18:
-    s.unnamed14946___U6 = (undefined);
-    r0 = (s.unnamed14945___U4 + 1);
-    s.unnamed14945___U4 = (r0);
+    s.unnamed15502___U6 = (undefined);
+    r0 = (s.unnamed15501___U4 + 1);
+    s.unnamed15501___U4 = (r0);
     { step = 1; continue; }
   case 19:
-    s.unnamed14944___U3 = (undefined);
+    s.unnamed15500___U3 = (undefined);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
@@ -9607,11 +9631,11 @@ function dot_collision__internal_calcCollisions__P477778_mk(s) {
   srcs___477781: undefined,
   dsts___477784: undefined,
   src___477788: undefined,
-  unnamed14944___U3: undefined,
-  unnamed14945___U4: undefined,
+  unnamed15500___U3: undefined,
+  unnamed15501___U4: undefined,
   dst___477791: undefined,
-  unnamed14946___U6: undefined,
-  unnamed14947___U7: undefined,
+  unnamed15502___U6: undefined,
+  unnamed15503___U7: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -9911,7 +9935,7 @@ function dot_rect_overlapping__P477620_mk(s) {
 
 
 
-function dot_game_end__P478864(s) {
+function dot_game_end__P505384(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9925,7 +9949,7 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = dot_game_gotoGameOver__P478867_mk(s);
+    s.tmp_0 = dot_game_gotoGameOver__P505387_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 161; s.pc = 1; return s.tmp_0;
   case 1:
@@ -9934,12 +9958,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_game_end__P478864.info = {"start":1125,"length":94,"line":36,"column":8,"endLine":38,"endColumn":9,"fileName":"game.ts","functionName":"end","argumentNames":["gameOverText"]}
+dot_game_end__P505384.info = {"start":1170,"length":94,"line":37,"column":8,"endLine":39,"endColumn":9,"fileName":"game.ts","functionName":"end","argumentNames":["gameOverText"]}
 
-function dot_game_end__P478864_mk(s) {
+function dot_game_end__P505384_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_game_end__P478864, depth: s.depth + 1,
+        parent: s, fn: dot_game_end__P505384, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -9949,7 +9973,7 @@ function dot_game_end__P478864_mk(s) {
 
 
 
-function dot_game_gotoGameOver__P478867(s) {
+function dot_game_gotoGameOver__P505387(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9965,35 +9989,35 @@ switch (step) {
     }
     s.tmp_0 = dot_Input_block__P478852_mk(s);
     s.tmp_0.arg0 = globals.input___474739;
-    s.callLocIdx = 185; s.pc = 3; return s.tmp_0;
+    s.callLocIdx = 187; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
     s.tmp_0 = dot_Input_block__P478852_mk(s);
     s.tmp_0.arg0 = globals.input___474741;
-    s.callLocIdx = 186; s.pc = 4; return s.tmp_0;
+    s.callLocIdx = 188; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
-    r0 = (globals.score___478826 > globals.high___478828);
+    r0 = (globals.score___505351 > globals.high___505353);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    globals.high___478828 = (globals.score___478826);
+    globals.high___505353 = (globals.score___505351);
   case 1:
   case 2:
-    globals._gameOverText___478842 = (s.arg0);
-    r0 = (globals.tick___478822 + 100);
-    globals.restartAt___478833 = (r0);
-    globals.state___478831 = (2);
+    globals._gameOverText___505367 = (s.arg0);
+    r0 = (globals.tick___505347 + 100);
+    globals.restartAt___505358 = (r0);
+    globals.state___505356 = (2);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-dot_game_gotoGameOver__P478867.info = {"start":2987,"length":319,"line":94,"column":8,"endLine":103,"endColumn":9,"fileName":"game.ts","functionName":"gotoGameOver","argumentNames":["gameOverText"]}
+dot_game_gotoGameOver__P505387.info = {"start":3222,"length":319,"line":99,"column":8,"endLine":108,"endColumn":9,"fileName":"game.ts","functionName":"gotoGameOver","argumentNames":["gameOverText"]}
 
-function dot_game_gotoGameOver__P478867_mk(s) {
+function dot_game_gotoGameOver__P505387_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_game_gotoGameOver__P478867, depth: s.depth + 1,
+        parent: s, fn: dot_game_gotoGameOver__P505387, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -11391,7 +11415,7 @@ switch (step) {
     }
     s.tmp_0 = dot_vec_length__P474818_mk(s);
     s.tmp_0.arg0 = s.arg0;
-    s.callLocIdx = 296; s.pc = 4; return s.tmp_0;
+    s.callLocIdx = 298; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
     s.len___480188 = (r0);
@@ -11407,7 +11431,7 @@ switch (step) {
     s.tmp_1.arg0 = s.arg0;
     r0 = (1 / s.len___480188);
     s.tmp_1.arg1 = r0;
-    s.callLocIdx = 297; s.pc = 5; return s.tmp_1;
+    s.callLocIdx = 299; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
   case 3:
@@ -11447,7 +11471,7 @@ switch (step) {
     }
     s.tmp_1 = dot_vec_lengthSq__P474817_mk(s);
     s.tmp_1.arg0 = s.arg0;
-    s.callLocIdx = 295; s.pc = 1; return s.tmp_1;
+    s.callLocIdx = 297; s.pc = 1; return s.tmp_1;
   case 1:
     r0 = s.retval;
     s.tmp_0 = r0;
@@ -11552,7 +11576,7 @@ switch (step) {
     s.tmp_5 = r0;
     r0 = (s.tmp_4 - s.tmp_5);
     s.tmp_1.arg2 = r0;
-    s.callLocIdx = 293; s.pc = 1; return s.tmp_1;
+    s.callLocIdx = 295; s.pc = 1; return s.tmp_1;
   case 1:
     r0 = s.retval;
     r0 = s.tmp_0;
@@ -11735,7 +11759,7 @@ switch (step) {
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = 0;
     s.tmp_1.arg2 = 0;
-    s.callLocIdx = 289; s.pc = 1; return s.tmp_1;
+    s.callLocIdx = 291; s.pc = 1; return s.tmp_1;
   case 1:
     r0 = s.retval;
     r0 = s.tmp_0;
@@ -11858,7 +11882,7 @@ switch (step) {
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.x___480038;
     s.tmp_1.arg2 = s.y___480042;
-    s.callLocIdx = 290; s.pc = 1; return s.tmp_1;
+    s.callLocIdx = 292; s.pc = 1; return s.tmp_1;
   case 1:
     r0 = s.retval;
     r0 = s.tmp_0;
@@ -11904,7 +11928,7 @@ switch (step) {
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg0;
     s.tmp_1.arg2 = s.arg1;
-    s.callLocIdx = 288; s.pc = 1; return s.tmp_1;
+    s.callLocIdx = 290; s.pc = 1; return s.tmp_1;
   case 1:
     r0 = s.retval;
     r0 = s.tmp_0;
@@ -11971,7 +11995,7 @@ function scene_setBackgroundColor__P473176_mk(s) {
 
 
 
-function dot_game_start__P478844(s) {
+function dot_game_start__P505369(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11985,10 +12009,10 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    globals._gameUpdate___478843 = (s.arg0);
-    globals.restartAt___478833 = (0);
+    globals._gameUpdate___505368 = (s.arg0);
+    globals.restartAt___505358 = (0);
     s.tmp_0 = setTimeout__P470715_mk(s);
-    s.tmp_0.arg0 = dot_game_start_inline__P478850;
+    s.tmp_0.arg0 = dot_game_start_inline__P505375;
     s.tmp_0.arg1 = 0;
     s.callLocIdx = 160; s.pc = 1; return s.tmp_0;
   case 1:
@@ -11997,12 +12021,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_game_start__P478844.info = {"start":735,"length":380,"line":24,"column":8,"endLine":34,"endColumn":9,"fileName":"game.ts","functionName":"start","argumentNames":["gameUpdate"]}
+dot_game_start__P505369.info = {"start":780,"length":380,"line":25,"column":8,"endLine":35,"endColumn":9,"fileName":"game.ts","functionName":"start","argumentNames":["gameUpdate"]}
 
-function dot_game_start__P478844_mk(s) {
+function dot_game_start__P505369_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_game_start__P478844, depth: s.depth + 1,
+        parent: s, fn: dot_game_start__P505369, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -12012,7 +12036,7 @@ function dot_game_start__P478844_mk(s) {
 
 
 
-function dot_game_start_inline__P478850(s) {
+function dot_game_start_inline__P505375(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -12040,17 +12064,17 @@ switch (step) {
     s.callLocIdx = 159; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
-    globals.state___478831 = (0);
+    globals.state___505356 = (0);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-dot_game_start_inline__P478850.info = {"start":871,"length":229,"line":27,"column":23,"endLine":33,"endColumn":13,"fileName":"game.ts","functionName":"inline","argumentNames":[]}
+dot_game_start_inline__P505375.info = {"start":916,"length":229,"line":28,"column":23,"endLine":34,"endColumn":13,"fileName":"game.ts","functionName":"inline","argumentNames":[]}
 
-function dot_game_start_inline__P478850_mk(s) {
+function dot_game_start_inline__P505375_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_game_start_inline__P478850, depth: s.depth + 1,
+        parent: s, fn: dot_game_start_inline__P505375, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -12443,7 +12467,7 @@ switch (step) {
     s.tmp_0.arg3 = 362436069;
     s.tmp_0.arg4 = 521288629;
     s.tmp_0.arg5 = 32;
-    s.callLocIdx = 254; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 256; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     r0 = undefined;
@@ -12526,7 +12550,7 @@ switch (step) {
     if (!r0) { step = 4; continue; }
     s.tmp_1 = dot_Random_next__P474761_mk(s);
     s.tmp_1.arg0 = s.arg0;
-    s.callLocIdx = 258; s.pc = 5; return s.tmp_1;
+    s.callLocIdx = 260; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
     r0 = (s.i___479609 + 1);
@@ -12808,7 +12832,7 @@ switch (step) {
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg1;
     s.tmp_1.arg2 = globals.A___472406;
-    s.callLocIdx = 203; s.pc = 1; return s.tmp_1;
+    s.callLocIdx = 205; s.pc = 1; return s.tmp_1;
   case 1:
     r0 = s.retval;
     r0 = (s.arg0).fields["_A"] = (s.tmp_0);
@@ -12818,7 +12842,7 @@ switch (step) {
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg1;
     s.tmp_1.arg2 = globals.B___472407;
-    s.callLocIdx = 204; s.pc = 2; return s.tmp_1;
+    s.callLocIdx = 206; s.pc = 2; return s.tmp_1;
   case 2:
     r0 = s.retval;
     r0 = (s.arg0).fields["_B"] = (s.tmp_0);
@@ -12828,7 +12852,7 @@ switch (step) {
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg1;
     s.tmp_1.arg2 = globals.up___472409;
-    s.callLocIdx = 205; s.pc = 3; return s.tmp_1;
+    s.callLocIdx = 207; s.pc = 3; return s.tmp_1;
   case 3:
     r0 = s.retval;
     r0 = (s.arg0).fields["_Up"] = (s.tmp_0);
@@ -12838,7 +12862,7 @@ switch (step) {
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg1;
     s.tmp_1.arg2 = globals.down___472411;
-    s.callLocIdx = 206; s.pc = 4; return s.tmp_1;
+    s.callLocIdx = 208; s.pc = 4; return s.tmp_1;
   case 4:
     r0 = s.retval;
     r0 = (s.arg0).fields["_Down"] = (s.tmp_0);
@@ -12848,7 +12872,7 @@ switch (step) {
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg1;
     s.tmp_1.arg2 = globals.left___472408;
-    s.callLocIdx = 207; s.pc = 5; return s.tmp_1;
+    s.callLocIdx = 209; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
     r0 = (s.arg0).fields["_Left"] = (s.tmp_0);
@@ -12858,7 +12882,7 @@ switch (step) {
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg1;
     s.tmp_1.arg2 = globals.right___472410;
-    s.callLocIdx = 208; s.pc = 6; return s.tmp_1;
+    s.callLocIdx = 210; s.pc = 6; return s.tmp_1;
   case 6:
     r0 = s.retval;
     r0 = (s.arg0).fields["_Right"] = (s.tmp_0);
@@ -50919,7 +50943,7 @@ const dot_Set__C474777_VT = mkVTable({
     "clear": dot_Set_clear__P474783,
   },
 });
-const test_Box__C495758_VT = mkVTable({
+const test_Box__C498342_VT = mkVTable({
   name: "Box",
   numFields: 4,
   classNo: 25,
@@ -52393,7 +52417,7 @@ const sprites_BaseSpriteSayRenderer__C472552_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["SCREEN_WIDTH___474669","SCREEN_HEIGHT___474670","scoreboardFont___478835","titleFont___478839","input___474739","state___478831","input___474741","scoreFont___479370","pool___479414","pool___479742","random___479753","gameTitle___478819","insertCoinText___478820","rand___495756","collisions___495760","boxColors___495766","boxes___495762","commands___478018","_gameUpdate___478843","difficulty___478824","tick___478822","restartAt___478833","_colorStack___477917","gen___474663","reporters___477729","dirty___477731","textColor___478818","_gameOverText___478842","scoreboardColor___478816","score___478826","high___478828","ALL_COLORS___477914","d___495835","a___495837","nextId___474662"])
+const breakpoints = setupDebugger(1, ["SCREEN_WIDTH___474669","SCREEN_HEIGHT___474670","scoreboardFont___505360","titleFont___505364","input___474739","state___505356","input___474741","scoreFont___479370","pool___479414","pool___479742","random___479753","gameTitle___505343","gameDescription___505344","insertCoinText___505345","rand___498340","collisions___498344","boxColors___498350","boxes___498346","commands___478018","_gameUpdate___505368","difficulty___505349","tick___505347","restartAt___505358","_colorStack___477917","gen___474663","reporters___477729","dirty___477731","textColor___505342","_gameOverText___505367","scoreboardColor___505340","score___505351","high___505353","ALL_COLORS___477914","d___498419","a___498421","nextId___474662"])
 
-return _main___P496793
+return _main___P507301
 })
