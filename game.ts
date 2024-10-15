@@ -8,6 +8,7 @@ namespace dot {
     export let scoreboardColor: Color = Color.Red;
     export let textColor: Color = Color.Blue;
     export let gameTitle: string = "MY GAME";
+    export let gameDescription: string = "";
     export let insertCoinText: string = "PRESS ANY KEY";
 
     export namespace game {
@@ -58,6 +59,10 @@ namespace dot {
                     new Vec(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3),
                     gameTitle, TextAlignment.Center,
                     titleFont);
+                draw.text(
+                    new Vec(SCREEN_WIDTH / 2, 8 + SCREEN_HEIGHT / 2),
+                    gameDescription, TextAlignment.Center,
+                    image.font8);
                 color.pop();
             }
             if (tick % 80 < 40) {

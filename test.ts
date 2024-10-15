@@ -2,6 +2,7 @@ game.stats = true;
 
 namespace test {
     dot.gameTitle = "DOT TEST";
+    dot.gameDescription = "testing features";
     dot.insertCoinText = "INSERT COIN";
     dot.game.start(gameUpdate);
 
