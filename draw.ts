@@ -43,11 +43,34 @@ namespace dot {
             collidesWith: Color[] = null,
             id?: string
         ): CollisionReporter {
+            if (thickness <= 0) return null;
             if (collidesWith == null) {
                 collidesWith = color.all();
             }
             return _internal.line(id, collidesWith, a, b, thickness, gap);
         }
+        export function arc(
+            p: Vec2,
+            radius: number,
+            thickness: number,
+            angleFrom?: number,
+            angleTo?: number,
+            collidesWith: Color[] = null,
+            id?: string
+        ): CollisionReporter {
+            if (thickness <= 0) return null;
+            if (angleFrom == null) {
+                angleFrom = 0;
+            }
+            if (angleTo == null) {
+                angleTo = Math.PI * 2;
+            }
+            if (collidesWith == null) {
+                collidesWith = color.all();
+            }
+            return _internal.arc(id, collidesWith, p, radius, thickness, angleFrom, angleTo);
+        }
+
         // Copied from screen/text.ts imagePrint
         // TODO: Support collision with text
         export function text(
@@ -238,6 +261,48 @@ namespace dot {
                 for (let i = 0; i <= numBoxes; i++) {
                     rect(id, false, true, collidesWith, p.x, p.y, thickness, thickness, reporter);
                     p.add(step);
+                }
+                return reporter;
+            }
+
+            export function arc(
+                id: string,
+                collidesWith: Color[],
+                p: Vec2,
+                radius: number,
+                thickness: number,
+                angleFrom: number,
+                angleTo: number,
+                reporter?: CollisionReporter
+            ): CollisionReporter {
+                if (!reporter) {
+                    reporter = collision.newReporter();
+                }
+                let af: number;
+                let ao: number;
+                if (angleFrom > angleTo) {
+                    af = angleTo;
+                    ao = angleFrom - angleTo;
+                } else {
+                    af = angleFrom;
+                    ao = angleTo - angleFrom;
+                }
+                ao = Math.clamp(0, Math.PI * 2, ao);
+                if (ao < 0.01) {
+                    return reporter;
+                }
+                const lc = Math.clamp(1, 36, Math.ceil(ao * Math.sqrt(radius * 0.25)));
+                const ai = ao / lc;
+                let a = af;
+                let p1 = vec2.mk(radius, 0).rotate(a).add(p);
+                let p2 = vec2.mk0();
+                let o = vec2.mk0();
+                for (let i = 0; i < lc; i++) {
+                    a += ai;
+                    p2.set(radius, 0).rotate(a).add(p);
+                    o.setv(p2).sub(p1);
+                    line(id, collidesWith, p1, p2, thickness, 0, reporter);
+                    p1.setv(p2);
                 }
                 return reporter;
             }

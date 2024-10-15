@@ -32,10 +32,31 @@ namespace dot {
             this.y = y;
             return this;
         }
+        public set(x: number, y: number): this {
+            this.x = x;
+            this.y = y;
+            return this;
+        }
+        public setn(s: number): this {
+            this.x = s;
+            this.y = s;
+            return this;
+        }
+        public setv(v: Vec2): this {
+            this.x = v.x;
+            this.y = v.y;
+            return this;
+        }
     }
     export namespace vec2 {
         export function mk(x: number, y: number): Vec2 {
             return new Vec2(x, y);
+        }
+        export function mkn(s: number): Vec2 {
+            return new Vec2(s, s);
+        }
+        export function mk0(): Vec2 {
+            return new Vec2(0, 0);
         }
         export function dup(v: Vec2): Vec2 {
             return new Vec2(v.x, v.y);

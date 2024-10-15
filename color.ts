@@ -61,6 +61,9 @@ namespace dot {
         export function all(): Color[] {
             return ALL_COLORS.slice();
         }
+        export function none(): Color[] {
+            return [];
+        }
         export namespace _internal {
             export function reset() {
                 _colorStack = [Color.Red];

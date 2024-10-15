@@ -43,15 +43,19 @@ namespace test {
             d = 1;
             a = 0;
         }
-
         scene.setBackgroundColor(dot.Color.Tan);
         a += dot.game.difficulty * d / f;
         const s = -Math.sin(a);
         const c = Math.cos(a);
         const p0 = new dot.Vec2(dot.SCREEN_WIDTH / 2, dot.SCREEN_HEIGHT / 2);
-        const p1 = dot.vec2.add(p0, dot.vec2.mk(s, c).scale(dot.SCREEN_HEIGHT * 0.6));
+        const p1 = dot.vec2.add(p0, dot.vec2.mk(s, c).scale(dot.SCREEN_WIDTH / 2));
         dot.color.set(dot.Color.White);
         const det = dot.draw.line(p0, p1, 3);
+        dot.color.set(dot.Color.LightPurple);
+        dot.draw.arc(
+            p0,
+            (dot.game.tick / 4) % (dot.SCREEN_WIDTH / 2),
+            1, 0, Math.PI * 2, dot.color.none());
 
         boxes.forEach(b => {
             b.r.pos.x += b.v.x * dot.game.difficulty;
