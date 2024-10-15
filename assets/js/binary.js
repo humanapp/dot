@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.56/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.6","target":"arcade","targetVersion":"1.12.56","repo":"humanapp/dot"}
-// total=1535145 new=21.40% cached=73.30% other=5.30%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.56/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.7","target":"arcade","targetVersion":"1.12.56","repo":"humanapp/dot"}
+// total=1539262 new=21.60% cached=73.11% other=5.29%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -486,7 +486,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P447247(s) {
+function _main___P463469(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1040,9 +1040,9 @@ switch (step) {
     s.b___414818 = (r0);
     r0 = pxsim_pxtcore_mkClassInstance(dot_Rect__C409194_VT);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_1 = r0;
-    s.tmp_2 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_2 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_2.arg0 = s.tmp_1;
     s.tmp_3 = dot_Random_get__P409319_mk(s);
     s.tmp_3.arg0 = globals.rand___414798;
@@ -1065,9 +1065,9 @@ switch (step) {
     s.callLocIdx = 303; s.pc = 50; return s.tmp_2;
   case 50:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_5 = r0;
-    s.tmp_6 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_6 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_6.arg0 = s.tmp_5;
     s.tmp_6.arg1 = 10;
     s.tmp_6.arg2 = 10;
@@ -1091,9 +1091,9 @@ switch (step) {
     r0 = s.retval;
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["c"] = (s.tmp_1);
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_2 = dot_Random_get__P409319_mk(s);
     s.tmp_2.arg0 = globals.rand___414798;
@@ -1172,13 +1172,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P447247.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
-_main___P447247.continuations = [ 59 ]
+_main___P463469.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
+_main___P463469.continuations = [ 59 ]
 
-function _main___P447247_mk(s) {
+function _main___P463469_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P447247, depth: s.depth + 1,
+        parent: s, fn: _main___P463469, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2979,9 +2979,9 @@ switch (step) {
     // jmp value (already in r0)
     s.tmp_1 = r0;
     s.text___445467 = (s.tmp_1);
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     r0 = (globals.SCREEN_WIDTH___409232 / 2);
     s.tmp_1.arg1 = r0;
@@ -3846,9 +3846,9 @@ switch (step) {
     s.callLocIdx = 177; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     r0 = (globals.SCREEN_WIDTH___409232 / 2);
     s.tmp_1.arg1 = r0;
@@ -3893,9 +3893,9 @@ switch (step) {
     // jmp value (already in r0)
     s.tmp_1 = r0;
     s.text___445449 = (s.tmp_1);
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     r0 = (globals.SCREEN_WIDTH___409232 / 2);
     s.tmp_1.arg1 = r0;
@@ -3957,9 +3957,9 @@ switch (step) {
     s.callLocIdx = 171; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = 2;
     s.tmp_1.arg2 = 2;
@@ -3988,9 +3988,9 @@ switch (step) {
     s.callLocIdx = 173; s.pc = 3; return s.tmp_2;
   case 3:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = globals.SCREEN_WIDTH___409232;
     s.tmp_1.arg2 = 2;
@@ -4124,7 +4124,7 @@ switch (step) {
     { step = 3; continue; }
   case 1:
   case 2:
-    s.tmp_2 = dot_Vec2_add__P409157_mk(s);
+    s.tmp_2 = dot_Vec2_add__P461863_mk(s);
     r0 = s.arg0.fields["pos"];
     s.tmp_2.arg0 = r0;
     r0 = s.arg0.fields["vel"];
@@ -4132,7 +4132,7 @@ switch (step) {
     s.callLocIdx = 291; s.pc = 4; return s.tmp_2;
   case 4:
     r0 = s.retval;
-    s.tmp_0 = dot_Vec2_scale__P409160_mk(s);
+    s.tmp_0 = dot_Vec2_scale__P461866_mk(s);
     r0 = s.arg0.fields["vel"];
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = 0.98;
@@ -4338,7 +4338,7 @@ function dot_color_set__P409254_mk(s) {
 
 
 
-function dot_Vec2_scale__P409160(s) {
+function dot_Vec2_scale__P461866(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -4354,7 +4354,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_Vec2__C409151_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_Vec2__C461854_VT)) failedCast(r0);
     s.tmp_0 = r0 = s.arg0;
     r0 = s.tmp_0.fields["x"];
     s.tmp_2 = r0;
@@ -4371,12 +4371,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_Vec2_scale__P409160.info = {"start":637,"length":116,"line":22,"column":8,"endLine":26,"endColumn":9,"fileName":"vec2.ts","functionName":"scale","argumentNames":["this","s"]}
+dot_Vec2_scale__P461866.info = {"start":815,"length":116,"line":26,"column":8,"endLine":30,"endColumn":9,"fileName":"vec2.ts","functionName":"scale","argumentNames":["this","s"]}
 
-function dot_Vec2_scale__P409160_mk(s) {
+function dot_Vec2_scale__P461866_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_Vec2_scale__P409160, depth: s.depth + 1,
+        parent: s, fn: dot_Vec2_scale__P461866, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -4389,7 +4389,7 @@ function dot_Vec2_scale__P409160_mk(s) {
 
 
 
-function dot_Vec2_add__P409157(s) {
+function dot_Vec2_add__P461863(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -4405,7 +4405,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_Vec2__C409151_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_Vec2__C461854_VT)) failedCast(r0);
     s.tmp_0 = r0 = s.arg0;
     r0 = s.tmp_0.fields["x"];
     s.tmp_2 = r0;
@@ -4426,12 +4426,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_Vec2_add__P409157.info = {"start":262,"length":116,"line":7,"column":8,"endLine":11,"endColumn":9,"fileName":"vec2.ts","functionName":"add","argumentNames":["this","v"]}
+dot_Vec2_add__P461863.info = {"start":440,"length":116,"line":11,"column":8,"endLine":15,"endColumn":9,"fileName":"vec2.ts","functionName":"add","argumentNames":["this","v"]}
 
-function dot_Vec2_add__P409157_mk(s) {
+function dot_Vec2_add__P461863_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_Vec2_add__P409157, depth: s.depth + 1,
+        parent: s, fn: dot_Vec2_add__P461863, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -7463,7 +7463,7 @@ function dot_Random_get__P409319_mk(s) {
 
 
 
-function dot_Vec2_constructor__P409156(s) {
+function dot_Vec2_constructor__P461905(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -7480,19 +7480,19 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_Vec2__C409151_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_Vec2__C461854_VT)) failedCast(r0);
     r0 = (s.arg0).fields["x"] = (s.arg1);
     r0 = (s.arg0).fields["y"] = (s.arg2);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-dot_Vec2_constructor__P409156.info = {"start":202,"length":51,"line":6,"column":8,"endLine":6,"endColumn":59,"fileName":"vec2.ts","functionName":"inline","argumentNames":["this","x","y"]}
+dot_Vec2_constructor__P461905.info = {"start":380,"length":51,"line":10,"column":8,"endLine":10,"endColumn":59,"fileName":"vec2.ts","functionName":"inline","argumentNames":["this","x","y"]}
 
-function dot_Vec2_constructor__P409156_mk(s) {
+function dot_Vec2_constructor__P461905_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_Vec2_constructor__P409156, depth: s.depth + 1,
+        parent: s, fn: dot_Vec2_constructor__P461905, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -7876,12 +7876,12 @@ switch (step) {
     s.det___414924 = undefined;
     s.colls___415050 = undefined;
     s.coll___415055 = undefined;
-    s.unnamed13848___U7 = undefined;
-    s.unnamed13849___U8 = undefined;
+    s.unnamed14408___U7 = undefined;
+    s.unnamed14409___U8 = undefined;
     s.pos___415066 = undefined;
     s.coll___415089 = undefined;
-    s.unnamed13850___U11 = undefined;
-    s.unnamed13851___U12 = undefined;
+    s.unnamed14410___U11 = undefined;
+    s.unnamed14411___U12 = undefined;
     r0 = (globals.tick___445358 === 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
@@ -7908,9 +7908,9 @@ switch (step) {
     s.s___414896 = (r0);
     r0 = pxsim.Math_.cos(globals.a___414879);
     s.c___414901 = (r0);
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     r0 = (globals.SCREEN_WIDTH___409232 / 2);
     s.tmp_1.arg1 = r0;
@@ -7920,10 +7920,10 @@ switch (step) {
   case 23:
     r0 = s.retval;
     s.p0___414905 = (s.tmp_0);
-    s.tmp_0 = dot_vec2_add__P409170_mk(s);
+    s.tmp_0 = dot_vec2_add__P462048_mk(s);
     s.tmp_0.arg0 = s.p0___414905;
-    s.tmp_1 = dot_Vec2_scale__P409160_mk(s);
-    s.tmp_2 = dot_vec2_mk__P409166_mk(s);
+    s.tmp_1 = dot_Vec2_scale__P461866_mk(s);
+    s.tmp_2 = dot_vec2_mk__P462024_mk(s);
     s.tmp_2.arg0 = s.s___414896;
     s.tmp_2.arg1 = s.c___414901;
     s.callLocIdx = 312; s.pc = 26; return s.tmp_2;
@@ -8039,15 +8039,15 @@ switch (step) {
     r0 = s.retval;
     s.colls___415050 = (r0);
     s.coll___415055 = (undefined);
-    s.unnamed13848___U7 = (s.colls___415050);
-    s.unnamed13849___U8 = (0);
+    s.unnamed14408___U7 = (s.colls___415050);
+    s.unnamed14409___U8 = (0);
   case 9:
-    s.tmp_0 = r0 = s.unnamed13849___U8;
-    r0 = pxsim_Array__length(s.unnamed13848___U7);
+    s.tmp_0 = r0 = s.unnamed14409___U8;
+    r0 = pxsim_Array__length(s.unnamed14408___U7);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 15; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed13848___U7, s.unnamed13849___U8);
+    r0 = pxsim_Array__getAt(s.unnamed14408___U7, s.unnamed14409___U8);
     s.coll___415055 = (r0);
     r0 = s.coll___415055.fields["dst"];
     r0 = r0.fields["id"];
@@ -8106,26 +8106,26 @@ switch (step) {
   case 41:
     r0 = s.retval;
   case 14:
-    r0 = (s.unnamed13849___U8 + 1);
-    s.unnamed13849___U8 = (r0);
+    r0 = (s.unnamed14409___U8 + 1);
+    s.unnamed14409___U8 = (r0);
     { step = 9; continue; }
   case 15:
-    s.unnamed13848___U7 = (undefined);
+    s.unnamed14408___U7 = (undefined);
     s.tmp_0 = dot_Set_clear__P409346_mk(s);
     s.tmp_0.arg0 = globals.collisions___414802;
     s.callLocIdx = 336; s.pc = 42; return s.tmp_0;
   case 42:
     r0 = s.retval;
     s.coll___415089 = (undefined);
-    s.unnamed13850___U11 = (s.colls___415050);
-    s.unnamed13851___U12 = (0);
+    s.unnamed14410___U11 = (s.colls___415050);
+    s.unnamed14411___U12 = (0);
   case 16:
-    s.tmp_0 = r0 = s.unnamed13851___U12;
-    r0 = pxsim_Array__length(s.unnamed13850___U11);
+    s.tmp_0 = r0 = s.unnamed14411___U12;
+    r0 = pxsim_Array__length(s.unnamed14410___U11);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 19; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed13850___U11, s.unnamed13851___U12);
+    r0 = pxsim_Array__getAt(s.unnamed14410___U11, s.unnamed14411___U12);
     s.coll___415089 = (r0);
     r0 = s.coll___415089.fields["dst"];
     r0 = r0.fields["id"];
@@ -8143,11 +8143,11 @@ switch (step) {
     r0 = s.retval;
   case 17:
   case 18:
-    r0 = (s.unnamed13851___U12 + 1);
-    s.unnamed13851___U12 = (r0);
+    r0 = (s.unnamed14411___U12 + 1);
+    s.unnamed14411___U12 = (r0);
     { step = 16; continue; }
   case 19:
-    s.unnamed13850___U11 = (undefined);
+    s.unnamed14410___U11 = (undefined);
   case 20:
   case 21:
     r0 = undefined;
@@ -8178,12 +8178,12 @@ function test_gameUpdate__P414796_mk(s) {
   det___414924: undefined,
   colls___415050: undefined,
   coll___415055: undefined,
-  unnamed13848___U7: undefined,
-  unnamed13849___U8: undefined,
+  unnamed14408___U7: undefined,
+  unnamed14409___U8: undefined,
   pos___415066: undefined,
   coll___415089: undefined,
-  unnamed13850___U11: undefined,
-  unnamed13851___U12: undefined,
+  unnamed14410___U11: undefined,
+  unnamed14411___U12: undefined,
 } }
 
 
@@ -8497,16 +8497,16 @@ switch (step) {
     s.a___414693 = (r0);
     r0 = pxsim_Array__mk();
     s.tmp_0 = r0;
-    s.tmp_2 = dot_vec2_dup__P409169_mk(s);
+    s.tmp_2 = dot_vec2_dup__P462040_mk(s);
     s.tmp_2.arg0 = s.arg0;
     s.callLocIdx = 280; s.pc = 10; return s.tmp_2;
   case 10:
     r0 = s.retval;
     s.tmp_1 = r0;
     r0 = pxsim_Array__push(s.tmp_0, s.tmp_1);
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_3 = r0;
-    s.tmp_4 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_4 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_4.arg0 = s.tmp_3;
     s.tmp_5 = r0 = s.arg2;
     s.tmp_7 = dot_Random_get__P409319_mk(s);
@@ -8523,7 +8523,7 @@ switch (step) {
     s.callLocIdx = 282; s.pc = 11; return s.tmp_4;
   case 11:
     r0 = s.retval;
-    s.tmp_9 = dot_Vec2_rotate__P409161_mk(s);
+    s.tmp_9 = dot_Vec2_rotate__P461867_mk(s);
     s.tmp_9.arg0 = s.tmp_3;
     s.tmp_9.arg1 = s.a___414693;
     s.callLocIdx = 283; s.pc = 13; return s.tmp_9;
@@ -8667,7 +8667,7 @@ function Math_abs__P404940_mk(s) {
 
 
 
-function dot_Vec2_rotate__P409161(s) {
+function dot_Vec2_rotate__P461867(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8677,15 +8677,15 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.x___412122 = undefined;
-    s.y___412136 = undefined;
+    s.x___461963 = undefined;
+    s.y___461977 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_Vec2__C409151_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_Vec2__C461854_VT)) failedCast(r0);
     r0 = s.arg0.fields["x"];
     s.tmp_1 = r0;
     r0 = pxsim.Math_.cos(s.arg1);
@@ -8699,7 +8699,7 @@ switch (step) {
     r0 = (s.tmp_4 * s.tmp_5);
     s.tmp_3 = r0;
     r0 = (s.tmp_0 - s.tmp_3);
-    s.x___412122 = (r0);
+    s.x___461963 = (r0);
     r0 = s.arg0.fields["x"];
     s.tmp_1 = r0;
     r0 = pxsim.Math_.sin(s.arg1);
@@ -8713,19 +8713,19 @@ switch (step) {
     r0 = (s.tmp_4 * s.tmp_5);
     s.tmp_3 = r0;
     r0 = (s.tmp_0 + s.tmp_3);
-    s.y___412136 = (r0);
-    r0 = (s.arg0).fields["x"] = (s.x___412122);
-    r0 = (s.arg0).fields["y"] = (s.y___412136);
+    s.y___461977 = (r0);
+    r0 = (s.arg0).fields["x"] = (s.x___461963);
+    r0 = (s.arg0).fields["y"] = (s.y___461977);
     r0 = s.arg0;
     return leave(s, r0)
   default: oops()
 } } }
-dot_Vec2_rotate__P409161.info = {"start":762,"length":249,"line":27,"column":8,"endLine":33,"endColumn":9,"fileName":"vec2.ts","functionName":"rotate","argumentNames":["this","a"]}
+dot_Vec2_rotate__P461867.info = {"start":940,"length":249,"line":31,"column":8,"endLine":37,"endColumn":9,"fileName":"vec2.ts","functionName":"rotate","argumentNames":["this","a"]}
 
-function dot_Vec2_rotate__P409161_mk(s) {
+function dot_Vec2_rotate__P461867_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_Vec2_rotate__P409161, depth: s.depth + 1,
+        parent: s, fn: dot_Vec2_rotate__P461867, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -8733,8 +8733,8 @@ function dot_Vec2_rotate__P409161_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   tmp_5: undefined,
-  x___412122: undefined,
-  y___412136: undefined,
+  x___461963: undefined,
+  y___461977: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -8743,7 +8743,7 @@ function dot_Vec2_rotate__P409161_mk(s) {
 
 
 
-function dot_vec2_dup__P409169(s) {
+function dot_vec2_dup__P462040(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8757,9 +8757,9 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     r0 = s.arg0.fields["x"];
     s.tmp_1.arg1 = r0;
@@ -8772,12 +8772,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_vec2_dup__P409169.info = {"start":1709,"length":85,"line":60,"column":8,"endLine":62,"endColumn":9,"fileName":"vec2.ts","functionName":"dup","argumentNames":["v"]}
+dot_vec2_dup__P462040.info = {"start":1887,"length":85,"line":64,"column":8,"endLine":66,"endColumn":9,"fileName":"vec2.ts","functionName":"dup","argumentNames":["v"]}
 
-function dot_vec2_dup__P409169_mk(s) {
+function dot_vec2_dup__P462040_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_vec2_dup__P409169, depth: s.depth + 1,
+        parent: s, fn: dot_vec2_dup__P462040, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -8949,9 +8949,9 @@ switch (step) {
     r0 = pxsim_Array__mk();
     s.tmp_0 = r0;
     r0 = pxsim_Array__push(s.tmp_0, s.str___414358);
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_1 = r0;
-    s.tmp_2 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_2 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_2.arg0 = s.tmp_1;
     r0 = s.arg1.fields["x"];
     s.tmp_2.arg1 = r0;
@@ -9047,10 +9047,10 @@ switch (step) {
     }
     r0 = s.arg0;
     if (!checkSubtype(r0, dot_Rect__C409194_VT)) failedCast(r0);
-    s.tmp_0 = dot_vec2_add__P409170_mk(s);
+    s.tmp_0 = dot_vec2_add__P462048_mk(s);
     r0 = s.arg0.fields["pos"];
     s.tmp_0.arg0 = r0;
-    s.tmp_1 = dot_vec2_scale__P409174_mk(s);
+    s.tmp_1 = dot_vec2_scale__P462108_mk(s);
     r0 = s.arg0.fields["size"];
     s.tmp_1.arg0 = r0;
     s.tmp_1.arg1 = 0.5;
@@ -9080,7 +9080,7 @@ function dot_Rect_center__P409201_mk(s) {
 
 
 
-function dot_vec2_scale__P409174(s) {
+function dot_vec2_scale__P462108(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9095,9 +9095,9 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     r0 = s.arg0.fields["x"];
     s.tmp_2 = r0;
@@ -9114,12 +9114,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_vec2_scale__P409174.info = {"start":2447,"length":152,"line":87,"column":8,"endLine":92,"endColumn":9,"fileName":"vec2.ts","functionName":"scale","argumentNames":["v","s"]}
+dot_vec2_scale__P462108.info = {"start":2625,"length":152,"line":91,"column":8,"endLine":96,"endColumn":9,"fileName":"vec2.ts","functionName":"scale","argumentNames":["v","s"]}
 
-function dot_vec2_scale__P409174_mk(s) {
+function dot_vec2_scale__P462108_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_vec2_scale__P409174, depth: s.depth + 1,
+        parent: s, fn: dot_vec2_scale__P462108, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -9375,11 +9375,11 @@ switch (step) {
     s.srcs___412725 = undefined;
     s.dsts___412728 = undefined;
     s.src___412732 = undefined;
-    s.unnamed13844___U3 = undefined;
-    s.unnamed13845___U4 = undefined;
+    s.unnamed14404___U3 = undefined;
+    s.unnamed14405___U4 = undefined;
     s.dst___412735 = undefined;
-    s.unnamed13846___U6 = undefined;
-    s.unnamed13847___U7 = undefined;
+    s.unnamed14406___U6 = undefined;
+    s.unnamed14407___U7 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -9390,26 +9390,26 @@ switch (step) {
     r0 = s.arg1.fields["_srcs"];
     s.dsts___412728 = (r0);
     s.src___412732 = (undefined);
-    s.unnamed13844___U3 = (s.srcs___412725);
-    s.unnamed13845___U4 = (0);
+    s.unnamed14404___U3 = (s.srcs___412725);
+    s.unnamed14405___U4 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed13845___U4;
-    r0 = pxsim_Array__length(s.unnamed13844___U3);
+    s.tmp_0 = r0 = s.unnamed14405___U4;
+    r0 = pxsim_Array__length(s.unnamed14404___U3);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 19; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed13844___U3, s.unnamed13845___U4);
+    r0 = pxsim_Array__getAt(s.unnamed14404___U3, s.unnamed14405___U4);
     s.src___412732 = (r0);
     s.dst___412735 = (undefined);
-    s.unnamed13846___U6 = (s.dsts___412728);
-    s.unnamed13847___U7 = (0);
+    s.unnamed14406___U6 = (s.dsts___412728);
+    s.unnamed14407___U7 = (0);
   case 2:
-    s.tmp_0 = r0 = s.unnamed13847___U7;
-    r0 = pxsim_Array__length(s.unnamed13846___U6);
+    s.tmp_0 = r0 = s.unnamed14407___U7;
+    r0 = pxsim_Array__length(s.unnamed14406___U6);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 18; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed13846___U6, s.unnamed13847___U7);
+    r0 = pxsim_Array__getAt(s.unnamed14406___U6, s.unnamed14407___U7);
     s.dst___412735 = (r0);
     r0 = s.src___412732.fields["_mask"];
     s.tmp_4 = r0;
@@ -9521,16 +9521,16 @@ switch (step) {
   case 15:
   case 16:
   case 17:
-    r0 = (s.unnamed13847___U7 + 1);
-    s.unnamed13847___U7 = (r0);
+    r0 = (s.unnamed14407___U7 + 1);
+    s.unnamed14407___U7 = (r0);
     { step = 2; continue; }
   case 18:
-    s.unnamed13846___U6 = (undefined);
-    r0 = (s.unnamed13845___U4 + 1);
-    s.unnamed13845___U4 = (r0);
+    s.unnamed14406___U6 = (undefined);
+    r0 = (s.unnamed14405___U4 + 1);
+    s.unnamed14405___U4 = (r0);
     { step = 1; continue; }
   case 19:
-    s.unnamed13844___U3 = (undefined);
+    s.unnamed14404___U3 = (undefined);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
@@ -9562,11 +9562,11 @@ function dot_collision__internal_calcCollisions__P412722_mk(s) {
   srcs___412725: undefined,
   dsts___412728: undefined,
   src___412732: undefined,
-  unnamed13844___U3: undefined,
-  unnamed13845___U4: undefined,
+  unnamed14404___U3: undefined,
+  unnamed14405___U4: undefined,
   dst___412735: undefined,
-  unnamed13846___U6: undefined,
-  unnamed13847___U7: undefined,
+  unnamed14406___U6: undefined,
+  unnamed14407___U7: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -10176,9 +10176,9 @@ switch (step) {
   case 2:
     r0 = pxsim_numops_toBoolDecr(s.arg1);
     if (!r0) { step = 3; continue; }
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_2 = r0 = s.arg4;
     r0 = (s.arg6 / 2);
@@ -10196,9 +10196,9 @@ switch (step) {
     r0 = s.tmp_0;
     { step = 4; continue; }
   case 3:
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_6 = r0;
-    s.tmp_7 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_7 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_7.arg0 = s.tmp_6;
     s.tmp_7.arg1 = s.arg4;
     s.tmp_7.arg2 = s.arg5;
@@ -10210,9 +10210,9 @@ switch (step) {
     // jmp value (already in r0)
     s.tmp_8 = r0;
     s.pos___413453 = (s.tmp_8);
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg6;
     s.tmp_1.arg2 = s.arg7;
@@ -10996,9 +10996,9 @@ switch (step) {
     r0 = (s.ao___413665 / s.lc___413690);
     s.ai___413701 = (r0);
     s.a___413705 = (s.af___413664);
-    s.tmp_0 = dot_Vec2_add__P409157_mk(s);
-    s.tmp_1 = dot_Vec2_rotate__P409161_mk(s);
-    s.tmp_2 = dot_vec2_mk__P409166_mk(s);
+    s.tmp_0 = dot_Vec2_add__P461863_mk(s);
+    s.tmp_1 = dot_Vec2_rotate__P461867_mk(s);
+    s.tmp_2 = dot_vec2_mk__P462024_mk(s);
     s.tmp_2.arg0 = s.arg3;
     s.tmp_2.arg1 = 0;
     s.callLocIdx = 151; s.pc = 15; return s.tmp_2;
@@ -11015,12 +11015,12 @@ switch (step) {
   case 13:
     r0 = s.retval;
     s.p1___413707 = (r0);
-    s.tmp_0 = dot_vec2_mk0__P409168_mk(s);
+    s.tmp_0 = dot_vec2_mk0__P462037_mk(s);
     s.callLocIdx = 154; s.pc = 16; return s.tmp_0;
   case 16:
     r0 = s.retval;
     s.p2___413714 = (r0);
-    s.tmp_0 = dot_vec2_mk0__P409168_mk(s);
+    s.tmp_0 = dot_vec2_mk0__P462037_mk(s);
     s.callLocIdx = 155; s.pc = 17; return s.tmp_0;
   case 17:
     r0 = s.retval;
@@ -11033,9 +11033,9 @@ switch (step) {
     if (!r0) { step = 8; continue; }
     r0 = (s.a___413705 + s.ai___413701);
     s.a___413705 = (r0);
-    s.tmp_0 = dot_Vec2_add__P409157_mk(s);
-    s.tmp_1 = dot_Vec2_rotate__P409161_mk(s);
-    s.tmp_2 = dot_Vec2_set__P409162_mk(s);
+    s.tmp_0 = dot_Vec2_add__P461863_mk(s);
+    s.tmp_1 = dot_Vec2_rotate__P461867_mk(s);
+    s.tmp_2 = dot_Vec2_set__P461868_mk(s);
     s.tmp_2.arg0 = s.p2___413714;
     s.tmp_2.arg1 = s.arg3;
     s.tmp_2.arg2 = 0;
@@ -11052,8 +11052,8 @@ switch (step) {
     s.callLocIdx = 158; s.pc = 18; return s.tmp_0;
   case 18:
     r0 = s.retval;
-    s.tmp_0 = dot_Vec2_sub__P409158_mk(s);
-    s.tmp_1 = dot_Vec2_setv__P409164_mk(s);
+    s.tmp_0 = dot_Vec2_sub__P461864_mk(s);
+    s.tmp_1 = dot_Vec2_setv__P461870_mk(s);
     s.tmp_1.arg0 = s.o___413716;
     s.tmp_1.arg1 = s.p2___413714;
     s.callLocIdx = 159; s.pc = 22; return s.tmp_1;
@@ -11075,7 +11075,7 @@ switch (step) {
     s.callLocIdx = 161; s.pc = 23; return s.tmp_0;
   case 23:
     r0 = s.retval;
-    s.tmp_0 = dot_Vec2_setv__P409164_mk(s);
+    s.tmp_0 = dot_Vec2_setv__P461870_mk(s);
     s.tmp_0.arg0 = s.p1___413707;
     s.tmp_0.arg1 = s.p2___413714;
     s.callLocIdx = 162; s.pc = 24; return s.tmp_0;
@@ -11183,20 +11183,20 @@ switch (step) {
   case 9:
     r0 = s.retval;
     s.arg5 = (r0);
-    s.tmp_0 = dot_vec2_sub__P409171_mk(s);
+    s.tmp_0 = dot_vec2_sub__P462063_mk(s);
     s.tmp_0.arg0 = s.arg3;
     s.tmp_0.arg1 = s.arg2;
     s.callLocIdx = 140; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
     s.d___413566 = (r0);
-    s.tmp_0 = dot_vec2_length__P409179_mk(s);
+    s.tmp_0 = dot_vec2_length__P462182_mk(s);
     s.tmp_0.arg0 = s.d___413566;
     s.callLocIdx = 141; s.pc = 11; return s.tmp_0;
   case 11:
     r0 = s.retval;
     s.len___413571 = (r0);
-    s.tmp_0 = dot_vec2_normal__P409180_mk(s);
+    s.tmp_0 = dot_vec2_normal__P462188_mk(s);
     s.tmp_0.arg0 = s.d___413566;
     s.callLocIdx = 142; s.pc = 12; return s.tmp_0;
   case 12:
@@ -11236,7 +11236,7 @@ switch (step) {
     s.actualGap___413590 = (r0);
   case 3:
   case 4:
-    s.tmp_0 = dot_vec2_scale__P409174_mk(s);
+    s.tmp_0 = dot_vec2_scale__P462108_mk(s);
     s.tmp_0.arg0 = s.norm___413575;
     r0 = (s.arg4 + s.actualGap___413590);
     s.tmp_0.arg1 = r0;
@@ -11244,9 +11244,9 @@ switch (step) {
   case 13:
     r0 = s.retval;
     s.step___413615 = (r0);
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     r0 = (s.arg4 / 2);
     s.tmp_1.arg1 = r0;
@@ -11255,7 +11255,7 @@ switch (step) {
     s.callLocIdx = 144; s.pc = 14; return s.tmp_1;
   case 14:
     r0 = s.retval;
-    s.tmp_2 = dot_vec2_sub__P409171_mk(s);
+    s.tmp_2 = dot_vec2_sub__P462063_mk(s);
     s.tmp_2.arg0 = s.arg2;
     s.tmp_2.arg1 = s.tmp_0;
     s.callLocIdx = 145; s.pc = 15; return s.tmp_2;
@@ -11283,7 +11283,7 @@ switch (step) {
     s.callLocIdx = 146; s.pc = 16; return s.tmp_1;
   case 16:
     r0 = s.retval;
-    s.tmp_0 = dot_Vec2_add__P409157_mk(s);
+    s.tmp_0 = dot_Vec2_add__P461863_mk(s);
     s.tmp_0.arg0 = s.p___413621;
     s.tmp_0.arg1 = s.step___413615;
     s.callLocIdx = 147; s.pc = 17; return s.tmp_0;
@@ -11329,7 +11329,7 @@ function dot_draw__internal_line__P413139_mk(s) {
 
 
 
-function dot_vec2_normal__P409180(s) {
+function dot_vec2_normal__P462188(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11339,18 +11339,18 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.len___412334 = undefined;
+    s.len___462190 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = dot_vec2_length__P409179_mk(s);
+    s.tmp_0 = dot_vec2_length__P462182_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 72; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
-    s.len___412334 = (r0);
-    r0 = (s.len___412334 === 0);
+    s.len___462190 = (r0);
+    r0 = (s.len___462190 === 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
@@ -11358,9 +11358,9 @@ switch (step) {
     { step = 3; continue; }
   case 1:
   case 2:
-    s.tmp_1 = dot_vec2_scale__P409174_mk(s);
+    s.tmp_1 = dot_vec2_scale__P462108_mk(s);
     s.tmp_1.arg0 = s.arg0;
-    r0 = (1 / s.len___412334);
+    r0 = (1 / s.len___462190);
     s.tmp_1.arg1 = r0;
     s.callLocIdx = 73; s.pc = 5; return s.tmp_1;
   case 5:
@@ -11369,16 +11369,16 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_vec2_normal__P409180.info = {"start":3332,"length":159,"line":114,"column":8,"endLine":118,"endColumn":9,"fileName":"vec2.ts","functionName":"normal","argumentNames":["v"]}
+dot_vec2_normal__P462188.info = {"start":3510,"length":159,"line":118,"column":8,"endLine":122,"endColumn":9,"fileName":"vec2.ts","functionName":"normal","argumentNames":["v"]}
 
-function dot_vec2_normal__P409180_mk(s) {
+function dot_vec2_normal__P462188_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_vec2_normal__P409180, depth: s.depth + 1,
+        parent: s, fn: dot_vec2_normal__P462188, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  len___412334: undefined,
+  len___462190: undefined,
   arg0: undefined,
 } }
 
@@ -11386,7 +11386,7 @@ function dot_vec2_normal__P409180_mk(s) {
 
 
 
-function dot_vec2_length__P409179(s) {
+function dot_vec2_length__P462182(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11400,7 +11400,7 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_1 = dot_vec2_lengthSq__P409178_mk(s);
+    s.tmp_1 = dot_vec2_lengthSq__P462169_mk(s);
     s.tmp_1.arg0 = s.arg0;
     s.callLocIdx = 71; s.pc = 1; return s.tmp_1;
   case 1:
@@ -11410,12 +11410,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_vec2_length__P409179.info = {"start":3229,"length":94,"line":111,"column":8,"endLine":113,"endColumn":9,"fileName":"vec2.ts","functionName":"length","argumentNames":["v"]}
+dot_vec2_length__P462182.info = {"start":3407,"length":94,"line":115,"column":8,"endLine":117,"endColumn":9,"fileName":"vec2.ts","functionName":"length","argumentNames":["v"]}
 
-function dot_vec2_length__P409179_mk(s) {
+function dot_vec2_length__P462182_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_vec2_length__P409179, depth: s.depth + 1,
+        parent: s, fn: dot_vec2_length__P462182, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -11426,7 +11426,7 @@ function dot_vec2_length__P409179_mk(s) {
 
 
 
-function dot_vec2_lengthSq__P409178(s) {
+function dot_vec2_lengthSq__P462169(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11456,12 +11456,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_vec2_lengthSq__P409178.info = {"start":3125,"length":95,"line":108,"column":8,"endLine":110,"endColumn":9,"fileName":"vec2.ts","functionName":"lengthSq","argumentNames":["v"]}
+dot_vec2_lengthSq__P462169.info = {"start":3303,"length":95,"line":112,"column":8,"endLine":114,"endColumn":9,"fileName":"vec2.ts","functionName":"lengthSq","argumentNames":["v"]}
 
-function dot_vec2_lengthSq__P409178_mk(s) {
+function dot_vec2_lengthSq__P462169_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_vec2_lengthSq__P409178, depth: s.depth + 1,
+        parent: s, fn: dot_vec2_lengthSq__P462169, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -11476,7 +11476,7 @@ function dot_vec2_lengthSq__P409178_mk(s) {
 
 
 
-function dot_vec2_sub__P409171(s) {
+function dot_vec2_sub__P462063(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11491,9 +11491,9 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     r0 = s.arg0.fields["x"];
     s.tmp_2 = r0;
@@ -11514,12 +11514,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_vec2_sub__P409171.info = {"start":1964,"length":152,"line":69,"column":8,"endLine":74,"endColumn":9,"fileName":"vec2.ts","functionName":"sub","argumentNames":["a","b"]}
+dot_vec2_sub__P462063.info = {"start":2142,"length":152,"line":73,"column":8,"endLine":78,"endColumn":9,"fileName":"vec2.ts","functionName":"sub","argumentNames":["a","b"]}
 
-function dot_vec2_sub__P409171_mk(s) {
+function dot_vec2_sub__P462063_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_vec2_sub__P409171, depth: s.depth + 1,
+        parent: s, fn: dot_vec2_sub__P462063, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -11535,7 +11535,7 @@ function dot_vec2_sub__P409171_mk(s) {
 
 
 
-function dot_Vec2_setv__P409164(s) {
+function dot_Vec2_setv__P461870(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11551,7 +11551,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_Vec2__C409151_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_Vec2__C461854_VT)) failedCast(r0);
     r0 = s.arg1.fields["x"];
     s.tmp_0 = r0;
     r0 = (s.arg0).fields["x"] = (s.tmp_0);
@@ -11562,12 +11562,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_Vec2_setv__P409164.info = {"start":1274,"length":115,"line":44,"column":8,"endLine":48,"endColumn":9,"fileName":"vec2.ts","functionName":"setv","argumentNames":["this","v"]}
+dot_Vec2_setv__P461870.info = {"start":1452,"length":115,"line":48,"column":8,"endLine":52,"endColumn":9,"fileName":"vec2.ts","functionName":"setv","argumentNames":["this","v"]}
 
-function dot_Vec2_setv__P409164_mk(s) {
+function dot_Vec2_setv__P461870_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_Vec2_setv__P409164, depth: s.depth + 1,
+        parent: s, fn: dot_Vec2_setv__P461870, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -11578,7 +11578,7 @@ function dot_Vec2_setv__P409164_mk(s) {
 
 
 
-function dot_Vec2_sub__P409158(s) {
+function dot_Vec2_sub__P461864(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11594,7 +11594,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_Vec2__C409151_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_Vec2__C461854_VT)) failedCast(r0);
     s.tmp_0 = r0 = s.arg0;
     r0 = s.tmp_0.fields["x"];
     s.tmp_2 = r0;
@@ -11615,12 +11615,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_Vec2_sub__P409158.info = {"start":387,"length":116,"line":12,"column":8,"endLine":16,"endColumn":9,"fileName":"vec2.ts","functionName":"sub","argumentNames":["this","v"]}
+dot_Vec2_sub__P461864.info = {"start":565,"length":116,"line":16,"column":8,"endLine":20,"endColumn":9,"fileName":"vec2.ts","functionName":"sub","argumentNames":["this","v"]}
 
-function dot_Vec2_sub__P409158_mk(s) {
+function dot_Vec2_sub__P461864_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_Vec2_sub__P409158, depth: s.depth + 1,
+        parent: s, fn: dot_Vec2_sub__P461864, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -11634,7 +11634,7 @@ function dot_Vec2_sub__P409158_mk(s) {
 
 
 
-function dot_Vec2_set__P409162(s) {
+function dot_Vec2_set__P461868(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11651,19 +11651,19 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_Vec2__C409151_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_Vec2__C461854_VT)) failedCast(r0);
     r0 = (s.arg0).fields["x"] = (s.arg1);
     r0 = (s.arg0).fields["y"] = (s.arg2);
     r0 = s.arg0;
     return leave(s, r0)
   default: oops()
 } } }
-dot_Vec2_set__P409162.info = {"start":1020,"length":123,"line":34,"column":8,"endLine":38,"endColumn":9,"fileName":"vec2.ts","functionName":"set","argumentNames":["this","x","y"]}
+dot_Vec2_set__P461868.info = {"start":1198,"length":123,"line":38,"column":8,"endLine":42,"endColumn":9,"fileName":"vec2.ts","functionName":"set","argumentNames":["this","x","y"]}
 
-function dot_Vec2_set__P409162_mk(s) {
+function dot_Vec2_set__P461868_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_Vec2_set__P409162, depth: s.depth + 1,
+        parent: s, fn: dot_Vec2_set__P461868, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -11674,7 +11674,7 @@ function dot_Vec2_set__P409162_mk(s) {
 
 
 
-function dot_vec2_mk0__P409168(s) {
+function dot_vec2_mk0__P462037(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11684,9 +11684,9 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = 0;
     s.tmp_1.arg2 = 0;
@@ -11697,12 +11697,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_vec2_mk0__P409168.info = {"start":1626,"length":74,"line":57,"column":8,"endLine":59,"endColumn":9,"fileName":"vec2.ts","functionName":"mk0","argumentNames":[]}
+dot_vec2_mk0__P462037.info = {"start":1804,"length":74,"line":61,"column":8,"endLine":63,"endColumn":9,"fileName":"vec2.ts","functionName":"mk0","argumentNames":[]}
 
-function dot_vec2_mk0__P409168_mk(s) {
+function dot_vec2_mk0__P462037_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_vec2_mk0__P409168, depth: s.depth + 1,
+        parent: s, fn: dot_vec2_mk0__P462037, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -11787,7 +11787,7 @@ function dot_draw_line__P409279_mk(s) {
 
 
 
-function dot_vec2_mk__P409166(s) {
+function dot_vec2_mk__P462024(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11802,9 +11802,9 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg0;
     s.tmp_1.arg2 = s.arg1;
@@ -11815,12 +11815,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_vec2_mk__P409166.info = {"start":1432,"length":93,"line":51,"column":8,"endLine":53,"endColumn":9,"fileName":"vec2.ts","functionName":"mk","argumentNames":["x","y"]}
+dot_vec2_mk__P462024.info = {"start":1610,"length":93,"line":55,"column":8,"endLine":57,"endColumn":9,"fileName":"vec2.ts","functionName":"mk","argumentNames":["x","y"]}
 
-function dot_vec2_mk__P409166_mk(s) {
+function dot_vec2_mk__P462024_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_vec2_mk__P409166, depth: s.depth + 1,
+        parent: s, fn: dot_vec2_mk__P462024, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -11832,7 +11832,7 @@ function dot_vec2_mk__P409166_mk(s) {
 
 
 
-function dot_vec2_add__P409170(s) {
+function dot_vec2_add__P462048(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -11847,9 +11847,9 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C409151_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(dot_Vec2__C461854_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = dot_Vec2_constructor__P409156_mk(s);
+    s.tmp_1 = dot_Vec2_constructor__P461905_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     r0 = s.arg0.fields["x"];
     s.tmp_2 = r0;
@@ -11870,12 +11870,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-dot_vec2_add__P409170.info = {"start":1803,"length":152,"line":63,"column":8,"endLine":68,"endColumn":9,"fileName":"vec2.ts","functionName":"add","argumentNames":["a","b"]}
+dot_vec2_add__P462048.info = {"start":1981,"length":152,"line":67,"column":8,"endLine":72,"endColumn":9,"fileName":"vec2.ts","functionName":"add","argumentNames":["a","b"]}
 
-function dot_vec2_add__P409170_mk(s) {
+function dot_vec2_add__P462048_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_vec2_add__P409170, depth: s.depth + 1,
+        parent: s, fn: dot_vec2_add__P462048, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -47245,7 +47245,44 @@ function scene_Scene_data__P407681_mk(s) {
 
 
 
-function dot_Vec2_width__P409154(s) {
+function dot_Vec2_width__P461861(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, dot_Vec2__C461854_VT)) failedCast(r0);
+    r0 = (s.arg0).fields["x"] = (s.arg1);
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+dot_Vec2_width__P461861.info = {"start":289,"length":36,"line":8,"column":8,"endLine":8,"endColumn":44,"fileName":"vec2.ts","functionName":"width","argumentNames":["this","v"]}
+
+function dot_Vec2_width__P461861_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: dot_Vec2_width__P461861, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function dot_Vec2_width__P461857(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -47260,18 +47297,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_Vec2__C409151_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_Vec2__C461854_VT)) failedCast(r0);
     r0 = s.arg0.fields["x"];
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-dot_Vec2_width__P409154.info = {"start":123,"length":30,"line":4,"column":8,"endLine":4,"endColumn":38,"fileName":"vec2.ts","functionName":"width","argumentNames":["this"]}
-dot_Vec2_width__P409154.isGetter = true;
+dot_Vec2_width__P461857.info = {"start":123,"length":30,"line":4,"column":8,"endLine":4,"endColumn":38,"fileName":"vec2.ts","functionName":"width","argumentNames":["this"]}
+dot_Vec2_width__P461857.isGetter = true;
 
-function dot_Vec2_width__P409154_mk(s) {
+function dot_Vec2_width__P461857_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_Vec2_width__P409154, depth: s.depth + 1,
+        parent: s, fn: dot_Vec2_width__P461857, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -49202,7 +49239,44 @@ function scene_Camera_left__P407605_mk(s) {
 
 
 
-function dot_Vec2_height__P409155(s) {
+function dot_Vec2_height__P461862(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, dot_Vec2__C461854_VT)) failedCast(r0);
+    r0 = (s.arg0).fields["y"] = (s.arg1);
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+dot_Vec2_height__P461862.info = {"start":334,"length":37,"line":9,"column":8,"endLine":9,"endColumn":45,"fileName":"vec2.ts","functionName":"height","argumentNames":["this","v"]}
+
+function dot_Vec2_height__P461862_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: dot_Vec2_height__P461862, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function dot_Vec2_height__P461858(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -49217,18 +49291,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_Vec2__C409151_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_Vec2__C461854_VT)) failedCast(r0);
     r0 = s.arg0.fields["y"];
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-dot_Vec2_height__P409155.info = {"start":162,"length":31,"line":5,"column":8,"endLine":5,"endColumn":39,"fileName":"vec2.ts","functionName":"height","argumentNames":["this"]}
-dot_Vec2_height__P409155.isGetter = true;
+dot_Vec2_height__P461858.info = {"start":162,"length":31,"line":5,"column":8,"endLine":5,"endColumn":39,"fileName":"vec2.ts","functionName":"height","argumentNames":["this"]}
+dot_Vec2_height__P461858.isGetter = true;
 
-function dot_Vec2_height__P409155_mk(s) {
+function dot_Vec2_height__P461858_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_Vec2_height__P409155, depth: s.depth + 1,
+        parent: s, fn: dot_Vec2_height__P461858, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -49237,7 +49311,44 @@ function dot_Vec2_height__P409155_mk(s) {
 
 
 
-function dot_Vec2_top__P409153(s) {
+function dot_Vec2_top__P461860(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, dot_Vec2__C461854_VT)) failedCast(r0);
+    r0 = (s.arg0).fields["y"] = (s.arg1);
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+dot_Vec2_top__P461860.info = {"start":246,"length":34,"line":7,"column":8,"endLine":7,"endColumn":42,"fileName":"vec2.ts","functionName":"top","argumentNames":["this","v"]}
+
+function dot_Vec2_top__P461860_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: dot_Vec2_top__P461860, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function dot_Vec2_top__P461856(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -49252,18 +49363,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_Vec2__C409151_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_Vec2__C461854_VT)) failedCast(r0);
     r0 = s.arg0.fields["y"];
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-dot_Vec2_top__P409153.info = {"start":86,"length":28,"line":3,"column":8,"endLine":3,"endColumn":36,"fileName":"vec2.ts","functionName":"top","argumentNames":["this"]}
-dot_Vec2_top__P409153.isGetter = true;
+dot_Vec2_top__P461856.info = {"start":86,"length":28,"line":3,"column":8,"endLine":3,"endColumn":36,"fileName":"vec2.ts","functionName":"top","argumentNames":["this"]}
+dot_Vec2_top__P461856.isGetter = true;
 
-function dot_Vec2_top__P409153_mk(s) {
+function dot_Vec2_top__P461856_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_Vec2_top__P409153, depth: s.depth + 1,
+        parent: s, fn: dot_Vec2_top__P461856, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -49272,7 +49383,44 @@ function dot_Vec2_top__P409153_mk(s) {
 
 
 
-function dot_Vec2_left__P409152(s) {
+function dot_Vec2_left__P461859(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, dot_Vec2__C461854_VT)) failedCast(r0);
+    r0 = (s.arg0).fields["x"] = (s.arg1);
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+dot_Vec2_left__P461859.info = {"start":202,"length":35,"line":6,"column":8,"endLine":6,"endColumn":43,"fileName":"vec2.ts","functionName":"left","argumentNames":["this","v"]}
+
+function dot_Vec2_left__P461859_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: dot_Vec2_left__P461859, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function dot_Vec2_left__P461855(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -49287,18 +49435,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, dot_Vec2__C409151_VT)) failedCast(r0);
+    if (!checkSubtype(r0, dot_Vec2__C461854_VT)) failedCast(r0);
     r0 = s.arg0.fields["x"];
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-dot_Vec2_left__P409152.info = {"start":48,"length":29,"line":2,"column":8,"endLine":2,"endColumn":37,"fileName":"vec2.ts","functionName":"left","argumentNames":["this"]}
-dot_Vec2_left__P409152.isGetter = true;
+dot_Vec2_left__P461855.info = {"start":48,"length":29,"line":2,"column":8,"endLine":2,"endColumn":37,"fileName":"vec2.ts","functionName":"left","argumentNames":["this"]}
+dot_Vec2_left__P461855.isGetter = true;
 
-function dot_Vec2_left__P409152_mk(s) {
+function dot_Vec2_left__P461855_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: dot_Vec2_left__P409152, depth: s.depth + 1,
+        parent: s, fn: dot_Vec2_left__P461855, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -50773,7 +50921,7 @@ const dot_Rect__C409194_VT = mkVTable({
     "center": dot_Rect_center__P409201,
   },
 });
-const dot_Vec2__C409151_VT = mkVTable({
+const dot_Vec2__C461854_VT = mkVTable({
   name: "Vec2",
   numFields: 2,
   classNo: 27,
@@ -50786,16 +50934,20 @@ const dot_Vec2__C409151_VT = mkVTable({
     "set/x": null,
     "y": null,
     "set/y": null,
-    "left": dot_Vec2_left__P409152,
-    "top": dot_Vec2_top__P409153,
-    "width": dot_Vec2_width__P409154,
-    "height": dot_Vec2_height__P409155,
-    "add": dot_Vec2_add__P409157,
-    "sub": dot_Vec2_sub__P409158,
-    "scale": dot_Vec2_scale__P409160,
-    "rotate": dot_Vec2_rotate__P409161,
-    "set": dot_Vec2_set__P409162,
-    "setv": dot_Vec2_setv__P409164,
+    "left": dot_Vec2_left__P461855,
+    "set/left": dot_Vec2_left__P461859,
+    "top": dot_Vec2_top__P461856,
+    "set/top": dot_Vec2_top__P461860,
+    "width": dot_Vec2_width__P461857,
+    "set/width": dot_Vec2_width__P461861,
+    "height": dot_Vec2_height__P461858,
+    "set/height": dot_Vec2_height__P461862,
+    "add": dot_Vec2_add__P461863,
+    "sub": dot_Vec2_sub__P461864,
+    "scale": dot_Vec2_scale__P461866,
+    "rotate": dot_Vec2_rotate__P461867,
+    "set": dot_Vec2_set__P461868,
+    "setv": dot_Vec2_setv__P461870,
   },
 });
 const control_EventContext__C405207_VT = mkVTable({
@@ -52206,5 +52358,5 @@ const sprites_BaseSpriteSayRenderer__C407072_VT = mkVTable({
 
 const breakpoints = setupDebugger(1, ["SCREEN_WIDTH___409232","SCREEN_HEIGHT___409233","scoreboardFont___445371","titleFont___445375","input___409302","state___445367","input___409304","scoreFont___409306","pool___414333","pool___414660","random___414671","gameTitle___445355","insertCoinText___445356","rand___414798","collisions___414802","boxColors___414808","boxes___414804","commands___412962","_gameUpdate___445379","difficulty___445360","tick___445358","restartAt___445369","_colorStack___412861","gen___409226","reporters___412673","dirty___412675","textColor___445354","_gameOverText___445378","scoreboardColor___445352","score___445362","high___445364","ALL_COLORS___412858","d___414877","a___414879","nextId___409225"])
 
-return _main___P447247
+return _main___P463469
 })
