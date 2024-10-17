@@ -30,7 +30,7 @@ namespace dot {
             count = 16,
             speed = 1,
             angle = 0,
-            angleWidth = Math.PI * 2
+            angleWidth = 6.28
         ) {
             if (count < 1) {
                 if (random.get() > count) {
