@@ -66,7 +66,7 @@ namespace test {
         scene.setBackgroundColor(dot.Color.Tan);
         a += dot.game.difficulty * d / f;
         const p0 = dot.vec.make(dot.SCREEN_WIDTH / 2, dot.SCREEN_HEIGHT / 2);
-        const p1 = dot.vec.fromAngle(a).scale(dot.SCREEN_WIDTH / 2).add(p0);
+        const p1 = dot.vec.fromAngle(a).scale(dot.SCREEN_WIDTH / 3).add(p0);
         dot.color.set(dot.Color.White);
         const det = dot.draw.line(p0, p1, 3);
         dot.color.set(dot.Color.LightPurple);
@@ -77,7 +77,7 @@ namespace test {
 
         dot.draw.img(p1, duck, true);
         dot.color.set(dot.Color.Pink);
-        dot.draw.bar(p0, 40, 2, -a, 0.5, dot.color.noncollidable());
+        dot.draw.bar(p0, 40, 2, -a * .15, 0.5, dot.color.noncollidable());
 
         boxes.forEach(b => {
             b.r.pos.x += b.v.x * dot.game.difficulty;
