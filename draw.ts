@@ -46,8 +46,9 @@ namespace dot {
             collidesWith: Color[] = null,
             id?: string
         ): CollisionReporter {
-            const l = vec.fromScalar(length).rotate(angle);
-            const p0 = vec.dup(center).sub(l.scale(centerPosRatio));
+            centerPosRatio = Math.clamp(0, 1, centerPosRatio);
+            const l = vec.make(length, 0).rotate(angle);
+            const p0 = vec.dup(center).sub(vec.scale(l, centerPosRatio));
             const p1 = vec.add(p0, l);
             return line(p0, p1, thickness, 0, collidesWith, id);
         }

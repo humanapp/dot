@@ -76,6 +76,8 @@ namespace test {
             1, 0, Math.PI * 2, dot.color.noncollidable());
 
         dot.draw.img(p1, duck, true);
+        dot.color.set(dot.Color.Pink);
+        dot.draw.bar(p0, 40, 2, -a, 0.5, dot.color.noncollidable());
 
         boxes.forEach(b => {
             b.r.pos.x += b.v.x * dot.game.difficulty;
