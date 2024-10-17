@@ -51,6 +51,17 @@ namespace dot {
             this.y = v.y;
             return this;
         }
+        public length(): number {
+            return vec.length(this);
+        }
+        public distanceTo(v: Vec): number {
+            return vec.distanceBetween(this, v);
+        }
+        public addWithAngle(angle: number, length: number): this {
+            this.x += Math.cos(angle) * length;
+            this.y += Math.sin(angle) * length;
+            return this;
+        }
     }
     export namespace vec {
         export function make(x: number, y: number): Vec {

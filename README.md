@@ -1,33 +1,13 @@
- 
+# Guide to using the `dot` mini game engine
 
+This game engine is based heavily on [CrispGameLib](https://github.com/abagames/crisp-game-lib),
+the delightful little game engine by [ABA Games (Kenta Cho)](https://www.asahi-net.or.jp/~cs8k-cyu/).
 
-> Open this page at [https://humanapp.github.io/dot/](https://humanapp.github.io/dot/)
+## About `dot`
 
-## Use as Extension
+In most ways, `dot` is a spiritual port of CrispGameLib to MakeCode Arcade, though it differs in some significant ways. Those ways are:
+* Collision detection works very differently.
+* The API is more structured with namespaces.
+* Leverage Arcade features (fonts, images).
 
-This repository can be added as an **extension** in MakeCode.
-
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/humanapp/dot** and import
-
-## Edit this project ![Build status badge](https://github.com/humanapp/dot/workflows/MakeCode/badge.svg)
-
-To edit this repository in MakeCode.
-
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/humanapp/dot** and click import
-
-## Blocks preview
-
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
-
-![A rendered view of the blocks](https://github.com/humanapp/dot/raw/master/.github/makecode/blocks.png)
-
-#### Metadata (used for search, rendering)
-
-* for PXT/arcade
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+Be sure to check out all the wonderful games created by Kenta Cho/ABA Games.

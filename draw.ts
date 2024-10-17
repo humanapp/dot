@@ -37,6 +37,20 @@ namespace dot {
             }
             return _internal.rect(id, alignCenter, true, collidesWith, x, y, w, h);
         }
+        export function bar(
+            center: Vec,
+            length: number,
+            thickness: number,
+            angle = 0,
+            centerPosRatio = 0.5,
+            collidesWith: Color[] = null,
+            id?: string
+        ): CollisionReporter {
+            const l = vec.fromScalar(length).rotate(angle);
+            const p0 = vec.dup(center).sub(l.scale(centerPosRatio));
+            const p1 = vec.add(p0, l);
+            return line(p0, p1, thickness, 0, collidesWith, id);
+        }
         export function line(
             a: Vec,
             b: Vec,
