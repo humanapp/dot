@@ -62,6 +62,11 @@ namespace dot {
             this.y += Math.sin(angle) * length;
             return this;
         }
+        public wrap(lo: Vec, hi: Vec): this {
+            this.x = util.wrap(lo.x, hi.x, this.x),
+            this.y = util.wrap(lo.y, hi.y, this.y)
+            return this;
+        }
     }
     export namespace vec {
         export function make(x: number, y: number): Vec {
